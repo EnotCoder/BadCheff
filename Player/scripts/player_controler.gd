@@ -60,15 +60,15 @@ func _physics_process(delta: float) -> void:
 	if ray_cast.is_colliding():
 		var hit := ray_cast.get_collider()
 		if hit:
-			$"Control / cursor".scale = Vector2(6, 6)
+			$"Control/cursor".scale = Vector2(6, 6)
 			if Input.is_action_just_pressed("left_click") and hit.has_method("main"):
 				hit.main()
 			if hit.has_method("main_delta"):
 				hit.main_delta()
 		else:
-			$"Control / cursor".scale = Vector2(6, 6)
+			$"Control/cursor".scale = Vector2(6, 6)
 	else:
-		$"Control / cursor".scale = Vector2(4, 4)
+		$"Control/cursor".scale = Vector2(4, 4)
 
 func _ready() -> void:
 	Dialog.show_say("Нужно выбратся от сюда и найти отца")
