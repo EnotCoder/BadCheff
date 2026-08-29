@@ -1,6 +1,8 @@
 extends CharacterBody3D
 class_name Enemy
 
+signal player_caught
+
 const WALK_SPEED := 3.0
 const RUN_SPEED := 5.0
 const ARRIVE_DISTANCE := 0.3
@@ -8,10 +10,8 @@ const ARRIVE_DISTANCE := 0.3
 var kill := false
 
 @onready var animation_state_machine = animation_tree.get("parameters/playback")
-@export var player: Node3D
 @export var navigation_agent: NavigationAgent3D
 @export var animation_tree: AnimationTree
-@export var you_lost: Node2D
 @export var hit: Area3D
 @export var door_kitchen: Node
 @export var list_kitchen_objects: Array[Node]
@@ -73,7 +73,4 @@ func navigate_to(_position: Vector3) -> void:
 
 func _on_hit_body_entered(_body: Node3D) -> void:
 	kill = true
-	player.queue_free()
-	await get_tree().create_timer(1.2).timeout
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
-	you_lost.show()
+	player_caught.emit()
