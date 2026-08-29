@@ -1,0 +1,77 @@
+[gd_scene load_steps=8 format=3 uid="uid://cq7poyneqv6gn"]
+
+[ext_resource type="Script" uid="uid://ptkat2llu4ik" path="res://ACTS/scripts/doors/door.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://c2c37u7bwsa61" path="res://act 1 object/prolog/door stove.fbx" id="2"]
+[ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="3"]
+
+[sub_resource type="Animation" id="Animation_0gat0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door stove:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tgpkt"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door stove:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.41372, 0, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_usjh8"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door stove:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(-1.41372, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_t5l5m"]
+_data = {
+&"RESET": SubResource("Animation_0gat0"),
+&"close": SubResource("Animation_tgpkt"),
+&"open": SubResource("Animation_usjh8")
+}
+
+[node name="door stove" type="Node3D"]
+script = ExtResource("1")
+
+[node name="door stove" parent="." instance=ExtResource("2")]
+
+[node name="ACTION" parent="door stove" node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("3")]
+transform = Transform3D(0.700257, 0, 0, 0, 0.57828, 0, 0, 0, 0.0402183, 0, 0.166868, 0)
+visible = false
+FUNC_NAME = "toggle_door"
+NODE_ACTION = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_t5l5m")
+}
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

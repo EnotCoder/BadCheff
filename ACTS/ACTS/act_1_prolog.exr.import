@@ -1,0 +1,27 @@
+[remap]
+
+importer="2d_array_texture"
+type="CompressedTexture2DArray"
+uid="uid://bs6fitnuvoyap"
+path.astc="res://.godot/imported/act_1_prolog.exr-3b291204aa05ee8c8b4ed444a89b63e6.astc.ctexarray"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+
+[deps]
+
+source_file="res://ACTS/ACTS/act_1_prolog.exr"
+dest_files=["res://.godot/imported/act_1_prolog.exr-3b291204aa05ee8c8b4ed444a89b63e6.astc.ctexarray"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=true
+compress/lossy_quality=1.0
+compress/hdr_compression=1
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+slices/horizontal=3
+slices/vertical=1

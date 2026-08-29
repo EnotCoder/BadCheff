@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cp6ua557y6c0j"]
+
+[ext_resource type="Script" uid="uid://dn31hh4dc4smy" path="res://ACTS/scripts/move.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://clcheo327pdpd" path="res://act 1 object/prolog/box.fbx" id="3"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v74ac"]
+size = Vector3(0.8, 0.8, 0.8)
+
+[node name="box" type="RigidBody3D"]
+transform = Transform3D(0.95882, 0, 0.284015, 0, 1, 0, -0.284015, 0, 0.95882, 0, 0, 0)
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.785, 0, 0, 0, 0.785, 0, 0, 0, 0.785, 0, 0, 0)
+shape = SubResource("BoxShape3D_v74ac")
+
+[node name="ACTION" parent="." node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("2")]
+transform = Transform3D(0.635, 0, 0, 0, 0.635, 0, 0, 0, 0.635, 0, 0, 0)
+visible = false
+FUNC_NAME = "move"
+NODE_ACTION = NodePath("..")
+delta = true
+
+[node name="box" parent="." instance=ExtResource("3")]
+transform = Transform3D(1.525, 0, 0, 0, 1.525, 0, 0, 0, 1.525, 0, 0, 0)

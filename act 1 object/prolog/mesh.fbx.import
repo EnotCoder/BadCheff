@@ -1,0 +1,124 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://b53w8q2htttth"
+path="res://.godot/imported/mesh.fbx-1a42c20bfab66fe3ce514f24104c2296.scn"
+
+[deps]
+
+source_file="res://act 1 object/prolog/mesh.fbx"
+dest_files=["res://.godot/imported/mesh.fbx-1a42c20bfab66fe3ce514f24104c2296.scn"]
+
+[params]
+
+nodes/root_type="Node3D"
+nodes/root_name="mesh"
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=true
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"materials": {
+"glass": {
+"use_external/enabled": true,
+"use_external/path": "res://act 1 object/materials/glass.tres"
+}
+},
+"meshes": {
+"Cube": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+},
+"Cube_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+},
+"Cube_012": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+},
+"Cylinder_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+},
+"Plane_014": {
+"generate/lightmap_uv": 0,
+"generate/lods": 2,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"save_to_file/enabled": false,
+"save_to_file/path": ""
+}
+},
+"nodes": {
+"PATH:break shelf": {
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:bricks": {
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:decor frezz": {
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:food": {
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:foods room": {
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:lamps": {
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:stoves": {
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:table for food": {
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:tables": {
+"physics/layer": 3,
+"physics/mask": 3
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

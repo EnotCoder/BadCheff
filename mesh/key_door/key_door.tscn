@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://2et6dy6al5i4"]
+
+[ext_resource type="PackedScene" uid="uid://c66swdb4ctsfm" path="res://mesh/key_door/key_door.fbx" id="1"]
+[ext_resource type="PackedScene" uid="uid://b3tj5vlc31n6j" path="res://golovolomki/action_object.tscn" id="2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_14rej"]
+size = Vector3(0.235, 0.255, 0.507)
+
+[node name="key_door" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0151367, 0.0933669, -0.0338083)
+shape = SubResource("BoxShape3D_14rej")
+
+[node name="key_door" parent="." instance=ExtResource("1")]
+transform = Transform3D(0.00954134, 0.0388454, 1.69799e-09, 0, -1.74846e-09, 0.04, 0.0388454, -0.00954134, -4.17065e-10, 0.016, 0, -0.073)
+
+[node name="ACTION_OBJECT" parent="key_door" instance=ExtResource("2")]
+transform = Transform3D(1.27806, 9.49614e-08, 9.82206, 5.20334, -1.21109e-07, -2.41253, 1.7834e-07, 2.853, -4.29336e-07, -0.010609, 0.00435901, 1.90539e-10)
+visible = false
+Key_object = "key_door"
