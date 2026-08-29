@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://0o3cdrv7baqt"
-path="res://.godot/imported/door closet_metal table.jpg-ea7046dd6cbfb9b9431abd9608b6a5e7.ctex"
+path.s3tc="res://.godot/imported/door closet_metal table.jpg-ea7046dd6cbfb9b9431abd9608b6a5e7.s3tc.ctex"
+path.etc2="res://.godot/imported/door closet_metal table.jpg-ea7046dd6cbfb9b9431abd9608b6a5e7.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "163558c80c50062e6ab8796194cdb51c"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/door closet_metal table.jpg"
-dest_files=["res://.godot/imported/door closet_metal table.jpg-ea7046dd6cbfb9b9431abd9608b6a5e7.ctex"]
+dest_files=["res://.godot/imported/door closet_metal table.jpg-ea7046dd6cbfb9b9431abd9608b6a5e7.s3tc.ctex", "res://.godot/imported/door closet_metal table.jpg-ea7046dd6cbfb9b9431abd9608b6a5e7.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://drapa8mgt8h2p"
-path="res://.godot/imported/up mesh_stairs floor.jpg-6a382debbbaf702700acc419e8401233.ctex"
+path.s3tc="res://.godot/imported/up mesh_stairs floor.jpg-6a382debbbaf702700acc419e8401233.s3tc.ctex"
+path.etc2="res://.godot/imported/up mesh_stairs floor.jpg-6a382debbbaf702700acc419e8401233.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "21d45007e56068c1e9ec86ee43c5990b"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/up mesh_stairs floor.jpg"
-dest_files=["res://.godot/imported/up mesh_stairs floor.jpg-6a382debbbaf702700acc419e8401233.ctex"]
+dest_files=["res://.godot/imported/up mesh_stairs floor.jpg-6a382debbbaf702700acc419e8401233.s3tc.ctex", "res://.godot/imported/up mesh_stairs floor.jpg-6a382debbbaf702700acc419e8401233.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

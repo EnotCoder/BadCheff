@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dfrid3eqwq2rm"
-path="res://.godot/imported/lock break_wall.jpg-49a9f8f30492ea479b723d5eeff209c4.ctex"
+path.s3tc="res://.godot/imported/lock break_wall.jpg-49a9f8f30492ea479b723d5eeff209c4.s3tc.ctex"
+path.etc2="res://.godot/imported/lock break_wall.jpg-49a9f8f30492ea479b723d5eeff209c4.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "e7c00f6e3e7d98698152a2cc6d0bbb04"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/lock/lock break_wall.jpg"
-dest_files=["res://.godot/imported/lock break_wall.jpg-49a9f8f30492ea479b723d5eeff209c4.ctex"]
+dest_files=["res://.godot/imported/lock break_wall.jpg-49a9f8f30492ea479b723d5eeff209c4.s3tc.ctex", "res://.godot/imported/lock break_wall.jpg-49a9f8f30492ea479b723d5eeff209c4.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

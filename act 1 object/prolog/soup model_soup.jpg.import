@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://lnigumbv0jee"
-path="res://.godot/imported/soup model_soup.jpg-06b33827e99cef542880ccb34bca7d46.ctex"
+path.s3tc="res://.godot/imported/soup model_soup.jpg-06b33827e99cef542880ccb34bca7d46.s3tc.ctex"
+path.etc2="res://.godot/imported/soup model_soup.jpg-06b33827e99cef542880ccb34bca7d46.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "c81f5aa299057661d552ac37e3322474"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/soup model_soup.jpg"
-dest_files=["res://.godot/imported/soup model_soup.jpg-06b33827e99cef542880ccb34bca7d46.ctex"]
+dest_files=["res://.godot/imported/soup model_soup.jpg-06b33827e99cef542880ccb34bca7d46.s3tc.ctex", "res://.godot/imported/soup model_soup.jpg-06b33827e99cef542880ccb34bca7d46.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

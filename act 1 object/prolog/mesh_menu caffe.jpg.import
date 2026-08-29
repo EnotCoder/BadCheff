@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpapbhxpj1bth"
-path="res://.godot/imported/mesh_menu caffe.jpg-2e9c45fcf5543ffc528341e819809d0d.ctex"
+path.s3tc="res://.godot/imported/mesh_menu caffe.jpg-2e9c45fcf5543ffc528341e819809d0d.s3tc.ctex"
+path.etc2="res://.godot/imported/mesh_menu caffe.jpg-2e9c45fcf5543ffc528341e819809d0d.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "c35c82dfdcf89a3e65bef78c0e85441c"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/mesh_menu caffe.jpg"
-dest_files=["res://.godot/imported/mesh_menu caffe.jpg-2e9c45fcf5543ffc528341e819809d0d.ctex"]
+dest_files=["res://.godot/imported/mesh_menu caffe.jpg-2e9c45fcf5543ffc528341e819809d0d.s3tc.ctex", "res://.godot/imported/mesh_menu caffe.jpg-2e9c45fcf5543ffc528341e819809d0d.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

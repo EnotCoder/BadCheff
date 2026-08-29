@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://200j2k7qd863"
-path="res://.godot/imported/lever_metal.jpg-94901ddf58982f21b14c6fc265d704bb.ctex"
+path.s3tc="res://.godot/imported/lever_metal.jpg-94901ddf58982f21b14c6fc265d704bb.s3tc.ctex"
+path.etc2="res://.godot/imported/lever_metal.jpg-94901ddf58982f21b14c6fc265d704bb.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "3d1057552a0f2c87457f4be6c3f6231a"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/lever_metal.jpg"
-dest_files=["res://.godot/imported/lever_metal.jpg-94901ddf58982f21b14c6fc265d704bb.ctex"]
+dest_files=["res://.godot/imported/lever_metal.jpg-94901ddf58982f21b14c6fc265d704bb.s3tc.ctex", "res://.godot/imported/lever_metal.jpg-94901ddf58982f21b14c6fc265d704bb.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

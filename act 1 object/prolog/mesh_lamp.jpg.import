@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ddcl75lm4se80"
-path="res://.godot/imported/mesh_lamp.jpg-69759694663e74dadfa1e54a400e6fbd.ctex"
+path.s3tc="res://.godot/imported/mesh_lamp.jpg-69759694663e74dadfa1e54a400e6fbd.s3tc.ctex"
+path.etc2="res://.godot/imported/mesh_lamp.jpg-69759694663e74dadfa1e54a400e6fbd.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "84d573e26a16b37c5821b0c346bea497"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/mesh_lamp.jpg"
-dest_files=["res://.godot/imported/mesh_lamp.jpg-69759694663e74dadfa1e54a400e6fbd.ctex"]
+dest_files=["res://.godot/imported/mesh_lamp.jpg-69759694663e74dadfa1e54a400e6fbd.s3tc.ctex", "res://.godot/imported/mesh_lamp.jpg-69759694663e74dadfa1e54a400e6fbd.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

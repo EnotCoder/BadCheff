@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dys8dvryw1lnj"
-path="res://.godot/imported/panel door_electrical panel.jpg-380b1e5e80b7102d61e6e2bdf17ed273.ctex"
+path.s3tc="res://.godot/imported/panel door_electrical panel.jpg-380b1e5e80b7102d61e6e2bdf17ed273.s3tc.ctex"
+path.etc2="res://.godot/imported/panel door_electrical panel.jpg-380b1e5e80b7102d61e6e2bdf17ed273.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "ac6d59e2c622709ce5323c03f0b9d811"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/panel door_electrical panel.jpg"
-dest_files=["res://.godot/imported/panel door_electrical panel.jpg-380b1e5e80b7102d61e6e2bdf17ed273.ctex"]
+dest_files=["res://.godot/imported/panel door_electrical panel.jpg-380b1e5e80b7102d61e6e2bdf17ed273.s3tc.ctex", "res://.godot/imported/panel door_electrical panel.jpg-380b1e5e80b7102d61e6e2bdf17ed273.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -1,4 +1,10 @@
-# apktool framework cache markers, keep build artifacts out
-*.apk
 # Godot editor cache (regenerated on open)
 .godot/
+
+# Android APK decompilation artifacts (not part of the game)
+res/
+src/
+
+# Recovery / build leftovers
+gdre_export.log
+_cl_
