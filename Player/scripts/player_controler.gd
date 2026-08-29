@@ -40,8 +40,6 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("sit"):
 		_toggle_crouch()
 
-	MainInventoryScript.chose_obj = MainInventoryScript.all[str(MainInventoryScript.num_chose)]
-
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 

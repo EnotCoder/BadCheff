@@ -19,8 +19,9 @@ func _process(_delta: float) -> void :
 	elif Input.is_action_just_pressed("slot_3"): MainInventoryScript.num_chose = 3
 
 	for slot in $item.get_children():
-		if MainInventoryScript.all[slot.name]:
-			slot.texture = load("res://widget/arm/" + MainInventoryScript.all[slot.name] + ".png")
+		var key: String = MainInventoryScript.slots[slot.name.to_int() - 1]
+		if key:
+			slot.texture = load("res://widget/arm/" + key + ".png")
 		else:
 			slot.texture = null
 
@@ -30,16 +31,17 @@ func _process(_delta: float) -> void :
 		else:
 			slot.texture = load("res://widget/inventory item/slot.jpg")
 
-	if MainInventoryScript.all[str(MainInventoryScript.num_chose)]:
+	var current_key: String = MainInventoryScript.slots[MainInventoryScript.num_chose - 1]
+	if current_key:
 		if Input.is_action_just_pressed("drop"):
-			var a = MainInventoryScript.all[str(MainInventoryScript.num_chose)]
+			var a := current_key
 			drop_obj = load("res://mesh/" + a + "/" + a + ".tscn").instantiate()
 			get_parent().get_parent().get_parent().add_child(drop_obj)
 			drop_obj.global_transform = $"../../drop".global_transform
 			drop_obj.apply_central_impulse(drop_obj.transform.basis.z * -3)
-			MainInventoryScript.all[str(MainInventoryScript.num_chose)] = null
+			MainInventoryScript.slots[MainInventoryScript.num_chose - 1] = ""
 		else:
-			var a = MainInventoryScript.all[str(MainInventoryScript.num_chose)]
+			var a := current_key
 			if obj: obj.queue_free()
 			obj = load("res://mesh/" + a + "/" + a + ".tscn").instantiate()
 			obj.gravity_scale = 0
@@ -51,8 +53,8 @@ func _process(_delta: float) -> void :
 
 func arm_widget(num):
 	var a
-	if MainInventoryScript.all[str(num)]:
-		a = load("res://widget/arm/" + MainInventoryScript.all[str(num)] + ".png")
+	if MainInventoryScript.slots[num - 1]:
+		a = load("res://widget/arm/" + MainInventoryScript.slots[num - 1] + ".png")
 	else:
 		a = load("res://widget/arm/null.png")
 	return a

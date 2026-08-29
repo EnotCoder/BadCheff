@@ -1,23 +1,64 @@
 extends Node
 
-var all = {
-	"1": "", 
-	"2": "", 
-	"3": ""
-}
+const SLOT_COUNT := 3
 
-var chose_obj
-var num_chose = 1
+var slots: Array[String] = ["", "", ""]
+var num_chose: int = 1
 
-var position_point = "frezz_room"
+# Player's current location (distinct from State.position_point, which tracks the chef).
+var position_point: String = "frezz_room"
 
-func add(key):
-	var ret
-	for i in all:
-		if !all[i]:
-			all[i] = key
-			ret = true
-			break
-		ret = false
+signal inventory_changed
 
-	return ret
+# Currently selected item, derived from `slots`/`num_chose` (was a desynced cached field).
+var chose_obj: String:
+	get:
+		return slots[num_chose - 1]
+
+
+func reset() -> void:
+	slots = ["", "", ""]
+	num_chose = 1
+	inventory_changed.emit()
+
+
+func add(key: String) -> bool:
+	for i in SLOT_COUNT:
+		if slots[i].is_empty():
+			slots[i] = key
+			inventory_changed.emit()
+			return true
+	return false
+
+
+func has(key: String) -> bool:
+	return key in slots
+
+
+func is_full() -> bool:
+	for s in slots:
+		if s.is_empty():
+			return false
+	return true
+
+
+func remove_at(index: int) -> String:
+	index = clampi(index, 0, SLOT_COUNT - 1)
+	var key := slots[index]
+	slots[index] = ""
+	inventory_changed.emit()
+	return key
+
+
+func set_chosen(i: int) -> void:
+	num_chose = clampi(i, 1, SLOT_COUNT)
+	inventory_changed.emit()
+
+
+func cycle(dir: int) -> void:
+	num_chose += dir
+	if num_chose > SLOT_COUNT:
+		num_chose = 1
+	elif num_chose < 1:
+		num_chose = SLOT_COUNT
+	inventory_changed.emit()
