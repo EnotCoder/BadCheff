@@ -4,6 +4,7 @@
 [ext_resource type="Skin" path="res://enemy/cheff_skin.res" id="2_yo1sh"]
 [ext_resource type="AnimationLibrary" path="res://enemy/cheff_anims.res" id="3_m37si"]
 [ext_resource type="Script" uid="uid://dfh8n2b6gh5pn" path="res://enemy/you_lost.gd" id="7"]
+[ext_resource type="Script" uid="uid://bir01xbbnpf7n" path="res://enemy/cheff_ai.gd" id="9"]
 [ext_resource type="FontFile" uid="uid://bloqh7n8tgsiw" path="res://widget/font.ttf" id="8"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7aued"]
@@ -47,6 +48,7 @@ radius = 0.723713
 [node name="Cheff" type="CharacterBody3D" unique_id=989422314]
 collision_layer = 8
 collision_mask = 8
+script = ExtResource("9")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=525527338]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.193, 0)

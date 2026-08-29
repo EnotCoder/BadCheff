@@ -5,8 +5,8 @@ signal noise()
 enum state_book{idle, cheak, attack}
 var state = 0
 
-var object_list_from_kithcen
-var object_list_from_room
+var object_list_from_kithcen: Array = []
+var object_list_from_room: Array = []
 
 var position_point = "room"
 
