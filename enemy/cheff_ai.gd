@@ -1,46 +1,47 @@
 extends CharacterBody3D
 class_name Enemy
 
+const WALK_SPEED := 3.0
+const RUN_SPEED := 5.0
+const ARRIVE_DISTANCE := 0.3
 
-const WALK_SPEED = 3
-const RUN_SPEED = 5
+var kill := false
 
-var navigation_target = Vector3.ZERO
-var prev_velocity = Vector3.ZERO
-var kill = false
-
-@onready var animation_state_machine = $AnimationTree.get("parameters/playback")
+@onready var animation_state_machine = animation_tree.get("parameters/playback")
 @export var player: Node3D
 @export var navigation_agent: NavigationAgent3D
+@export var animation_tree: AnimationTree
+@export var you_lost: Node2D
+@export var hit: Area3D
+@export var door_kitchen: Node
 @export var list_kitchen_objects: Array[Node]
 @export var list_room_objects: Array[Node]
 
-func _ready():
+func _ready() -> void:
 	State.object_list_from_kithcen = list_kitchen_objects
 	State.object_list_from_room = list_room_objects
-	$hit.body_entered.connect(_on_hit_body_entered)
+	hit.body_entered.connect(_on_hit_body_entered)
 
-func _physics_process(delta):
-	# Gravitation
+func _physics_process(delta: float) -> void:
 	if !is_on_floor():
 		velocity += get_gravity() * delta
-	
 	process_movement()
 	manage_animations()
 
+func process_movement() -> void:
+	var target_position := navigation_agent.get_next_path_position()
+	var dir := (target_position - global_position).normalized()
 
-func process_movement():
-	var target_position = navigation_agent.get_next_path_position()
-	var dir = (target_position - global_position).normalized()
-
-	if State.state != State.StateBook.ATTACK: velocity = dir * WALK_SPEED
-	else: velocity = dir * RUN_SPEED
-	if global_position.distance_to(target_position) > 0.3:
+	if State.state != State.StateBook.ATTACK:
+		velocity = dir * WALK_SPEED
+	else:
+		velocity = dir * RUN_SPEED
+	if global_position.distance_to(target_position) > ARRIVE_DISTANCE:
 		look_at(target_position)
-	navigate_to(get_postion())
+	navigate_to(get_navigation_target())
 
 	if State.position_point == "kitchen" and (
-		$"../active object/door/door kitchen".door_opened
+		door_kitchen.get("door_opened") as bool
 		or MainInventoryScript.position_point != "frezz_room"
 	):
 		_start_chase()
@@ -52,25 +53,22 @@ func _start_chase() -> void:
 	State.state = State.StateBook.ATTACK
 	Dialog.show_say("Ага")
 
-func manage_animations():
-	if velocity == prev_velocity and !kill:
-		animation_state_machine.travel("idle")
-	elif velocity != prev_velocity and !kill:
+func manage_animations() -> void:
+	if kill:
+		animation_state_machine.travel("hit")
+	elif velocity.length() > 0.01:
 		animation_state_machine.travel("walk")
 	else:
-		animation_state_machine.travel("hit")
-	prev_velocity = velocity
+		animation_state_machine.travel("idle")
 
-func get_postion():
-	var n: Vector3
+func get_navigation_target() -> Vector3:
 	match State.state:
-		State.StateBook.IDLE: n = State.Room
-		State.StateBook.CHEAK: n = State.Kithen
-		State.StateBook.ATTACK: n = State.Player
-		_: n = State.Room
-	return n
+		State.StateBook.IDLE: return State.Room
+		State.StateBook.CHEAK: return State.Kithen
+		State.StateBook.ATTACK: return State.Player
+		_: return State.Room
 
-func navigate_to(_position):
+func navigate_to(_position: Vector3) -> void:
 	navigation_agent.target_position = _position
 
 func _on_hit_body_entered(_body: Node3D) -> void:
@@ -78,4 +76,4 @@ func _on_hit_body_entered(_body: Node3D) -> void:
 	player.queue_free()
 	await get_tree().create_timer(1.2).timeout
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
-	$"you lost".show()
+	you_lost.show()
