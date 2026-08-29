@@ -1,2 +1,4 @@
 # apktool framework cache markers, keep build artifacts out
 *.apk
+# Godot editor cache (regenerated on open)
+.godot/

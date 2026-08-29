@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://b5brqy1d2l01p" path="res://ACTS/camera.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://df5rnqgcxwvy0" path="res://act 1 object/prolog/camera.jpg" id="2"]
-[ext_resource type="PackedScene" uid="uid://b3ucf2qqp6wcv" path="res://act 1 object/prolog/camera_fov.fbx" id="3"]
+[ext_resource type="PackedScene" uid="uid://b3ucf2qqp6wcv" path="res://act 1 object/prolog/camera_fov.glb" id="3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4tbrd"]
 resource_name = "Material"

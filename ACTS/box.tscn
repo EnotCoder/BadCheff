@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dn31hh4dc4smy" path="res://ACTS/scripts/move.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="2"]
-[ext_resource type="PackedScene" uid="uid://clcheo327pdpd" path="res://act 1 object/prolog/box.fbx" id="3"]
+[ext_resource type="PackedScene" uid="uid://clcheo327pdpd" path="res://act 1 object/prolog/box.glb" id="3"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v74ac"]
 size = Vector3(0.8, 0.8, 0.8)

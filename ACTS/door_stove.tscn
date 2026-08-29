@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cq7poyneqv6gn"]
 
 [ext_resource type="Script" uid="uid://ptkat2llu4ik" path="res://ACTS/scripts/doors/door.gd" id="1"]
-[ext_resource type="PackedScene" uid="uid://c2c37u7bwsa61" path="res://act 1 object/prolog/door stove.fbx" id="2"]
+[ext_resource type="PackedScene" uid="uid://c2c37u7bwsa61" path="res://act 1 object/prolog/door stove.glb" id="2"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="3"]
 
 [sub_resource type="Animation" id="Animation_0gat0"]
