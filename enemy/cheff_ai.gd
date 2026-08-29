@@ -10,12 +10,15 @@ var prev_velocity = Vector3.ZERO
 var kill = false
 
 @onready var animation_state_machine = $AnimationTree.get("parameters/playback")
+@export var player: Node3D
+@export var navigation_agent: NavigationAgent3D
 @export var list_kitchen_objects: Array[Node]
 @export var list_room_objects: Array[Node]
 
 func _ready():
 	State.object_list_from_kithcen = list_kitchen_objects
 	State.object_list_from_room = list_room_objects
+	$hit.body_entered.connect(_on_hit_body_entered)
 
 func _physics_process(delta):
 	# Gravitation
@@ -27,7 +30,7 @@ func _physics_process(delta):
 
 
 func process_movement():
-	var target_position = $NavigationAgent3D.get_next_path_position()
+	var target_position = navigation_agent.get_next_path_position()
 	var dir = (target_position - global_position).normalized()
 
 	if State.state != State.StateBook.ATTACK: velocity = dir * WALK_SPEED
@@ -36,15 +39,18 @@ func process_movement():
 		look_at(target_position)
 	navigate_to(get_postion())
 
-	if $"../active object/door/door kitchen".door_opened and State.position_point == "kitchen":
-		State.state = State.StateBook.ATTACK
-		Dialog.show_say("Ага")
-	elif MainInventoryScript.position_point != "frezz_room" and State.position_point == "kitchen":
-		State.state = State.StateBook.ATTACK
-		Dialog.show_say("Ага")
+	if State.position_point == "kitchen" and (
+		$"../active object/door/door kitchen".door_opened
+		or MainInventoryScript.position_point != "frezz_room"
+	):
+		_start_chase()
 
-	if !$NavigationAgent3D.is_navigation_finished():
+	if !navigation_agent.is_navigation_finished():
 		move_and_slide()
+
+func _start_chase() -> void:
+	State.state = State.StateBook.ATTACK
+	Dialog.show_say("Ага")
 
 func manage_animations():
 	if velocity == prev_velocity and !kill:
@@ -65,11 +71,11 @@ func get_postion():
 	return n
 
 func navigate_to(_position):
-	$NavigationAgent3D.target_position = _position
+	navigation_agent.target_position = _position
 
-func _on_hit_body_entered(_body: Node3D) -> void :
+func _on_hit_body_entered(_body: Node3D) -> void:
 	kill = true
-	$"../player".queue_free()
+	player.queue_free()
 	await get_tree().create_timer(1.2).timeout
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	$"you lost".show()

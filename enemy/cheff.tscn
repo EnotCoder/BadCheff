@@ -586,6 +586,5 @@ theme_override_font_sizes/font_size = 21
 text = "В меню"
 flat = true
 
-[connection signal="body_entered" from="hit" to="." method="_on_hit_body_entered"]
 [connection signal="pressed" from="you lost/restart" to="you lost" method="_on_restart_pressed"]
 [connection signal="pressed" from="you lost/go to menu" to="you lost" method="_on_go_to_menu_pressed"]
