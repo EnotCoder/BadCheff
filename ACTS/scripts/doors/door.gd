@@ -17,7 +17,7 @@ func toggle_door():
 		if locked == MainInventoryScript.chose_obj:
 			unlock_door()
 		else:
-			show_locked_hint("Закрыто")
+			show_locked_hint(locked_hint)
 	else:
 		if not animation_in_progress:
 			if not door_opened:
