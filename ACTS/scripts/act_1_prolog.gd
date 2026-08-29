@@ -2,7 +2,7 @@ extends Node3D
 
 
 func _ready() -> void :
-	State.state = 0
+	State.state = State.StateBook.IDLE
 	State.position_point = "room"
 	MainInventoryScript.reset()
 

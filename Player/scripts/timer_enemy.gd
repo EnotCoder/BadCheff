@@ -12,7 +12,7 @@ func _process(_delta: float) -> void :
 	$hint.text = Dialog.hint_text
 	$Label.text = str(int($Timer.time_left))
 
-	if str(int($Timer.time_left)) != "0" and State.state != 2: $Label.show()
+	if str(int($Timer.time_left)) != "0" and 	State.state != State.StateBook.ATTACK: $Label.show()
 	else: $Label.hide()
 
 func p():
@@ -26,23 +26,23 @@ func p():
 
 func test_room(list):
 	for obj in list:
-		if obj.player_interaction_active and State.state == 1:
-			State.state = 2
+		if obj.player_interaction_active and State.state == State.StateBook.CHEAK:
+			State.state = State.StateBook.ATTACK
 			Dialog.show_say(obj.say)
 			break
 
 func _on_timer_timeout() -> void :
-	State.state = 1
+	State.state = State.StateBook.CHEAK
 	test_room(State.object_list_from_room)
 
-	if State.state != 2: Dialog.show_say("Откуда был шум!?")
+	if 	State.state != State.StateBook.ATTACK: Dialog.show_say("Откуда был шум!?")
 	await get_tree().create_timer(5).timeout
-	if State.state != 2: Dialog.show_say("Что-то не так")
+	if 	State.state != State.StateBook.ATTACK: Dialog.show_say("Что-то не так")
 	await get_tree().create_timer(5).timeout
 
 	test_room(State.object_list_from_kithcen)
 
-	if State.state != 2:
+	if 	State.state != State.StateBook.ATTACK:
 		Dialog.show_say("Странно всё на месте")
-		State.state = 0
+		State.state = State.StateBook.IDLE
 	time_wait = false

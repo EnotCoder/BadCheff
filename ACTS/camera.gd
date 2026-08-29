@@ -12,5 +12,5 @@ func _process(delta: float) -> void:
 
 func _on_hit_body_entered(body: Node3D) -> void :
 	if body is CharacterBody3D and MainInventoryScript.position_point == "room":
-		State.state = 2
+		State.state = State.StateBook.ATTACK
 		Dialog.show_say("ага")

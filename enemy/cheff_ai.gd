@@ -30,17 +30,17 @@ func process_movement():
 	var target_position = $NavigationAgent3D.get_next_path_position()
 	var dir = (target_position - global_position).normalized()
 
-	if State.state != 2: velocity = dir * WALK_SPEED
+	if State.state != State.StateBook.ATTACK: velocity = dir * WALK_SPEED
 	else: velocity = dir * RUN_SPEED
 	if global_position.distance_to(target_position) > 0.3:
 		look_at(target_position)
 	navigate_to(get_postion())
 
 	if $"../active object/door/door kitchen".door_opened and State.position_point == "kitchen":
-		State.state = 2
+		State.state = State.StateBook.ATTACK
 		Dialog.show_say("Ага")
 	elif MainInventoryScript.position_point != "frezz_room" and State.position_point == "kitchen":
-		State.state = 2
+		State.state = State.StateBook.ATTACK
 		Dialog.show_say("Ага")
 
 	if !$NavigationAgent3D.is_navigation_finished():
@@ -56,11 +56,12 @@ func manage_animations():
 	prev_velocity = velocity
 
 func get_postion():
-	var n
+	var n: Vector3
 	match State.state:
-		0: n = State.Room
-		1: n = State.Kithen
-		2: n = State.Player
+		State.StateBook.IDLE: n = State.Room
+		State.StateBook.CHEAK: n = State.Kithen
+		State.StateBook.ATTACK: n = State.Player
+		_: n = State.Room
 	return n
 
 func navigate_to(_position):
