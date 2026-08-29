@@ -1,0 +1,2 @@
+# apktool framework cache markers, keep build artifacts out
+*.apk

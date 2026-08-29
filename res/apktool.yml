@@ -1,0 +1,160 @@
+version: 3.0.3
+apkFileName: badcheff.apk
+usesFramework:
+  ids:
+  - 1
+sdkInfo:
+  minSdkVersion: 21
+  targetSdkVersion: 34
+versionInfo:
+  versionCode: 1
+  versionName: 1.0.0
+resourcesInfo:
+  packageId: 127
+  packageName: com.godot.game
+doNotCompress:
+- arsc
+- png
+- assets/.godot/exported/133200997/export-061368e9764d4ce69368860b510f2372-cheff.scn
+- assets/.godot/exported/133200997/export-138631bb55aefeddbee936229c25ea38-action.scn
+- assets/.godot/exported/133200997/export-1b47fb572f8ad7b87931c5c418d80f44-hamer.scn
+- assets/.godot/exported/133200997/export-2d23cfbc4989cee5e9fb7b9b7bd21ecc-key_panel.scn
+- assets/.godot/exported/133200997/export-34748925096cc1199f7b567596ac0af7-action_object.scn
+- assets/.godot/exported/133200997/export-4fefb2d1c978e429fe9cfeba8aa59129-virtual_joystick_scene.scn
+- assets/.godot/exported/133200997/export-5ff58dfef2907feed1cb62f86e129434-act_1_prolog.scn
+- assets/.godot/exported/133200997/export-65fc1102b221e3c86f8828aab5faf636-test.scn
+- assets/.godot/exported/133200997/export-71e23035d725ba18dc198e419c28df60-cook_handle.scn
+- assets/.godot/exported/133200997/export-7be586eb6f3ab4c087272e40b3e92761-enemy_triger.scn
+- assets/.godot/exported/133200997/export-83d808e0e1307c6a461caa53cc68774a-key_door.scn
+- assets/.godot/exported/133200997/export-95c56068e9de73324f60844ccd1d66e7-door_kitchen.scn
+- assets/.godot/exported/133200997/export-9a98ef2382816f9e97c9eb5b6fe64d35-hint_object.scn
+- assets/.godot/exported/133200997/export-b471c083cb51534719ab0333f83e268d-box.scn
+- assets/.godot/exported/133200997/export-d25007babf48b5a11b91afed6aa2e49b-camera.scn
+- assets/.godot/exported/133200997/export-d267b47f7e81a3258979164d56d0d9c2-player.scn
+- assets/.godot/exported/133200997/export-d640bc6dd1f7096612bb61529620c290-door_stove.scn
+- assets/.godot/exported/133200997/export-d668e33ec2637e4ce59abc869c577259-menu.scn
+- assets/.godot/exported/133200997/export-e107fcec8cebdaf7d29f72292e97972e-triger.scn
+- assets/.godot/exported/133200997/export-ef493911e4b0d69933b26e22a0cd8c45-door_k_and_r.scn
+- assets/.godot/imported/Bevel Circle.png-1be1b7d26bcc5ec5fca963612ac926d2.ctex
+- assets/.godot/imported/CoverPreview.svg-7c17dc7ed6007b5f94a5e30c30227a42.ctex
+- assets/.godot/imported/Crouch.png-8dad4d57f6d2fffeb0459d8f7b522c3b.ctex
+- assets/.godot/imported/Logo.svg-ff6e2b43579b0b50d493f1bf1feaff55.ctex
+- assets/.godot/imported/Menu img.jpg-65d9b8414f487002f2f1483b13e7f90b.ctex
+- assets/.godot/imported/ShowcasePreview.png-70f7a50f53e5fc814a0e306c3f1e556a.ctex
+- assets/.godot/imported/active slot.jpg-8b7f94ffa8df666c8aab4213780c77c0.ctex
+- assets/.godot/imported/all.jpg-928cdacd2719968a5ef48f109a7b5e1e.etc2.ctex
+- assets/.godot/imported/bar.jpg-b96c37c39f6b9911344c86baa456b281.etc2.ctex
+- assets/.godot/imported/black wall.jpg-07a5f70578bfac3e492ba1f2d88aaa07.etc2.ctex
+- assets/.godot/imported/blood.jpg-216675559576179ec7198e81936ac784.ctex
+- assets/.godot/imported/board.fbx-7de89df87dca59f4eaa24e09196b05ca.scn
+- assets/.godot/imported/board.jpg-79a1d846362ca09afeac05dc031f0e5b.etc2.ctex
+- assets/.godot/imported/board_break.fbx-973a65bf73bd0b62307c864fa4e572b4.scn
+- assets/.godot/imported/box.fbx-a55288c905a5f529311a19a8359d3e87.scn
+- assets/.godot/imported/box.jpg-ca01195e1832d36275ed61502b5583ed.etc2.ctex
+- assets/.godot/imported/brick.jpg-b8bf3cc1ffb12e029fecd8561905dec0.etc2.ctex
+- assets/.godot/imported/bulb.jpg-68881f3163ae5494f6331ef044f497a9.etc2.ctex
+- assets/.godot/imported/camera.fbx-c652ef96fd75bebda641eb2c0c190420.scn
+- assets/.godot/imported/camera.jpg-6ebad8273662e597854153dfc62c31e5.etc2.ctex
+- assets/.godot/imported/camera_fov.fbx-684479ef7ea15d3ffa76c7f00c8f535b.scn
+- assets/.godot/imported/carpet.jpg-17b5783f47dac744d3e7c3e9b0de2469.etc2.ctex
+- assets/.godot/imported/cheff anim.glb-0d7f0e3dd42acd0ec643b428974d88e8.scn
+- assets/.godot/imported/cheff anim_body.png-67ceb6e39f69568cb522807fb9b2f88e.etc2.ctex
+- assets/.godot/imported/cheff anim_eays.jpg-a46ae0f8e80f7114f6c66c03b5734ed2.etc2.ctex
+- assets/.godot/imported/cheff anim_hair.jpg-ce7d60c73b56daabadf09885aaa3a285.etc2.ctex
+- assets/.godot/imported/cheff anim_legs.jpg-b34be6ede44d434b49efd341f0836d3b.etc2.ctex
+- assets/.godot/imported/cheff anim_shrit all.png-05dd1a56472e48815241014513f99019.etc2.ctex
+- assets/.godot/imported/closet.fbx-6188060bb9b34b75c6757608df53a4f2.scn
+- assets/.godot/imported/cola.jpg-49bcdf803e88a2cc4c0c245f4144282d.etc2.ctex
+- assets/.godot/imported/cook handle.fbx-7a04bd39306f526c90474be8b2cb3ba2.scn
+- assets/.godot/imported/cook_handle.jpg-3e4bbdca4194eb3527b3d6c42c2ec02f.etc2.ctex
+- assets/.godot/imported/cook_handle.png-db14ec0c1e2ae60605810236342b4d13.ctex
+- assets/.godot/imported/curtain window.jpg-b6afb2e4e3c48e69af97b2a0f835583e.etc2.ctex
+- assets/.godot/imported/curtain.jpg-cc65f3a8f7971df7fb2aaf726509e3e6.etc2.ctex
+- assets/.godot/imported/dark_wall.jpg-036485d75d8c17a140b44bb473f806e2.etc2.ctex
+- assets/.godot/imported/dark_wood.jpg-fc271e216b94037362e0ba0c924256ac.etc2.ctex
+- assets/.godot/imported/desk for food.jpg-479d14acb434273008e56c1c3faa4ec8.etc2.ctex
+- assets/.godot/imported/desk.jpg-b18bae43f849a9d521bbb480f3fda08c.etc2.ctex
+- assets/.godot/imported/dina.jpg-a094b23be8db4757f1961b8f6c19b83f.etc2.ctex
+- assets/.godot/imported/door closet.fbx-3d17bf2e6116a693b7fa76425da3d396.scn
+- assets/.godot/imported/door cut.fbx-3fc1aa0e478179e6089721092a55ea7b.scn
+- assets/.godot/imported/door k and r.fbx-46afd66f93569bdb2db8d79ca41d61c5.scn
+- assets/.godot/imported/door k and r.jpg-05a8146297edbcbb1719016e084e2530.etc2.ctex
+- assets/.godot/imported/door kitchen.fbx-518d97d35705bcf33ed8df9395060feb.scn
+- assets/.godot/imported/door kitchen.jpg-8d5ca9e2a4e7aa70cd4e28cc6517a63e.etc2.ctex
+- assets/.godot/imported/door stove.fbx-dee519a0f3bf05ce5c813af96c734016.scn
+- assets/.godot/imported/door.jpg-84f0d258a6e043ed71bddf3fced4fdee.etc2.ctex
+- assets/.godot/imported/door.jpg-87fde8e3b598381f0f649aed8d49afc7.etc2.ctex
+- assets/.godot/imported/drop.png-1c6f63d40a2f58ab5127dd1f31c823f2.ctex
+- assets/.godot/imported/electrical panel.jpg-5432e175a7e7b4a03db64bcf7e893671.etc2.ctex
+- assets/.godot/imported/ent.png-a1492e398637260980dfe140b41c5050.ctex
+- assets/.godot/imported/fanta.jpg-dfe336659ae74b5bb8189bf436feeda5.etc2.ctex
+- assets/.godot/imported/floor.jpg-1ce496d3c735fd2670616957b3e2792c.etc2.ctex
+- assets/.godot/imported/floor.png-f5678ed819c05af41d77504d4cf0726e.etc2.ctex
+- assets/.godot/imported/floor_dark.jpg-fde05edf86a298722a344025c6b8d9bd.etc2.ctex
+- assets/.godot/imported/floor_freezz room.jpg-b961282e753a39029cd8ea47a0ea60cb.etc2.ctex
+- assets/.godot/imported/floor_kitchen.jpg-79d245a1df910a5844602cacbc81362b.etc2.ctex
+- assets/.godot/imported/font.ttf-3e428c5f2d50c6e791053fc2b16993f7.fontdata
+- assets/.godot/imported/food.jpg-6f2b864610c9c81214cb2275a2a3a28d.etc2.ctex
+- assets/.godot/imported/glass.jpg-73fa09facb8578e4ab9b0e5a5c0e0eac.etc2.ctex
+- assets/.godot/imported/glock.fbx-75f52dbff1164593645d51e7b9756e1a.scn
+- assets/.godot/imported/hamer.fbx-ebd6dac2a747af43d71cf547601de889.scn
+- assets/.godot/imported/hamer.png-9c4fcac443235a4ef8c5ebca0cf34869.etc2.ctex
+- assets/.godot/imported/hello table.jpg-ce4956730d47cc6924e1130df57f6d5b.etc2.ctex
+- assets/.godot/imported/ice.jpg-37211e1d1fd8662c29c2dcfda1b9142f.etc2.ctex
+- assets/.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560.ctex
+- assets/.godot/imported/joystick_base_outline.png-1529fbc0a23b5af9e961e1a3d047aa0b.ctex
+- assets/.godot/imported/joystick_icon.png-6e8744e631946e765d6836c0ecb27227.ctex
+- assets/.godot/imported/joystick_tip.png-95989d4495f4fb8387b93ac5f53ed669.ctex
+- assets/.godot/imported/joystick_tip_arrows.png-cd5fb367005f4e3e79a192d69a489560.ctex
+- assets/.godot/imported/key panel.fbx-099da06c1832b6607c8b7988016af18d.scn
+- assets/.godot/imported/key panel.jpg-d102c9de46041d952e6b15029ecbb9cf.etc2.ctex
+- assets/.godot/imported/key_door.fbx-0c7a251bd4c9783882551aa7d16f29a6.scn
+- assets/.godot/imported/key_door.jpg-b330a7a547300c09b4550fc38a72a4c1.etc2.ctex
+- assets/.godot/imported/key_door.png-69675765a2aecce4e234a835b7e927ff.ctex
+- assets/.godot/imported/key_panel.jpg-33af88a29ec88efd4e47ad5818182bcd.etc2.ctex
+- assets/.godot/imported/key_panel.png-c8d38877335d2d11bc5bfabe23aef35f.ctex
+- assets/.godot/imported/knife.jpg-cf710ee0a6f7687aca799c171ad2fb11.etc2.ctex
+- assets/.godot/imported/lamp.jpg-03d408e2f9b508cf922e7d3bbd2150e1.etc2.ctex
+- assets/.godot/imported/lever.fbx-f4d2a0bb5914e8c0f54c9a6e32177ab0.scn
+- assets/.godot/imported/light wood.jpg-4190ea2f3bb94258e9d08e6699c93664.etc2.ctex
+- assets/.godot/imported/list.jpg-27afbe222be3d285bd908a7dd6dbe6b5.etc2.ctex
+- assets/.godot/imported/lock active.fbx-4e8d8007a5164b95c738e6b802b62a4a.scn
+- assets/.godot/imported/lock break.fbx-a2e9ed4632e83f3b80a8600f53cc2ee3.scn
+- assets/.godot/imported/main.jpg-8cab494538453e7ec8f6060481097abb.etc2.ctex
+- assets/.godot/imported/meat.jpg-1e17f31ade791910ced3ff8e9fc41a37.etc2.ctex
+- assets/.godot/imported/melon.jpg-b38bc8d4f4f4f1e3be7fcce7fb46df5f.etc2.ctex
+- assets/.godot/imported/menu bar.jpg-d4212a4122acfe563517a346fbc2b09f.etc2.ctex
+- assets/.godot/imported/menu caffe.jpg-8c67c309322852079d7dea4995770c93.etc2.ctex
+- assets/.godot/imported/mesh.fbx-1a42c20bfab66fe3ce514f24104c2296.scn
+- assets/.godot/imported/metal box.jpg-c602bde69bcc9886afac19c5d3ce5344.etc2.ctex
+- assets/.godot/imported/metal table.jpg-b6a58a075a8cdc029c0bb40b136ce82b.etc2.ctex
+- assets/.godot/imported/metal.jpg-851ee2dfde7e65f83bb134cedac63745.etc2.ctex
+- assets/.godot/imported/metal.jpg-d3a60c765883acf418f8467c5600b8b2.etc2.ctex
+- assets/.godot/imported/napkin holders.jpg-1a0f97e7fa1c2d8d0ef7e2614ce81f5a.etc2.ctex
+- assets/.godot/imported/orange.jpg-17d87fd10554cdb7a13063517ff5ff8b.etc2.ctex
+- assets/.godot/imported/orig.webp-d52b8faed59814060748d8b95c9a0101.etc2.ctex
+- assets/.godot/imported/pan.jpg-456c4e8793418a8c666c8e8feac15f02.etc2.ctex
+- assets/.godot/imported/panel door.fbx-b58c8ba8d638d48284e17819115de8e9.scn
+- assets/.godot/imported/red metal.jpg-4d585fb14d300a608d217460a09b1b73.etc2.ctex
+- assets/.godot/imported/rubber.jpg-983917d449d30833efe52f8235eb0b01.etc2.ctex
+- assets/.godot/imported/salad.jpg-39334d17890b1d41d7705c20162e1850.etc2.ctex
+- assets/.godot/imported/slot.jpg-2671ee078445b9fa5a12d187843cb71d.ctex
+- assets/.godot/imported/soup model.fbx-f3fc8e2a66587c3c24cdadf8de9486b1.scn
+- assets/.godot/imported/soup.jpg-5174cc7ff26283b9932b0ce5ce47c0ba.etc2.ctex
+- assets/.godot/imported/sprite.jpg-88f80d83319d1e7966404c3d85bc6419.etc2.ctex
+- assets/.godot/imported/stairs floor.jpg-0a404383553a52b1c3d356cc35c39e07.etc2.ctex
+- assets/.godot/imported/stove up.jpg-9f1d1177c379d59fecbe00de32c8d284.etc2.ctex
+- assets/.godot/imported/table_tex.jpg-c2fe1e350f0ca8d32ccd0fba178b5b58.etc2.ctex
+- assets/.godot/imported/tape.jpg-e69a49e65e3254b91be5bfae959e74c2.etc2.ctex
+- assets/.godot/imported/tex.png-95d540a9072894390f524615e9d84f77.etc2.ctex
+- assets/.godot/imported/tex.png-b70f98883d1daaee8b1006a8a59d768d.ctex
+- assets/.godot/imported/tomat.jpg-aebe33f8827fb3b2890d69b493de6101.etc2.ctex
+- assets/.godot/imported/up mesh.fbx-eb912720ca3b50f8c499ad2bca9e84d8.scn
+- assets/.godot/imported/virtual_joystick_icon.png-de46b24999f9aaea71ffaa7771da41e6.ctex
+- assets/.godot/imported/wall kitchen.jpg-3d77a77cdc4adf69dbbec791ce64215e.etc2.ctex
+- assets/.godot/imported/wall.jpg-3bf4c831ce516b554b33c5b77ae44725.etc2.ctex
+- assets/.godot/imported/white wall.jpg-7ce087d5edd2babab425d4428b4e97fd.etc2.ctex
+- assets/.godot/imported/wind cut.fbx-e51a6921318d809f1d35ceed987e5bc6.scn
+- assets/.godot/imported/wood floor.jpg-41217df66d63cee30fbf4da62c5bebae.ctex
+- assets/.godot/imported/сucumber.jpg-027753a8004d3f1b8952cdee4ed66c90.etc2.ctex
+- assets/_cl_

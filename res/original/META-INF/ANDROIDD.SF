@@ -1,0 +1,1542 @@
+Signature-Version: 1.0
+Created-By: 1.0 (Android)
+SHA-256-Digest-Manifest: eZZt0mmvEtW8rT+Z+xUjVOUJRiiuwoMo8PiGM0AxH6I=
+X-Android-APK-Signed: 2, 3
+
+Name: AndroidManifest.xml
+SHA-256-Digest: SpYY/JFKLJ7zLRWbmJ/OT4jx/K5SqACqEyFQA0hBfT0=
+
+Name: DebugProbesKt.bin
+SHA-256-Digest: f1VLL3ND49UIB8KI6Qz30xG64Fz+tJnIVlR2zwEcJAM=
+
+Name: assets/.godot/exported/133200997/export-061368e9764d4ce69368860b
+ 510f2372-cheff.scn
+SHA-256-Digest: 5ZwE3mTcGNZUM07MtM+0oZATlqwElmkRygTj7m0CT78=
+
+Name: assets/.godot/exported/133200997/export-138631bb55aefeddbee93622
+ 9c25ea38-action.scn
+SHA-256-Digest: 0sCaYtJimKaDvmBDRn3n20bjzLxihpsynUH4bWl6O3k=
+
+Name: assets/.godot/exported/133200997/export-1b47fb572f8ad7b87931c5c4
+ 18d80f44-hamer.scn
+SHA-256-Digest: Kq4NwJyCM82Pkjv6c6c94L+W8klC0pT/D7A/UCgncwE=
+
+Name: assets/.godot/exported/133200997/export-2d23cfbc4989cee5e9fb7b9b
+ 7bd21ecc-key_panel.scn
+SHA-256-Digest: zW5eOijkeIQE7gjyFLbb0RiGEPDeamqTY8rEpI/N0CQ=
+
+Name: assets/.godot/exported/133200997/export-34748925096cc1199f7b5675
+ 96ac0af7-action_object.scn
+SHA-256-Digest: 3xlEo5mb9TItpWyBjJT+s02RTROJYj+eAw5MzFaZJdk=
+
+Name: assets/.godot/exported/133200997/export-4255467c939d1cfd7d5c370b
+ f15449d5-glass.res
+SHA-256-Digest: ApW6dTWBPdkKirGe3R7kBPVRZuuqHsNPkehkyfv3qJw=
+
+Name: assets/.godot/exported/133200997/export-4fefb2d1c978e429fe9cfeba
+ 8aa59129-virtual_joystick_scene.scn
+SHA-256-Digest: RV2kyf5iwHMSqBAbNeTH884YuUe3U/epyKi4Mh+6FmE=
+
+Name: assets/.godot/exported/133200997/export-5ff58dfef2907feed1cb62f8
+ 6e129434-act_1_prolog.scn
+SHA-256-Digest: qy63ZmHPHuWkCsHLPaEiizJxDpUJUOc2VkNVFUWavoI=
+
+Name: assets/.godot/exported/133200997/export-65fc1102b221e3c86f8828aa
+ b5faf636-test.scn
+SHA-256-Digest: QF1qSWrojPgtKf7i9vmUEeh/FsMy8epWMsuPUVVy8WM=
+
+Name: assets/.godot/exported/133200997/export-71e23035d725ba18dc198e41
+ 9c28df60-cook_handle.scn
+SHA-256-Digest: 1g3fBNW5lFNk+Y5ew1uQAwZ/nFyrA7IfGmUtOyROrCY=
+
+Name: assets/.godot/exported/133200997/export-7be586eb6f3ab4c087272e40
+ b3e92761-enemy_triger.scn
+SHA-256-Digest: BZ4McI1grhN84itGH4OYLQu+eaDPFP40Lj/Rh0YS54E=
+
+Name: assets/.godot/exported/133200997/export-83d808e0e1307c6a461caa53
+ cc68774a-key_door.scn
+SHA-256-Digest: dNTP+2Wj3LwLjjw35dRc8IF7kjLXT8TxWbL8xKaiWhY=
+
+Name: assets/.godot/exported/133200997/export-95c56068e9de73324f60844c
+ cd1d66e7-door_kitchen.scn
+SHA-256-Digest: Ye0AP/YJGP4RLorWADL0pAZe3w/U4Xq6kK9RZVoh7fw=
+
+Name: assets/.godot/exported/133200997/export-9a98ef2382816f9e97c9eb5b
+ 6fe64d35-hint_object.scn
+SHA-256-Digest: BGDfH6XwG7P81Hw78kkU2u5Kt07G3TZxvaGJ3rHmLAU=
+
+Name: assets/.godot/exported/133200997/export-b471c083cb51534719ab0333
+ f83e268d-box.scn
+SHA-256-Digest: rX1dcRqruL64jnDs87kj/3LGYFU0+aeKXMIh+Udlc38=
+
+Name: assets/.godot/exported/133200997/export-d25007babf48b5a11b91afed
+ 6aa2e49b-camera.scn
+SHA-256-Digest: ka3Bsxxpy7sQwtCwjglKBSH52AQW/fGq/onaHyPjb3Q=
+
+Name: assets/.godot/exported/133200997/export-d267b47f7e81a3258979164d
+ 56d0d9c2-player.scn
+SHA-256-Digest: Ovs2HL3zjl/7QcHl5Mq1SKCcO3pJWrNMfy5f0xsCeEA=
+
+Name: assets/.godot/exported/133200997/export-d640bc6dd1f7096612bb6152
+ 9620c290-door_stove.scn
+SHA-256-Digest: 3Rq7z1b36aGKMxJttZeEi+m58mMLAzA4pXDNku9etm8=
+
+Name: assets/.godot/exported/133200997/export-d668e33ec2637e4ce59abc86
+ 9c577259-menu.scn
+SHA-256-Digest: NVPtPgbeo/CQ92RZKoXhf2ziXrFr7d0hqmVA4yxDj5w=
+
+Name: assets/.godot/exported/133200997/export-e107fcec8cebdaf7d29f7229
+ 2e97972e-triger.scn
+SHA-256-Digest: aVKA11b+6H1c6BSEZWE7BBd/JvVduNFA8wXcYSZO4L8=
+
+Name: assets/.godot/exported/133200997/export-ef493911e4b0d69933b26e22
+ a0cd8c45-door_k_and_r.scn
+SHA-256-Digest: oYzZQ01SVl8ZhzHosR9OlfLk8oOz6dUMKQ3yId0t42w=
+
+Name: assets/.godot/global_script_class_cache.cfg
+SHA-256-Digest: JZ51Fvk8wQl7lf37M9Z/zkcFBH3oH8JdsJcxH58AdfI=
+
+Name: assets/.godot/imported/Bevel Circle.png-1be1b7d26bcc5ec5fca96361
+ 2ac926d2.ctex
+SHA-256-Digest: VykV0K5pls8NOd4X4+qaXE7AQfPslkEnF3nvisxtUls=
+
+Name: assets/.godot/imported/CoverPreview.svg-7c17dc7ed6007b5f94a5e30c
+ 30227a42.ctex
+SHA-256-Digest: B6q76eCvbvLNtK20kBsGO0oy9rdzTd/lLhUhbuug31w=
+
+Name: assets/.godot/imported/Crouch.png-8dad4d57f6d2fffeb0459d8f7b522c
+ 3b.ctex
+SHA-256-Digest: CCLJKOCnySQyL04s50NP+SXaTp247/IOwMPh5Oapjts=
+
+Name: assets/.godot/imported/Logo.svg-ff6e2b43579b0b50d493f1bf1feaff55
+ .ctex
+SHA-256-Digest: ePG2oFprPlV7YgLegTZOpus0H7igh7UCCA6cI6JUEkA=
+
+Name: assets/.godot/imported/Menu img.jpg-65d9b8414f487002f2f1483b13e7
+ f90b.ctex
+SHA-256-Digest: YG9hQWJsglhFuwN+vamDVGHxAZ7irGgR8C0S3gp8SZg=
+
+Name: assets/.godot/imported/ShowcasePreview.png-70f7a50f53e5fc814a0e3
+ 06c3f1e556a.ctex
+SHA-256-Digest: 61geV+YRMQ5dwt6NTsmGtfiiX+ftWi82FN01Mzn8AXs=
+
+Name: assets/.godot/imported/act_1_prolog.exr-3b291204aa05ee8c8b4ed444
+ a89b63e6.astc.ctexarray
+SHA-256-Digest: wTKilP1iRucBdkLjsW0Hz+PBVNr0JFPZU26cwkL/7ik=
+
+Name: assets/.godot/imported/act_1_prolog.exr-531d93bd13c21cc1698c3469
+ a91abc61.astc.ctexarray
+SHA-256-Digest: RP+D7UbXGy1uxM6DZRXhPZXxjjuXOBROHqSNl6P9nGw=
+
+Name: assets/.godot/imported/active slot.jpg-8b7f94ffa8df666c8aab42137
+ 80c77c0.ctex
+SHA-256-Digest: blgHTZKEKP3fFsXA38yn0WHef885MRWjIyPiR2+l8cI=
+
+Name: assets/.godot/imported/all.jpg-928cdacd2719968a5ef48f109a7b5e1e.
+ etc2.ctex
+SHA-256-Digest: amQp3h+lk2Min+yFKbhNTYWmLcIPGBd40B6vcujCqsA=
+
+Name: assets/.godot/imported/bar.jpg-b96c37c39f6b9911344c86baa456b281.
+ etc2.ctex
+SHA-256-Digest: +FLRKNa0p1GATTtE+fdpm6Q2TCatVzFUxcLUTe0E7vY=
+
+Name: assets/.godot/imported/black wall.jpg-07a5f70578bfac3e492ba1f2d8
+ 8aaa07.etc2.ctex
+SHA-256-Digest: W1lVZrU+lkQVbRIHVN32iyA82zHXDC5rqQfa7HA8Apk=
+
+Name: assets/.godot/imported/blood.jpg-216675559576179ec7198e81936ac78
+ 4.ctex
+SHA-256-Digest: ZhjLMPZF46qjs4SYdxc+7E07TgiZbppehgzeu7kuUCI=
+
+Name: assets/.godot/imported/board.fbx-7de89df87dca59f4eaa24e09196b05c
+ a.scn
+SHA-256-Digest: 7npGOd3L+3oRrpKQLX0KnaAxgiFlkoXHD+O7b61C96I=
+
+Name: assets/.godot/imported/board.jpg-79a1d846362ca09afeac05dc031f0e5
+ b.etc2.ctex
+SHA-256-Digest: GwPhjALthbaGCvauc+rfp8N43p7dFpIAbv7iAao95+k=
+
+Name: assets/.godot/imported/board_break.fbx-973a65bf73bd0b62307c864fa
+ 4e572b4.scn
+SHA-256-Digest: tfrmIr1PgxhG19A+xOioZNveMgNPzKhH6Zf/y+X8+f4=
+
+Name: assets/.godot/imported/box.fbx-a55288c905a5f529311a19a8359d3e87.
+ scn
+SHA-256-Digest: /MjA3PKZOTRkKBmTADxvByYeSxG7wXMH2DgEcDfvMcM=
+
+Name: assets/.godot/imported/box.jpg-ca01195e1832d36275ed61502b5583ed.
+ etc2.ctex
+SHA-256-Digest: 1V9yV1YhlpJBN52C+WMbPyAAy9tl7tQca/d8QmgskIY=
+
+Name: assets/.godot/imported/brick.jpg-b8bf3cc1ffb12e029fecd8561905dec
+ 0.etc2.ctex
+SHA-256-Digest: R7GpeedHzIO9IiHy1mH2fx6Qp9Wm1I2KB/z1v3fZdAI=
+
+Name: assets/.godot/imported/bulb.jpg-68881f3163ae5494f6331ef044f497a9
+ .etc2.ctex
+SHA-256-Digest: qNEv8ciDAomNhcjCFWbx5afDMF9YPd3UDr/VDBP77Lw=
+
+Name: assets/.godot/imported/camera.fbx-c652ef96fd75bebda641eb2c0c1904
+ 20.scn
+SHA-256-Digest: bBJY9iNrRIrBt0Z0rkv7G6wbqTqCylpAI37MaGMotwU=
+
+Name: assets/.godot/imported/camera.jpg-6ebad8273662e597854153dfc62c31
+ e5.etc2.ctex
+SHA-256-Digest: 0kEhdxpNtxHbaImFqFzbhm7pNwZZaVTp+/sJfzZZeQA=
+
+Name: assets/.godot/imported/camera_fov.fbx-684479ef7ea15d3ffa76c7f00c
+ 8f535b.scn
+SHA-256-Digest: rXlMdqT4h4YjluqiLt+BMI51DNBCpBVAIJvHT5WZ+8Y=
+
+Name: assets/.godot/imported/carpet.jpg-17b5783f47dac744d3e7c3e9b0de24
+ 69.etc2.ctex
+SHA-256-Digest: nBvFbw6LBri1Vo+yJxjo5FblPqBY9LCWlbacgmEn53E=
+
+Name: assets/.godot/imported/cheff anim.glb-0d7f0e3dd42acd0ec643b42897
+ 4d88e8.scn
+SHA-256-Digest: +8iSfb5cEDIfCYT65Gh+VY/tUy0anyVW96vYvinAcaw=
+
+Name: assets/.godot/imported/cheff anim_body.png-67ceb6e39f69568cb5228
+ 07fb9b2f88e.etc2.ctex
+SHA-256-Digest: bbcBp69TcBqRRofWl9Xecg32qJ0VJB9nc/cbcRyB4LY=
+
+Name: assets/.godot/imported/cheff anim_eays.jpg-a46ae0f8e80f7114f6c66
+ c03b5734ed2.etc2.ctex
+SHA-256-Digest: VOUdZqYsXiUYOGNCKAqUQYDDaMMeB+1CIZBoJEK1Gh4=
+
+Name: assets/.godot/imported/cheff anim_hair.jpg-ce7d60c73b56daabadf09
+ 885aaa3a285.etc2.ctex
+SHA-256-Digest: Kgv1ypqTz8qxoAKGACSSe6NuA1+UYpjXrVrooXSjNTI=
+
+Name: assets/.godot/imported/cheff anim_legs.jpg-b34be6ede44d434b49efd
+ 341f0836d3b.etc2.ctex
+SHA-256-Digest: 5gvCrbRh41fSnJYdtkiGYLeCJb+1InMqVYlp9dkcMbE=
+
+Name: assets/.godot/imported/cheff anim_shrit all.png-05dd1a56472e4881
+ 5241014513f99019.etc2.ctex
+SHA-256-Digest: QCRg0PPwggBV4ACXo2uyoMkKDEBjdQa6eqip9wdPY5s=
+
+Name: assets/.godot/imported/closet.fbx-6188060bb9b34b75c6757608df53a4
+ f2.scn
+SHA-256-Digest: DgrVcQ10HO5TJPnSOBTS+0Nd274b7svpJ4eNNXFeco0=
+
+Name: assets/.godot/imported/cola.jpg-49bcdf803e88a2cc4c0c245f4144282d
+ .etc2.ctex
+SHA-256-Digest: MYCEMHUjNbf5GwjloYyLYNf/6VvzwT0Umw1IfkFPYaY=
+
+Name: assets/.godot/imported/cook handle.fbx-7a04bd39306f526c90474be8b
+ 2cb3ba2.scn
+SHA-256-Digest: /Uis9pI+JYzVMmbEkMkkEieqI7iNB3ayH24CND8se+s=
+
+Name: assets/.godot/imported/cook_handle.jpg-3e4bbdca4194eb3527b3d6c42
+ c2ec02f.etc2.ctex
+SHA-256-Digest: +UdX+Ay/wvWOIq/te4leYXCJe0eBRah33FsDO8NZo/0=
+
+Name: assets/.godot/imported/cook_handle.png-db14ec0c1e2ae606058102363
+ 42b4d13.ctex
+SHA-256-Digest: 3Ohi8iYDTwCLjZLVHUFI9ZJA2iMpbMbPQQiIoCWFoc0=
+
+Name: assets/.godot/imported/curtain window.jpg-b6afb2e4e3c48e69af97b2
+ a0f835583e.etc2.ctex
+SHA-256-Digest: aHsm/0WurrCKCjWMtL30MEA7MEaMWdNQUvn4bjwyi/I=
+
+Name: assets/.godot/imported/curtain.jpg-cc65f3a8f7971df7fb2aaf726509e
+ 3e6.etc2.ctex
+SHA-256-Digest: on4oYAV/pMpKEui4dbIPieKJ9QYaRdTdfC5NQqp9D5I=
+
+Name: assets/.godot/imported/dark_wall.jpg-036485d75d8c17a140b44bb473f
+ 806e2.etc2.ctex
+SHA-256-Digest: 4QoT20qXVT22pzcMGGIn1UZkuyObhkEGvs8HKeg9Hns=
+
+Name: assets/.godot/imported/dark_wood.jpg-fc271e216b94037362e0ba0c924
+ 256ac.etc2.ctex
+SHA-256-Digest: M25UGP/qj/Cskd27gZ4HyFr8pTxzIYVMDRnxQ5xbCfs=
+
+Name: assets/.godot/imported/desk for food.jpg-479d14acb434273008e56c1
+ c3faa4ec8.etc2.ctex
+SHA-256-Digest: O7EXdr7KrBdW0GmzjClhn7ZRbKiMYdL+9wBlsvti1RQ=
+
+Name: assets/.godot/imported/desk.jpg-b18bae43f849a9d521bbb480f3fda08c
+ .etc2.ctex
+SHA-256-Digest: 5+2NCS8B2HoLbSctP4XW9oAiyDWytYFqrDZUwu+9cJg=
+
+Name: assets/.godot/imported/dina.jpg-a094b23be8db4757f1961b8f6c19b83f
+ .etc2.ctex
+SHA-256-Digest: NpWjke8Btfx3lOtJpmjZeYv7r1e/9MWCzVg2TH+92lU=
+
+Name: assets/.godot/imported/door closet.fbx-3d17bf2e6116a693b7fa76425
+ da3d396.scn
+SHA-256-Digest: 9ORQKDKMymLRhuNa+wqF5wgTC0UfJnRI+8w/FjT2o9Q=
+
+Name: assets/.godot/imported/door cut.fbx-3fc1aa0e478179e6089721092a55
+ ea7b.scn
+SHA-256-Digest: Yhflvcd/PaFyTbFVXDAx/BE9+O3hDdB6LCvMfHUHndg=
+
+Name: assets/.godot/imported/door k and r.fbx-46afd66f93569bdb2db8d79c
+ a41d61c5.scn
+SHA-256-Digest: lHsfeCjSTD0HissRHp5sPvLsz5mrg8HOd+N2ltelRpY=
+
+Name: assets/.godot/imported/door k and r.jpg-05a8146297edbcbb1719016e
+ 084e2530.etc2.ctex
+SHA-256-Digest: m9t3P0fQSE3vT64+txLwqVgvyWz6fiHimpCPktDBE8M=
+
+Name: assets/.godot/imported/door kitchen.fbx-518d97d35705bcf33ed8df93
+ 95060feb.scn
+SHA-256-Digest: uV/YLnwcPnGJusHxwLM99MdExzES0Px8TdqI9R1fO4k=
+
+Name: assets/.godot/imported/door kitchen.jpg-8d5ca9e2a4e7aa70cd4e28cc
+ 6517a63e.etc2.ctex
+SHA-256-Digest: v2a9M2AOTskkdf36WuOWFVbz7dPXttf0WOVyCV7U3O0=
+
+Name: assets/.godot/imported/door stove.fbx-dee519a0f3bf05ce5c813af96c
+ 734016.scn
+SHA-256-Digest: 4m81fjc35Gevhegypy97qbJwkuIdfbA5YxN2+9X84nU=
+
+Name: assets/.godot/imported/door.jpg-84f0d258a6e043ed71bddf3fced4fdee
+ .etc2.ctex
+SHA-256-Digest: hlVjdmLMy02iUeQ2zdD1ncsQVaujFNNGlYjkuzScx/k=
+
+Name: assets/.godot/imported/door.jpg-87fde8e3b598381f0f649aed8d49afc7
+ .etc2.ctex
+SHA-256-Digest: yQwhkHqT8UUiMlMska39oAmtNNAhQmzLO2du5h9B9Rg=
+
+Name: assets/.godot/imported/drop.png-1c6f63d40a2f58ab5127dd1f31c823f2
+ .ctex
+SHA-256-Digest: hfxIvi6fukCpHw9DC0qw6jEHAByFxD8fvf2l1uS7LGY=
+
+Name: assets/.godot/imported/electrical panel.jpg-5432e175a7e7b4a03db6
+ 4bcf7e893671.etc2.ctex
+SHA-256-Digest: CSygoC+NvcgeoXlyubsBfhEGlK8CpGhvYPRWAF/F4uc=
+
+Name: assets/.godot/imported/ent.png-a1492e398637260980dfe140b41c5050.
+ ctex
+SHA-256-Digest: V/riZ131lq9UDOrfmYwYUIlegGcj3nEDWlG4XgphX4Y=
+
+Name: assets/.godot/imported/fanta.jpg-dfe336659ae74b5bb8189bf436feeda
+ 5.etc2.ctex
+SHA-256-Digest: NtCMnijP+xYD6fSIZR9S8gHpSSrNTb8tJSW2e3H4yvo=
+
+Name: assets/.godot/imported/floor.jpg-1ce496d3c735fd2670616957b3e2792
+ c.etc2.ctex
+SHA-256-Digest: nLB0/o+LLP1on5ug+l+8JuzSgEd8Sa5oLHGhjob+Mjc=
+
+Name: assets/.godot/imported/floor.png-f5678ed819c05af41d77504d4cf0726
+ e.etc2.ctex
+SHA-256-Digest: N7fAsUmnnceai3C+loDqM3Dn6nbVnS4WERTsC5Y7Cz4=
+
+Name: assets/.godot/imported/floor_dark.jpg-fde05edf86a298722a344025c6
+ b8d9bd.etc2.ctex
+SHA-256-Digest: BnbyoyK8el6GjTUuwP0mUTciscwiT0DUWZ7uOn2bQwc=
+
+Name: assets/.godot/imported/floor_freezz room.jpg-b961282e753a39029cd
+ 8ea47a0ea60cb.etc2.ctex
+SHA-256-Digest: DnHPpgOvs6WCDwJCA9x+bfgBAdMKmcKDBSQOdWRrqwY=
+
+Name: assets/.godot/imported/floor_kitchen.jpg-79d245a1df910a5844602ca
+ cbc81362b.etc2.ctex
+SHA-256-Digest: Ym4rWTMn7RH7DeL9863SYCWXTukWG+5G/He4lRawoLo=
+
+Name: assets/.godot/imported/font.ttf-3e428c5f2d50c6e791053fc2b16993f7
+ .fontdata
+SHA-256-Digest: 5x0wSuG3T5L6DxuGZ7ZzmgOazDf4RUoDcp6yTuxb67k=
+
+Name: assets/.godot/imported/food.jpg-6f2b864610c9c81214cb2275a2a3a28d
+ .etc2.ctex
+SHA-256-Digest: O0Buzp5Z4pVZvfUoY2p5GfrVGqnlfgutPCamr6708GQ=
+
+Name: assets/.godot/imported/glass.jpg-73fa09facb8578e4ab9b0e5a5c0e0ea
+ c.etc2.ctex
+SHA-256-Digest: wK/Dcie1t3InpaLB+Ry1hV0WQ7YqmF6iNv1CUkGz0vE=
+
+Name: assets/.godot/imported/glock.fbx-75f52dbff1164593645d51e7b9756e1
+ a.scn
+SHA-256-Digest: +8SyyVf9F3/C8mvGCb9B719jKK2g8qvo4xj2RbOZZaM=
+
+Name: assets/.godot/imported/hamer.fbx-ebd6dac2a747af43d71cf547601de88
+ 9.scn
+SHA-256-Digest: O7NQCQJozNHlHGTEcvyOleaQe473QsbLZmAOb5b2YFE=
+
+Name: assets/.godot/imported/hamer.png-9c4fcac443235a4ef8c5ebca0cf3486
+ 9.etc2.ctex
+SHA-256-Digest: 6h4eydTym74lnlb93Kb3dOkzwB0hxbkoEVQIvNybu68=
+
+Name: assets/.godot/imported/hello table.jpg-ce4956730d47cc6924e1130df
+ 57f6d5b.etc2.ctex
+SHA-256-Digest: zWDw0rgctf/MEESVCQfz7VMultMgx4qTjqq1Q8G0gTk=
+
+Name: assets/.godot/imported/ice.jpg-37211e1d1fd8662c29c2dcfda1b9142f.
+ etc2.ctex
+SHA-256-Digest: gSaFtWsPwCLNY4IPHZR9BY6ufeal639+rHfGOP0uwsY=
+
+Name: assets/.godot/imported/icon.png-487276ed1e3a0c39cad0279d744ee560
+ .ctex
+SHA-256-Digest: nCwducwWSmRaRikVClO0sKV8TohARnXZNSPiCx7VZKk=
+
+Name: assets/.godot/imported/joystick_base_outline.png-1529fbc0a23b5af
+ 9e961e1a3d047aa0b.ctex
+SHA-256-Digest: ++++ppd2QUn8irTXcVYGNfxaOfG/mIUo+gsFk37rTXo=
+
+Name: assets/.godot/imported/joystick_icon.png-6e8744e631946e765d6836c
+ 0ecb27227.ctex
+SHA-256-Digest: xir3goVOiNqWkorcn0EiS6EVvKXSWnSJQE64gxeTa+A=
+
+Name: assets/.godot/imported/joystick_tip.png-95989d4495f4fb8387b93ac5
+ f53ed669.ctex
+SHA-256-Digest: z0nMpj2pW7KJw6iDwd02/W45UnD7RPC5No15X+Zm5OQ=
+
+Name: assets/.godot/imported/joystick_tip_arrows.png-cd5fb367005f4e3e7
+ 9a192d69a489560.ctex
+SHA-256-Digest: xnXkX5z94YxhRKE/SHuNaQ0ZPzXY8j+U1un0s9IMQWM=
+
+Name: assets/.godot/imported/key panel.fbx-099da06c1832b6607c8b7988016
+ af18d.scn
+SHA-256-Digest: sjxfwOIOtqbhzR2YWqZUp289LOwBKsHz1Jvpi3chghE=
+
+Name: assets/.godot/imported/key panel.jpg-d102c9de46041d952e6b15029ec
+ bb9cf.etc2.ctex
+SHA-256-Digest: UIfHARWuSzov1BouD3nPROZ25IKPDRa5uU0GuT7GpJY=
+
+Name: assets/.godot/imported/key_door.fbx-0c7a251bd4c9783882551aa7d16f
+ 29a6.scn
+SHA-256-Digest: 8E6jf/b1LoRm1c7ztM66mfA3KAXL00sWJ8G3h/VU7uQ=
+
+Name: assets/.godot/imported/key_door.jpg-b330a7a547300c09b4550fc38a72
+ a4c1.etc2.ctex
+SHA-256-Digest: OJsy85IYwbokBpbgUBlJ7yaA10jBxNuT5FUt5SzCLr4=
+
+Name: assets/.godot/imported/key_door.png-69675765a2aecce4e234a835b7e9
+ 27ff.ctex
+SHA-256-Digest: ldzNNsyr8HaYpgNaQJG37oo/W01Zc8y+xiPTKWAIl64=
+
+Name: assets/.godot/imported/key_panel.jpg-33af88a29ec88efd4e47ad58181
+ 82bcd.etc2.ctex
+SHA-256-Digest: laFVs/ICP9Kmb0MZD7A8sxbfDHMiNTSQePq5XevtLiE=
+
+Name: assets/.godot/imported/key_panel.png-c8d38877335d2d11bc5bfabe23a
+ ef35f.ctex
+SHA-256-Digest: Ii5gH/Kl38rjpc4En9mDl/LDXCPumPR+umnGYzK5DHM=
+
+Name: assets/.godot/imported/knife.jpg-cf710ee0a6f7687aca799c171ad2fb1
+ 1.etc2.ctex
+SHA-256-Digest: OZN72tX3DhZxueEuTUjZI+ne7y/9uNnyBPawxKvccfI=
+
+Name: assets/.godot/imported/lamp.jpg-03d408e2f9b508cf922e7d3bbd2150e1
+ .etc2.ctex
+SHA-256-Digest: 0hxPxntLzHvBIUXgA3WZC9H3lWzzpghmP3z+aPADabE=
+
+Name: assets/.godot/imported/lever.fbx-f4d2a0bb5914e8c0f54c9a6e32177ab
+ 0.scn
+SHA-256-Digest: QQb0rG94M/so31r4LSN4GiZtTXNY91iWgqbaNn4JgAQ=
+
+Name: assets/.godot/imported/light wood.jpg-4190ea2f3bb94258e9d08e6699
+ c93664.etc2.ctex
+SHA-256-Digest: RENyx4WVA8gICZNWV0m8zyPFDfZdvq85zoGuz/2klGI=
+
+Name: assets/.godot/imported/list.jpg-27afbe222be3d285bd908a7dd6dbe6b5
+ .etc2.ctex
+SHA-256-Digest: JcUiRSTCQuhGyRbs79v+0xUQjIg3BW3UlC19d28pxQU=
+
+Name: assets/.godot/imported/lock active.fbx-4e8d8007a5164b95c738e6b80
+ 2b62a4a.scn
+SHA-256-Digest: U3wLqXOWaLlo31zg96NRhPigaW0r0SOp226i9zzT4GA=
+
+Name: assets/.godot/imported/lock break.fbx-a2e9ed4632e83f3b80a8600f53
+ cc2ee3.scn
+SHA-256-Digest: ieOS18VKJrjZWM1iqoPXSqRiPHbCSVvO+BSRvaCsZbk=
+
+Name: assets/.godot/imported/main.jpg-8cab494538453e7ec8f6060481097abb
+ .etc2.ctex
+SHA-256-Digest: uxTzlG4qxbAHcUG0+BW5wqqwvHS7O4VG2g9VVQ29nOs=
+
+Name: assets/.godot/imported/meat.jpg-1e17f31ade791910ced3ff8e9fc41a37
+ .etc2.ctex
+SHA-256-Digest: oh3u/cS+5+a9z9y8MruDmM60Fv/48SFor4x4j9Esm8M=
+
+Name: assets/.godot/imported/melon.jpg-b38bc8d4f4f4f1e3be7fcce7fb46df5
+ f.etc2.ctex
+SHA-256-Digest: opkYKRZPDcLYlhTzhsQwGJEKqllRkkHXVWYNeZcpLEQ=
+
+Name: assets/.godot/imported/menu bar.jpg-d4212a4122acfe563517a346fbc2
+ b09f.etc2.ctex
+SHA-256-Digest: 6GxkNr9ALsYBiTP6p1Rfr0QHTHufJR0NO/25is7VGX8=
+
+Name: assets/.godot/imported/menu caffe.jpg-8c67c309322852079d7dea4995
+ 770c93.etc2.ctex
+SHA-256-Digest: wZ+pbzc0EoeNohjuL2cAcS8wTD+NPBjeGiYAGVZFbYk=
+
+Name: assets/.godot/imported/mesh.fbx-1a42c20bfab66fe3ce514f24104c2296
+ .scn
+SHA-256-Digest: O5MryzSfZPlNDH4MKL8EtsYpR1XuaYh+vIfYwvOef1c=
+
+Name: assets/.godot/imported/metal box.jpg-c602bde69bcc9886afac19c5d3c
+ e5344.etc2.ctex
+SHA-256-Digest: jcCrSkMqz3lEYbclJrDmlrE2bTXvpl2OmZrYJvTpLvc=
+
+Name: assets/.godot/imported/metal table.jpg-b6a58a075a8cdc029c0bb40b1
+ 36ce82b.etc2.ctex
+SHA-256-Digest: EIyyY6CoTHmeo6bnURmYyU2VC3X6PRUzfpFRvhv5Bmk=
+
+Name: assets/.godot/imported/metal.jpg-851ee2dfde7e65f83bb134cedac6374
+ 5.etc2.ctex
+SHA-256-Digest: xhddHVZOS2caVOfY4cf0ggmq+MrkJFQ60gCgoTGL778=
+
+Name: assets/.godot/imported/metal.jpg-d3a60c765883acf418f8467c5600b8b
+ 2.etc2.ctex
+SHA-256-Digest: KwbjtqT20xb+o/EjB/F/jPU8mqqIbLHPAwZad0QaWs4=
+
+Name: assets/.godot/imported/napkin holders.jpg-1a0f97e7fa1c2d8d0ef7e2
+ 614ce81f5a.etc2.ctex
+SHA-256-Digest: q5QnuZYEh6DUvVNpwroHTm2HHxidq/vaSnese60ekwk=
+
+Name: assets/.godot/imported/orange.jpg-17d87fd10554cdb7a13063517ff5ff
+ 8b.etc2.ctex
+SHA-256-Digest: JzS6PPMBnbW1ScR6RARdfB8ufe0cona5HDdErHtytbc=
+
+Name: assets/.godot/imported/orig.webp-d52b8faed59814060748d8b95c9a010
+ 1.etc2.ctex
+SHA-256-Digest: 6NrnU2iOuH4ux4vbDVPSSaWrhJ2yasYG4qEFOswqcXY=
+
+Name: assets/.godot/imported/pan.jpg-456c4e8793418a8c666c8e8feac15f02.
+ etc2.ctex
+SHA-256-Digest: KxlRwif+lYec0jLu5jNuWCxVDL/28fZi1jadWEjUEyo=
+
+Name: assets/.godot/imported/panel door.fbx-b58c8ba8d638d48284e1781911
+ 5de8e9.scn
+SHA-256-Digest: QMlB1f4oAyy1Xp+QpoF2QaehPkOzhOVscQ/pecooIcA=
+
+Name: assets/.godot/imported/red metal.jpg-4d585fb14d300a608d217460a09
+ b1b73.etc2.ctex
+SHA-256-Digest: 3haX7+k01O3xT5qngixgwk5hc5P0c8oNNfiRPw0XJbU=
+
+Name: assets/.godot/imported/rubber.jpg-983917d449d30833efe52f8235eb0b
+ 01.etc2.ctex
+SHA-256-Digest: o7zCA85mrEDTanb8ZvqUL0z6OUfcNnPp5ia2fg1PYB8=
+
+Name: assets/.godot/imported/salad.jpg-39334d17890b1d41d7705c20162e185
+ 0.etc2.ctex
+SHA-256-Digest: xy6W/QkQk3Ewgk0SLb8BGmqoT9qa9br4H7wpeE+ioys=
+
+Name: assets/.godot/imported/slot.jpg-2671ee078445b9fa5a12d187843cb71d
+ .ctex
+SHA-256-Digest: OCDXHMHLvOL45JdFIP1P+k9v7adW3TVoN1U5rpPZhGc=
+
+Name: assets/.godot/imported/soup model.fbx-f3fc8e2a66587c3c24cdadf8de
+ 9486b1.scn
+SHA-256-Digest: nGH038xDbaHsyPfzzuAobnGiXBGpETQuH80FSEZln7o=
+
+Name: assets/.godot/imported/soup.jpg-5174cc7ff26283b9932b0ce5ce47c0ba
+ .etc2.ctex
+SHA-256-Digest: /ELF53JFIEimh+w+ais1G/726BWVo8slKcInVFIQVCA=
+
+Name: assets/.godot/imported/sprite.jpg-88f80d83319d1e7966404c3d85bc64
+ 19.etc2.ctex
+SHA-256-Digest: Pf+Ji3FsQxsFrt6lN/mMn1ceFgKV2ydu/2vSO7ts4D4=
+
+Name: assets/.godot/imported/stairs floor.jpg-0a404383553a52b1c3d356cc
+ 35c39e07.etc2.ctex
+SHA-256-Digest: 9marRmY10pleeQUh6FEcdzYh6UIeBzymgfAqMuhdua8=
+
+Name: assets/.godot/imported/stove up.jpg-9f1d1177c379d59fecbe00de32c8
+ d284.etc2.ctex
+SHA-256-Digest: CYRMFNV3Euchqx9w+jclrHYyuz97E+wzFCKICeal6x0=
+
+Name: assets/.godot/imported/table_tex.jpg-c2fe1e350f0ca8d32ccd0fba178
+ b5b58.etc2.ctex
+SHA-256-Digest: veddHzhRSBg+g4J2TdLY2cLckCFECdMAbq2mxaATdD0=
+
+Name: assets/.godot/imported/tape.jpg-e69a49e65e3254b91be5bfae959e74c2
+ .etc2.ctex
+SHA-256-Digest: i+FdNzCt6o2wmQlFJxpjLar8HkyzDkpDJzLkrBP2rt8=
+
+Name: assets/.godot/imported/tex.png-95d540a9072894390f524615e9d84f77.
+ etc2.ctex
+SHA-256-Digest: h2nV07nOA3wRSCHAvaarl77U+C829HGW0BXsSFWHi8M=
+
+Name: assets/.godot/imported/tex.png-b70f98883d1daaee8b1006a8a59d768d.
+ ctex
+SHA-256-Digest: zhemzgfpMRxUqeU8POxyLJb/O96PRJASRTGkNPrH0Ss=
+
+Name: assets/.godot/imported/tomat.jpg-aebe33f8827fb3b2890d69b493de610
+ 1.etc2.ctex
+SHA-256-Digest: ulqIBYfMu4WjvOcCoyUo1kMoHt39OGJMKyuBqGC8LPY=
+
+Name: assets/.godot/imported/up mesh.fbx-eb912720ca3b50f8c499ad2bca9e8
+ 4d8.scn
+SHA-256-Digest: t+pBo5a2VKGUMTGXXMKj8aemL3Xb2miISMpUaxx9UXE=
+
+Name: assets/.godot/imported/virtual_joystick_icon.png-de46b24999f9aae
+ a71ffaa7771da41e6.ctex
+SHA-256-Digest: 2xlhdkk/YqSZM3SM6jKGY7YcBD1fdRIuOzrexRHiWDY=
+
+Name: assets/.godot/imported/wall kitchen.jpg-3d77a77cdc4adf69dbbec791
+ ce64215e.etc2.ctex
+SHA-256-Digest: sqaE06CDx/K/m3wRzEWoIH2y8CE6LX3sSp9Ebdl5Ny4=
+
+Name: assets/.godot/imported/wall.jpg-3bf4c831ce516b554b33c5b77ae44725
+ .etc2.ctex
+SHA-256-Digest: ckiAD7ocX9BFQ803Zcp6fsxdA5Q6RHlOTFsr2anxxWU=
+
+Name: assets/.godot/imported/white wall.jpg-7ce087d5edd2babab425d4428b
+ 4e97fd.etc2.ctex
+SHA-256-Digest: umm/qx+urufi1m4gN3cZIoEK/TERlLseQX9CUZUqD4o=
+
+Name: assets/.godot/imported/wind cut.fbx-e51a6921318d809f1d35ceed987e
+ 5bc6.scn
+SHA-256-Digest: aWXC395mtE9pXEok9OCw5L5NUD1nm04qRoN2ZZBiK8w=
+
+Name: assets/.godot/imported/wood floor.jpg-41217df66d63cee30fbf4da62c
+ 5bebae.ctex
+SHA-256-Digest: ThFo+4GPRkJxHDoo5wNOPtTqZZC5Qsil70wg9BqEXNM=
+
+Name: assets/.godot/imported/выбивания двери.MP3-52afed3
+ 9e12b4597244cb713d24b289b.mp3str
+SHA-256-Digest: lK659pWhpwPXvvFZibc6P8DNA9W9GZbkXeDkPCfHTZo=
+
+Name: assets/.godot/imported/звук ходьбы.MP3-b7b388203755e48
+ 1afd1638c07ed84b1.mp3str
+SHA-256-Digest: VfeW8o4dIlvckis/QRPFOPkCUiCQa4jlqbb56dvya98=
+
+Name: assets/.godot/imported/кнопка.mp3-dca27f193a6648a785357a28
+ f40c70a2.mp3str
+SHA-256-Digest: 7/6uXh8lgT6Yq7qaw1z+qdxS4AyU9ndyavkXZJX/rjQ=
+
+Name: assets/.godot/imported/падение после скример�
+ �.mp3-89e256e28bfa8b8e30859cdb88a50a16.mp3str
+SHA-256-Digest: aueH25RB2mJrVf63/mdKpXxzFLbuUtKd/r8Y68pnp3o=
+
+Name: assets/.godot/imported/плита.mp3-5c868effbc38148ff2983f75f0
+ 278d4d.mp3str
+SHA-256-Digest: duLqxyXH01zWTtesfnYubv7ntK5X3yKbxVuqXjZVhNA=
+
+Name: assets/.godot/imported/попытка открыть дверь.
+ MP3-23060afe02cd851760c8c77079c6f9ae.mp3str
+SHA-256-Digest: 8fcD05OkfQ13u0WkCdeaOzswN/4so6E3QKcuGHxXWDc=
+
+Name: assets/.godot/imported/сucumber.jpg-027753a8004d3f1b8952cdee4ed
+ 66c90.etc2.ctex
+SHA-256-Digest: AVW28BTr/NbLyCbRWHArrL44uCb2HThiMXAuK3uxbxk=
+
+Name: assets/.godot/imported/фоновый звук.mp3-a949dfc517ff0
+ 2c6e5e50512f6eec20f.mp3str
+SHA-256-Digest: FEnTYBJYgGf9IxUR5hIrENipLQGlVRvGzHQaStQWz3Y=
+
+Name: assets/.godot/uid_cache.bin
+SHA-256-Digest: tYIAGBsv0aEnLLlViRuTp4xGcIlwDgi6wyMnaNBzL4E=
+
+Name: assets/ACTS/ACTS/act_1_prolog.exr.import
+SHA-256-Digest: YBdtYkHDiwmBMDqAsv6cmTGl0NqZa/Fhzhhz7gaxIlA=
+
+Name: assets/ACTS/ACTS/act_1_prolog.tscn.remap
+SHA-256-Digest: lcm64pyz57Q6wFYdfiCT+YrtE7KD5jozpu06ODOs7UI=
+
+Name: assets/ACTS/ACTS/menu.tscn.remap
+SHA-256-Digest: m1YEzpWjjsnNVw7o+uH/xQ2tRz3vPAlgV0cXflzGoLM=
+
+Name: assets/ACTS/box.tscn.remap
+SHA-256-Digest: Il6NRiH/UvmGcFZz3R92uMHsd/hvJ/SLU4WTz9/OLOc=
+
+Name: assets/ACTS/camera.gd.remap
+SHA-256-Digest: s0JKB+cW5srfcCjn7Kwqj6Yp1UFrTHHTXSzn88KrUks=
+
+Name: assets/ACTS/camera.gdc
+SHA-256-Digest: JxViky+Z3cAyGBpIbXUVq/CYIIgktF9kAk+EwE5di0c=
+
+Name: assets/ACTS/camera.tscn.remap
+SHA-256-Digest: ImqJPp152HNNbeclGVWBnyWpFe3SJTYnbIWFNnVl3Gs=
+
+Name: assets/ACTS/door_k_and_r.tscn.remap
+SHA-256-Digest: +hhWm1RIawioSbrLgF/A+WuqVP5VL46LT5EejURMEPs=
+
+Name: assets/ACTS/door_kitchen.tscn.remap
+SHA-256-Digest: v30XGk82wOrrfMuRAQm2+Rr4osaLmNNTBFJlCTck39U=
+
+Name: assets/ACTS/door_stove.tscn.remap
+SHA-256-Digest: SM4MgQo2EW+r7YjaiYfqrbQPZavAOkcsmrChweR8tj0=
+
+Name: assets/ACTS/scripts/act_1_prolog.gd.remap
+SHA-256-Digest: zOjF7n790nCeuA6BZsHyct3VCRgX8T7lZvmuL7UNZfk=
+
+Name: assets/ACTS/scripts/act_1_prolog.gdc
+SHA-256-Digest: uSKPAvlrzBTdDRtuVR1sygeNeW/2kfQbV9fHfnqs/gY=
+
+Name: assets/ACTS/scripts/board_script.gd.remap
+SHA-256-Digest: opSV7iIRQ1Be06VxvduB41Z1yLPX2IS+uPAYR1YHYdg=
+
+Name: assets/ACTS/scripts/board_script.gdc
+SHA-256-Digest: sHH4PIfGLgUaEQXiOPoh/74pmM5FgO7I5vwaptENlQE=
+
+Name: assets/ACTS/scripts/doors/door frezz room.gd.remap
+SHA-256-Digest: MDz3ApfY1MCheABng9HRktA9nzTgXQwpkzkHHPNQ5Ag=
+
+Name: assets/ACTS/scripts/doors/door frezz room.gdc
+SHA-256-Digest: AFUowFsiCxXV0EJnX71SPfoDKiq4WxhYYnCAmmwxB6E=
+
+Name: assets/ACTS/scripts/doors/door.gd.remap
+SHA-256-Digest: uBZNrsy0dLeGBateE2eA/ynRigqaZg+I96EVtUKosB4=
+
+Name: assets/ACTS/scripts/doors/door.gdc
+SHA-256-Digest: n66fPIotv7AAPsGrW1S6lvm/ME54AsQXclkiU0QeY8o=
+
+Name: assets/ACTS/scripts/doors/door_k_and_r.gd.remap
+SHA-256-Digest: u5SmnmKJ7ZXWGFOw3ziOi6TO7akysufG9LFmf6NH1/Y=
+
+Name: assets/ACTS/scripts/doors/door_k_and_r.gdc
+SHA-256-Digest: EYPG6GbHcGWSUFOZy+4btGcSIMI0cvHpi6kT0HNEqUE=
+
+Name: assets/ACTS/scripts/lever.gd.remap
+SHA-256-Digest: zgoU4h/wN7rzgngY/p+zsKZz3hqm6LVZKpOWSDUTgfw=
+
+Name: assets/ACTS/scripts/lever.gdc
+SHA-256-Digest: yRCU8gH9h/EvO1NzQKrg1RVJK/OXsg3jU7ullG30g+Y=
+
+Name: assets/ACTS/scripts/main.gd.remap
+SHA-256-Digest: WP8bYPbAyxKM/yJN32wHK8rutdue0EsO1mom3CYCjFU=
+
+Name: assets/ACTS/scripts/main.gdc
+SHA-256-Digest: Q9XHHKq/WCwFZgJ2DCBm3GKGM7ImIPw3rXN9lPPObBo=
+
+Name: assets/ACTS/scripts/move.gd.remap
+SHA-256-Digest: e+aGnU7VWS/wtfnguA8CVHe+1OeOxUwG8HG0Q3xY/fA=
+
+Name: assets/ACTS/scripts/move.gdc
+SHA-256-Digest: 1SFj1mES7pO3VtmdejO2UkIM9OQfP3663d4xcj5zzTY=
+
+Name: assets/ACTS/scripts/tp_move_soup.gd.remap
+SHA-256-Digest: /oDMmYSAYxS2edGyRaLgTtJVg005ieGKwckpwYo7Wmg=
+
+Name: assets/ACTS/scripts/tp_move_soup.gdc
+SHA-256-Digest: OQ1zuGv/Rwo89IVVXCntOUy1P0uxkaA6vCWWUoexpN4=
+
+Name: assets/ACTS/scripts/zones.gd.remap
+SHA-256-Digest: BhrjIYYuW4PKvCs1QAdnG0xHFDG7KWyw7apDnajpJEY=
+
+Name: assets/ACTS/scripts/zones.gdc
+SHA-256-Digest: 1cXNfj8pMd8YdpfNOGhKck+clc83ctJcYxD5u2ZyFuY=
+
+Name: assets/Diolog.gd.remap
+SHA-256-Digest: oSEsJMn6cxCSnl3XRhBE0uGjun/91PDMT/3hGWL6wIc=
+
+Name: assets/Diolog.gdc
+SHA-256-Digest: K0pVZyo9w+NrhOZtBXUwF2hRyIRBuRj6npwMNpjfODc=
+
+Name: assets/Player/Inventory/main_inventory_script.gd.remap
+SHA-256-Digest: Sw/gZrHcvjZwHE9Dpl5lN9FK0nU8j+Y0dOam8+j0RdI=
+
+Name: assets/Player/Inventory/main_inventory_script.gdc
+SHA-256-Digest: d7/lSt5VlOUgpZS1gUzZ+E2NU4Vttut1iLvo25Fqubk=
+
+Name: assets/Player/control.gd.remap
+SHA-256-Digest: HoBAeejf4Kxm/N34NcJmvHpH01dM+rBkbaGFt+u1N1o=
+
+Name: assets/Player/control.gdc
+SHA-256-Digest: 3ukvXrb6E4WwgvcC7HIrn4+KactVsjduJ7iReAbcEKY=
+
+Name: assets/Player/player.tscn.remap
+SHA-256-Digest: 94GN+U3YJtezwfwq9A3gT6aWsIPKS3gAvfqZEXrnmF0=
+
+Name: assets/Player/scripts/anim_screen.gd.remap
+SHA-256-Digest: BIGX8e/bJ/BVQ5h6GyPCVVZgVsn3EDa/mE1HeM6P0o0=
+
+Name: assets/Player/scripts/anim_screen.gdc
+SHA-256-Digest: GBicsHa8/cL/mvRol0l9y3lMThiZdxHY7RteRdJCd1c=
+
+Name: assets/Player/scripts/inventory_icon.gd.remap
+SHA-256-Digest: oaXXYeh5xPzVo2wQw0cuH1jkcZcj6TheP/J9owLIoSc=
+
+Name: assets/Player/scripts/inventory_icon.gdc
+SHA-256-Digest: 7DQB0KskISJy5kJ5DM9YIXbXYC3zIGP6ghuc5DsM4LA=
+
+Name: assets/Player/scripts/player_controler.gd.remap
+SHA-256-Digest: Gbc+00du27EVpQ1022H33IrrpQBY3sU61sFPbwyWZSo=
+
+Name: assets/Player/scripts/player_controler.gdc
+SHA-256-Digest: pWsOoF03Y8rD0wnLfNtkqPVDxh5nyMe2Shdf91qTBp0=
+
+Name: assets/Player/scripts/timer_enemy.gd.remap
+SHA-256-Digest: zIHXX14/yi1uWG7oeAvgCHNgLa6zgjwLdkUeBUCfh6o=
+
+Name: assets/Player/scripts/timer_enemy.gdc
+SHA-256-Digest: LoSfSdbcnSDeUZJJLOBArZ1Lgu/ykP/vRSJsYb8nZmg=
+
+Name: assets/_cl_
+SHA-256-Digest: YPtHOO49FjHRCeJdetvy6QrjbVYfG1edSubmE1Bu9uw=
+
+Name: assets/act 1 object/materials/glass.tres.remap
+SHA-256-Digest: ajMJIzbMpgs5IbpvEV9TUY8O16e3445pONi/7XmGYRE=
+
+Name: assets/act 1 object/prolog/bar.jpg.import
+SHA-256-Digest: c35rwdTXmsmmsnWMWUv0s1Qy/Q8o9O8sdt0KTrStwDM=
+
+Name: assets/act 1 object/prolog/blood.jpg.import
+SHA-256-Digest: FDdIbIgBk3oWIV9yw+QRVoW4iZz9AFFJ9753jquBpUM=
+
+Name: assets/act 1 object/prolog/board.fbx.import
+SHA-256-Digest: dL1wS0qWXRHsaz1IhRJ36AS5ZA2ysTJC/dVy6zu1Dwc=
+
+Name: assets/act 1 object/prolog/board.jpg.import
+SHA-256-Digest: KFvcorvXhid8pdxD+5GD85gJuSHO4lahM99SeFwZmr8=
+
+Name: assets/act 1 object/prolog/board_break.fbx.import
+SHA-256-Digest: pQEiA2oD/5LkC9N/q7adpsJRDpvsRx2M/SH9sjDDw0s=
+
+Name: assets/act 1 object/prolog/box.fbx.import
+SHA-256-Digest: zcquZVBF66DQg7HcUzsaQnO/nHsgDUM3GyqiGbrfJR8=
+
+Name: assets/act 1 object/prolog/box.jpg.import
+SHA-256-Digest: E9+QHqQP0uHoXqoPnA9K5LfkN/f9EScR1lHV6I92/gY=
+
+Name: assets/act 1 object/prolog/bulb.jpg.import
+SHA-256-Digest: nmeS2/WGifXtslvIAftCHGmkjPYywQTc9l9Y/TQOb/E=
+
+Name: assets/act 1 object/prolog/camera.fbx.import
+SHA-256-Digest: n42T8IL1PrBrcckDzNLYfreXD+70QWzaQ7FR4Xic+A4=
+
+Name: assets/act 1 object/prolog/camera.jpg.import
+SHA-256-Digest: eVvcmEaOo0PQpt7DONzU56iYy4jw8vphgm2MH5l7Ut4=
+
+Name: assets/act 1 object/prolog/camera_fov.fbx.import
+SHA-256-Digest: Uh9nISdCR0b4Mk6MRNe7WQau8hQ2L8hDVOT84t2Loo0=
+
+Name: assets/act 1 object/prolog/carpet.jpg.import
+SHA-256-Digest: GRbmCxdWMvR2+KXf5kwUiqZBhgLzureQ6oeXMZzlVFc=
+
+Name: assets/act 1 object/prolog/cellar/metal.jpg.import
+SHA-256-Digest: Vp/gGv/i3NVuN+IKSzIC3M7NgsRPdNjw2XTe5Ld7iT0=
+
+Name: assets/act 1 object/prolog/cellar/wood floor.jpg.import
+SHA-256-Digest: XAKosICIKx8DVKPX6+N6kMkZKlBB0qvgxlBEb+0Hywc=
+
+Name: assets/act 1 object/prolog/closet.fbx.import
+SHA-256-Digest: gY6cI3yuVWQI1CVr8CXP4JJbJ6Rz+j49vqrMgu5gAU0=
+
+Name: assets/act 1 object/prolog/curtain window.jpg.import
+SHA-256-Digest: Y4/6RJtuFYa+kd2tR7jEzWawcHPteUGNjaWVnN7rYP8=
+
+Name: assets/act 1 object/prolog/curtain.jpg.import
+SHA-256-Digest: /Fr/xNzGARnQTpEgcRDcAONBZrqTLbZJZ7Jcd7kHe3U=
+
+Name: assets/act 1 object/prolog/desk for food.jpg.import
+SHA-256-Digest: +xOCIbgvnmkdRlMs5dvVuw/szMIjNGfSLRKqMp/O+RI=
+
+Name: assets/act 1 object/prolog/desk.jpg.import
+SHA-256-Digest: JrnDsQZZbkoWcpmOzL6QGqY+b2lVWOC5RfNnrYUopQQ=
+
+Name: assets/act 1 object/prolog/dina.jpg.import
+SHA-256-Digest: w9sW2EL82m+rves4Rx3Nc0xbmJcmO68D8rbczj/u82o=
+
+Name: assets/act 1 object/prolog/door closet.fbx.import
+SHA-256-Digest: Z/dD1MBIgPu2IrTQbyi70B3bLPoTvgPKjXopp+jT4Ks=
+
+Name: assets/act 1 object/prolog/door cut.fbx.import
+SHA-256-Digest: sBT1s31+FrpUogaY0n0sQfmOvBCXtj2S7ksy0saMo/o=
+
+Name: assets/act 1 object/prolog/door k and r.fbx.import
+SHA-256-Digest: 4NOgU+UB+nHjIUfYhrJuqvM0qsy2V6SMEd5xD0u/X6Q=
+
+Name: assets/act 1 object/prolog/door k and r.jpg.import
+SHA-256-Digest: WBZU0ajAhYRsRLovR/PANyLNDaK9HqgfyjIM4X9i5gk=
+
+Name: assets/act 1 object/prolog/door kitchen.fbx.import
+SHA-256-Digest: +ClO+y2XNXgUluBlw6jj7DCnP/Bx3K0BIPp70WHHVVk=
+
+Name: assets/act 1 object/prolog/door kitchen.jpg.import
+SHA-256-Digest: O7VJgcjkJLqi1qIrBPxDYd8VC0Eh3pkU9/S/8XyTjVY=
+
+Name: assets/act 1 object/prolog/door stove.fbx.import
+SHA-256-Digest: fsFPZuD3saemSDW2oOwrmdhMa9otLqFdHFeuc+g4bss=
+
+Name: assets/act 1 object/prolog/door.jpg.import
+SHA-256-Digest: SwiFSdrJ+ydNUhkmFjSR2c4JmT0Z/47ErFI9b9togVY=
+
+Name: assets/act 1 object/prolog/drinks/all.jpg.import
+SHA-256-Digest: aT9T79WJbifQOcWa+PW5XwTVH+kogqScIg5/EwiOLdo=
+
+Name: assets/act 1 object/prolog/drinks/cola.jpg.import
+SHA-256-Digest: +ozdksUg9RNrdo9vh/UZDGlLtafi7mj40HUIy4Ju4JY=
+
+Name: assets/act 1 object/prolog/drinks/fanta.jpg.import
+SHA-256-Digest: 0MXHXoTbQNYQNo2rwmh9BuaKzUM2rguna8TFZlFfZZ0=
+
+Name: assets/act 1 object/prolog/drinks/sprite.jpg.import
+SHA-256-Digest: 41Kr7Jmy+cj+rMImlJ0Sw2g218FvVlo6z427kvLEANs=
+
+Name: assets/act 1 object/prolog/electrical panel.jpg.import
+SHA-256-Digest: /Hlmbd9xlHZXVujaPqSKtIZvgC6nGxer/tiKyPZQg74=
+
+Name: assets/act 1 object/prolog/food.jpg.import
+SHA-256-Digest: s/dt8mnQJ9z27RpTxUQpqKJTc/BjUs3+e//Di++OMI0=
+
+Name: assets/act 1 object/prolog/glass.jpg.import
+SHA-256-Digest: g5FNN6fXgVe4muJrT18LvAsHzUgP0N+ZvjvfEdBwq7Y=
+
+Name: assets/act 1 object/prolog/hello table.jpg.import
+SHA-256-Digest: k3X4slqFGA5Kp/3yz5gAtkVBYEoTIKkUyXEahqbpGKY=
+
+Name: assets/act 1 object/prolog/ice.jpg.import
+SHA-256-Digest: b+2WYi97s6Fg61pz6yDsRhxMNzLbxRs3e4lxj8Q3VoI=
+
+Name: assets/act 1 object/prolog/knife.jpg.import
+SHA-256-Digest: nUZwzbZRczz3aPm6iYgr8og5p78zriE8qw24HPcxY04=
+
+Name: assets/act 1 object/prolog/lamp.jpg.import
+SHA-256-Digest: tHsBTXLMwnq1LhhxNok9aYQRxR0cdTX7dUACM1GLDIA=
+
+Name: assets/act 1 object/prolog/lever.fbx.import
+SHA-256-Digest: 21L1BZeZ+rD5XZTnTDrLl2ocIS+JVo+wvrdU1aesw80=
+
+Name: assets/act 1 object/prolog/list.jpg.import
+SHA-256-Digest: n0fm79QgpI+a3lB3jqTJcbBQFoK1Es8wKJ2JQemiq4o=
+
+Name: assets/act 1 object/prolog/lock/lock active.fbx.import
+SHA-256-Digest: IJZyd/LuCdIb1Ylo/1TMjSFalHxtHuVDdVL8rzPlJM4=
+
+Name: assets/act 1 object/prolog/lock/lock break.fbx.import
+SHA-256-Digest: zH0cdIFtOP117cQ40ziHnJ6omsRFOZOarpTKNJQRwLI=
+
+Name: assets/act 1 object/prolog/meat.jpg.import
+SHA-256-Digest: VitYWHKxvW+aeyOqUnakCWJzQJTkjjf/iYkaz1PmQgI=
+
+Name: assets/act 1 object/prolog/melon.jpg.import
+SHA-256-Digest: hk5mPcH9zRVJRhmAEQstuVzYBAyegvX+qjiuws4dmJk=
+
+Name: assets/act 1 object/prolog/menu bar.jpg.import
+SHA-256-Digest: XeF3Gk8JTYwy8ZcNGqIrpyYEApWIwFO6izwLNwfBeIM=
+
+Name: assets/act 1 object/prolog/menu caffe.jpg.import
+SHA-256-Digest: 6aET2Z9Hyi7Xdmj/CnOpF8S/Xi98sAx+2FiHNydwQoU=
+
+Name: assets/act 1 object/prolog/mesh.fbx.import
+SHA-256-Digest: alLqLPg+ypdtahbXoMiw8fSWmh4716WXWQ1dbnvg+kU=
+
+Name: assets/act 1 object/prolog/metal box.jpg.import
+SHA-256-Digest: teCKpYDXeS5tAC6kTA5mzBDXvl4lWRj1uHXwJF5px9A=
+
+Name: assets/act 1 object/prolog/metal table.jpg.import
+SHA-256-Digest: RQdg/56I6UN8lsG9HRcBEroM9xXWe+sa7tBJ4WE9KQ8=
+
+Name: assets/act 1 object/prolog/napkin holders.jpg.import
+SHA-256-Digest: csAOeG4QTDwrAWuMZppi9G5s3WJ6JAAhSjZNvMK3xlY=
+
+Name: assets/act 1 object/prolog/orange.jpg.import
+SHA-256-Digest: mxz7sFVKjxIMLAabez1+iJ2ObsX43fm/Co+lV84+e+s=
+
+Name: assets/act 1 object/prolog/pan.jpg.import
+SHA-256-Digest: 0x9TRT9N2Ews/PVKOHoadb9OR+oqVAiBValWZEUEiqc=
+
+Name: assets/act 1 object/prolog/panel door.fbx.import
+SHA-256-Digest: O5AZGAhsm9dRFZETtBBiTjxFJkLxHB+ahHYsd2//g2E=
+
+Name: assets/act 1 object/prolog/red metal.jpg.import
+SHA-256-Digest: ywRz1ZCU/t3bGHerRap8hvPpDfADD8LUzITpj05TUVU=
+
+Name: assets/act 1 object/prolog/rubber.jpg.import
+SHA-256-Digest: w0dAaGmDLj8YhP26BOtO5wXdo923iGMbayeeaJk4kkM=
+
+Name: assets/act 1 object/prolog/salad.jpg.import
+SHA-256-Digest: WMgWK5GrmnPF4kQtCGcDrqMsszlXdsSkkJHYRX8Inig=
+
+Name: assets/act 1 object/prolog/soup model.fbx.import
+SHA-256-Digest: mx1nM1+igzTwlsV7y/pX2VEv6fkC5a2V9GouT0H5T7E=
+
+Name: assets/act 1 object/prolog/soup.jpg.import
+SHA-256-Digest: XcnaD87xY1sItEqGOTWq5NXEj60ud+fTki/tjphcfM0=
+
+Name: assets/act 1 object/prolog/stove/door.jpg.import
+SHA-256-Digest: msGQm2SndNfjFusxrtRreaNDB0YJaQmLXqCGvHmyMto=
+
+Name: assets/act 1 object/prolog/stove/main.jpg.import
+SHA-256-Digest: AJ9az5T52emG9Yb2UQ6++FFOTY6NvlZko4TR3F151e8=
+
+Name: assets/act 1 object/prolog/stove/stove up.jpg.import
+SHA-256-Digest: y4dTULWCCuT2UftF90lQ6liIgC78+b8Bezao4c36aU0=
+
+Name: assets/act 1 object/prolog/table and chair and box/dark_wood.jpg
+ .import
+SHA-256-Digest: IssQvrmF1EAD/S4jSPtiO9HRJ9JGe8i8ZagTw2nmVSM=
+
+Name: assets/act 1 object/prolog/table and chair and box/light wood.jp
+ g.import
+SHA-256-Digest: e2y9WcoRxbaYsrc7by9iLPj+c5FnhE86o0PbE6Ujow4=
+
+Name: assets/act 1 object/prolog/table and chair and box/white wall.jp
+ g.import
+SHA-256-Digest: QFrLRf1BSwcibFRofKEHDIgoN5B5l2/bkt0KfQnTKFU=
+
+Name: assets/act 1 object/prolog/table_tex.jpg.import
+SHA-256-Digest: 6vmrHUl7WLCf8wIq0PQJxVe1tJrCglmXzz648Ced2mI=
+
+Name: assets/act 1 object/prolog/tape.jpg.import
+SHA-256-Digest: 7Ccf02a5vmPHUrKYOGVol+804h+Q0CKArwuFxpn/sgs=
+
+Name: assets/act 1 object/prolog/tex/black wall.jpg.import
+SHA-256-Digest: 51UMehxwhYLzpk53DxIykrrV/meYcR2kA0GXFSRbTww=
+
+Name: assets/act 1 object/prolog/tex/brick.jpg.import
+SHA-256-Digest: 69sU9XrkNT3HJUfBD8Db0Bz6RzfWQee2BHeMa4YqYZg=
+
+Name: assets/act 1 object/prolog/tex/dark_wall.jpg.import
+SHA-256-Digest: caZ+o1j9uMY32YmkjWMhnoCaf5+Ai031M8HtWKd7EHk=
+
+Name: assets/act 1 object/prolog/tex/floor.jpg.import
+SHA-256-Digest: 4JRxm7rTrTia3UJoGgjmk8qDxO1AxuEb5z4soMhStbs=
+
+Name: assets/act 1 object/prolog/tex/floor.png.import
+SHA-256-Digest: nsZx5jKUIcoAqZKB2JaRCvmrmnmwYFTptnAy0CC/l6Q=
+
+Name: assets/act 1 object/prolog/tex/floor_dark.jpg.import
+SHA-256-Digest: VOTE0eE8ky6Mg0GSgCFFPlQEu8nGuBKdSdzxaoahbeY=
+
+Name: assets/act 1 object/prolog/tex/floor_freezz room.jpg.import
+SHA-256-Digest: Yev6n1DWw3W6bgPRyBW6eNWnRzgpgRn3/eH4p17L8bc=
+
+Name: assets/act 1 object/prolog/tex/floor_kitchen.jpg.import
+SHA-256-Digest: kpvXhzFhc8bZ5HwSlogX/+MtF0/3kFNYg2vW3MSr9lE=
+
+Name: assets/act 1 object/prolog/tex/metal.jpg.import
+SHA-256-Digest: dVcMSXI5JwZpNs358Bl28YONPwr/ll9fW90zUloQhN0=
+
+Name: assets/act 1 object/prolog/tex/stairs floor.jpg.import
+SHA-256-Digest: hZzJ77zIbh/d57517XcLLletBvCXX76I80zy2jnU1h8=
+
+Name: assets/act 1 object/prolog/tex/wall kitchen.jpg.import
+SHA-256-Digest: VLFsNw4Rj1rYK52ddWQeuzwYOmRl5maDMwHTzwOcoU0=
+
+Name: assets/act 1 object/prolog/tex/wall.jpg.import
+SHA-256-Digest: GEovVZCuKV3eatqRhrpBdVpDqNdX4jCiYVz9Ny6AEuQ=
+
+Name: assets/act 1 object/prolog/tomat.jpg.import
+SHA-256-Digest: xd/0SUVxFSoOBASD96gp0nX4Hotc8pxXpQBqEdPEXsM=
+
+Name: assets/act 1 object/prolog/up mesh.fbx.import
+SHA-256-Digest: cLDhfpc9mM5UhQjPMc8vX85VLpumuGlCPYQ4YBiAO9E=
+
+Name: assets/act 1 object/prolog/wind cut.fbx.import
+SHA-256-Digest: di1drS+o5MR8gD+kgnbJQqkrkpwQUsPBsQf6HhlXP/8=
+
+Name: assets/act 1 object/prolog/сucumber.jpg.import
+SHA-256-Digest: PEXRowBA6boRGqJWa3bNOOUkhzTZm+RcaEUDO8dSHTw=
+
+Name: assets/addons/virtual_joystick/previews/CoverPreview.svg.import
+SHA-256-Digest: 868tkxjJKOfwsSVSuf7D7l7p99XjMg1tjQqJybYd7BQ=
+
+Name: assets/addons/virtual_joystick/previews/Logo.svg.import
+SHA-256-Digest: hiSdqn/uJI3aaHiyOaubUeymTM0IwumzFVwdSZZ0upk=
+
+Name: assets/addons/virtual_joystick/previews/ShowcasePreview.png.impo
+ rt
+SHA-256-Digest: 9iv469rVM3dmxyR4J6qROhGQNetXgll6Fu9FqDtnOvA=
+
+Name: assets/addons/virtual_joystick/previews/joystick_icon.png.import
+SHA-256-Digest: gUisSnZYITMWJz8Nq7d3/dBwenrSor8HNTGn8o1A6m8=
+
+Name: assets/addons/virtual_joystick/test/player.gd.remap
+SHA-256-Digest: MFQgKrrJh6g+mwwlmbLzoafWweEOw94k0fGxwPCnd0U=
+
+Name: assets/addons/virtual_joystick/test/player.gdc
+SHA-256-Digest: R1D2VvBfEe142DG1ZO+ZrVVt78VRAHoT67fdIV6PbJ0=
+
+Name: assets/addons/virtual_joystick/test/test.tscn.remap
+SHA-256-Digest: 4fHftj1kF52WixpQhL2ozCRlbqm4Eoge00qxKcdA7sI=
+
+Name: assets/addons/virtual_joystick/textures/joystick_base_outline.pn
+ g.import
+SHA-256-Digest: jwKNWOxAiTrMTlDrP3YZ9r1pmdqjK9+BthQmK0P5fwg=
+
+Name: assets/addons/virtual_joystick/textures/joystick_tip.png.import
+SHA-256-Digest: /QW8ZzLIJyMNVdHdf6eSpDCFd1DXyx+LDFJFjJvRV8c=
+
+Name: assets/addons/virtual_joystick/textures/joystick_tip_arrows.png.
+ import
+SHA-256-Digest: vuZdcK2QRkdXX9UmUioyzqrRRg1czBeYy58rxQlpsEo=
+
+Name: assets/addons/virtual_joystick/virtual_joystick.gd.remap
+SHA-256-Digest: WFQlHQrQhCwo3Aap9A5nYpNUSFRnrbBodoS4cH00Ta8=
+
+Name: assets/addons/virtual_joystick/virtual_joystick.gdc
+SHA-256-Digest: aNDxs1JE5Cs0OSTgWMCuRBVJ1qJfMgejcpDzsQQrFAA=
+
+Name: assets/addons/virtual_joystick/virtual_joystick_icon.png.import
+SHA-256-Digest: yBGKJKDi1AoSozsKrzIg4vp5OfiB5uW7FaYjCjOkp4c=
+
+Name: assets/addons/virtual_joystick/virtual_joystick_instantiator.gd.
+ remap
+SHA-256-Digest: bBjjTmjKpZSKRpYCus6uUPceaBwJdcYxE+ixrxTVlZ8=
+
+Name: assets/addons/virtual_joystick/virtual_joystick_instantiator.gdc
+SHA-256-Digest: c+MXH6VB2dlo7kzrE/Mc1o62Xwx5wZTN3Q+L2ZYBB3M=
+
+Name: assets/addons/virtual_joystick/virtual_joystick_plugin.gd.remap
+SHA-256-Digest: TNcp34Kgj/N+ohqfp5Cp2QQTiQm1PSX8gljC9IkBzJQ=
+
+Name: assets/addons/virtual_joystick/virtual_joystick_plugin.gdc
+SHA-256-Digest: K5WblLT49BReWmgfHSzKCNoeZy7EoklypzM7Owk89rs=
+
+Name: assets/addons/virtual_joystick/virtual_joystick_scene.tscn.remap
+SHA-256-Digest: xgQC1+uQUPDojfr4l0YCwsSe6vEhBmGe1e7tBpsd62c=
+
+Name: assets/bake/act_1_prolog.exr.import
+SHA-256-Digest: ndGPb25CpCk6jMwnf4Aads/pA9XX2z5bDMRHSFQuXUE=
+
+Name: assets/bake/act_1_prolog.lmbake
+SHA-256-Digest: pW6RtDxulSr1u1vfeApP4xG0cBXt+XvV8qZL7mZULQE=
+
+Name: assets/enemy/State.gd.remap
+SHA-256-Digest: amKRoeRDBchxBGMjvnAweFtlk98Y4KCSM6iytfAmWbo=
+
+Name: assets/enemy/State.gdc
+SHA-256-Digest: uJN0QNj2JNpMsIwVG7FtlttATju9GBKx2QoLceziCRo=
+
+Name: assets/enemy/cheff.tscn.remap
+SHA-256-Digest: QB4+vw1YjX/mKIe4ewNIzfqJc5oNVph1PW46lYVQ4Zg=
+
+Name: assets/enemy/cheff_ai.gd.remap
+SHA-256-Digest: sHagwBxhPOeKpUgi5hu1XVhhwfQWYdONU5ZMb8ZvyyE=
+
+Name: assets/enemy/cheff_ai.gdc
+SHA-256-Digest: HRdFGASDykc8FxsLDsNDn14ED3AsLeEPVXg/Jbz+4+8=
+
+Name: assets/enemy/model/cheff anim.glb.import
+SHA-256-Digest: 0/wYMVVMuZ51hyEFj+kd412UYduK55lDe4InKMCCn1I=
+
+Name: assets/enemy/model/cheff anim_body.png.import
+SHA-256-Digest: 29LA2syLgzbaxQgCrxVbqwuadNp86QArw1WIvpPWbi8=
+
+Name: assets/enemy/model/cheff anim_eays.jpg.import
+SHA-256-Digest: TS+HGvpztxoLafzzM7AQ5Gm2WfbhSum+HOYjGEsEIdY=
+
+Name: assets/enemy/model/cheff anim_hair.jpg.import
+SHA-256-Digest: YNBsQLmPXNQcVxkvRt+Izh/8lAwWxbWZSyr1zYEB1Gw=
+
+Name: assets/enemy/model/cheff anim_legs.jpg.import
+SHA-256-Digest: Nf5rveiPE6Bw2wUkGgckRZa8/r9AerpZtcNWNQfu+pM=
+
+Name: assets/enemy/model/cheff anim_shrit all.png.import
+SHA-256-Digest: Mk0x5ebaV/M61xut0reS56BAFNNspqoz+WwSHL3lehY=
+
+Name: assets/enemy/you_lost.gd.remap
+SHA-256-Digest: m7o9a0qeBfc1mZL0MZDk6stOo8w9Ux6FCnWN3wSdhxU=
+
+Name: assets/enemy/you_lost.gdc
+SHA-256-Digest: bV2FoqGoYMWGUuceUJaHqQnw5sDaXn8ngjbJFi+8Lew=
+
+Name: assets/golovolomki/action.tscn.remap
+SHA-256-Digest: EVrB9QmiRp87GyqBP4NE1cCRdnjGlPmaPH/bqiougp8=
+
+Name: assets/golovolomki/action_object.tscn.remap
+SHA-256-Digest: /ov7QCHbeDqbS7AQu+USitnL/GhypGxDxPKMann/6u0=
+
+Name: assets/golovolomki/enemy_triger.tscn.remap
+SHA-256-Digest: beigrBNVfI8pYJEiSnvmUQ8+V6Q5sjHFTX4HDKy2urM=
+
+Name: assets/golovolomki/hint_object.tscn.remap
+SHA-256-Digest: wddd3et5BenFvCbcjUWJqNQwEEiKyKZDGpNiUMOx8qI=
+
+Name: assets/golovolomki/scripts/action.gd.remap
+SHA-256-Digest: 5bcdv3rsGXhfZXLiFX+BrDBhNMF+yhuNREoVWipJDIk=
+
+Name: assets/golovolomki/scripts/action.gdc
+SHA-256-Digest: ZtFv956/na2DkEirxKQQRqGpAnySeiVyVLO4aKDAcMQ=
+
+Name: assets/golovolomki/scripts/action_object.gd.remap
+SHA-256-Digest: h8pmc6w4KVWhmpxDpcOaaQZQfMz6kDLS2WlUutMlQKc=
+
+Name: assets/golovolomki/scripts/action_object.gdc
+SHA-256-Digest: NdegK0y/QEx0YTKQIWrS+vADh+5PaMq2gXVCc3iNrbQ=
+
+Name: assets/golovolomki/scripts/enemy_triger.gd.remap
+SHA-256-Digest: 5Gfgatnw5NKEheIrIaYAgLeFhT/gcWSfH6LCKVSIEKY=
+
+Name: assets/golovolomki/scripts/enemy_triger.gdc
+SHA-256-Digest: R+bB+8DvErCBr1EfC7coJ//BBj9dC8yg2p2V/wVrqPM=
+
+Name: assets/golovolomki/scripts/hint_obj.gd.remap
+SHA-256-Digest: L6ruEt6/f3PuKIwBxnl+nQUUy2rj6/gXpZx+To5aOyM=
+
+Name: assets/golovolomki/scripts/hint_obj.gdc
+SHA-256-Digest: Ga3TPgNYTmWqzyA75MzkwGZ2Lozv67jtfFozzVCHxb0=
+
+Name: assets/golovolomki/triger.gd.remap
+SHA-256-Digest: wUQVdVSVP/N0IVpiPON/ikERin2/ZHR2oVxfzcOSPEQ=
+
+Name: assets/golovolomki/triger.gdc
+SHA-256-Digest: ZNY8XfX9/7g2ImLNy5T5Dt0pYgd8tuB/p9Ytr/VZVMc=
+
+Name: assets/golovolomki/triger.tscn.remap
+SHA-256-Digest: 4YgHfq/ro+ZqgSkShIFa1EaEP6oSVJ8xC0tGEJiesok=
+
+Name: assets/icon.png
+SHA-256-Digest: uVVbJVSpa3/cGGYSVbU2U7BPvo+N/39cmbmb6E0Y42g=
+
+Name: assets/icon.png.import
+SHA-256-Digest: 5ate97g+G1+Bq9Q3FQE7bdwHomnN85HI1UjvJFztgyQ=
+
+Name: assets/mesh/cook_handle/cook handle.fbx.import
+SHA-256-Digest: oYl6JadNC37jr16KL5Vdl8b83Xr9rM8pUEqgFSXXbq8=
+
+Name: assets/mesh/cook_handle/cook_handle.jpg.import
+SHA-256-Digest: Gb/294md0K8pkSeiYItSk41WfZHOkk8MXbn25NuLssA=
+
+Name: assets/mesh/cook_handle/cook_handle.tscn.remap
+SHA-256-Digest: yzau46oh8PKQta4cTfj4LE2NmQP28CAIr2C0r0JYxjA=
+
+Name: assets/mesh/glock/glock.fbx.import
+SHA-256-Digest: k7PoiBStP+A4iPqFB/l+BGNhrF/Nq+x3ZcGtiq+k4uA=
+
+Name: assets/mesh/glock/orig.webp.import
+SHA-256-Digest: nHJrf9I72jG7U+od2BMPnG8INvsqZcMWiolV2m8BZZ8=
+
+Name: assets/mesh/hamer/hamer.fbx.import
+SHA-256-Digest: 4AdCWAejS41abP3DSW3qN8v/kwhie51NwY7H3y534Vs=
+
+Name: assets/mesh/hamer/hamer.tscn.remap
+SHA-256-Digest: nLbinFvH4/KNacZYvASPA7/IloNZyaKL29Ggb2IPnyA=
+
+Name: assets/mesh/hamer/tex.png.import
+SHA-256-Digest: F8MtOuas8S6vS0WjSktuBgdy9TXlK5ZwJNW02plVisQ=
+
+Name: assets/mesh/key_door/key_door.fbx.import
+SHA-256-Digest: YfI/0NHOR83FAYVoQCjB/1b+n8KaUrKv1nwSzluZi0Y=
+
+Name: assets/mesh/key_door/key_door.jpg.import
+SHA-256-Digest: fAxXW23s58e5p+mNX1dHXdL1H14OCGj/R2aUteztQf4=
+
+Name: assets/mesh/key_door/key_door.tscn.remap
+SHA-256-Digest: 48pSTRk87X9vLYb6ThodJLEybEssOqghGJfbb8gH/zk=
+
+Name: assets/mesh/key_panel/key panel.fbx.import
+SHA-256-Digest: m5rpI0lfjd1pYO5JzlS4QD7rn8SnSPGjGR8POmUU2lw=
+
+Name: assets/mesh/key_panel/key panel.jpg.import
+SHA-256-Digest: Gg09aerchoAov7RcWX8PZHfwEVNqGBNA+1XoiTPYGcY=
+
+Name: assets/mesh/key_panel/key_panel.jpg.import
+SHA-256-Digest: z309exuwOFVteJRlEtlZvor8D7AVki1+LXSi6jxWkA4=
+
+Name: assets/mesh/key_panel/key_panel.tscn.remap
+SHA-256-Digest: yEjM41dPj4mbZDL0n0Pef9x+6PONFJC325cMp16DlTQ=
+
+Name: assets/mesh/key_panel/tex.png.import
+SHA-256-Digest: Ey3hJzDICCLOyMduEly9YOIbQ6tY0NsrtKH2FHJrq/g=
+
+Name: assets/project.binary
+SHA-256-Digest: G/FzOXb+iq0oPv5PePtv3chHmNDgBrDmiO/LyRduuPM=
+
+Name: assets/sound/выбивания двери.MP3.import
+SHA-256-Digest: q5lEQcmG9W5COkY/z1JOliiMXTx6EyVFjdWJLwVT3G4=
+
+Name: assets/sound/звук ходьбы.MP3.import
+SHA-256-Digest: F2aW6qNscIRw7h8a32uRO4+5CWdfEdmwYdtObNq857E=
+
+Name: assets/sound/кнопка.mp3.import
+SHA-256-Digest: 9RSSdKXpJsNF7Q1KmCH2qfI1MNHXyFRB9AMI0i4MIPM=
+
+Name: assets/sound/падение после скримера.mp3.impo
+ rt
+SHA-256-Digest: Tf1uxBV49zNn9x6ySzKpdeZTyHBAMUL7cTDEYDTyENc=
+
+Name: assets/sound/плита.mp3.import
+SHA-256-Digest: fRaEfyZY4l6f3xuPgdQVDx2AS0QhQras+ZOm86iuWvw=
+
+Name: assets/sound/попытка открыть дверь.MP3.import
+SHA-256-Digest: KdLki2lzWJGTzvDDT531RzkhzEMRHyckvTaYU9GMGpc=
+
+Name: assets/sound/фоновый звук.mp3.import
+SHA-256-Digest: nEQSa5lhFiDy9Q3KZdn257HARZOVgEWEw0+iInjeRRA=
+
+Name: assets/widget/Menu img.jpg.import
+SHA-256-Digest: jFCfeZEx0DReHPh+256BCmNHsC6tgHO5fHeJPie8TFA=
+
+Name: assets/widget/arm/cook_handle.png.import
+SHA-256-Digest: 0fpZDI1MZH3QSoywjfoBXVoDuWaX4ceePbNY9e2TZ7A=
+
+Name: assets/widget/arm/hamer.png.import
+SHA-256-Digest: 2HaXic4LrkkbavsbWndCfScUNbavIyfLsVEOcbE8U2M=
+
+Name: assets/widget/arm/key_door.png.import
+SHA-256-Digest: TTC47yey4I7RSU1yJQ1XWqigdijsGwT1Y8951yr5auA=
+
+Name: assets/widget/arm/key_panel.png.import
+SHA-256-Digest: K2IpxnAkta3MnK9/wKLIWo/R9AAs9Wy3xk5Rwavdh5o=
+
+Name: assets/widget/control/Bevel Circle.png.import
+SHA-256-Digest: nYvfZUihGPqgYO/Xhb/73ZMWLS9xLSqIASvmxVp/g7U=
+
+Name: assets/widget/control/Crouch.png.import
+SHA-256-Digest: ZZsucXGhEE3wp1/HgSd+crHdurXiZOppM+dbrYZv2pY=
+
+Name: assets/widget/control/drop.png.import
+SHA-256-Digest: Qg252N+oEjRgDfoS4WTnMlwJl8sUfSFwEy9m0dK6H1Y=
+
+Name: assets/widget/control/ent.png.import
+SHA-256-Digest: fOQZui+ACl24FnmG9ASxcgFhjHLdjEL4wapFpK7rnRg=
+
+Name: assets/widget/font.ttf.import
+SHA-256-Digest: F20GRYl0ug5JKvLW3SKcJBfE6o0MUhtTWVnw+j0UDXg=
+
+Name: assets/widget/inventory item/active slot.jpg.import
+SHA-256-Digest: 1CO1M8mQE09AtwCzBK8DPbchRvDP28WcRg/w0CIhVto=
+
+Name: assets/widget/inventory item/slot.jpg.import
+SHA-256-Digest: ealkcekj7ChTcdhlFfLL49F3Hbj6gAbu1trKPJyp79w=
+
+Name: assets/widget/outline object.gdshader
+SHA-256-Digest: nuW0fU0TPAdnyyzhnuiX4J9G790o1qLcJY9gKZWfXw8=
+
+Name: assets/widget/retro.gdshader
+SHA-256-Digest: FIjj/C4nMo0hfl1uRb8BikY0GO+ljoX7RViKURZfuGs=
+
+Name: classes.dex
+SHA-256-Digest: 8NGdnNDTL0UdBBAlIq22/O601llXGNKsg5MuWTQUDlA=
+
+Name: classes2.dex
+SHA-256-Digest: ByvOI6+mcNaPBzywMaKCy8/dGNLwDYc5OcUcprJ6WT8=
+
+Name: classes3.dex
+SHA-256-Digest: 7gSr4n+nYzybgByu2paComCVc4AldHKq3u7VxFOcuPs=
+
+Name: classes4.dex
+SHA-256-Digest: YD43tfByA7Qf7Sfkl/Rgs83kCHU+Ie7wPe3Vj5J7JdI=
+
+Name: kotlin/annotation/annotation.kotlin_builtins
+SHA-256-Digest: 37WDWfmYN6iX75eAXUXFlMf/SlVVztjbh/wKm8XgEWU=
+
+Name: kotlin/collections/collections.kotlin_builtins
+SHA-256-Digest: Q7jZRv9+2qLROmcpCDWJWzGOsq/s4QM2TNcA5RrXm70=
+
+Name: kotlin/coroutines/coroutines.kotlin_builtins
+SHA-256-Digest: QETf+Rc+3vjnIqvzEpc9ejAXaloigQfzV2j4bU5faEU=
+
+Name: kotlin/internal/internal.kotlin_builtins
+SHA-256-Digest: qWjFefItkz/FFM0931o0I9QAMQd6m7pJzUdFC+5vViU=
+
+Name: kotlin/kotlin.kotlin_builtins
+SHA-256-Digest: VkN63WmmMvTy5+7sWhLjfsu1S8gsbvGzd2OXMHK4TbY=
+
+Name: kotlin/ranges/ranges.kotlin_builtins
+SHA-256-Digest: 6esJbrjuBmuBEM7N5TrVnjx2L2UG1oEIWu89qSZC99U=
+
+Name: kotlin/reflect/reflect.kotlin_builtins
+SHA-256-Digest: qh6R0TdzM0XLQkA8j2eqWn/lGjwb09s60ayGgdVcP8w=
+
+Name: lib/arm64-v8a/libc++_shared.so
+SHA-256-Digest: KkE/ckgx5SUz3RUypuHgoQkxtIQ+RszxPL5qqbFy5N8=
+
+Name: lib/arm64-v8a/libgodot_android.so
+SHA-256-Digest: ucxypx7Y6Ww6b/VGpplprSsz/WkCd0IbU/YZiU/e0jU=
+
+Name: res/anim-v21/fragment_fast_out_extra_slow_in.xml
+SHA-256-Digest: drCtQ+FyBC5dx66ByTEswLoEDTceWPVnhP0K3P2rxJ0=
+
+Name: res/animator/fragment_close_enter.xml
+SHA-256-Digest: xzVZkI+xIfvrys0byDZKKisxPaRGuRustBBmjsoFHcQ=
+
+Name: res/animator/fragment_close_exit.xml
+SHA-256-Digest: 3zFNtTNaBT34JQ3EJTDM64DqRS9YAZ4Ff/zow2ECsPk=
+
+Name: res/animator/fragment_fade_enter.xml
+SHA-256-Digest: 7P8enVvZzQY1lkQ6YqCl0pN84B1p0nVYXrGBInYXsQg=
+
+Name: res/animator/fragment_fade_exit.xml
+SHA-256-Digest: 2LPsSVbuVFK3SzizVcuOLcODlK54Z73m+6Am+h3wPPw=
+
+Name: res/animator/fragment_open_enter.xml
+SHA-256-Digest: WDdpHvwIlAwlGQdo0cnS3TlsnApR6Cl+W2OFbqxbwHY=
+
+Name: res/animator/fragment_open_exit.xml
+SHA-256-Digest: sZf6aBToQ/Ysj9BewgsQJQeXOQMpHJJNZYU+1YVCe3Q=
+
+Name: res/drawable-hdpi-v4/notification_bg_low_normal.9.png
+SHA-256-Digest: fdgyJ61bkVHESSHzWiTHQ5LVNwIge6pbEao7ySrGIjw=
+
+Name: res/drawable-hdpi-v4/notification_bg_low_pressed.9.png
+SHA-256-Digest: 4RlHlyDIzTYG5Klg5AKe0Fi4c3z+iVWMOHgAh9ZL7Aw=
+
+Name: res/drawable-hdpi-v4/notification_bg_normal.9.png
+SHA-256-Digest: R2ot7jptNS4NITpYzXOWw8lhLeXmUvp8G9vuPhk6Z5g=
+
+Name: res/drawable-hdpi-v4/notification_bg_normal_pressed.9.png
+SHA-256-Digest: QpO86S6qjy93OQJSq/J9fVVQWcP9s8Pv2bUoICK94gI=
+
+Name: res/drawable-hdpi-v4/notify_panel_notification_icon_bg.png
+SHA-256-Digest: /PItNSPhz1UN7VfEyZ8kRa5sj9QY+F0lydOxu0h8L3A=
+
+Name: res/drawable-mdpi-v4/notification_bg_low_normal.9.png
+SHA-256-Digest: vPDmKMKiqjYmhi26bO46qs1KOttdTfXBQv3S6xgfvbk=
+
+Name: res/drawable-mdpi-v4/notification_bg_low_pressed.9.png
+SHA-256-Digest: e16Z3lBylbmIotIXO0QYkgWhWX879GWDILhD+IqQPrc=
+
+Name: res/drawable-mdpi-v4/notification_bg_normal.9.png
+SHA-256-Digest: vg/gP72vh/b3yaE+84dQHojgy5jwUZQN3hC/VrbOPYU=
+
+Name: res/drawable-mdpi-v4/notification_bg_normal_pressed.9.png
+SHA-256-Digest: E+nflwefiwR9S8AxSqqdC4YdlP6FC3dp3U7y/507B1k=
+
+Name: res/drawable-mdpi-v4/notify_panel_notification_icon_bg.png
+SHA-256-Digest: 8C4ln6xzH/7a1Zr/v13Gw9vF9lJ85KeVqKuMY61s+To=
+
+Name: res/drawable-v21/notification_action_background.xml
+SHA-256-Digest: 6E1wfs1FDoJsr4+MdEWEjpnT20m1Thjbb+s+dpZcBXM=
+
+Name: res/drawable-v23/compat_splash_screen.xml
+SHA-256-Digest: K9xKRCI6i77eBj+Pv+5Py76VwZYpVu12RXU+8lpRgKA=
+
+Name: res/drawable-v23/compat_splash_screen_no_icon_background.xml
+SHA-256-Digest: 98e5Myy1GNJKtw9Olqa7kfxW2sOY14nm0F5LS4oLsyM=
+
+Name: res/drawable-xhdpi-v4/notification_bg_low_normal.9.png
+SHA-256-Digest: uXY6G0jRm/22W3PCh/Bn1QB8m4GwiK1QCuoTeveblDQ=
+
+Name: res/drawable-xhdpi-v4/notification_bg_low_pressed.9.png
+SHA-256-Digest: f/QdP0Grwhn/DYrOcK8L48iPdr49tI6JUbIsde2OQaY=
+
+Name: res/drawable-xhdpi-v4/notification_bg_normal.9.png
+SHA-256-Digest: UcrXW2ElY1qt5dfTsuSlaRj5YzoOKQ6qQH5GeDt/B8E=
+
+Name: res/drawable-xhdpi-v4/notification_bg_normal_pressed.9.png
+SHA-256-Digest: ukgIe6XxA8BIeBpiCpKscdVufr7N3/HFli1R1e0BBDs=
+
+Name: res/drawable-xhdpi-v4/notify_panel_notification_icon_bg.png
+SHA-256-Digest: D1Xpcp0eT5Aq/BN3oXeFvyGZiAwa+YOLYva+w2YhSQs=
+
+Name: res/drawable/compat_splash_screen.xml
+SHA-256-Digest: o4OCW532B6QCqqfDINzf8Ryf1vhyhaA93nth7o1jj18=
+
+Name: res/drawable/compat_splash_screen_no_icon_background.xml
+SHA-256-Digest: GQRs5O9x6kQk9Hc2cb1mkH7JUOnplb3ggg6B5zYUs2w=
+
+Name: res/drawable/icon_background.xml
+SHA-256-Digest: d4XYBOlpMovdcHGQCH+EDmYFR1jItW9+jlVFbtYqCQo=
+
+Name: res/drawable/notification_bg.xml
+SHA-256-Digest: YTuKOemzZm1ezGz4XI/MkWbEc/G1er0ozRNzgl3TqQY=
+
+Name: res/drawable/notification_bg_low.xml
+SHA-256-Digest: ZkKrON7V3sX1vPTqtw4/JD1lutdpTquxKBYFTzFYf2c=
+
+Name: res/drawable/notification_icon_background.xml
+SHA-256-Digest: /EHu6R1L1pkBzt4c865i2JNnO8POaQgZ/YGIsTtlkS0=
+
+Name: res/drawable/notification_tile_bg.xml
+SHA-256-Digest: 8k6kY2N4INb/JeotIhA14NUJkCj8UUL8tTFfo4b1Z4Y=
+
+Name: res/layout-v21/notification_action.xml
+SHA-256-Digest: /2Ko8OnVSGdf9Q4oyCSUL2SL84jK76rkbnc77xv+uyQ=
+
+Name: res/layout-v21/notification_action_tombstone.xml
+SHA-256-Digest: twzrPg/u7LzF7CNK5BPYnD4WDxhwWF/7rJBSqbS5pwI=
+
+Name: res/layout-v21/notification_template_custom_big.xml
+SHA-256-Digest: jHk4Nft6bpNOMcGEyxToRBH4yd6NUI2Q4hFVlg6V5bI=
+
+Name: res/layout-v21/notification_template_icon_group.xml
+SHA-256-Digest: S5N/C8u7lwORPC3g6diIlBN6vt3wizKUSZhKu4dphqM=
+
+Name: res/layout-v22/snackbar.xml
+SHA-256-Digest: lSSfV4BJ1y5XC9JAxE21jF5vRxuA3VVBv4oXhzGfc1Y=
+
+Name: res/layout/custom_dialog.xml
+SHA-256-Digest: GjJEJ2GC+Lz70wtcJ0RVkGzKH523ldWLZqCKQtEdY1Q=
+
+Name: res/layout/downloading_expansion.xml
+SHA-256-Digest: VyiRpflHESY18u/G4yN8OndPyVMzfJKgABn8NQUozH4=
+
+Name: res/layout/godot_app_layout.xml
+SHA-256-Digest: 7BuO+VZJR5VSmNlX5GDxHTgD9tEVTrE6Wt56KnZutaI=
+
+Name: res/layout/notification_template_part_chronometer.xml
+SHA-256-Digest: haKgafUownACGprfM9XKDsw665akZXWRn2e+fhcgPAU=
+
+Name: res/layout/notification_template_part_time.xml
+SHA-256-Digest: R91a22W7yXIGa3Nj0YIjJCcYuexPoWl368LtvNy6SSU=
+
+Name: res/layout/snackbar.xml
+SHA-256-Digest: VW3bSt6Yogx6G7PjpYv/fs6i39K1SjQw0VkdQrGiruw=
+
+Name: res/layout/splash_screen_view.xml
+SHA-256-Digest: biXClmHsAnaw1q7I8yV4g7VjcDoAT/JgU74M5N5XaU0=
+
+Name: res/layout/status_bar_ongoing_event_progress_bar.xml
+SHA-256-Digest: YLW0b5JS11+PMpmwANiZQVNw0q5egpIi9eOOhWS+5Jc=
+
+Name: res/mipmap-anydpi-v26/icon.xml
+SHA-256-Digest: H7yY4Eez2QoYfIhNd42DIwHniYqzPopjNumKSO+NXuA=
+
+Name: res/mipmap-hdpi-v4/icon.png
+SHA-256-Digest: kAzV0fKaz8qKu9ZP+fx0D83vBpckyWJXNERIXTcjqrI=
+
+Name: res/mipmap-hdpi-v4/icon_background.png
+SHA-256-Digest: bcvqoCeN18mjk+t2AmJ0w44pe4PAbTvmwG4EBYtz1rA=
+
+Name: res/mipmap-hdpi-v4/icon_foreground.png
+SHA-256-Digest: 37UZX67vbZ0diZjkPnDV0LSMLOvcLccOYef1B/bubB8=
+
+Name: res/mipmap-hdpi-v4/icon_monochrome.png
+SHA-256-Digest: RpeqrTWo4U1R89fior/2qAw9hTflI+WNJTSYpjMxRls=
+
+Name: res/mipmap-mdpi-v4/icon.png
+SHA-256-Digest: TYpasbMcG2CTVs2T0jQmW9aXyYQ+ft0+wRtEj/QXTe8=
+
+Name: res/mipmap-mdpi-v4/icon_background.png
+SHA-256-Digest: d0GHrEhOQA7suDXif0nSdmUiGVFbnlzujsiqT3YMqXw=
+
+Name: res/mipmap-mdpi-v4/icon_foreground.png
+SHA-256-Digest: leYP3BEKnf7OHIyMs+m6M3qJfR9yT0Hi/38oVfAbqx8=
+
+Name: res/mipmap-mdpi-v4/icon_monochrome.png
+SHA-256-Digest: cYvYPjj9u9Iimuh5POnC+El/EidZUfsDqqUSPzwUnCA=
+
+Name: res/mipmap-xhdpi-v4/icon.png
+SHA-256-Digest: /KMG/uyvk0t0FHixIzcp6OQXRGTDhcOsvO0uDrUO9P0=
+
+Name: res/mipmap-xhdpi-v4/icon_background.png
+SHA-256-Digest: VPx8e9AxVI0Ha/v1znJbkEkVQpj75981sR2GgJ0RcTM=
+
+Name: res/mipmap-xhdpi-v4/icon_foreground.png
+SHA-256-Digest: MV68x5NCV/PoBW7eBif+sOchFEJU2pa9PEQNaIcYghU=
+
+Name: res/mipmap-xhdpi-v4/icon_monochrome.png
+SHA-256-Digest: HHYr8QqPmOmdTEW5kCsOuGW3ILKTS4zvHlAX89EvsBc=
+
+Name: res/mipmap-xxhdpi-v4/icon.png
+SHA-256-Digest: Vzx3Iwu6tw7zkE4LeOszOycoC34SNGqO6GQquoI9mKU=
+
+Name: res/mipmap-xxhdpi-v4/icon_background.png
+SHA-256-Digest: isnKXAyQ4+ORCMjqBr88TrXOLJ5xBtZlm0mkGyQdOZs=
+
+Name: res/mipmap-xxhdpi-v4/icon_foreground.png
+SHA-256-Digest: 08s3UxHyVCgUu4r9eBdCf/FpXLI14oX12LtWlofz2DU=
+
+Name: res/mipmap-xxhdpi-v4/icon_monochrome.png
+SHA-256-Digest: 2fiNGrpfVcFI95+zTd1uFMm/PXykeeNmOzK19hvR6hQ=
+
+Name: res/mipmap-xxxhdpi-v4/icon.png
+SHA-256-Digest: L7mU46wMw16Jynj0hzqxr9YGjSWhbVLonFNEcQNXgpA=
+
+Name: res/mipmap-xxxhdpi-v4/icon_background.png
+SHA-256-Digest: Td8aHgQqgf/mGWuK9HWear6+QFCjTIP7pD8MMTTlaBI=
+
+Name: res/mipmap-xxxhdpi-v4/icon_foreground.png
+SHA-256-Digest: Q7VeI6qMEKmb4D3GZRx31IOKsLOGkyQ/QT5edAeXLks=
+
+Name: res/mipmap-xxxhdpi-v4/icon_monochrome.png
+SHA-256-Digest: asHQ7rrJgC89JSamq1wFV6ZOVl9F1gfPfFKR/dA2Yt4=
+
+Name: res/mipmap/icon.png
+SHA-256-Digest: AHZrPDcya51GNClVDAJtanFIdE6l+qsZhaPGrAb2aUE=
+
+Name: res/mipmap/icon_background.png
+SHA-256-Digest: lF+TNLt3RKnJk/l2NoYRpyj3rf9jw99Uyz7psdfczTU=
+
+Name: res/mipmap/icon_foreground.png
+SHA-256-Digest: A9ZRkYDPnNvLxRnL66CKTg7TUn1ee7PGOI7s3AjvIQY=
+
+Name: res/mipmap/icon_monochrome.png
+SHA-256-Digest: 95Y/Z2Hk9hL8usKyVslMsn7O02KZjX2zLCwwEGsPUeU=
+
+Name: res/xml/godot_provider_paths.xml
+SHA-256-Digest: 9dXvi7i9IkJDbJWUBF1VxirlbCC4MyjZKpgw+XXWj2I=
+
+Name: resources.arsc
+SHA-256-Digest: WuZOTF76nziQ/Cs3W3yVkVn2BMlSdVuX1u2A0KftG2U=
+
