@@ -21,4 +21,4 @@ func locked_is_false() -> void:
 	if MainInventoryScript.chose_obj == "hamer":
 		is_locked = false
 	else:
-		Diolog.set_hint("Нужно его сломать")
+		Dialog.show_hint("Нужно его сломать")

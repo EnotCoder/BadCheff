@@ -8,7 +8,7 @@ func toggle_door() -> void:
 		return
 	_uses_count += 1
 	if _uses_count < required_uses:
-		Diolog.set_hint("Можно выбить")
+		Dialog.show_hint("Можно выбить")
 		$"ПопыткаОткрытьДверь".play()
 		return
 	door_opened = not door_opened

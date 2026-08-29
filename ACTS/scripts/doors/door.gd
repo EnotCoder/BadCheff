@@ -38,7 +38,7 @@ func unlock_door() -> void:
 	locked = ""
 
 func show_locked_hint(text: String) -> void:
-	Diolog.set_hint(text)
+	Dialog.show_hint(text)
 
 func play_animation(animation_name: String) -> void:
 	$AnimationPlayer.play(animation_name)

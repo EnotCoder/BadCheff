@@ -5,4 +5,4 @@ extends Area3D
 
 
 func main():
-	Diolog.set_hint(Key_hint)
+	Dialog.show_hint(Key_hint)

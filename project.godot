@@ -23,8 +23,8 @@ config/icon="uid://ckayg2tlpi0an"
 [autoload]
 
 State="*res://enemy/State.gd"
-Diolog="*res://Diolog.gd"
 MainInventoryScript="*res://Player/Inventory/main_inventory_script.gd"
+Dialog="*res://Dialog.gd"
 
 [debug]
 

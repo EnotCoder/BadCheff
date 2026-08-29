@@ -73,7 +73,7 @@ func _physics_process(delta: float) -> void:
 		$"Control / cursor".scale = Vector2(4, 4)
 
 func _ready() -> void:
-	Diolog.set_say("Нужно выбратся от сюда и найти отца")
+	Dialog.show_say("Нужно выбратся от сюда и найти отца")
 	State.noise.connect($"timer enemy".p.bind())
 	$"timer enemy/Timer".wait_time = time
 	$"Control/anim screen".color_down()

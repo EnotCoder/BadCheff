@@ -8,8 +8,8 @@ func set_timer():
 	$Timer.start()
 
 func _process(_delta: float) -> void :
-	$"cheffs say".text = Diolog.say
-	$hint.text = Diolog.hint
+	$"cheffs say".text = Dialog.speech_text
+	$hint.text = Dialog.hint_text
 	$Label.text = str(int($Timer.time_left))
 
 	if str(int($Timer.time_left)) != "0" and State.state != 2: $Label.show()
@@ -28,21 +28,21 @@ func test_room(list):
 	for obj in list:
 		if obj.player_interaction_active and State.state == 1:
 			State.state = 2
-			Diolog.set_say(obj.say)
+			Dialog.show_say(obj.say)
 			break
 
 func _on_timer_timeout() -> void :
 	State.state = 1
 	test_room(State.object_list_from_room)
 
-	if State.state != 2: Diolog.set_say("Откуда был шум!?")
+	if State.state != 2: Dialog.show_say("Откуда был шум!?")
 	await get_tree().create_timer(5).timeout
-	if State.state != 2: Diolog.set_say("Что-то не так")
+	if State.state != 2: Dialog.show_say("Что-то не так")
 	await get_tree().create_timer(5).timeout
 
 	test_room(State.object_list_from_kithcen)
 
 	if State.state != 2:
-		Diolog.set_say("Странно всё на месте")
+		Dialog.show_say("Странно всё на месте")
 		State.state = 0
 	time_wait = false

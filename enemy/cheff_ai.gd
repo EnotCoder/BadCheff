@@ -38,10 +38,10 @@ func process_movement():
 
 	if $"../active object/door/door kitchen".door_opened and State.position_point == "kitchen":
 		State.state = 2
-		Diolog.set_say("Ага")
+		Dialog.show_say("Ага")
 	elif MainInventoryScript.position_point != "frezz_room" and State.position_point == "kitchen":
 		State.state = 2
-		Diolog.set_say("Ага")
+		Dialog.show_say("Ага")
 
 	if !$NavigationAgent3D.is_navigation_finished():
 		move_and_slide()

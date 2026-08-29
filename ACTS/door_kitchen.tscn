@@ -1,12 +1,12 @@
-[gd_scene load_steps=25 format=4 uid="uid://bjotsfvxh0hqu"]
+[gd_scene format=4 uid="uid://bjotsfvxh0hqu"]
 
 [ext_resource type="Script" uid="uid://d4ca5jnro8fv" path="res://ACTS/scripts/doors/door_frezz_room.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://btrn40p225kfa" path="res://act 1 object/prolog/door kitchen.jpg" id="2"]
 [ext_resource type="Texture2D" uid="uid://dlv6ulm730avr" path="res://act 1 object/prolog/board.jpg" id="3"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="4"]
 [ext_resource type="Material" uid="uid://bu2wbi3fv6cl3" path="res://act 1 object/materials/glass.tres" id="5"]
-[ext_resource type="AudioStream" uid="uid://bflaqhuvbpw7m" path="res://sound/выбивания двери.MP3" id="6"]
-[ext_resource type="AudioStream" uid="uid://oq20jc03n2bo" path="res://sound/попытка открыть дверь.MP3" id="7"]
+[ext_resource type="AudioStream" uid="uid://bflaqhuvbpw7m" path="res://sounds/выбивания двери.MP3" id="6"]
+[ext_resource type="AudioStream" uid="uid://oq20jc03n2bo" path="res://sounds/попытка открыть дверь.MP3" id="7"]
 [ext_resource type="PackedScene" uid="uid://d0uanjln038ld" path="res://golovolomki/enemy_triger.tscn" id="8"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iwpp8"]

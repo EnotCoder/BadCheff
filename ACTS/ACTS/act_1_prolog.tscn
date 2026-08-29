@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://c44174odqpnqj" path="res://mesh/cook_handle/cook_handle.tscn" id="22"]
 [ext_resource type="PackedScene" uid="uid://2et6dy6al5i4" path="res://mesh/key_door/key_door.tscn" id="23"]
 [ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/scripts/zones.gd" id="24"]
-[ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sound/фоновый звук.mp3" id="25"]
+[ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
 
 [sub_resource type="Environment" id="Environment_nyylq"]
 background_mode = 1

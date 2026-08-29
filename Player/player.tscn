@@ -1,10 +1,10 @@
-[gd_scene load_steps=23 format=3 uid="uid://dip7a70gdxdee"]
+[gd_scene format=3 uid="uid://dip7a70gdxdee"]
 
 [ext_resource type="Script" uid="uid://r3yq7ih4a3w8" path="res://Player/scripts/player_controler.gd" id="1"]
 [ext_resource type="Script" uid="uid://bvl27574jcs0k" path="res://Player/scripts/inventory_icon.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://b2oi13y4ao30m" path="res://widget/inventory item/slot.jpg" id="3"]
 [ext_resource type="Script" uid="uid://bcqgbwffjrvpc" path="res://Player/scripts/anim_screen.gd" id="4"]
-[ext_resource type="Shader" uid="uid://grq82ch3xux8" path="res://widget/retro.gdshader" id="5"]
+
 [ext_resource type="Script" uid="uid://cvh1p8o8c6ser" path="res://Player/control.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://btxywwyajdiq0" path="res://widget/control/Bevel Circle.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://boep7b5ra6l1d" path="res://widget/control/ent.png" id="8"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://5h8pt611do21" path="res://widget/control/drop.png" id="10"]
 [ext_resource type="Script" uid="uid://5h3xer1o08y3" path="res://Player/scripts/timer_enemy.gd" id="11"]
 [ext_resource type="FontFile" uid="uid://bloqh7n8tgsiw" path="res://widget/font.ttf" id="12"]
-[ext_resource type="AudioStream" uid="uid://bx5geg00005ba" path="res://sound/звук ходьбы.MP3" id="13"]
+[ext_resource type="AudioStream" uid="uid://bx5geg00005ba" path="res://sounds/звук ходьбы.MP3" id="13"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="14"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
@@ -75,15 +75,7 @@ _data = {
 &"start": SubResource("Animation_k53q1")
 }
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_fhl08"]
-shader = ExtResource("5")
-shader_parameter/uTexBlueNoise = null
-shader_parameter/contrast = 2.99
-shader_parameter/brightness = 0.0
-shader_parameter/uTime1 = 1.0
-shader_parameter/uTime2 = 2.0
-shader_parameter/uTime3 = 4.0
-shader_parameter/colors = 8.0
+
 
 [node name="player" type="CharacterBody3D"]
 collision_layer = 5
@@ -187,7 +179,7 @@ libraries = {
 }
 
 [node name="screen" type="ColorRect" parent="Control"]
-material = SubResource("ShaderMaterial_fhl08")
+
 layout_mode = 0
 offset_left = -21.0
 offset_top = -9.0

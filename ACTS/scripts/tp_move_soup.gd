@@ -12,4 +12,4 @@ func act():
 		else: global_position = pos[0]
 		player_interaction_active = !player_interaction_active
 	else:
-		Diolog.set_hint("очень горячо")
+		Dialog.show_hint("очень горячо")
