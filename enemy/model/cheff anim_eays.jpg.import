@@ -3,25 +3,28 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dapfm7dbw4wd3"
+path.s3tc="res://.godot/imported/cheff anim_eays.jpg-a46ae0f8e80f7114f6c66c03b5734ed2.s3tc.ctex"
 path.etc2="res://.godot/imported/cheff anim_eays.jpg-a46ae0f8e80f7114f6c66c03b5734ed2.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
 "vram_texture": true
 }
 generator_parameters={
-"md5": "e456c4463f3a42dfadb210631456f82e"
+"md5": "764b8c65f09d53a7eab35ed5a756132b"
 }
 
 [deps]
 
 source_file="res://enemy/model/cheff anim_eays.jpg"
-dest_files=["res://.godot/imported/cheff anim_eays.jpg-a46ae0f8e80f7114f6c66c03b5734ed2.etc2.ctex"]
+dest_files=["res://.godot/imported/cheff anim_eays.jpg-a46ae0f8e80f7114f6c66c03b5734ed2.s3tc.ctex", "res://.godot/imported/cheff anim_eays.jpg-a46ae0f8e80f7114f6c66c03b5734ed2.etc2.ctex"]
 
 [params]
 
 compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=1.0
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=0
 compress/normal_map=0
 compress/channel_pack=0
@@ -29,6 +32,10 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false

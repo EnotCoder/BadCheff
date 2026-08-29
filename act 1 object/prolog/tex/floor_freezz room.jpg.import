@@ -3,6 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://i1lvn2jomdql"
+path.s3tc="res://.godot/imported/floor_freezz room.jpg-b961282e753a39029cd8ea47a0ea60cb.s3tc.ctex"
 path.etc2="res://.godot/imported/floor_freezz room.jpg-b961282e753a39029cd8ea47a0ea60cb.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
@@ -12,13 +13,15 @@ metadata={
 [deps]
 
 source_file="res://act 1 object/prolog/tex/floor_freezz room.jpg"
-dest_files=["res://.godot/imported/floor_freezz room.jpg-b961282e753a39029cd8ea47a0ea60cb.etc2.ctex"]
+dest_files=["res://.godot/imported/floor_freezz room.jpg-b961282e753a39029cd8ea47a0ea60cb.s3tc.ctex", "res://.godot/imported/floor_freezz room.jpg-b961282e753a39029cd8ea47a0ea60cb.etc2.ctex"]
 
 [params]
 
 compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=1.0
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=0
 compress/normal_map=0
 compress/channel_pack=0
@@ -26,6 +29,10 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false

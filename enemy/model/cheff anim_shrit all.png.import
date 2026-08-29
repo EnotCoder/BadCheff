@@ -3,6 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://7evvfg45r8cw"
+path.s3tc="res://.godot/imported/cheff anim_shrit all.png-05dd1a56472e48815241014513f99019.s3tc.ctex"
 path.etc2="res://.godot/imported/cheff anim_shrit all.png-05dd1a56472e48815241014513f99019.etc2.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc", "etc2_astc"],
@@ -15,13 +16,15 @@ generator_parameters={
 [deps]
 
 source_file="res://enemy/model/cheff anim_shrit all.png"
-dest_files=["res://.godot/imported/cheff anim_shrit all.png-05dd1a56472e48815241014513f99019.etc2.ctex"]
+dest_files=["res://.godot/imported/cheff anim_shrit all.png-05dd1a56472e48815241014513f99019.s3tc.ctex", "res://.godot/imported/cheff anim_shrit all.png-05dd1a56472e48815241014513f99019.etc2.ctex"]
 
 [params]
 
 compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=1.0
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
 compress/hdr_compression=0
 compress/normal_map=0
 compress/channel_pack=0
@@ -29,6 +32,10 @@ mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+process/channel_remap/red=0
+process/channel_remap/green=1
+process/channel_remap/blue=2
+process/channel_remap/alpha=3
 process/fix_alpha_border=false
 process/premult_alpha=false
 process/normal_map_invert_y=false
