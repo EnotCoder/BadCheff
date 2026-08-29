@@ -1,0 +1,38 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://bhrowb8s6wgkh"
+path.etc2="res://.godot/imported/cheff anim_body.png-67ceb6e39f69568cb522807fb9b2f88e.etc2.ctex"
+metadata={
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
+}
+generator_parameters={
+"md5": "f3b9ec78939e1dd6d911363416a92af1"
+}
+
+[deps]
+
+source_file="res://enemy/model/cheff anim_body.png"
+dest_files=["res://.godot/imported/cheff anim_body.png-67ceb6e39f69568cb522807fb9b2f88e.etc2.ctex"]
+
+[params]
+
+compress/mode=2
+compress/high_quality=false
+compress/lossy_quality=1.0
+compress/hdr_compression=0
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=true
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=false
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=0

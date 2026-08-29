@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bflaqhuvbpw7m"
+path="res://.godot/imported/выбивания двери.MP3-52afed39e12b4597244cb713d24b289b.mp3str"
+
+[deps]
+
+source_file="res://sound/выбивания двери.MP3"
+dest_files=["res://.godot/imported/выбивания двери.MP3-52afed39e12b4597244cb713d24b289b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

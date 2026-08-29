@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfbdjopewbnng"]
+
+[ext_resource type="Script" uid="uid://pggonsg71jvr" path="res://golovolomki/scripts/action.gd" id="1"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_j5vqh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nr2we"]
+albedo_color = Color(0.251177, 0.634926, 0.281885, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_lf8pb"]
+
+[node name="ACTION" type="Area3D"]
+script = ExtResource("1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_j5vqh")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_nr2we")
+mesh = SubResource("BoxMesh_lf8pb")

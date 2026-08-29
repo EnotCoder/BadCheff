@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://cld5hwq188761"]
+
+[ext_resource type="PackedScene" uid="uid://5l8y3wvjo5ck" path="res://mesh/hamer/hamer.fbx" id="1"]
+[ext_resource type="PackedScene" uid="uid://b3tj5vlc31n6j" path="res://golovolomki/action_object.tscn" id="2"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m401g"]
+size = Vector3(0.29208, 0.130738, 0.645289)
+
+[node name="hamer" type="RigidBody3D"]
+collision_layer = 2
+collision_mask = 2
+
+[node name="hamer" parent="." instance=ExtResource("1")]
+transform = Transform3D(0.35, 0, 0, 0, 0.35, 0, 0, 0, 0.35, 0, 0, 0)
+
+[node name="ACTION_OBJECT" parent="hamer" instance=ExtResource("2")]
+transform = Transform3D(1.08, 0, 0, 0, 0.575051, 0, 0, 0, 2.03858, 0, 0, 0)
+visible = false
+Key_object = "hamer"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00923338, 0.0228657, 0.00172686)
+shape = SubResource("BoxShape3D_m401g")
