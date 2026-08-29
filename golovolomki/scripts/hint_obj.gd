@@ -5,4 +5,4 @@ extends Area3D
 
 
 func main():
-	MainInventoryScript.set_hint(Key_hint)
+	Diolog.set_hint(Key_hint)

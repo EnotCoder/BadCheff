@@ -273,7 +273,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.327473, 0.600051, -0.035776
 [node name="lock" parent="lock" node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("3")]
 transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
 visible = false
-FUNC_NAME = "loked_is_false"
+FUNC_NAME = "locked_is_false"
 NODE_ACTION = NodePath("../..")
 
 [node name="lock active" parent="lock" instance=ExtResource("5")]

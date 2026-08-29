@@ -1,6 +1,6 @@
 [gd_scene load_steps=25 format=4 uid="uid://bjotsfvxh0hqu"]
 
-[ext_resource type="Script" uid="uid://d4ca5jnro8fv" path="res://ACTS/scripts/doors/door frezz room.gd" id="1"]
+[ext_resource type="Script" uid="uid://d4ca5jnro8fv" path="res://ACTS/scripts/doors/door_frezz_room.gd" id="1"]
 [ext_resource type="Texture2D" uid="uid://btrn40p225kfa" path="res://act 1 object/prolog/door kitchen.jpg" id="2"]
 [ext_resource type="Texture2D" uid="uid://dlv6ulm730avr" path="res://act 1 object/prolog/board.jpg" id="3"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="4"]
