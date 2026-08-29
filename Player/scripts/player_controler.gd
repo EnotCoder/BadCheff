@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-class_name player
+class_name Player
 
 const WALK_SPEED := 4.0
 const CROUCH_SPEED := 2.0
