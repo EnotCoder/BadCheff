@@ -4,6 +4,7 @@ extends Node3D
 @export var locked_hint: String = ""
 @export var say: String = ""
 @export var noise: bool = false
+@export var play_squeak: bool = false
 
 var door_opened: bool = false
 var animation_in_progress: bool = false
@@ -27,6 +28,8 @@ func _perform_toggle() -> void:
 	if animation_in_progress:
 		return
 	door_opened = not door_opened
+	if play_squeak:
+		$Squeak.play()
 	if door_opened:
 		play_animation("open")
 	else:
