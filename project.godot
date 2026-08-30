@@ -19,6 +19,9 @@ config/description="This project demonstrates what you can be done with the Volu
 run/main_scene="uid://cbdo7l5ro8ukn"
 config/features=PackedStringArray("4.7")
 config/icon="uid://ckayg2tlpi0an"
+boot_splash/image="res://prev.png"
+boot_splash/show_image=true
+boot_splash/use_filter=false
 
 [autoload]
 
