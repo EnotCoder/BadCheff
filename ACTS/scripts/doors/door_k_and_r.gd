@@ -1,6 +1,8 @@
 extends "res://ACTS/scripts/doors/door.gd"
 
 var is_locked: bool = true
+@onready var lock_active: Node3D = $"lock/lock active"
+@onready var lock_break: Node3D = $"lock/lock break"
 
 func toggle_door() -> void:
 	if locked != "":
@@ -20,5 +22,7 @@ func toggle_door() -> void:
 func locked_is_false() -> void:
 	if MainInventoryScript.chose_obj == "hamer":
 		is_locked = false
+		lock_active.hide()
+		lock_break.show()
 	else:
 		Dialog.show_hint("Нужно его сломать")
