@@ -91,6 +91,7 @@ mesh = SubResource("CapsuleMesh_l8h54")
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1915093553]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.17982, 0)
+far = 15.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=437576829]
 target_position = Vector3(0, 0, -3)

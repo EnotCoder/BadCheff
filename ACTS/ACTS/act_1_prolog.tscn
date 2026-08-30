@@ -29,7 +29,6 @@
 
 [sub_resource type="Environment" id="Environment_nyylq"]
 background_mode = 1
-background_color = Color(0.77084, 0.770839, 0.770839, 1)
 fog_light_color = Color(0, 0, 0, 1)
 adjustment_brightness = 0.88
 
@@ -221,6 +220,7 @@ script = ExtResource("1")
 environment = SubResource("Environment_nyylq")
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=991100221]
+supersampling = true
 directional = true
 max_texture_size = 8192
 generate_probes_subdiv = 3
