@@ -17,7 +17,7 @@ centered = false
 [node name="ColorRect" type="ColorRect" parent="main" unique_id=1031307380]
 offset_left = 75.0
 offset_top = 122.0
-offset_right = 275.0
+offset_right = 274.99988
 offset_bottom = 310.0
 scale = Vector2(1.475, 1.475)
 color = Color(0, 0, 0, 0.792157)

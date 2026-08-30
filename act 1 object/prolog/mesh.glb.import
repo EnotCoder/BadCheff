@@ -61,48 +61,52 @@ _subresources={
 }
 },
 "nodes": {
+"PATH:break shelf": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:bricks": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
 "PATH:decor basement": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:mesh/break shelf": {
+"PATH:decor frezz": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:mesh/bricks": {
+"PATH:food": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:mesh/decor frezz": {
+"PATH:foods room": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:mesh/food": {
+"PATH:stairs": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:mesh/stairs": {
+"PATH:stoves": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:mesh/stoves": {
+"PATH:table for food": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:mesh/table for food": {
-"generate/physics": true,
-"mesh_instance/layers": 3,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:mesh/tables": {
+"PATH:tables": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
