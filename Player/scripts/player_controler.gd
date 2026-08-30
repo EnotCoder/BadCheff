@@ -2,6 +2,10 @@ extends CharacterBody3D
 
 class_name Player
 
+enum Platform { PC, ANDROID }
+
+@export var platform: Platform = Platform.PC
+
 const WALK_SPEED := 4.0
 const CROUCH_SPEED := 2.0
 const STAND_HEIGHT := 2.4
@@ -71,13 +75,23 @@ func _physics_process(delta: float) -> void:
 		$"Control/cursor".scale = Vector2(4, 4)
 
 func _ready() -> void:
+	if platform == Platform.PC:
+		$"Virtual Joystick".hide()
+		$"Control/control".hide()
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+	else:
+		$"Control/cursor".hide()
 	Dialog.show_say("Нужно выбратся от сюда и найти отца")
 	State.noise.connect($"timer enemy".p.bind())
 	$"timer enemy/Timer".wait_time = time
 	$"Control/anim screen".color_down()
 
 func _input(event: InputEvent) -> void:
-	if event is InputEventScreenDrag:
+	if platform == Platform.PC and event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * 0.003)
+		$Camera3D.rotate_x(-event.relative.y * 0.003)
+		clamp_camera_rotation()
+	elif event is InputEventScreenDrag:
 		rotate_y(-event.relative.x * 0.005)
 		$Camera3D.rotate_x(-event.relative.y * 0.005)
 		clamp_camera_rotation()
