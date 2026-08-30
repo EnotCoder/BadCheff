@@ -249,10 +249,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.66945, 0.629781, 7.19884)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0986326, 0, 0.139015)
 shape = SubResource("BoxShape3D_chw1t")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="NavigationRegion3D/bag fix" unique_id=575793225]
-transform = Transform3D(1, 0, 0, 0, 0.798636, -0.601815, 0, 0.601815, 0.798636, -7.19735, -4.10592, 1.10296)
-shape = SubResource("BoxShape3D_chw1t")
-
 [node name="mesh" parent="NavigationRegion3D" unique_id=705924923 instance=ExtResource("4")]
 transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -0.012, -0.211, 0.006)
 
@@ -274,109 +270,16 @@ shadow_opacity = 0.15
 omni_range = 5.853
 omni_attenuation = 4.809
 
-[node name="kitchen2" type="OmniLight3D" parent="point light" unique_id=1545929280]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.085, 2.29438, -1.73429)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
+[node name="room_light" type="Node3D" parent="point light" unique_id=1180062992]
 
-[node name="kitchen3" type="OmniLight3D" parent="point light" unique_id=983318882]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62083, 2.29438, 2.86182)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
-
-[node name="kitchen5" type="OmniLight3D" parent="point light" unique_id=1789296105]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12549, 2.29438, -1.33648)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
-omni_attenuation = 1.395
-
-[node name="kitchen6" type="OmniLight3D" parent="point light" unique_id=618646165]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12549, 2.29438, 1.99918)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
-omni_attenuation = 1.395
-
-[node name="kitchen4" type="OmniLight3D" parent="point light" unique_id=402683240]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.38438, 2.29438, -1.33648)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
-
-[node name="kitchen7" type="OmniLight3D" parent="point light" unique_id=1978262119]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.49976, 2.29438, 1.99918)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
-
-[node name="kitchen8" type="OmniLight3D" parent="point light" unique_id=1675866637]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4025, 2.294, 0.593)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
-omni_attenuation = 1.794
-
-[node name="kitchen9" type="OmniLight3D" parent="point light" unique_id=1892630121]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33405, 2.294, 6.58969)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
-omni_attenuation = 1.036
-
-[node name="kitchen10" type="OmniLight3D" parent="point light" unique_id=870010516]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.16743, 1.96612, 8.14792)
-light_energy = 0.1
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 0.655
-omni_attenuation = 1.036
-
-[node name="bar light" type="OmniLight3D" parent="point light" unique_id=1861576522]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.50921, 0.46292, 2.91336)
-light_color = Color(0.619217, 0.513405, 0.80692, 1)
-light_bake_mode = 1
-shadow_opacity = 0.4
-omni_range = 5.359
-omni_attenuation = 1.086
-
-[node name="bar lamp2" type="OmniLight3D" parent="point light" unique_id=744189109]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87789, 2.25583, 1.72578)
-light_energy = 0.111
-light_size = 0.33
-light_bake_mode = 1
-shadow_opacity = 0.4
-omni_range = 5.359
-omni_attenuation = 1.086
-
-[node name="bar lamp3" type="OmniLight3D" parent="point light" unique_id=1597538605]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87789, 2.25583, 3.88547)
-light_energy = 0.111
-light_size = 0.33
-light_bake_mode = 1
-shadow_opacity = 0.4
-omni_range = 5.359
-omni_attenuation = 1.086
-
-[node name="room" type="OmniLight3D" parent="point light" unique_id=631941455]
+[node name="room_1" type="OmniLight3D" parent="point light/room_light" unique_id=631941455]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198532, 2.66145, 1.46317)
 light_bake_mode = 1
 shadow_opacity = 0.4
 omni_range = 4.165
 omni_attenuation = 1.395
 
-[node name="room2" type="OmniLight3D" parent="point light" unique_id=482123413]
+[node name="room2" type="OmniLight3D" parent="point light/room_light" unique_id=482123413]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3598, 2.66145, 1.46317)
 light_energy = 1.366
 light_bake_mode = 1
@@ -384,7 +287,7 @@ shadow_opacity = 0.4
 omni_range = 5.359
 omni_attenuation = 1.395
 
-[node name="room7" type="OmniLight3D" parent="point light" unique_id=1647715090]
+[node name="room7" type="OmniLight3D" parent="point light/room_light" unique_id=1647715090]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3598, 2.66145, 5.27779)
 light_energy = 0.4
 light_bake_mode = 1
@@ -392,7 +295,7 @@ shadow_opacity = 0.4
 omni_range = 5.359
 omni_attenuation = 1.995
 
-[node name="room8" type="OmniLight3D" parent="point light" unique_id=834502346]
+[node name="room8" type="OmniLight3D" parent="point light/room_light" unique_id=834502346]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.239, 2.43526, 1.23617)
 light_color = Color(1, 0.92549, 1, 1)
 light_energy = 0.3
@@ -402,7 +305,7 @@ shadow_opacity = 0.57
 omni_range = 5.359
 omni_attenuation = 0.566
 
-[node name="room9" type="OmniLight3D" parent="point light" unique_id=1350236103]
+[node name="room9" type="OmniLight3D" parent="point light/room_light" unique_id=1350236103]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.239, 2.66145, 3.24309)
 light_color = Color(1, 0.92549, 1, 1)
 light_energy = 0.3
@@ -412,33 +315,155 @@ shadow_opacity = 0.57
 omni_range = 5.359
 omni_attenuation = 0.566
 
-[node name="room3" type="OmniLight3D" parent="point light" unique_id=110578149]
+[node name="room3" type="OmniLight3D" parent="point light/room_light" unique_id=110578149]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198532, 2.66145, -1.75286)
 light_bake_mode = 1
 shadow_opacity = 0.4
 omni_range = 4.165
 omni_attenuation = 1.395
 
-[node name="room4" type="OmniLight3D" parent="point light" unique_id=146613422]
+[node name="room4" type="OmniLight3D" parent="point light/room_light" unique_id=146613422]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3598, 2.66145, -1.75286)
 light_bake_mode = 1
 shadow_opacity = 0.4
 omni_range = 5.359
 omni_attenuation = 1.395
 
-[node name="room5" type="OmniLight3D" parent="point light" unique_id=294792257]
+[node name="room5" type="OmniLight3D" parent="point light/room_light" unique_id=294792257]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209662, 2.66651, -5.21334)
 light_bake_mode = 1
 shadow_opacity = 0.4
 omni_range = 4.165
 omni_attenuation = 1.395
 
-[node name="room6" type="OmniLight3D" parent="point light" unique_id=73050754]
+[node name="room6" type="OmniLight3D" parent="point light/room_light" unique_id=73050754]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.34867, 2.66651, -5.21334)
 light_bake_mode = 1
 shadow_opacity = 0.4
 omni_range = 5.359
 omni_attenuation = 1.395
+
+[node name="kitchen" type="Node3D" parent="point light" unique_id=909260169]
+
+[node name="kitchen2" type="OmniLight3D" parent="point light/kitchen" unique_id=1545929280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.085, 2.29438, -1.73429)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen3" type="OmniLight3D" parent="point light/kitchen" unique_id=983318882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62083, 2.29438, 2.86182)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen5" type="OmniLight3D" parent="point light/kitchen" unique_id=1789296105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12549, 2.29438, -1.33648)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.395
+
+[node name="kitchen6" type="OmniLight3D" parent="point light/kitchen" unique_id=618646165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12549, 2.29438, 1.99918)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.395
+
+[node name="kitchen4" type="OmniLight3D" parent="point light/kitchen" unique_id=402683240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.38438, 2.29438, -1.33648)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen7" type="OmniLight3D" parent="point light/kitchen" unique_id=1978262119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.49976, 2.29438, 1.99918)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen8" type="OmniLight3D" parent="point light/kitchen" unique_id=1675866637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4025, 2.294, 0.593)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.794
+
+[node name="kitchen9" type="OmniLight3D" parent="point light/kitchen" unique_id=1892630121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33405, 2.294, 6.58969)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.036
+
+[node name="kitchen10" type="OmniLight3D" parent="point light/kitchen" unique_id=870010516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.16743, 1.96612, 8.14792)
+light_energy = 0.1
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 0.655
+omni_attenuation = 1.036
+
+[node name="bar" type="Node3D" parent="point light" unique_id=1689732836]
+
+[node name="bar light" type="OmniLight3D" parent="point light/bar" unique_id=1861576522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.50921, 0.46292, 2.91336)
+light_color = Color(0.619217, 0.513405, 0.80692, 1)
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.086
+
+[node name="bar lamp2" type="OmniLight3D" parent="point light/bar" unique_id=744189109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87789, 2.25583, 1.72578)
+light_energy = 0.111
+light_size = 0.33
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.086
+
+[node name="bar lamp3" type="OmniLight3D" parent="point light/bar" unique_id=1597538605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87789, 2.25583, 3.88547)
+light_energy = 0.111
+light_size = 0.33
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.086
+
+[node name="basement" type="Node3D" parent="point light" unique_id=1323402988]
+
+[node name="kitchen2" type="OmniLight3D" parent="point light/basement" unique_id=2062211157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.758164, 1.9400795, 6.68417)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen3" type="OmniLight3D" parent="point light/basement" unique_id=1419555359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.911362, -1.1194872, 10.944951)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen4" type="OmniLight3D" parent="point light/basement" unique_id=1694700647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.988123, -1.1194872, 10.944951)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
 
 [node name="active object" type="Node3D" parent="." unique_id=630362278]
 metadata/_edit_group_ = true

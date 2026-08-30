@@ -41,54 +41,38 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "nodes": {
-"PATH:break shelf": {
+"PATH:mesh/break shelf": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:mesh/bricks": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:mesh/decor frezz": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:mesh/food": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:mesh/stoves": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:mesh/table for food": {
 "generate/physics": true,
 "mesh_instance/layers": 3,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:bricks": {
-"generate/physics": true,
-"mesh_instance/layers": 3,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:decor frezz": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:food": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:foods room": {
-"generate/physics": true,
-"mesh_instance/layers": 3,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:foods room_001": {
-"generate/physics": true,
-"mesh_instance/layers": 3,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:lamps": {
-"mesh_instance/layers": 3
-},
-"PATH:stoves": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:table for food": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:tables": {
+"PATH:mesh/tables": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
