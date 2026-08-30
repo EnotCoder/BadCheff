@@ -8,3 +8,4 @@ src/
 # Recovery / build leftovers
 gdre_export.log
 _cl_
+build/
