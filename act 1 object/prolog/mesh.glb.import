@@ -40,33 +40,8 @@ materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
 _subresources={
-"meshes": {
-"mesh_Cube_005_001": {
-"generate/lightmap_uv": 1,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 20.0,
-"save_to_file/enabled": false,
-"save_to_file/fallback_path": "",
-"save_to_file/path": ""
-},
-"mesh_Sphere_014_001": {
-"generate/lightmap_uv": 1,
-"generate/lods": 0,
-"generate/shadow_meshes": 0,
-"lods/normal_merge_angle": 20.0,
-"save_to_file/enabled": false,
-"save_to_file/fallback_path": "",
-"save_to_file/path": ""
-}
-},
 "nodes": {
-"PATH:basement": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:decor basement": {
+"PATH:basement decor": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
@@ -76,48 +51,45 @@ _subresources={
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:food room 1": {
+"PATH:food": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:kitchen": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:kitchen decor 1": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:kitchen decor 2": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:main room decor": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
-},
-"PATH:main_room": {
-"generate/physics": true,
-"physics/layer": 3,
-"physics/mask": 3
+"PATH:food room decor 1": {
+"generate/physics": true
 },
 "PATH:player room decor": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
-"PATH:player_room": {
+"PATH:room decor 1": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:room decor 2": {
 "generate/physics": true,
 "physics/layer": 3,
 "physics/mask": 3
 },
 "PATH:stairs": {
 "generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:stoves": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:walls": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:windows": {
 "physics/layer": 3,
 "physics/mask": 3
 }
