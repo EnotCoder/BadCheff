@@ -100,9 +100,12 @@ collide_with_bodies = false
 
 [node name="Control" type="Control" parent="." unique_id=149811016]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 
 [node name="inventory" type="Node2D" parent="Control" unique_id=1774600199]
 position = Vector2(-64, -8)
@@ -166,21 +169,24 @@ visible = false
 script = ExtResource("4")
 
 [node name="rect" type="ColorRect" parent="Control/anim screen" unique_id=264912674]
-offset_left = -38.0
-offset_top = -11.0
-offset_right = 1018.0
-offset_bottom = 528.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/anim screen" unique_id=1190063737]
 libraries/ = SubResource("AnimationLibrary_od3ui")
 
 [node name="screen" type="ColorRect" parent="Control" unique_id=1592986548]
-layout_mode = 0
-offset_left = -21.0
-offset_top = -9.0
-offset_right = 1265.0
-offset_bottom = 673.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="control" type="Node2D" parent="Control" unique_id=1127348742]
@@ -200,10 +206,10 @@ scale = Vector2(0.08, 0.08)
 texture = ExtResource("8")
 
 [node name="sit" type="TextureButton" parent="Control/control" unique_id=1021391900]
-offset_left = 1027.0
-offset_top = 533.0
-offset_right = 1127.0
-offset_bottom = 633.0
+offset_left = 990.0
+offset_top = 502.0
+offset_right = 1090.0
+offset_bottom = 602.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
 
@@ -214,9 +220,9 @@ texture = ExtResource("9")
 
 [node name="drop" type="TextureButton" parent="Control/control" unique_id=1768852973]
 offset_left = 48.0
-offset_top = 77.0
+offset_top = 103.0
 offset_right = 148.0
-offset_bottom = 177.0
+offset_bottom = 203.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
 

@@ -35,7 +35,10 @@ settings/fps/force_fps=60
 
 [display]
 
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/size/viewport_width=1152
+window/size/viewport_height=648
 
 [filesystem]
 
