@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bjrkmbgmgyq6"
-path="res://.godot/imported/wind cut_orange.jpg-d5d07317d4bfff3c2f4218ae77496d45.ctex"
+path.s3tc="res://.godot/imported/wind cut_orange.jpg-d5d07317d4bfff3c2f4218ae77496d45.s3tc.ctex"
+path.etc2="res://.godot/imported/wind cut_orange.jpg-d5d07317d4bfff3c2f4218ae77496d45.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "e9d13a052c47f7b0094ad5134a739d52"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/wind cut_orange.jpg"
-dest_files=["res://.godot/imported/wind cut_orange.jpg-d5d07317d4bfff3c2f4218ae77496d45.ctex"]
+dest_files=["res://.godot/imported/wind cut_orange.jpg-d5d07317d4bfff3c2f4218ae77496d45.s3tc.ctex", "res://.godot/imported/wind cut_orange.jpg-d5d07317d4bfff3c2f4218ae77496d45.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

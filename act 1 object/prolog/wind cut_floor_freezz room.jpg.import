@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://csge6eidhewim"
-path="res://.godot/imported/wind cut_floor_freezz room.jpg-e5e4175d4c129657f533c83bd38a1b0a.ctex"
+path.s3tc="res://.godot/imported/wind cut_floor_freezz room.jpg-e5e4175d4c129657f533c83bd38a1b0a.s3tc.ctex"
+path.etc2="res://.godot/imported/wind cut_floor_freezz room.jpg-e5e4175d4c129657f533c83bd38a1b0a.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "a8db55a4084a4d90519aa720946298b1"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/wind cut_floor_freezz room.jpg"
-dest_files=["res://.godot/imported/wind cut_floor_freezz room.jpg-e5e4175d4c129657f533c83bd38a1b0a.ctex"]
+dest_files=["res://.godot/imported/wind cut_floor_freezz room.jpg-e5e4175d4c129657f533c83bd38a1b0a.s3tc.ctex", "res://.godot/imported/wind cut_floor_freezz room.jpg-e5e4175d4c129657f533c83bd38a1b0a.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

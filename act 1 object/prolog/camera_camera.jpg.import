@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://4xyie2mijj0k"
-path="res://.godot/imported/camera_camera.jpg-67e0ae13097f02bb5e6e91c0e4ed9411.ctex"
+path.s3tc="res://.godot/imported/camera_camera.jpg-67e0ae13097f02bb5e6e91c0e4ed9411.s3tc.ctex"
+path.etc2="res://.godot/imported/camera_camera.jpg-67e0ae13097f02bb5e6e91c0e4ed9411.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "a1f8f58fa7dd71babcd6d2f3020a9087"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/camera_camera.jpg"
-dest_files=["res://.godot/imported/camera_camera.jpg-67e0ae13097f02bb5e6e91c0e4ed9411.ctex"]
+dest_files=["res://.godot/imported/camera_camera.jpg-67e0ae13097f02bb5e6e91c0e4ed9411.s3tc.ctex", "res://.godot/imported/camera_camera.jpg-67e0ae13097f02bb5e6e91c0e4ed9411.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c4t3yoauqswf"
-path="res://.godot/imported/board_board.jpg-8f72969c01a6ac4ee62c7863cec65517.ctex"
+path.s3tc="res://.godot/imported/board_board.jpg-8f72969c01a6ac4ee62c7863cec65517.s3tc.ctex"
+path.etc2="res://.godot/imported/board_board.jpg-8f72969c01a6ac4ee62c7863cec65517.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "3af5bf18de71c43b80c44d7ae12a0082"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/board_board.jpg"
-dest_files=["res://.godot/imported/board_board.jpg-8f72969c01a6ac4ee62c7863cec65517.ctex"]
+dest_files=["res://.godot/imported/board_board.jpg-8f72969c01a6ac4ee62c7863cec65517.s3tc.ctex", "res://.godot/imported/board_board.jpg-8f72969c01a6ac4ee62c7863cec65517.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

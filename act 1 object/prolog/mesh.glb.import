@@ -16,6 +16,8 @@ dest_files=["res://.godot/imported/mesh.glb-6a0d49d94c792a83a6002154934abb7f.scn
 nodes/root_type=""
 nodes/root_name=""
 nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
 nodes/import_as_skeleton_bones=false
@@ -37,6 +39,62 @@ import_script/path=""
 materials/extract=0
 materials/extract_format=0
 materials/extract_path=""
-_subresources={}
+_subresources={
+"nodes": {
+"PATH:break shelf": {
+"generate/physics": true,
+"mesh_instance/layers": 3,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:bricks": {
+"generate/physics": true,
+"mesh_instance/layers": 3,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:decor frezz": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:food": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:foods room": {
+"generate/physics": true,
+"mesh_instance/layers": 3,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:foods room_001": {
+"generate/physics": true,
+"mesh_instance/layers": 3,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:lamps": {
+"mesh_instance/layers": 3
+},
+"PATH:stoves": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:table for food": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
+"PATH:tables": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+}
+}
+}
 gltf/naming_version=2
 gltf/embedded_image_handling=1
+gltf/texture_map_mode=0

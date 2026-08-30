@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://cew8ob2rfbhfm" path="res://act 1 object/prolog/door k and r.jpg" id="2"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://d0uanjln038ld" path="res://golovolomki/enemy_triger.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://vwh08tmfuo1b" path="res://act 1 object/prolog/lock/lock active.glb" id="5"]
-[ext_resource type="PackedScene" uid="uid://bxhqudhr0ux0n" path="res://act 1 object/prolog/lock/lock break.glb" id="6"]
+[ext_resource type="PackedScene" uid="uid://1pjv5iudyaso" path="res://act 1 object/prolog/lock/lock active.glb" id="5"]
+[ext_resource type="PackedScene" uid="uid://cswvr67qyhw8k" path="res://act 1 object/prolog/lock/lock break.glb" id="6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyr4r"]
 resource_name = "Material.001"

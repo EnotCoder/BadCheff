@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ky21adapl0vk"
-path="res://.godot/imported/wind cut_light wood.jpg-9e092836d386f2fa5614bbfd5ce50c3f.ctex"
+path.s3tc="res://.godot/imported/wind cut_light wood.jpg-9e092836d386f2fa5614bbfd5ce50c3f.s3tc.ctex"
+path.etc2="res://.godot/imported/wind cut_light wood.jpg-9e092836d386f2fa5614bbfd5ce50c3f.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "12cfc59d1933f9631a69a015c7458475"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/wind cut_light wood.jpg"
-dest_files=["res://.godot/imported/wind cut_light wood.jpg-9e092836d386f2fa5614bbfd5ce50c3f.ctex"]
+dest_files=["res://.godot/imported/wind cut_light wood.jpg-9e092836d386f2fa5614bbfd5ce50c3f.s3tc.ctex", "res://.godot/imported/wind cut_light wood.jpg-9e092836d386f2fa5614bbfd5ce50c3f.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0

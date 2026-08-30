@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 		$"ЗвукХодьбы".stream_paused = true
 
 	camera_bob(delta)
-	State.Player = global_position
+	State.player = global_position
 
 	if Input.is_action_just_pressed("sit"):
 		_toggle_crouch()

@@ -65,7 +65,7 @@ func get_navigation_target() -> Vector3:
 	match State.state:
 		State.StateBook.IDLE: return State.Room
 		State.StateBook.CHEAK: return State.Kithen
-		State.StateBook.ATTACK: return State.Player
+		State.StateBook.ATTACK: return State.player
 		_: return State.Room
 
 func navigate_to(_position: Vector3) -> void:

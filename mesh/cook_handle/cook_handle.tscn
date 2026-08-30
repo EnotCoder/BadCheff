@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c44174odqpnqj"]
 
-[ext_resource type="PackedScene" uid="uid://c7bn84uiu4rs8" path="res://mesh/cook_handle/cook handle.glb" id="1"]
+[ext_resource type="PackedScene" uid="uid://bw5gcflwdpjwp" path="res://mesh/cook_handle/cook handle.glb" id="1"]
 [ext_resource type="PackedScene" uid="uid://b3tj5vlc31n6j" path="res://golovolomki/action_object.tscn" id="2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8ouoj"]

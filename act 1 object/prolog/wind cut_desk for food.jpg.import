@@ -3,9 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bj7i3jki2llja"
-path="res://.godot/imported/wind cut_desk for food.jpg-025dd5dfedd64a91255084f3ec1b4d1b.ctex"
+path.s3tc="res://.godot/imported/wind cut_desk for food.jpg-025dd5dfedd64a91255084f3ec1b4d1b.s3tc.ctex"
+path.etc2="res://.godot/imported/wind cut_desk for food.jpg-025dd5dfedd64a91255084f3ec1b4d1b.etc2.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc", "etc2_astc"],
+"vram_texture": true
 }
 generator_parameters={
 "md5": "e504de9369587d5e925bfe585ef25f32"
@@ -14,11 +16,11 @@ generator_parameters={
 [deps]
 
 source_file="res://act 1 object/prolog/wind cut_desk for food.jpg"
-dest_files=["res://.godot/imported/wind cut_desk for food.jpg-025dd5dfedd64a91255084f3ec1b4d1b.ctex"]
+dest_files=["res://.godot/imported/wind cut_desk for food.jpg-025dd5dfedd64a91255084f3ec1b4d1b.s3tc.ctex", "res://.godot/imported/wind cut_desk for food.jpg-025dd5dfedd64a91255084f3ec1b4d1b.etc2.ctex"]
 
 [params]
 
-compress/mode=0
+compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/uastc_level=0
@@ -40,4 +42,4 @@ process/normal_map_invert_y=false
 process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
-detect_3d/compress_to=1
+detect_3d/compress_to=0
