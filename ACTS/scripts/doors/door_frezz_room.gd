@@ -1,6 +1,6 @@
 extends "res://ACTS/scripts/doors/door.gd"
 
-@export var required_uses: int = 4
+@export var required_uses: int = 1
 var _uses_count: int = 0
 
 func toggle_door() -> void:

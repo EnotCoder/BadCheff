@@ -4,7 +4,7 @@ class_name Player
 
 enum Platform { PC, ANDROID }
 
-@export var platform: Platform = Platform.ANDROID
+@export var platform: Platform = Platform.PC
 
 const WALK_SPEED := 4.0
 const CROUCH_SPEED := 2.0

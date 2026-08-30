@@ -18,10 +18,9 @@ config/name="badcheff"
 config/description="This project demonstrates what you can be done with the Volumetrics Plugin."
 run/main_scene="uid://cbdo7l5ro8ukn"
 config/features=PackedStringArray("4.7")
-config/icon="uid://ckayg2tlpi0an"
-boot_splash/image="res://prev.png"
-boot_splash/show_image=true
 boot_splash/use_filter=false
+boot_splash/image="res://prev.png"
+config/icon="uid://ckayg2tlpi0an"
 
 [autoload]
 
@@ -35,10 +34,7 @@ settings/fps/force_fps=60
 
 [display]
 
-window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
-window/size/viewport_width=1152
-window/size/viewport_height=648
+window/stretch/mode="viewport"
 
 [filesystem]
 

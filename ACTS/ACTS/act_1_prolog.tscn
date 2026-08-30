@@ -445,22 +445,31 @@ omni_attenuation = 1.086
 
 [node name="basement" type="Node3D" parent="point light" unique_id=1323402988]
 
-[node name="kitchen2" type="OmniLight3D" parent="point light/basement" unique_id=2062211157]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.758164, 1.9400795, 6.68417)
+[node name="stairs_1" type="OmniLight3D" parent="point light/basement" unique_id=2062211157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.758164, 1.2229985, 6.5946527)
+light_energy = 0.2
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="stairs_2" type="OmniLight3D" parent="point light/basement" unique_id=462734178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.758164, -1.9968576, 8.724116)
+light_energy = 0.2
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="basement_1" type="OmniLight3D" parent="point light/basement" unique_id=1419555359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.097333, -1.1194872, 11.10146)
+light_energy = 0.5
 light_bake_mode = 1
 shadow_enabled = true
 shadow_opacity = 0.15
 omni_range = 4.165
 
-[node name="kitchen3" type="OmniLight3D" parent="point light/basement" unique_id=1419555359]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.911362, -1.1194872, 10.944951)
-light_bake_mode = 1
-shadow_enabled = true
-shadow_opacity = 0.15
-omni_range = 4.165
-
-[node name="kitchen4" type="OmniLight3D" parent="point light/basement" unique_id=1694700647]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.988123, -1.1194872, 10.944951)
+[node name="basement_2" type="OmniLight3D" parent="point light/basement" unique_id=1694700647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.988123, -1.1194872, 10.72485)
+light_energy = 0.5
 light_bake_mode = 1
 shadow_enabled = true
 shadow_opacity = 0.15

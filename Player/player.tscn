@@ -100,11 +100,9 @@ collide_with_bodies = false
 
 [node name="Control" type="Control" parent="." unique_id=149811016]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 mouse_filter = 2
 
 [node name="inventory" type="Node2D" parent="Control" unique_id=1774600199]
@@ -169,23 +167,21 @@ visible = false
 script = ExtResource("4")
 
 [node name="rect" type="ColorRect" parent="Control/anim screen" unique_id=264912674]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_left = -38.0
+offset_top = -11.0
+offset_right = 1018.0
+offset_bottom = 528.0
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/anim screen" unique_id=1190063737]
 libraries/ = SubResource("AnimationLibrary_od3ui")
 
 [node name="screen" type="ColorRect" parent="Control" unique_id=1592986548]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_left = -21.0
+offset_top = -9.0
+offset_right = 1265.0
+offset_bottom = 673.0
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
