@@ -56,7 +56,7 @@ func _start_chase() -> void:
 func manage_animations() -> void:
 	if kill:
 		animation_state_machine.travel("hit")
-	elif velocity.length() > 0.01:
+	elif not navigation_agent.is_navigation_finished() and velocity.length() > 0.01:
 		animation_state_machine.travel("walk")
 	else:
 		animation_state_machine.travel("idle")
