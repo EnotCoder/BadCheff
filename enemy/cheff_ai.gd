@@ -37,7 +37,9 @@ func process_movement() -> void:
 	else:
 		velocity = dir * RUN_SPEED
 	if global_position.distance_to(target_position) > ARRIVE_DISTANCE:
-		look_at(target_position)
+		var look_target = Vector3(target_position.x, global_position.y, target_position.z)
+		var target_transform = global_transform.looking_at(look_target, Vector3.UP)
+		global_transform.basis = global_transform.basis.slerp(target_transform.basis, 10.0 * get_physics_process_delta_time())
 	navigate_to(get_navigation_target())
 
 	if State.position_point == "kitchen" and (
