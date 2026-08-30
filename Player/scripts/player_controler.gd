@@ -4,7 +4,7 @@ class_name Player
 
 enum Platform { PC, ANDROID }
 
-@export var platform: Platform = Platform.PC
+@export var platform: Platform = Platform.ANDROID
 
 const WALK_SPEED := 4.0
 const CROUCH_SPEED := 2.0
@@ -79,8 +79,6 @@ func _ready() -> void:
 		$"Virtual Joystick".hide()
 		$"Control/control".hide()
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	else:
-		$"Control/cursor".hide()
 	Dialog.show_say("Нужно выбратся от сюда и найти отца")
 	State.noise.connect($"timer enemy".p.bind())
 	$"timer enemy/Timer".wait_time = time

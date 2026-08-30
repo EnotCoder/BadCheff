@@ -4,7 +4,6 @@
 [ext_resource type="Script" uid="uid://bvl27574jcs0k" path="res://Player/scripts/inventory_icon.gd" id="2"]
 [ext_resource type="Texture2D" uid="uid://b2oi13y4ao30m" path="res://widget/inventory item/slot.jpg" id="3"]
 [ext_resource type="Script" uid="uid://bcqgbwffjrvpc" path="res://Player/scripts/anim_screen.gd" id="4"]
-
 [ext_resource type="Script" uid="uid://cvh1p8o8c6ser" path="res://Player/control.gd" id="6"]
 [ext_resource type="Texture2D" uid="uid://btxywwyajdiq0" path="res://widget/control/Bevel Circle.png" id="7"]
 [ext_resource type="Texture2D" uid="uid://boep7b5ra6l1d" path="res://widget/control/ent.png" id="8"]
@@ -75,62 +74,60 @@ _data = {
 &"start": SubResource("Animation_k53q1")
 }
 
-
-
-[node name="player" type="CharacterBody3D"]
+[node name="player" type="CharacterBody3D" unique_id=1652741091]
 collision_layer = 5
 collision_mask = 5
 script = ExtResource("1")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1794087894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19306, 0)
 shape = SubResource("CapsuleShape3D_hvfyp")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=784892726]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19715, 0)
 visible = false
 mesh = SubResource("CapsuleMesh_l8h54")
 
-[node name="Camera3D" type="Camera3D" parent="."]
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1915093553]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.17982, 0)
 
-[node name="RayCast3D" type="RayCast3D" parent="Camera3D"]
+[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=437576829]
 target_position = Vector3(0, 0, -3)
 collide_with_areas = true
 collide_with_bodies = false
 
-[node name="Control" type="Control" parent="."]
+[node name="Control" type="Control" parent="." unique_id=149811016]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="inventory" type="Node2D" parent="Control"]
+[node name="inventory" type="Node2D" parent="Control" unique_id=1774600199]
 position = Vector2(-64, -8)
 scale = Vector2(1.275, 1.275)
 script = ExtResource("2")
 
-[node name="slot_tex" type="Node2D" parent="Control/inventory"]
+[node name="slot_tex" type="Node2D" parent="Control/inventory" unique_id=1490508609]
 
-[node name="1" type="Sprite2D" parent="Control/inventory/slot_tex"]
+[node name="1" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=63532716]
 position = Vector2(450, 488)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("3")
 
-[node name="2" type="Sprite2D" parent="Control/inventory/slot_tex"]
+[node name="2" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=76871022]
 position = Vector2(500, 488)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("3")
 
-[node name="3" type="Sprite2D" parent="Control/inventory/slot_tex"]
+[node name="3" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=2077866241]
 position = Vector2(550, 488)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("3")
 
-[node name="item" type="Node2D" parent="Control/inventory"]
+[node name="item" type="Node2D" parent="Control/inventory" unique_id=1300875161]
 position = Vector2(0, 21)
 
-[node name="3" type="TextureRect" parent="Control/inventory/item"]
+[node name="3" type="TextureRect" parent="Control/inventory/item" unique_id=1028406037]
 offset_left = 530.0
 offset_top = 447.0
 offset_right = 730.0
@@ -138,7 +135,7 @@ offset_bottom = 647.0
 scale = Vector2(0.2, 0.2)
 metadata/_edit_use_anchors_ = true
 
-[node name="2" type="TextureRect" parent="Control/inventory/item"]
+[node name="2" type="TextureRect" parent="Control/inventory/item" unique_id=1357432789]
 offset_left = 480.0
 offset_top = 447.0
 offset_right = 680.0
@@ -146,7 +143,7 @@ offset_bottom = 647.0
 scale = Vector2(0.2, 0.2)
 metadata/_edit_use_anchors_ = true
 
-[node name="1" type="TextureRect" parent="Control/inventory/item"]
+[node name="1" type="TextureRect" parent="Control/inventory/item" unique_id=416916154]
 offset_left = 430.0
 offset_top = 447.0
 offset_right = 630.0
@@ -154,32 +151,29 @@ offset_bottom = 647.0
 scale = Vector2(0.2, 0.2)
 metadata/_edit_use_anchors_ = true
 
-[node name="cursor" type="MeshInstance2D" parent="Control"]
+[node name="cursor" type="MeshInstance2D" parent="Control" unique_id=1218033845]
 position = Vector2(576, 324)
 scale = Vector2(4, 4)
 mesh = SubResource("SphereMesh_gwnis")
 
-[node name="hint_timer" type="Timer" parent="Control"]
+[node name="hint_timer" type="Timer" parent="Control" unique_id=1531966501]
 wait_time = 2.0
 
-[node name="anim screen" type="Node2D" parent="Control"]
+[node name="anim screen" type="Node2D" parent="Control" unique_id=1753516806]
 visible = false
 script = ExtResource("4")
 
-[node name="rect" type="ColorRect" parent="Control/anim screen"]
+[node name="rect" type="ColorRect" parent="Control/anim screen" unique_id=264912674]
 offset_left = -38.0
 offset_top = -11.0
 offset_right = 1018.0
 offset_bottom = 528.0
 color = Color(0, 0, 0, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/anim screen"]
-libraries = {
-&"": SubResource("AnimationLibrary_od3ui")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/anim screen" unique_id=1190063737]
+libraries/ = SubResource("AnimationLibrary_od3ui")
 
-[node name="screen" type="ColorRect" parent="Control"]
-
+[node name="screen" type="ColorRect" parent="Control" unique_id=1592986548]
 layout_mode = 0
 offset_left = -21.0
 offset_top = -9.0
@@ -187,10 +181,10 @@ offset_right = 1265.0
 offset_bottom = 673.0
 color = Color(1, 1, 1, 0)
 
-[node name="control" type="Node2D" parent="Control"]
+[node name="control" type="Node2D" parent="Control" unique_id=1127348742]
 script = ExtResource("6")
 
-[node name="interact" type="TextureButton" parent="Control/control"]
+[node name="interact" type="TextureButton" parent="Control/control" unique_id=268772807]
 offset_left = 990.0
 offset_top = 103.0
 offset_right = 1090.0
@@ -198,12 +192,12 @@ offset_bottom = 203.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
 
-[node name="Ent" type="Sprite2D" parent="Control/control/interact"]
+[node name="Ent" type="Sprite2D" parent="Control/control/interact" unique_id=590452804]
 position = Vector2(54, 48)
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("8")
 
-[node name="sit" type="TextureButton" parent="Control/control"]
+[node name="sit" type="TextureButton" parent="Control/control" unique_id=1021391900]
 offset_left = 1027.0
 offset_top = 533.0
 offset_right = 1127.0
@@ -211,12 +205,12 @@ offset_bottom = 633.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
 
-[node name="Crouch" type="Sprite2D" parent="Control/control/sit"]
+[node name="Crouch" type="Sprite2D" parent="Control/control/sit" unique_id=1305672656]
 position = Vector2(49, 49)
 scale = Vector2(0.245, 0.245)
 texture = ExtResource("9")
 
-[node name="drop" type="TextureButton" parent="Control/control"]
+[node name="drop" type="TextureButton" parent="Control/control" unique_id=1768852973]
 offset_left = 48.0
 offset_top = 77.0
 offset_right = 148.0
@@ -224,46 +218,46 @@ offset_bottom = 177.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
 
-[node name="Drop" type="Sprite2D" parent="Control/control/drop"]
+[node name="Drop" type="Sprite2D" parent="Control/control/drop" unique_id=438142252]
 position = Vector2(48, 48)
 scale = Vector2(0.205, 0.205)
 texture = ExtResource("10")
 
-[node name="slot" type="TextureButton" parent="Control/control"]
+[node name="slot" type="TextureButton" parent="Control/control" unique_id=1010208653]
 offset_left = 482.0
 offset_top = 587.0
 offset_right = 591.0
 offset_bottom = 694.0
 scale = Vector2(0.505, 0.505)
 
-[node name="slot2" type="TextureButton" parent="Control/control"]
+[node name="slot2" type="TextureButton" parent="Control/control" unique_id=336975508]
 offset_left = 546.0
 offset_top = 587.0
 offset_right = 655.0
 offset_bottom = 696.0
 scale = Vector2(0.505, 0.505)
 
-[node name="slot3" type="TextureButton" parent="Control/control"]
+[node name="slot3" type="TextureButton" parent="Control/control" unique_id=1403612969]
 offset_left = 610.0
 offset_top = 586.0
 offset_right = 719.0
 offset_bottom = 697.0
 scale = Vector2(0.505, 0.505)
 
-[node name="obj pos" type="Marker3D" parent="."]
+[node name="obj pos" type="Marker3D" parent="." unique_id=407285797]
 transform = Transform3D(0.891007, -0.357749, -0.279504, 0, 0.615662, -0.788011, 0.453991, 0.702123, 0.548558, 0.380988, 1.81059, -0.420157)
 
-[node name="drop" type="Marker3D" parent="."]
+[node name="drop" type="Marker3D" parent="." unique_id=304854490]
 transform = Transform3D(0.891007, -0.357749, -0.279504, 0, 0.615662, -0.788011, 0.453991, 0.702123, 0.548558, 0, 1.782, 0)
 
-[node name="timer enemy" type="Control" parent="."]
+[node name="timer enemy" type="Control" parent="." unique_id=1882071947]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 script = ExtResource("11")
 
-[node name="Label" type="Label" parent="timer enemy"]
+[node name="Label" type="Label" parent="timer enemy" unique_id=89666092]
 layout_mode = 0
 offset_left = 562.0
 offset_top = 24.0
@@ -275,10 +269,10 @@ text = "9"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Timer" type="Timer" parent="timer enemy"]
+[node name="Timer" type="Timer" parent="timer enemy" unique_id=900610478]
 one_shot = true
 
-[node name="cheffs say" type="Label" parent="timer enemy"]
+[node name="cheffs say" type="Label" parent="timer enemy" unique_id=49295087]
 layout_mode = 0
 offset_left = 220.0
 offset_top = 55.0
@@ -290,7 +284,7 @@ text = "так чтото нетак"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="hint" type="Label" parent="timer enemy"]
+[node name="hint" type="Label" parent="timer enemy" unique_id=651071158]
 layout_mode = 0
 offset_left = 497.0
 offset_top = 562.0
@@ -302,11 +296,11 @@ text = "hamer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="ЗвукХодьбы" type="AudioStreamPlayer3D" parent="."]
+[node name="ЗвукХодьбы" type="AudioStreamPlayer3D" parent="." unique_id=837473034]
 stream = ExtResource("13")
 autoplay = true
 
-[node name="Virtual Joystick" parent="." instance=ExtResource("14")]
+[node name="Virtual Joystick" parent="." unique_id=745962944 instance=ExtResource("14")]
 offset_left = 0.999996
 offset_top = -250.0
 offset_right = 301.0
