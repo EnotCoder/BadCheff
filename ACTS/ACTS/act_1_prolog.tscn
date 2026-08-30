@@ -221,10 +221,10 @@ script = ExtResource("1")
 environment = SubResource("Environment_nyylq")
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=991100221]
+quality = 0
 supersampling = true
 directional = true
 max_texture_size = 8192
-generate_probes_subdiv = 3
 light_data = ExtResource("2_chw1t")
 
 [node name="player" parent="." unique_id=1696094556 instance=ExtResource("2")]
