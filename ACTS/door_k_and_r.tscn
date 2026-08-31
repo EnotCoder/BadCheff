@@ -4,8 +4,6 @@
 [ext_resource type="Texture2D" uid="uid://cew8ob2rfbhfm" path="res://act 1 object/prolog/door k and r.jpg" id="2"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://d0uanjln038ld" path="res://golovolomki/enemy_triger.tscn" id="4"]
-[ext_resource type="PackedScene" uid="uid://1pjv5iudyaso" path="res://act 1 object/prolog/lock/lock active.glb" id="5"]
-[ext_resource type="PackedScene" uid="uid://cswvr67qyhw8k" path="res://act 1 object/prolog/lock/lock break.glb" id="6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iyr4r"]
 resource_name = "Material.001"
@@ -264,21 +262,5 @@ transform = Transform3D(0.726104, 0, 0, 0, 1.39469, 0, 0, 0, 0.282664, 0, 0.1175
 visible = false
 func_ent = "enemy_door"
 node = NodePath("..")
-
-[node name="lock" type="Node3D" parent="." unique_id=1805051666]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.327473, 0.600051, -0.035776)
-
-[node name="lock" parent="lock" unique_id=1899500273 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("3")]
-transform = Transform3D(0.08, 0, 0, 0, 0.08, 0, 0, 0, 0.08, 0, 0, 0)
-visible = false
-FUNC_NAME = "locked_is_false"
-NODE_ACTION = NodePath("../..")
-
-[node name="lock active" parent="lock" unique_id=875851975 instance=ExtResource("5")]
-transform = Transform3D(-0.665, 0, -5.81361e-08, 0, 0.665, 0, 5.81361e-08, 0, -0.665, -0.000328779, 0.000208676, -0.00140848)
-
-[node name="lock break" parent="lock" unique_id=975531482 instance=ExtResource("6")]
-transform = Transform3D(-0.665, 0, 5.81361e-08, 0, 0.665, 0, -5.81361e-08, 0, -0.665, 0, 0, -0.001)
-visible = false
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
