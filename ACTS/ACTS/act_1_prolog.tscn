@@ -17,7 +17,6 @@
 [ext_resource type="Script" uid="uid://diugj0csq8ait" path="res://ACTS/scripts/tp_move_soup.gd" id="16"]
 [ext_resource type="PackedScene" uid="uid://cq7poyneqv6gn" path="res://ACTS/door_stove.tscn" id="17"]
 [ext_resource type="PackedScene" uid="uid://ebiudfydg81h" path="res://golovolomki/hint_object.tscn" id="18"]
-[ext_resource type="PackedScene" uid="uid://cld5hwq188761" path="res://mesh/hamer/hamer.tscn" id="19"]
 [ext_resource type="PackedScene" uid="uid://bviogo5gglca3" path="res://mesh/key_panel/key_panel.tscn" id="20"]
 [ext_resource type="PackedScene" uid="uid://cp6ua557y6c0j" path="res://ACTS/box.tscn" id="21"]
 [ext_resource type="PackedScene" uid="uid://c44174odqpnqj" path="res://mesh/cook_handle/cook_handle.tscn" id="22"]
@@ -27,8 +26,14 @@
 [ext_resource type="Script" uid="uid://vkw4f3i5qs3f" path="res://ACTS/scripts/visibility_manager.gd" id="27"]
 [ext_resource type="PackedScene" uid="uid://cqqdge24m2pwi" path="res://ACTS/closet.tscn" id="28"]
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_is1rh"]
+
+[sub_resource type="Sky" id="Sky_mki4p"]
+sky_material = SubResource("ProceduralSkyMaterial_is1rh")
+
 [sub_resource type="Environment" id="Environment_nyylq"]
 background_mode = 1
+sky = SubResource("Sky_mki4p")
 fog_light_color = Color(0, 0, 0, 1)
 adjustment_brightness = 0.88
 
@@ -163,6 +168,7 @@ script = ExtResource("1")
 environment = SubResource("Environment_nyylq")
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=991100221]
+quality = 0
 supersampling = true
 bounces = 4
 directional = true
@@ -592,12 +598,6 @@ Key_hint = "Тупой нож"
 
 [node name="items" type="Node3D" parent="." unique_id=1069946109]
 metadata/_edit_group_ = true
-
-[node name="hammer" parent="items" unique_id=1452818005 instance=ExtResource("19")]
-transform = Transform3D(-0.284015, 0, 0.95882, 0, 1, 0, -0.95882, 0, -0.284015, -2.70476, -0.771566, 5.57042)
-axis_lock_angular_x = true
-axis_lock_angular_y = true
-axis_lock_angular_z = true
 
 [node name="key_panel" parent="items" unique_id=246291444 instance=ExtResource("20")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01716, -0.2753939, 3.76808)
