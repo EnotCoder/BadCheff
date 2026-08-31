@@ -25,7 +25,7 @@
 [ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/scripts/zones.gd" id="24"]
 [ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
 [ext_resource type="Script" uid="uid://vkw4f3i5qs3f" path="res://ACTS/scripts/visibility_manager.gd" id="27"]
-[ext_resource type="PackedScene" path="res://ACTS/closet.tscn" id="28"]
+[ext_resource type="PackedScene" uid="uid://cqqdge24m2pwi" path="res://ACTS/closet.tscn" id="28"]
 
 [sub_resource type="Environment" id="Environment_nyylq"]
 background_mode = 1
@@ -163,8 +163,8 @@ script = ExtResource("1")
 environment = SubResource("Environment_nyylq")
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=991100221]
-quality = 0
 supersampling = true
+bounces = 4
 directional = true
 max_texture_size = 8192
 light_data = ExtResource("2_chw1t")
@@ -539,7 +539,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
-omni_range = 1.13
+omni_range = 0.8
 
 [node name="stove_door_2" parent="active object/groups/stove_doors" unique_id=45881912 instance=ExtResource("17")]
 transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -8.89147, -0.666083, 3.02491)
@@ -551,7 +551,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
-omni_range = 1.13
+omni_range = 0.8
 
 [node name="stove_door_3" parent="active object/groups/stove_doors" unique_id=1450894875 instance=ExtResource("17")]
 transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -6.95343, -0.666083, -1.80577)
@@ -563,7 +563,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
-omni_range = 1.13
+omni_range = 0.8
 
 [node name="stove_door_4" parent="active object/groups/stove_doors" unique_id=682012548 instance=ExtResource("17")]
 transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -9.03971, -0.666083, -1.80577)
@@ -575,7 +575,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
-omni_range = 1.13
+omni_range = 0.8
 
 [node name="hint_player_object" type="Node3D" parent="." unique_id=1576116321]
 metadata/_edit_group_ = true
