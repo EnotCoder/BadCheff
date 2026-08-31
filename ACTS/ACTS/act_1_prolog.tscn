@@ -27,6 +27,7 @@
 [ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/scripts/zones.gd" id="24"]
 [ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
 [ext_resource type="AudioStream" uid="uid://daxwy2b2trc45" path="res://sounds/squeak.mp3" id="26"]
+[ext_resource type="Script" uid="uid://vkw4f3i5qs3f" path="res://ACTS/scripts/visibility_manager.gd" id="27"]
 
 [sub_resource type="Environment" id="Environment_nyylq"]
 background_mode = 1
@@ -754,6 +755,9 @@ shape = SubResource("BoxShape3D_8djt0")
 stream = ExtResource("25")
 volume_db = -5.0
 autoplay = true
+
+[node name="VisibilityManager" type="Node3D" parent="." unique_id=1305382429]
+script = ExtResource("27")
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/door closet/AnimationPlayer" to="active object/little object/door closet" method="_on_animation_player_animation_finished"]

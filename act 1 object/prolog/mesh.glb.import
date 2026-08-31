@@ -57,7 +57,9 @@ _subresources={
 "physics/mask": 3
 },
 "PATH:food room decor 1": {
-"generate/physics": true
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
 },
 "PATH:player room decor": {
 "generate/physics": true,
