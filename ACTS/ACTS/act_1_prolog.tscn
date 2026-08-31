@@ -8,11 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://i51bngfd7dw2" path="res://act 1 object/prolog/up mesh.glb" id="5"]
 [ext_resource type="PackedScene" uid="uid://bjotsfvxh0hqu" path="res://ACTS/door_kitchen.tscn" id="6"]
 [ext_resource type="PackedScene" uid="uid://vy0v8kyled64" path="res://ACTS/door_double.tscn" id="7"]
-[ext_resource type="PackedScene" uid="uid://i2coyajrvt5s" path="res://act 1 object/prolog/closet.glb" id="8"]
 [ext_resource type="Script" uid="uid://ptkat2llu4ik" path="res://ACTS/scripts/doors/door.gd" id="9"]
 [ext_resource type="PackedScene" uid="uid://d1euety22e6tx" path="res://act 1 object/prolog/panel door.glb" id="10"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="11"]
-[ext_resource type="PackedScene" uid="uid://bjvikrvdscf05" path="res://act 1 object/prolog/door closet.glb" id="12"]
 [ext_resource type="Script" uid="uid://bx57vuhjty4ou" path="res://ACTS/scripts/lever.gd" id="13"]
 [ext_resource type="PackedScene" uid="uid://c8vrrw2o0gjw6" path="res://act 1 object/prolog/lever.glb" id="14"]
 [ext_resource type="PackedScene" uid="uid://bv34s03h4gq6g" path="res://act 1 object/prolog/soup model.glb" id="15"]
@@ -26,7 +24,6 @@
 [ext_resource type="PackedScene" uid="uid://2et6dy6al5i4" path="res://mesh/key_door/key_door.tscn" id="23"]
 [ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/scripts/zones.gd" id="24"]
 [ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
-[ext_resource type="AudioStream" uid="uid://daxwy2b2trc45" path="res://sounds/squeak.mp3" id="26"]
 [ext_resource type="Script" uid="uid://vkw4f3i5qs3f" path="res://ACTS/scripts/visibility_manager.gd" id="27"]
 [ext_resource type="PackedScene" path="res://ACTS/closet.tscn" id="28"]
 
@@ -41,9 +38,6 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(2, 0, 4), PackedInt32Arr
 cell_size = 0.1
 cell_height = 0.1
 agent_max_climb = 0.2
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_chw1t"]
-size = Vector3(1.6976777, 0.8925781, 0.96966547)
 
 [sub_resource type="Animation" id="Animation_e1ico"]
 length = 0.001
@@ -193,10 +187,6 @@ metadata/_edit_group_ = true
 
 [node name="collision_fix" type="StaticBody3D" parent="NavigationRegion3D" unique_id=286464057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.66945, 0.629781, 7.19884)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/bag fix" unique_id=1871710570]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50452447, -0.4794922, 0.3782425)
-shape = SubResource("BoxShape3D_chw1t")
 
 [node name="mesh" parent="NavigationRegion3D" unique_id=705924923 instance=ExtResource("4")]
 transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -0.012, -0.211, 0.006)
@@ -422,6 +412,22 @@ light_bake_mode = 1
 shadow_enabled = true
 shadow_opacity = 0.15
 omni_range = 4.165
+
+[node name="street" type="Node3D" parent="point light" unique_id=1157119859]
+
+[node name="street 1" type="OmniLight3D" parent="point light/street" unique_id=565691298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.455061, 2.2902653, -6.9046197)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 2" type="OmniLight3D" parent="point light/street" unique_id=1593198336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.157912, 2.2902653, -5.1288996)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
 
 [node name="active object" type="Node3D" parent="." unique_id=630362278]
 metadata/_edit_group_ = true
