@@ -28,6 +28,7 @@
 [ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
 [ext_resource type="AudioStream" uid="uid://daxwy2b2trc45" path="res://sounds/squeak.mp3" id="26"]
 [ext_resource type="Script" uid="uid://vkw4f3i5qs3f" path="res://ACTS/scripts/visibility_manager.gd" id="27"]
+[ext_resource type="PackedScene" path="res://ACTS/closet.tscn" id="28"]
 
 [sub_resource type="Environment" id="Environment_nyylq"]
 background_mode = 1
@@ -96,60 +97,6 @@ _data = {
 &"RESET": SubResource("Animation_e1ico"),
 &"close": SubResource("Animation_tc3g8"),
 &"open": SubResource("Animation_plkck")
-}
-
-[sub_resource type="Animation" id="Animation_8nyl2"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("door closet:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(-1.6396, 0.640186, -1.5154)]
-}
-
-[sub_resource type="Animation" id="Animation_8nf5b"]
-resource_name = "close"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("door closet:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-0.985553, 0.640186, -1.5154), Vector3(-1.64, 0.64, -1.515)]
-}
-
-[sub_resource type="Animation" id="Animation_ugleo"]
-resource_name = "open"
-length = 0.5
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("door closet:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(-1.6396, 0.640186, -1.5154), Vector3(-0.985553, 0.640186, -1.5154)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_k10x1"]
-_data = {
-&"RESET": SubResource("Animation_8nyl2"),
-&"close": SubResource("Animation_8nf5b"),
-&"open": SubResource("Animation_ugleo")
 }
 
 [sub_resource type="Animation" id="Animation_jg2uw"]
@@ -237,7 +184,7 @@ navigation_agent = NodePath("NavigationAgent3D")
 animation_tree = NodePath("AnimationTree")
 hit = NodePath("hit")
 door_kitchen = NodePath("../active object/door/door kitchen")
-list_kitchen_objects = [NodePath("../active object/groups/stove_doors/stove_door"), NodePath("../active object/groups/stove_doors/stove_door_2"), NodePath("../active object/groups/stove_doors/stove_door_3"), NodePath("../active object/groups/stove_doors/stove_door_4"), NodePath("../active object/little object/soup model"), NodePath("../active object/little object/soup model2"), NodePath("../active object/little object/closet_door"), NodePath("../active object/little object/door panel")]
+list_kitchen_objects = [NodePath("../active object/groups/stove_doors/stove_door"), NodePath("../active object/groups/stove_doors/stove_door_2"), NodePath("../active object/groups/stove_doors/stove_door_3"), NodePath("../active object/groups/stove_doors/stove_door_4"), NodePath("../active object/little object/soup model"), NodePath("../active object/little object/soup model2"), NodePath("../active object/door/closet"), NodePath("../active object/little object/door panel")]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=271489394]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122633, -0.629781, -0.00592089)
@@ -493,11 +440,11 @@ locked = "key_door"
 locked_hint = "Закрыто"
 say = "кто открыл дверь"
 
-[node name="closet" parent="active object/door" unique_id=1147328754 instance=ExtResource("8")]
-transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -4.18062, -0.0959911, -2.71109)
+[node name="closet" parent="active object/door" unique_id=1147328754 instance=ExtResource("28")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18062, -0.0959911, -2.71109)
 
-[node name="closet2" parent="active object/door" unique_id=1396675150 instance=ExtResource("8")]
-transform = Transform3D(-1.96, 0, -1.7134865e-07, 0, 1.96, 0, 1.7134865e-07, 0, -1.96, -11.835036, -3.3065584, 12.477015)
+[node name="closet2" parent="active object/door" unique_id=1396675150 instance=ExtResource("28")]
+transform = Transform3D(-1, 0, -1.7134865e-07, 0, 1, 0, 1.7134865e-07, 0, -1, -11.835036, -3.3065584, 12.477015)
 
 [node name="little object" type="Node3D" parent="active object" unique_id=813168241]
 metadata/_edit_group_ = true
@@ -521,66 +468,6 @@ NODE_ACTION = NodePath("../..")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/door panel" unique_id=815974990]
 libraries/ = SubResource("AnimationLibrary_bc1rt")
-
-[node name="closet_door" type="Node3D" parent="active object/little object" unique_id=383202084]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21087, 0, -1.00336)
-script = ExtResource("9")
-say = "кто открыл шкаф"
-noise = true
-play_squeak = true
-metadata/_edit_group_ = true
-
-[node name="Squeak" type="AudioStreamPlayer3D" parent="active object/little object/closet_door" unique_id=2077526754]
-stream = ExtResource("26")
-
-[node name="door closet" parent="active object/little object/closet_door" unique_id=1870996495 instance=ExtResource("12")]
-transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -1.6396, 0.640186, -1.5154)
-
-[node name="ACTION" parent="active object/little object/closet_door/door closet" unique_id=1434216450 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
-transform = Transform3D(0.520309, 0, 0, 0, 0.741025, 0, 0, 0, 0.0788279, 0, 0, 0)
-visible = false
-FUNC_NAME = "toggle_door"
-NODE_ACTION = NodePath("../..")
-
-[node name="light" type="OmniLight3D" parent="active object/little object/closet_door/door closet" unique_id=763901271]
-transform = Transform3D(0.5102041, 0, 0, 0, 0.5102041, 0, 0, 0, 0.5102041, 0.21092892, 0.15864247, -0.14783764)
-light_energy = 0.945
-light_bake_mode = 1
-shadow_opacity = 0.15
-omni_range = 1.13
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/closet_door" unique_id=1113806125]
-libraries/ = SubResource("AnimationLibrary_k10x1")
-
-[node name="closet_door_2" type="Node3D" parent="active object/little object" unique_id=1402135898]
-transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.804786, -3.2105672, 10.769283)
-script = ExtResource("9")
-say = "кто открыл шкаф"
-noise = true
-play_squeak = true
-metadata/_edit_group_ = true
-
-[node name="Squeak" type="AudioStreamPlayer3D" parent="active object/little object/closet_door_2" unique_id=1001571587]
-stream = ExtResource("26")
-
-[node name="door closet" parent="active object/little object/closet_door_2" unique_id=293134125 instance=ExtResource("12")]
-transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -1.6396, 0.640186, -1.5154)
-
-[node name="ACTION" parent="active object/little object/closet_door_2/door closet" unique_id=1046810659 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
-transform = Transform3D(0.520309, 0, 0, 0, 0.741025, 0, 0, 0, 0.0788279, 0, 0, 0)
-visible = false
-FUNC_NAME = "toggle_door"
-NODE_ACTION = NodePath("../..")
-
-[node name="light" type="OmniLight3D" parent="active object/little object/closet_door_2/door closet" unique_id=335172865]
-transform = Transform3D(0.5102041, 0, 0, 0, 0.5102041, 0, 0, 0, 0.5102041, 0.21092892, 0.15864247, -0.14783764)
-light_energy = 0.945
-light_bake_mode = 1
-shadow_opacity = 0.15
-omni_range = 1.13
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/closet_door_2" unique_id=2108347621]
-libraries/ = SubResource("AnimationLibrary_k10x1")
 
 [node name="lever" type="Node3D" parent="active object/little object" unique_id=1688062373]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21087, 0, 8.01726)
@@ -760,8 +647,6 @@ autoplay = true
 script = ExtResource("27")
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
-[connection signal="animation_finished" from="active object/little object/closet_door/AnimationPlayer" to="active object/little object/closet_door" method="_on_animation_player_animation_finished"]
-[connection signal="animation_finished" from="active object/little object/closet_door_2/AnimationPlayer" to="active object/little object/closet_door_2" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="zones/player zone" to="zones" method="_on_player_zone_body_entered"]
 [connection signal="body_entered" from="zones/kitchen" to="zones" method="_on_kitchen_body_entered"]
