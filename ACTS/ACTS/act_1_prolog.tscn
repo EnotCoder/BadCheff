@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c6n5bfkih0w6s" path="res://act 1 object/prolog/mesh.glb" id="4"]
 [ext_resource type="PackedScene" uid="uid://i51bngfd7dw2" path="res://act 1 object/prolog/up mesh.glb" id="5"]
 [ext_resource type="PackedScene" uid="uid://bjotsfvxh0hqu" path="res://ACTS/door_kitchen.tscn" id="6"]
-[ext_resource type="PackedScene" uid="uid://vy0v8kyled64" path="res://ACTS/door_k_and_r.tscn" id="7"]
+[ext_resource type="PackedScene" uid="uid://vy0v8kyled64" path="res://ACTS/door_double.tscn" id="7"]
 [ext_resource type="PackedScene" uid="uid://i2coyajrvt5s" path="res://act 1 object/prolog/closet.glb" id="8"]
 [ext_resource type="Script" uid="uid://ptkat2llu4ik" path="res://ACTS/scripts/doors/door.gd" id="9"]
 [ext_resource type="PackedScene" uid="uid://d1euety22e6tx" path="res://act 1 object/prolog/panel door.glb" id="10"]
@@ -237,14 +237,14 @@ navigation_agent = NodePath("NavigationAgent3D")
 animation_tree = NodePath("AnimationTree")
 hit = NodePath("hit")
 door_kitchen = NodePath("../active object/door/door kitchen")
-list_kitchen_objects = [NodePath("../active object/groups/door stoves/door stove"), NodePath("../active object/groups/door stoves/door stove2"), NodePath("../active object/groups/door stoves/door stove3"), NodePath("../active object/groups/door stoves/door stove4"), NodePath("../active object/little object/soup model"), NodePath("../active object/little object/soup model2"), NodePath("../active object/little object/door closet"), NodePath("../active object/little object/door panel")]
+list_kitchen_objects = [NodePath("../active object/groups/stove_doors/stove_door"), NodePath("../active object/groups/stove_doors/stove_door_2"), NodePath("../active object/groups/stove_doors/stove_door_3"), NodePath("../active object/groups/stove_doors/stove_door_4"), NodePath("../active object/little object/soup model"), NodePath("../active object/little object/soup model2"), NodePath("../active object/little object/closet_door"), NodePath("../active object/little object/door panel")]
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="." unique_id=271489394]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0122633, -0.629781, -0.00592089)
 navigation_mesh = SubResource("NavigationMesh_8wfn1")
 metadata/_edit_group_ = true
 
-[node name="bag fix" type="StaticBody3D" parent="NavigationRegion3D" unique_id=286464057]
+[node name="collision_fix" type="StaticBody3D" parent="NavigationRegion3D" unique_id=286464057]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.66945, 0.629781, 7.19884)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/bag fix" unique_id=1871710570]
@@ -487,7 +487,7 @@ transform = Transform3D(-8.56743e-08, 0, 2.255, 0, 1.96, 0, -1.96, 0, -9.85692e-
 locked_hint = "можно вибить"
 noise = false
 
-[node name="door k and r" parent="active object/door" unique_id=1389420085 instance=ExtResource("7")]
+[node name="door_double" parent="active object/door" unique_id=1389420085 instance=ExtResource("7")]
 transform = Transform3D(-8.56743e-08, 0, 1.96, 0, 1.96, 0, -1.96, 0, -8.56743e-08, -2.2568, 0.545, 0.475585)
 locked = "key_door"
 locked_hint = "Закрыто"
@@ -522,7 +522,7 @@ NODE_ACTION = NodePath("../..")
 [node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/door panel" unique_id=815974990]
 libraries/ = SubResource("AnimationLibrary_bc1rt")
 
-[node name="door closet" type="Node3D" parent="active object/little object" unique_id=383202084]
+[node name="closet_door" type="Node3D" parent="active object/little object" unique_id=383202084]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21087, 0, -1.00336)
 script = ExtResource("9")
 say = "кто открыл шкаф"
@@ -530,29 +530,29 @@ noise = true
 play_squeak = true
 metadata/_edit_group_ = true
 
-[node name="Squeak" type="AudioStreamPlayer3D" parent="active object/little object/door closet" unique_id=2077526754]
+[node name="Squeak" type="AudioStreamPlayer3D" parent="active object/little object/closet_door" unique_id=2077526754]
 stream = ExtResource("26")
 
-[node name="door closet" parent="active object/little object/door closet" unique_id=1870996495 instance=ExtResource("12")]
+[node name="door closet" parent="active object/little object/closet_door" unique_id=1870996495 instance=ExtResource("12")]
 transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -1.6396, 0.640186, -1.5154)
 
-[node name="ACTION" parent="active object/little object/door closet/door closet" unique_id=1434216450 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
+[node name="ACTION" parent="active object/little object/closet_door/door closet" unique_id=1434216450 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
 transform = Transform3D(0.520309, 0, 0, 0, 0.741025, 0, 0, 0, 0.0788279, 0, 0, 0)
 visible = false
 FUNC_NAME = "toggle_door"
 NODE_ACTION = NodePath("../..")
 
-[node name="light" type="OmniLight3D" parent="active object/little object/door closet/door closet" unique_id=763901271]
+[node name="light" type="OmniLight3D" parent="active object/little object/closet_door/door closet" unique_id=763901271]
 transform = Transform3D(0.5102041, 0, 0, 0, 0.5102041, 0, 0, 0, 0.5102041, 0.21092892, 0.15864247, -0.14783764)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
 omni_range = 1.13
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/door closet" unique_id=1113806125]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/closet_door" unique_id=1113806125]
 libraries/ = SubResource("AnimationLibrary_k10x1")
 
-[node name="door closet2" type="Node3D" parent="active object/little object" unique_id=1402135898]
+[node name="closet_door_2" type="Node3D" parent="active object/little object" unique_id=1402135898]
 transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, -12.804786, -3.2105672, 10.769283)
 script = ExtResource("9")
 say = "кто открыл шкаф"
@@ -560,26 +560,26 @@ noise = true
 play_squeak = true
 metadata/_edit_group_ = true
 
-[node name="Squeak" type="AudioStreamPlayer3D" parent="active object/little object/door closet2" unique_id=1001571587]
+[node name="Squeak" type="AudioStreamPlayer3D" parent="active object/little object/closet_door_2" unique_id=1001571587]
 stream = ExtResource("26")
 
-[node name="door closet" parent="active object/little object/door closet2" unique_id=293134125 instance=ExtResource("12")]
+[node name="door closet" parent="active object/little object/closet_door_2" unique_id=293134125 instance=ExtResource("12")]
 transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -1.6396, 0.640186, -1.5154)
 
-[node name="ACTION" parent="active object/little object/door closet2/door closet" unique_id=1046810659 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
+[node name="ACTION" parent="active object/little object/closet_door_2/door closet" unique_id=1046810659 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
 transform = Transform3D(0.520309, 0, 0, 0, 0.741025, 0, 0, 0, 0.0788279, 0, 0, 0)
 visible = false
 FUNC_NAME = "toggle_door"
 NODE_ACTION = NodePath("../..")
 
-[node name="light" type="OmniLight3D" parent="active object/little object/door closet2/door closet" unique_id=335172865]
+[node name="light" type="OmniLight3D" parent="active object/little object/closet_door_2/door closet" unique_id=335172865]
 transform = Transform3D(0.5102041, 0, 0, 0, 0.5102041, 0, 0, 0, 0.5102041, 0.21092892, 0.15864247, -0.14783764)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
 omni_range = 1.13
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/door closet2" unique_id=2108347621]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/closet_door_2" unique_id=2108347621]
 libraries/ = SubResource("AnimationLibrary_k10x1")
 
 [node name="lever" type="Node3D" parent="active object/little object" unique_id=1688062373]
@@ -634,50 +634,50 @@ NODE_ACTION = NodePath("../../..")
 [node name="groups" type="Node3D" parent="active object" unique_id=1300293492]
 metadata/_edit_group_ = true
 
-[node name="door stoves" type="Node3D" parent="active object/groups" unique_id=1471663208]
+[node name="stove_doors" type="Node3D" parent="active object/groups" unique_id=1471663208]
 
-[node name="door stove" parent="active object/groups/door stoves" unique_id=1823053172 instance=ExtResource("17")]
+[node name="stove_door" parent="active object/groups/stove_doors" unique_id=1823053172 instance=ExtResource("17")]
 transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -6.80519, -0.666083, 3.02491)
 say = "Кто открыл плиту"
 noise = true
 
-[node name="light" type="OmniLight3D" parent="active object/groups/door stoves/door stove" unique_id=638804928]
+[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door" unique_id=638804928]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
 omni_range = 1.13
 
-[node name="door stove2" parent="active object/groups/door stoves" unique_id=45881912 instance=ExtResource("17")]
+[node name="stove_door_2" parent="active object/groups/stove_doors" unique_id=45881912 instance=ExtResource("17")]
 transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -8.89147, -0.666083, 3.02491)
 say = "Кто открыл плиту"
 noise = true
 
-[node name="light" type="OmniLight3D" parent="active object/groups/door stoves/door stove2" unique_id=1290695589]
+[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_2" unique_id=1290695589]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
 omni_range = 1.13
 
-[node name="door stove3" parent="active object/groups/door stoves" unique_id=1450894875 instance=ExtResource("17")]
+[node name="stove_door_3" parent="active object/groups/stove_doors" unique_id=1450894875 instance=ExtResource("17")]
 transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -6.95343, -0.666083, -1.80577)
 say = "Кто открыл плиту"
 noise = true
 
-[node name="light" type="OmniLight3D" parent="active object/groups/door stoves/door stove3" unique_id=1533623410]
+[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_3" unique_id=1533623410]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
 light_energy = 0.945
 light_bake_mode = 1
 shadow_opacity = 0.15
 omni_range = 1.13
 
-[node name="door stove4" parent="active object/groups/door stoves" unique_id=682012548 instance=ExtResource("17")]
+[node name="stove_door_4" parent="active object/groups/stove_doors" unique_id=682012548 instance=ExtResource("17")]
 transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -9.03971, -0.666083, -1.80577)
 say = "Кто открыл плиту"
 noise = true
 
-[node name="light" type="OmniLight3D" parent="active object/groups/door stoves/door stove4" unique_id=793346368]
+[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_4" unique_id=793346368]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
 light_energy = 0.945
 light_bake_mode = 1
@@ -697,25 +697,25 @@ transform = Transform3D(-1.61231e-08, -0.127219, 0, 0.368854, -5.56093e-09, 0, 0
 visible = false
 Key_hint = "Тупой нож"
 
-[node name="PH objct" type="Node3D" parent="." unique_id=1069946109]
+[node name="items" type="Node3D" parent="." unique_id=1069946109]
 metadata/_edit_group_ = true
 
-[node name="hamer" parent="PH objct" unique_id=1452818005 instance=ExtResource("19")]
+[node name="hammer" parent="items" unique_id=1452818005 instance=ExtResource("19")]
 transform = Transform3D(-0.284015, 0, 0.95882, 0, 1, 0, -0.95882, 0, -0.284015, -2.70476, -0.771566, 5.57042)
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 axis_lock_angular_z = true
 
-[node name="key panel" parent="PH objct" unique_id=246291444 instance=ExtResource("20")]
+[node name="key_panel" parent="items" unique_id=246291444 instance=ExtResource("20")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01716, -0.2753939, 3.76808)
 
-[node name="box2" parent="PH objct" unique_id=938879234 instance=ExtResource("21")]
+[node name="box2" parent="items" unique_id=938879234 instance=ExtResource("21")]
 transform = Transform3D(0.95882, 0, 0.284015, 0, 1, 0, -0.284015, 0, 0.95882, -2.73828, -0.39126, 6.20252)
 
-[node name="cook handle" parent="PH objct" unique_id=573129757 instance=ExtResource("22")]
+[node name="cook_handle" parent="items" unique_id=573129757 instance=ExtResource("22")]
 transform = Transform3D(0.714473, 0, -0.699663, 0, 1, 0, 0.699663, 0, 0.714473, -5.68554, 1.48111, 7.12448)
 
-[node name="key_door" parent="PH objct" unique_id=1015271151 instance=ExtResource("23")]
+[node name="key_door" parent="items" unique_id=1015271151 instance=ExtResource("23")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.67429, 0.480208, 4.08478)
 
 [node name="zones" type="Node3D" parent="." unique_id=1156769167]
@@ -731,12 +731,12 @@ collision_mask = 12
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0552168, -0.451904, -0.150635)
 shape = SubResource("BoxShape3D_tc3g8")
 
-[node name="kithcen" type="Area3D" parent="zones" unique_id=852964577]
+[node name="kitchen" type="Area3D" parent="zones" unique_id=852964577]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5259, 1.01743, 0.731566)
 collision_layer = 12
 collision_mask = 12
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="zones/kithcen" unique_id=1440253333]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zones/kitchen" unique_id=1440253333]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.563859, -0.572754, 1.87058)
 visible = false
 shape = SubResource("BoxShape3D_bc1rt")
@@ -751,7 +751,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.573, 0)
 visible = false
 shape = SubResource("BoxShape3D_8djt0")
 
-[node name="ФоновыйЗвук" type="AudioStreamPlayer3D" parent="." unique_id=1012415001]
+[node name="ambient_sound" type="AudioStreamPlayer3D" parent="." unique_id=1012415001]
 stream = ExtResource("25")
 volume_db = -5.0
 autoplay = true
@@ -760,9 +760,9 @@ autoplay = true
 script = ExtResource("27")
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
-[connection signal="animation_finished" from="active object/little object/door closet/AnimationPlayer" to="active object/little object/door closet" method="_on_animation_player_animation_finished"]
-[connection signal="animation_finished" from="active object/little object/door closet2/AnimationPlayer" to="active object/little object/door closet2" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="active object/little object/closet_door/AnimationPlayer" to="active object/little object/closet_door" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="active object/little object/closet_door_2/AnimationPlayer" to="active object/little object/closet_door_2" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="zones/player zone" to="zones" method="_on_player_zone_body_entered"]
-[connection signal="body_entered" from="zones/kithcen" to="zones" method="_on_kithcen_body_entered"]
+[connection signal="body_entered" from="zones/kitchen" to="zones" method="_on_kitchen_body_entered"]
 [connection signal="body_entered" from="zones/room" to="zones" method="_on_room_body_entered"]

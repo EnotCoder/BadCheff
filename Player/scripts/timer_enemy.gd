@@ -40,7 +40,7 @@ func _on_timer_timeout() -> void :
 	if 	State.state != State.StateBook.ATTACK: Dialog.show_say("Что-то не так")
 	await get_tree().create_timer(5).timeout
 
-	test_room(State.object_list_from_kithcen)
+	test_room(State.object_list_from_kitchen)
 
 	if 	State.state != State.StateBook.ATTACK:
 		Dialog.show_say("Странно всё на месте")
