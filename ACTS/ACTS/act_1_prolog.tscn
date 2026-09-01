@@ -168,10 +168,12 @@ script = ExtResource("1")
 environment = SubResource("Environment_nyylq")
 
 [node name="LightmapGI" type="LightmapGI" parent="." unique_id=991100221]
-quality = 0
 supersampling = true
 bounces = 4
-directional = true
+interior = true
+denoiser_strength = 0.05
+bias = 0.001
+texel_scale = 1.5
 max_texture_size = 8192
 light_data = ExtResource("2_chw1t")
 
@@ -430,6 +432,20 @@ omni_range = 11.153
 
 [node name="street 2" type="OmniLight3D" parent="point light/street" unique_id=1593198336]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.157912, 2.2902653, -5.1288996)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 3" type="OmniLight3D" parent="point light/street" unique_id=24616280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44998646, 2.2902653, -10.246958)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 4" type="OmniLight3D" parent="point light/street" unique_id=831136498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.049719, 2.2902653, -4.061343)
 light_bake_mode = 1
 shadow_enabled = true
 shadow_opacity = 0.15
