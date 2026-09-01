@@ -2,10 +2,6 @@ extends Node2D
 
 var inv_show = false
 
-
-var obj
-var drop_obj
-
 func _process(_delta: float) -> void :
 	if Input.is_action_just_pressed("inventory_move_up"):
 		if MainInventoryScript.num_chose > 1: MainInventoryScript.num_chose -= 1
@@ -34,22 +30,17 @@ func _process(_delta: float) -> void :
 	var current_key: String = MainInventoryScript.slots[MainInventoryScript.num_chose - 1]
 	if current_key:
 		if Input.is_action_just_pressed("drop"):
-			var a := current_key
-			drop_obj = load("res://mesh/" + a + "/" + a + ".tscn").instantiate()
-			get_parent().get_parent().get_parent().add_child(drop_obj)
-			drop_obj.global_transform = $"../../drop".global_transform
-			drop_obj.apply_central_impulse(drop_obj.transform.basis.z * -3)
+			var item_node = MainInventoryScript.get_item_node(current_key)
+			if item_node:
+				item_node.global_transform = $"../../drop".global_transform
+				item_node.freeze = false
+				item_node.collision_layer = 2
+				item_node.collision_mask = 2
+				item_node.linear_velocity = Vector3.ZERO
+				item_node.angular_velocity = Vector3.ZERO
+				item_node.apply_central_impulse(item_node.transform.basis.z * -3)
 			MainInventoryScript.slots[MainInventoryScript.num_chose - 1] = ""
-		else:
-			var a := current_key
-			if obj: obj.queue_free()
-			obj = load("res://mesh/" + a + "/" + a + ".tscn").instantiate()
-			obj.gravity_scale = 0
-			$"../..".add_child(obj)
-			obj.global_transform = $"../../obj pos".global_transform
-	else:
-		if obj: obj.queue_free()
-		obj = null
+			MainInventoryScript.remove_item_node(current_key)
 
 func arm_widget(num):
 	var a

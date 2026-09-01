@@ -15,6 +15,17 @@ var chose_obj: String:
 	get:
 		return slots[num_chose - 1]
 
+var _item_nodes: Dictionary = {}
+
+func set_item_node(key: String, node: RigidBody3D) -> void:
+	_item_nodes[key] = node
+
+func get_item_node(key: String) -> RigidBody3D:
+	return _item_nodes.get(key)
+
+func remove_item_node(key: String) -> void:
+	_item_nodes.erase(key)
+
 
 func reset() -> void:
 	slots = ["", "", ""]
