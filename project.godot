@@ -27,6 +27,7 @@ config/icon="uid://ckayg2tlpi0an"
 State="*res://enemy/State.gd"
 MainInventoryScript="*res://Player/Inventory/main_inventory_script.gd"
 Dialog="*res://Dialog.gd"
+YandexSDK="*res://scripts/yandex_sdk.gd"
 
 [debug]
 
@@ -35,6 +36,10 @@ settings/fps/force_fps=60
 [display]
 
 window/stretch/mode="viewport"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/yandex_mobile_ads/plugin.cfg")
 
 [filesystem]
 

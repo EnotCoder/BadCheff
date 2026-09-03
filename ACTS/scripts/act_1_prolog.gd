@@ -1,12 +1,16 @@
 extends Node3D
 
-
 func _ready() -> void :
 	State.state = State.StateBook.IDLE
 	State.position_point = "room"
 	MainInventoryScript.reset()
 	$Cheff.player_caught.connect(_on_player_caught)
+	_start_game()
 
+func _start_game() -> void:
+	YandexSDK.loading_ready()
+	YandexSDK.gameplay_start()
+	RenderingServer.force_draw()
 
 func _on_player_caught() -> void:
 	$player.queue_free()

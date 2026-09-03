@@ -3,11 +3,17 @@ extends Node2D
 
 func _ready() -> void :
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
-
-
+	YandexSDK.launch_adv_closed.connect(_on_launch_adv_closed)
 
 
 func _on_play_pressed() -> void :
+	if YandexSDK.is_online:
+		YandexSDK.show_launch_adv()
+	else:
+		_show_loading_and_change("res://ACTS/ACTS/act_1_prolog.tscn")
+
+
+func _on_launch_adv_closed() -> void:
 	_show_loading_and_change("res://ACTS/ACTS/act_1_prolog.tscn")
 
 
