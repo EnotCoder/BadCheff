@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://2et6dy6al5i4" path="res://mesh/key_door/key_door.tscn" id="23"]
 [ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/scripts/zones.gd" id="24"]
 [ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
+[ext_resource type="PackedScene" uid="uid://cld5hwq188761" path="res://mesh/hamer/hamer.tscn" id="25_k10x1"]
 [ext_resource type="Script" uid="uid://vkw4f3i5qs3f" path="res://ACTS/scripts/visibility_manager.gd" id="27"]
 [ext_resource type="PackedScene" uid="uid://cqqdge24m2pwi" path="res://ACTS/closet.tscn" id="28"]
 
@@ -728,6 +729,9 @@ offset_bottom = 30.0
 theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 18
 text = "FPS: 0"
+
+[node name="hamer" parent="." unique_id=905970777 instance=ExtResource("25_k10x1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.398117, -0.3592515, 3.724915)
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]

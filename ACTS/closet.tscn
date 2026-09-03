@@ -85,6 +85,13 @@ light_bake_mode = 1
 shadow_opacity = 0.15
 omni_range = 0.5
 
+[node name="light2" type="OmniLight3D" parent="door" unique_id=1676171247]
+transform = Transform3D(0.5102041, 0, 0, 0, 0.5102041, 0, 0, 0, 0.5102041, 0.21092884, -0.41137764, -0.14783764)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.5
+
 [node name="Squeak" type="AudioStreamPlayer3D" parent="." unique_id=962289253]
 stream = ExtResource("5")
 
