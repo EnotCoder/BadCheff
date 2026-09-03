@@ -2,7 +2,8 @@
 
 [ext_resource type="Script" uid="uid://nhy7hyspqy81" path="res://ACTS/scripts/act_1_prolog.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dip7a70gdxdee" path="res://Player/player.tscn" id="2"]
-[ext_resource type="LightmapGIData" uid="uid://d2vwfv55q75t" path="res://ACTS/ACTS/act_1_prolog.lmbake" id="2_chw1t"]
+[ext_resource type="LightmapGIData" uid="uid://y7yke16xouwk" path="res://ACTS/ACTS/act_1_prolog_without_basement.lmbake" id="2_8nyl2"]
+[ext_resource type="LightmapGIData" path="res://ACTS/ACTS/act_1_prolog.lmbake" id="29"]
 [ext_resource type="PackedScene" uid="uid://dt27hoyuh8f0q" path="res://enemy/cheff.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://c6n5bfkih0w6s" path="res://act 1 object/prolog/mesh.glb" id="4"]
 [ext_resource type="PackedScene" uid="uid://i51bngfd7dw2" path="res://act 1 object/prolog/up mesh.glb" id="5"]
@@ -177,7 +178,7 @@ denoiser_strength = 0.05
 bias = 0.001
 texel_scale = 1.5
 max_texture_size = 8192
-light_data = ExtResource("2_chw1t")
+light_data = ExtResource("2_8nyl2")
 
 [node name="player" parent="." unique_id=1696094556 instance=ExtResource("2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.437, -0.812, 0.67925733)
@@ -693,19 +694,6 @@ autoplay = true
 
 [node name="VisibilityManager" type="Node3D" parent="." unique_id=1305382429]
 script = ExtResource("27")
-
-[node name="DarkOverlay" type="CanvasLayer" parent="."]
-layer = 10
-visible = false
-
-[node name="ColorRect" type="ColorRect" parent="DarkOverlay"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-color = Color(0, 0, 0, 0.85)
 
 [node name="FPSCounter" type="CanvasLayer" parent="." unique_id=1672235340]
 

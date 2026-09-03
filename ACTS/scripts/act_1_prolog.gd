@@ -1,5 +1,7 @@
 extends Node3D
 
+var _lightmap_with_basement: LightmapGIData = preload("res://ACTS/ACTS/act_1_prolog.lmbake")
+
 func _ready() -> void :
 	State.state = State.StateBook.IDLE
 	State.position_point = "room"
@@ -17,11 +19,7 @@ func _start_game() -> void:
 	RenderingServer.force_draw()
 
 func _on_lever_activated() -> void:
-	$"point light/basement/stairs_1".visible = false
-	$"point light/basement/stairs_2".visible = false
-	$"point light/basement/basement_1".visible = false
-	$"point light/basement/basement_2".visible = false
-	$DarkOverlay.visible = true
+	$LightmapGI.light_data = _lightmap_with_basement
 
 func _on_player_caught() -> void:
 	$player.queue_free()
