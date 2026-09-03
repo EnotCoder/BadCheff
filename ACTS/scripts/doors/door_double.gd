@@ -8,7 +8,5 @@ func toggle_door() -> void:
 		else:
 			show_locked_hint("Закрыто")
 		return
-	if not $"../../little object/lever".door_opened:
-		show_locked_hint("Не хватает энергии")
-		return
+		
 	_perform_toggle()

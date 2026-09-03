@@ -651,7 +651,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01716, -0.2753939, 3.76808
 transform = Transform3D(0.714473, 0, -0.699663, 0, 1, 0, 0.699663, 0, 0.714473, -5.68554, 1.48111, 7.12448)
 
 [node name="key_door" parent="items" unique_id=1015271151 instance=ExtResource("23")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.67429, 0.480208, 4.08478)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4927464, 0.480208, 4.025949)
 
 [node name="zones" type="Node3D" parent="." unique_id=1156769167]
 script = ExtResource("24")
