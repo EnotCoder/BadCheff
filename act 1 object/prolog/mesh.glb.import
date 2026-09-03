@@ -111,6 +111,11 @@ _subresources={
 "physics/layer": 3,
 "physics/mask": 3
 },
+"PATH:table for food": {
+"generate/physics": true,
+"physics/layer": 3,
+"physics/mask": 3
+},
 "PATH:walls": {
 "generate/physics": true,
 "physics/layer": 3,
