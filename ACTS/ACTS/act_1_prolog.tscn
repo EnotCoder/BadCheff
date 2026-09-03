@@ -694,6 +694,19 @@ autoplay = true
 [node name="VisibilityManager" type="Node3D" parent="." unique_id=1305382429]
 script = ExtResource("27")
 
+[node name="DarkOverlay" type="CanvasLayer" parent="."]
+layer = 10
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="DarkOverlay"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.85)
+
 [node name="FPSCounter" type="CanvasLayer" parent="." unique_id=1672235340]
 
 [node name="FPS" type="Label" parent="FPSCounter" unique_id=2099580516]

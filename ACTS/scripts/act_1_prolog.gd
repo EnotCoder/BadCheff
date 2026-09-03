@@ -5,6 +5,7 @@ func _ready() -> void :
 	State.position_point = "room"
 	MainInventoryScript.reset()
 	$Cheff.player_caught.connect(_on_player_caught)
+	$"active object/little object/lever".lever_activated.connect(_on_lever_activated)
 	_start_game()
 
 func _process(_delta: float) -> void:
@@ -14,6 +15,13 @@ func _start_game() -> void:
 	YandexSDK.loading_ready()
 	YandexSDK.gameplay_start()
 	RenderingServer.force_draw()
+
+func _on_lever_activated() -> void:
+	$"point light/basement/stairs_1".visible = false
+	$"point light/basement/stairs_2".visible = false
+	$"point light/basement/basement_1".visible = false
+	$"point light/basement/basement_2".visible = false
+	$DarkOverlay.visible = true
 
 func _on_player_caught() -> void:
 	$player.queue_free()
