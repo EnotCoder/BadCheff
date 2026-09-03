@@ -6,6 +6,10 @@ func _ready() -> void :
 	YandexSDK.launch_adv_closed.connect(_on_launch_adv_closed)
 
 
+func _process(_delta: float) -> void:
+	$FPS.text = "FPS: " + str(Engine.get_frames_per_second())
+
+
 func _on_play_pressed() -> void :
 	if YandexSDK.is_online:
 		YandexSDK.show_launch_adv()
