@@ -290,10 +290,10 @@ vertical_alignment = 1
 
 [node name="hint" type="Label" parent="timer enemy" unique_id=651071158]
 layout_mode = 0
-offset_left = 497.0
+offset_left = 437.0
 offset_top = 562.0
-offset_right = 655.0
-offset_bottom = 585.0
+offset_right = 714.0
+offset_bottom = 586.0
 theme_override_fonts/font = ExtResource("12")
 theme_override_font_sizes/font_size = 20
 text = "hammer"

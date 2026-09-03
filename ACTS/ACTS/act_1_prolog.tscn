@@ -164,10 +164,10 @@ size = Vector3(9.19431, 2.14551, 11.2517)
 size = Vector3(13.6339, 2.146, 14.314)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_basement_wall"]
-size = Vector3(1.5, 3.0, 0.3)
+size = Vector3(1.5, 3, 0.3)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_basement_trigger"]
-size = Vector3(2.0, 3.0, 2.0)
+size = Vector3(2, 3, 2)
 
 [node name="ACT 1" type="Node3D" unique_id=535680354]
 script = ExtResource("1")
@@ -642,6 +642,11 @@ transform = Transform3D(0.479965, 0, 0.0906969, 0, 0.28, 0, -0.164329, 0, 0.2649
 visible = false
 Key_hint = "Тупой нож"
 
+[node name="knife3" parent="hint_player_object" unique_id=1362503628 instance=ExtResource("18")]
+transform = Transform3D(1.237, 0, 0, 0, 2.918, 0, 0, 0, 0.688, -10.749222, 0.6407473, -3.1966155)
+visible = false
+Key_hint = "Закрыто"
+
 [node name="knife2" parent="hint_player_object" unique_id=866758432 instance=ExtResource("18")]
 transform = Transform3D(-1.61231e-08, -0.127219, 0, 0.368854, -5.56093e-09, 0, 0, 0, 0.28, -8.17975, 0.624877, 3.45088)
 visible = false
@@ -700,19 +705,17 @@ autoplay = true
 [node name="VisibilityManager" type="Node3D" parent="." unique_id=1305382429]
 script = ExtResource("27")
 
-[node name="BasementWall" type="StaticBody3D" parent="."]
+[node name="BasementWall" type="StaticBody3D" parent="." unique_id=1644105390]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.85, 1.5, 5.5)
-collision_layer = 1
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementWall"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementWall" unique_id=1007096308]
 shape = SubResource("BoxShape3D_basement_wall")
 
-[node name="BasementTrigger" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.85, 1.5, 4.0)
+[node name="BasementTrigger" type="Area3D" parent="." unique_id=506449026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.85, 1.5, 5.003362)
 collision_layer = 0
-collision_mask = 1
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementTrigger"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementTrigger" unique_id=391195076]
 shape = SubResource("BoxShape3D_basement_trigger")
 
 [node name="FPSCounter" type="CanvasLayer" parent="." unique_id=1672235340]

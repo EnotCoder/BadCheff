@@ -44,7 +44,7 @@ theme_override_font_sizes/font_size = 31
 text = "Выход"
 flat = true
 
-[node name="FPS" type="Label" parent="main"]
+[node name="FPS" type="Label" parent="main" unique_id=780987820]
 offset_left = 10.0
 offset_top = 10.0
 offset_right = 150.0
