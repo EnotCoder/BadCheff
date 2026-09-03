@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://nhy7hyspqy81" path="res://ACTS/scripts/act_1_prolog.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dip7a70gdxdee" path="res://Player/player.tscn" id="2"]
 [ext_resource type="LightmapGIData" uid="uid://y7yke16xouwk" path="res://ACTS/ACTS/act_1_prolog_without_basement.lmbake" id="2_8nyl2"]
-[ext_resource type="LightmapGIData" path="res://ACTS/ACTS/act_1_prolog.lmbake" id="29"]
 [ext_resource type="PackedScene" uid="uid://dt27hoyuh8f0q" path="res://enemy/cheff.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://c6n5bfkih0w6s" path="res://act 1 object/prolog/mesh.glb" id="4"]
 [ext_resource type="PackedScene" uid="uid://i51bngfd7dw2" path="res://act 1 object/prolog/up mesh.glb" id="5"]
@@ -163,6 +162,12 @@ size = Vector3(9.19431, 2.14551, 11.2517)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8djt0"]
 size = Vector3(13.6339, 2.146, 14.314)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_basement_wall"]
+size = Vector3(1.5, 3.0, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_basement_trigger"]
+size = Vector3(2.0, 3.0, 2.0)
 
 [node name="ACT 1" type="Node3D" unique_id=535680354]
 script = ExtResource("1")
@@ -695,6 +700,21 @@ autoplay = true
 [node name="VisibilityManager" type="Node3D" parent="." unique_id=1305382429]
 script = ExtResource("27")
 
+[node name="BasementWall" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.85, 1.5, 5.5)
+collision_layer = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementWall"]
+shape = SubResource("BoxShape3D_basement_wall")
+
+[node name="BasementTrigger" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.85, 1.5, 4.0)
+collision_layer = 0
+collision_mask = 1
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementTrigger"]
+shape = SubResource("BoxShape3D_basement_trigger")
+
 [node name="FPSCounter" type="CanvasLayer" parent="." unique_id=1672235340]
 
 [node name="FPS" type="Label" parent="FPSCounter" unique_id=2099580516]
@@ -711,3 +731,4 @@ text = "FPS: 0"
 [connection signal="body_entered" from="zones/player zone" to="zones" method="_on_player_zone_body_entered"]
 [connection signal="body_entered" from="zones/kitchen" to="zones" method="_on_kitchen_body_entered"]
 [connection signal="body_entered" from="zones/room" to="zones" method="_on_room_body_entered"]
+[connection signal="body_entered" from="BasementTrigger" to="." method="_on_basement_trigger_body_entered"]

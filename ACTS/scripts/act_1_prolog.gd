@@ -20,6 +20,12 @@ func _start_game() -> void:
 
 func _on_lever_activated() -> void:
 	$LightmapGI.light_data = _lightmap_with_basement
+	$BasementWall.get_node("CollisionShape3D").disabled = true
+	$BasementTrigger.get_node("CollisionShape3D").disabled = true
+
+func _on_basement_trigger_body_entered(body: Node3D) -> void:
+	if body.name == "player":
+		Dialog.show_hint("Тёмно... Нужно включить свет")
 
 func _on_player_caught() -> void:
 	$player.queue_free()
