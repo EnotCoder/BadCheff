@@ -7,6 +7,9 @@ func _ready() -> void :
 	$Cheff.player_caught.connect(_on_player_caught)
 	_start_game()
 
+func _process(_delta: float) -> void:
+	$FPSCounter/FPS.text = "FPS: " + str(Engine.get_frames_per_second())
+
 func _start_game() -> void:
 	YandexSDK.loading_ready()
 	YandexSDK.gameplay_start()

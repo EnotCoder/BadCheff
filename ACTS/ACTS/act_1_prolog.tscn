@@ -668,6 +668,17 @@ autoplay = true
 [node name="VisibilityManager" type="Node3D" parent="." unique_id=1305382429]
 script = ExtResource("27")
 
+[node name="FPSCounter" type="CanvasLayer" parent="."]
+
+[node name="FPS" type="Label" parent="FPSCounter"]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "FPS: 0"
+
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]
 [connection signal="body_entered" from="zones/player zone" to="zones" method="_on_player_zone_body_entered"]
