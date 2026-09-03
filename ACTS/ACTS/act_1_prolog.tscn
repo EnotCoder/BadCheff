@@ -668,9 +668,9 @@ autoplay = true
 [node name="VisibilityManager" type="Node3D" parent="." unique_id=1305382429]
 script = ExtResource("27")
 
-[node name="FPSCounter" type="CanvasLayer" parent="."]
+[node name="FPSCounter" type="CanvasLayer" parent="." unique_id=1672235340]
 
-[node name="FPS" type="Label" parent="FPSCounter"]
+[node name="FPS" type="Label" parent="FPSCounter" unique_id=2099580516]
 offset_left = 10.0
 offset_top = 10.0
 offset_right = 150.0
