@@ -731,7 +731,7 @@ theme_override_font_sizes/font_size = 18
 text = "FPS: 0"
 
 [node name="hamer" parent="." unique_id=905970777 instance=ExtResource("25_k10x1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.398117, -0.3592515, 3.724915)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.398117, -0.3398913, 3.724915)
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]
