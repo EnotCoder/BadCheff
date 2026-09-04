@@ -4,6 +4,7 @@ extends Node2D
 func _ready() -> void :
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	YandexSDK.launch_adv_closed.connect(_on_launch_adv_closed)
+	$"../cheff/AnimationPlayer".play("idle")
 
 
 func _process(_delta: float) -> void:
