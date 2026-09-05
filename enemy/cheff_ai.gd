@@ -10,6 +10,7 @@ const ARRIVE_DISTANCE := 0.3
 
 var kill := false
 var _was_navigating := false
+var chase_sound: AudioStreamPlayer
 
 @onready var animation_state_machine = animation_tree.get("parameters/playback")
 @export var navigation_agent: NavigationAgent3D
@@ -24,6 +25,11 @@ func _ready() -> void:
 	State.object_list_from_kitchen = list_kitchen_objects
 	State.object_list_from_room = list_room_objects
 	hit.body_entered.connect(_on_hit_body_entered)
+
+	chase_sound = AudioStreamPlayer.new()
+	chase_sound.stream = load("res://sounds/cheff/ага.mp3")
+	chase_sound.bus = "Master"
+	add_child(chase_sound)
 
 func _physics_process(delta: float) -> void:
 	if !is_on_floor():
@@ -48,7 +54,7 @@ func process_movement() -> void:
 	if State.position_point == "kitchen" and (
 		door_kitchen.get("door_opened") as bool
 		or MainInventoryScript.position_point != "frezz_room"
-	):
+	) and State.state != State.StateBook.ATTACK:
 		_start_chase()
 
 	if !navigation_agent.is_navigation_finished():
@@ -60,6 +66,7 @@ func process_movement() -> void:
 
 func _start_chase() -> void:
 	State.state = State.StateBook.ATTACK
+	chase_sound.play()
 	Dialog.show_say("Ага")
 
 func manage_animations() -> void:

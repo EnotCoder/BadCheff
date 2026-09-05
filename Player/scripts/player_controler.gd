@@ -37,11 +37,11 @@ var bob_offset := Vector3.ZERO
 @onready var mesh: MeshInstance3D = $MeshInstance3D
 @onready var collision: CollisionShape3D = $CollisionShape3D
 @onready var interact_position: Node3D = $"obj pos"
-@onready var walking_sound: AudioStreamPlayer = $"ЗвукХодьбы"
-@onready var cursor: Control = $"Control/cursor"
+@onready var walking_sound: AudioStreamPlayer3D = $"ЗвукХодьбы"
+@onready var cursor: MeshInstance2D = $Control/cursor
 @onready var virtual_joystick: Control = $"Virtual Joystick"
-@onready var control_button: Control = $"Control/control"
-@onready var anim_screen: Control = $"Control/anim screen"
+@onready var control_button: Node2D = $"Control/control"
+@onready var anim_screen: Node2D = $"Control/anim screen"
 @onready var enemy_timer: Control = $"timer enemy"
 
 func _ready() -> void:
