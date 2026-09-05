@@ -43,6 +43,7 @@ func p():
 		timer.wait_time = time
 		timer.start()
 		time_wait = true
+		State.timer_active = true
 
 func test_room(list):
 	for obj in list:
@@ -59,6 +60,7 @@ func _on_timer_timeout() -> void :
 	if cheff:
 		await cheff.arrived
 
+	State.audio_busy = true
 	sound_tak_pogodika.play()
 	await sound_tak_pogodika.finished
 
@@ -75,4 +77,6 @@ func _on_timer_timeout() -> void :
 		sound_aga.play()
 		await sound_aga.finished
 
+	State.audio_busy = false
+	State.timer_active = false
 	time_wait = false

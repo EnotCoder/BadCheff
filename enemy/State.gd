@@ -17,6 +17,8 @@ var Frezz_room = Vector3(-12.29, -0.774, 0.56)
 
 var noise_sound: AudioStreamPlayer
 var player_sound: AudioStreamPlayer
+var audio_busy := false
+var timer_active := false
 
 func _ready():
 	noise_sound = AudioStreamPlayer.new()
@@ -30,9 +32,14 @@ func _ready():
 	add_child(player_sound)
 
 func set_noise():
+	if audio_busy or timer_active:
+		noise.emit()
+		return
+	audio_busy = true
 	await get_tree().create_timer(0.5).timeout
 	player_sound.play()
 	await player_sound.finished
 	noise_sound.play()
 	await noise_sound.finished
+	audio_busy = false
 	noise.emit()
