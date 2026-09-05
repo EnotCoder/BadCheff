@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cr0mqyobw3x2m"]
 
-[ext_resource type="PackedScene" uid="uid://cfg472ufrfhix" path="res://act 1 object/prolog/board.glb" id="1_6s4jn"]
+[ext_resource type="PackedScene" uid="uid://dlyffmqboifwv" path="res://act 1 object/prolog/board.glb" id="1_6s4jn"]
 [ext_resource type="Script" uid="uid://c003wvr2vg2st" path="res://ACTS/scripts/board.gd" id="1_pjq8h"]
 [ext_resource type="PackedScene" uid="uid://rwkeiobj2orb" path="res://act 1 object/prolog/board_break.glb" id="2_pjq8h"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="3_6kkif"]
