@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://nhy7hyspqy81" path="res://ACTS/scripts/act_1_prolog.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dip7a70gdxdee" path="res://Player/player.tscn" id="2"]
-[ext_resource type="LightmapGIData" uid="uid://d2vwfv55q75t" path="res://ACTS/ACTS/act_1_prolog.lmbake" id="2_8nf5b"]
+[ext_resource type="LightmapGIData" uid="uid://y7yke16xouwk" path="res://ACTS/ACTS/act_1_prolog_without_basement.lmbake" id="2_k10x1"]
 [ext_resource type="PackedScene" uid="uid://dt27hoyuh8f0q" path="res://enemy/cheff.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://bg2pkblkrhpm" path="res://ACTS/map.tscn" id="5_8nyl2"]
 [ext_resource type="PackedScene" uid="uid://bjotsfvxh0hqu" path="res://ACTS/door_kitchen.tscn" id="6"]
@@ -195,13 +195,13 @@ denoiser_strength = 0.05
 bias = 0.001
 texel_scale = 1.5
 max_texture_size = 8192
-light_data = ExtResource("2_8nf5b")
+light_data = ExtResource("2_k10x1")
 
 [node name="player" parent="." unique_id=1696094556 instance=ExtResource("2")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 3.4950886, -0.812, 0.67925733)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.539267, -0.812, 0.67925733)
 
 [node name="Cheff" parent="." unique_id=620991757 node_paths=PackedStringArray("navigation_agent", "animation_tree", "hit", "door_kitchen", "list_kitchen_objects") instance=ExtResource("3")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.41959, -0.408409, 2.55925)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.4311457, -0.408409, 3.27305)
 navigation_agent = NodePath("NavigationAgent3D")
 animation_tree = NodePath("AnimationTree")
 hit = NodePath("hit")
@@ -645,19 +645,19 @@ Key_hint = "Закрыто"
 metadata/_edit_group_ = true
 
 [node name="hamer" parent="items" unique_id=905970777 instance=ExtResource("25_k10x1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.54982, -0.3398913, 3.724915)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8521538, -0.5233036, 3.724915)
 
 [node name="key_panel" parent="items" unique_id=246291444 instance=ExtResource("20")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.01716, -0.2753939, 3.76808)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.842857, -0.2753939, 3.76808)
 
 [node name="cook_handle" parent="items" unique_id=573129757 instance=ExtResource("22")]
-transform = Transform3D(0.714473, 0, -0.699663, 0, 1, 0, 0.699663, 0, 0.714473, -5.68554, 1.48111, 7.12448)
+transform = Transform3D(0.714473, 0, -0.699663, 0, 1, 0, 0.699663, 0, 0.714473, -5.5847144, 1.48111, 7.1260686)
 
 [node name="key_door" parent="items" unique_id=1015271151 instance=ExtResource("23")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4927464, 0.480208, 4.025949)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4843206, 0.480208, 4.0800037)
 
 [node name="key_main_door" parent="items" unique_id=2091486217 instance=ExtResource("23_k10x1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.9963074, -0.3703422, 5.101627)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5480561, -2.0951283, 1.4400978)
 
 [node name="zones" type="Node3D" parent="." unique_id=1156769167]
 script = ExtResource("24")

@@ -50,6 +50,11 @@ _subresources={
 "save_to_file/fallback_path": "",
 "save_to_file/path": ""
 }
+},
+"nodes": {
+"PATH:cook handle/Plane": {
+"mesh_instance/layers": 2
+}
 }
 }
 gltf/naming_version=2

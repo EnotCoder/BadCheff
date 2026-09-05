@@ -4153,6 +4153,11 @@ _subresources={
 "slice_99/start_frame": 0,
 "slices/amount": 0
 }
+},
+"nodes": {
+"PATH:Armature_002/Skeleton3D/body": {
+"mesh_instance/layers": 4
+}
 }
 }
 gltf/naming_version=1
