@@ -320,71 +320,69 @@ _data = {
 &"open": SubResource("Animation_qld0a")
 }
 
-[node name="door kitchen" type="Node3D"]
+[node name="door kitchen" type="Node3D" unique_id=1196333246]
 script = ExtResource("1")
 locked = "ffff"
 locked_hint = "можно выбить"
 noise = true
 
-[node name="mesh" type="Node3D" parent="."]
+[node name="mesh" type="Node3D" parent="." unique_id=272301141]
 
-[node name="main" type="MeshInstance3D" parent="mesh"]
-transform = Transform3D(38.9783, 1.72386e-14, 2.22045e-14, -8.65492e-15, 77.6356, 7.54979e-06, -8.65492e-15, -5.86133e-06, 100, 6.05065e-17, 0.359647, 0.0075761)
+[node name="main" type="MeshInstance3D" parent="mesh" unique_id=1824631165]
+transform = Transform3D(38.978, 1.7238652e-14, 2.5327517e-14, -8.654854e-15, 77.636, 8.611676e-06, -8.654854e-15, -5.8613605e-06, 114.065, 6.05065e-17, 0.359647, 0.0075761)
 mesh = SubResource("ArrayMesh_ulu7r")
 skeleton = NodePath("")
 
-[node name="door left" type="MeshInstance3D" parent="mesh"]
-transform = Transform3D(-100.877, 0.000253518, 9.17733e-10, 0, -0.000361999, 100, 0.000255742, 100, 0.000361999, -0.301002, 0.0517102, 0.00494723)
+[node name="door left" type="MeshInstance3D" parent="mesh" unique_id=25694634]
+transform = Transform3D(-100.877, 0.00025351817, 9.177332e-10, 0, -0.000361999, 100, 0.00025574153, 100, 0.000361999, -0.301002, 0.0517102, 0.020290881)
 mesh = SubResource("ArrayMesh_cdv8b")
 skeleton = NodePath("")
 
-[node name="left" parent="mesh/door left" node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("4")]
+[node name="left" parent="mesh/door left" unique_id=690312522 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("4")]
 transform = Transform3D(-0.00354263, -1.16895e-14, -2.38215e-09, -7.98077e-09, 6.85575e-09, 0.00107606, 3.64188e-16, 0.0154044, -2.86486e-10, -0.00118279, -4.94746e-05, 0.000453103)
 visible = false
 FUNC_NAME = "toggle_door"
 NODE_ACTION = NodePath("../../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="mesh/door left"]
+[node name="StaticBody3D" type="StaticBody3D" parent="mesh/door left" unique_id=1386608244]
 transform = Transform3D(0.999994, -2.36345e-06, -4.80853e-13, 2.40509e-06, 1, 3.25842e-07, -1.43354e-13, -2.06632e-07, 1, -5.12227e-09, 8.00355e-11, 2.32831e-10)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mesh/door left/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mesh/door left/StaticBody3D" unique_id=518875093]
 transform = Transform3D(1, 0, 0, 0, 1, 0, -8.47033e-22, 0, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_qld0a")
 
-[node name="door right" type="MeshInstance3D" parent="mesh"]
-transform = Transform3D(100.877, 5.06753e-27, 1.83444e-32, 0, -0.000361999, 100, 5.11197e-27, -100, -0.000361999, 0.298998, 0.0517102, 0.00494723)
+[node name="door right" type="MeshInstance3D" parent="mesh" unique_id=1464590616]
+transform = Transform3D(100.877, 5.0675296e-27, 1.8344408e-32, 0, -0.000361999, 100, 5.111972e-27, -100, -0.000361999, 0.298998, 0.0517102, 0.020290881)
 mesh = SubResource("ArrayMesh_o4tti")
 skeleton = NodePath("")
 
-[node name="right" parent="mesh/door right" node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("4")]
+[node name="right" parent="mesh/door right" unique_id=1772258925 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("4")]
 transform = Transform3D(0.00354263, 2.91388e-23, -2.34957e-31, 1.50888e-30, -5.9987e-09, -0.00107606, -6.81934e-24, 0.0154044, -4.19033e-10, -0.00115978, 4.9472e-05, 0.000452898)
 visible = false
 FUNC_NAME = "toggle_door"
 NODE_ACTION = NodePath("../../..")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="mesh/door right"]
+[node name="StaticBody3D" type="StaticBody3D" parent="mesh/door right" unique_id=1147192020]
 transform = Transform3D(0.999994, 9.29503e-29, 1.26106e-21, 1.76052e-28, 1, -2.70205e-07, -1.28328e-21, 2.70205e-07, 1, 5.12227e-09, -7.27596e-11, 2.32831e-10)
 collision_layer = 3
 collision_mask = 3
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="mesh/door right/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mesh/door right/StaticBody3D" unique_id=1632544255]
 transform = Transform3D(1, 0, 0, 0, 1, 3.55271e-15, 0, -3.55271e-15, 1, 0, 0, 0)
 shape = SubResource("ConcavePolygonShape3D_6l6h4")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_h2ccp")
-}
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=459086346]
+libraries/ = SubResource("AnimationLibrary_h2ccp")
 
-[node name="ВыбиванияДвери" type="AudioStreamPlayer3D" parent="."]
+[node name="ВыбиванияДвери" type="AudioStreamPlayer3D" parent="." unique_id=505091118]
 stream = ExtResource("6")
 
-[node name="ПопыткаОткрытьДверь" type="AudioStreamPlayer3D" parent="."]
+[node name="ПопыткаОткрытьДверь" type="AudioStreamPlayer3D" parent="." unique_id=556818611]
 stream = ExtResource("7")
 
-[node name="enemy triger" parent="." node_paths=PackedStringArray("node") instance=ExtResource("8")]
+[node name="enemy triger" parent="." unique_id=322321285 node_paths=PackedStringArray("node") instance=ExtResource("8")]
 transform = Transform3D(0.728303, 0, 0, 0, 1.46312, 0, 0, 0, 0.229143, 0, 0.0933684, 0)
 visible = false
 func_ent = "toggle_door"
