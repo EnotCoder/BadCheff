@@ -2,12 +2,14 @@ extends CharacterBody3D
 class_name Enemy
 
 signal player_caught
+signal arrived
 
 const WALK_SPEED := 3.0
 const RUN_SPEED := 5.0
 const ARRIVE_DISTANCE := 0.3
 
 var kill := false
+var _was_navigating := false
 
 @onready var animation_state_machine = animation_tree.get("parameters/playback")
 @export var navigation_agent: NavigationAgent3D
@@ -18,6 +20,7 @@ var kill := false
 @export var list_room_objects: Array[Node]
 
 func _ready() -> void:
+	add_to_group("cheff")
 	State.object_list_from_kitchen = list_kitchen_objects
 	State.object_list_from_room = list_room_objects
 	hit.body_entered.connect(_on_hit_body_entered)
@@ -50,6 +53,10 @@ func process_movement() -> void:
 
 	if !navigation_agent.is_navigation_finished():
 		move_and_slide()
+		_was_navigating = true
+	elif _was_navigating:
+		_was_navigating = false
+		arrived.emit()
 
 func _start_chase() -> void:
 	State.state = State.StateBook.ATTACK

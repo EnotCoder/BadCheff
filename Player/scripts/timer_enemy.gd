@@ -4,6 +4,26 @@ var time = 10
 
 var time_wait = false
 
+var sound_tak_pogodika: AudioStreamPlayer
+var sound_pokazalos: AudioStreamPlayer
+var sound_aga: AudioStreamPlayer
+
+func _ready():
+	sound_tak_pogodika = AudioStreamPlayer.new()
+	sound_tak_pogodika.stream = load("res://sounds/cheff/так_погодика.mp3")
+	sound_tak_pogodika.bus = "Master"
+	add_child(sound_tak_pogodika)
+
+	sound_pokazalos = AudioStreamPlayer.new()
+	sound_pokazalos.stream = load("res://sounds/cheff/показалось.mp3")
+	sound_pokazalos.bus = "Master"
+	add_child(sound_pokazalos)
+
+	sound_aga = AudioStreamPlayer.new()
+	sound_aga.stream = load("res://sounds/cheff/ага.mp3")
+	sound_aga.bus = "Master"
+	add_child(sound_aga)
+
 func set_timer():
 	$Timer.start()
 
@@ -35,14 +55,24 @@ func _on_timer_timeout() -> void :
 	State.state = State.StateBook.CHEAK
 	test_room(State.object_list_from_room)
 
-	if 	State.state != State.StateBook.ATTACK: Dialog.show_say("Откуда был шум!?")
-	await get_tree().create_timer(5).timeout
-	if 	State.state != State.StateBook.ATTACK: Dialog.show_say("Что-то не так")
-	await get_tree().create_timer(5).timeout
+	var cheff = get_tree().get_first_node_in_group("cheff")
+	if cheff:
+		await cheff.arrived
+
+	sound_tak_pogodika.play()
+	await sound_tak_pogodika.finished
+
+	await get_tree().create_timer(2.0).timeout
 
 	test_room(State.object_list_from_kitchen)
 
-	if 	State.state != State.StateBook.ATTACK:
+	if State.state != State.StateBook.ATTACK:
+		sound_pokazalos.play()
+		await sound_pokazalos.finished
 		Dialog.show_say("Странно всё на месте")
 		State.state = State.StateBook.IDLE
+	else:
+		sound_aga.play()
+		await sound_aga.finished
+
 	time_wait = false
