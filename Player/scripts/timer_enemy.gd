@@ -71,7 +71,6 @@ func _on_timer_timeout() -> void :
 	if State.state != State.StateBook.ATTACK:
 		sound_pokazalos.play()
 		await sound_pokazalos.finished
-		Dialog.show_say("Странно всё на месте")
 		State.state = State.StateBook.IDLE
 	else:
 		sound_aga.play()
