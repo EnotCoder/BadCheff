@@ -645,7 +645,7 @@ Key_hint = "Закрыто"
 metadata/_edit_group_ = true
 
 [node name="hamer" parent="items" unique_id=905970777 instance=ExtResource("25_k10x1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8521538, -0.5233036, 3.724915)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.450233, -0.5233036, 3.724915)
 
 [node name="key_panel" parent="items" unique_id=246291444 instance=ExtResource("20")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.842857, -0.2753939, 3.76808)
@@ -657,7 +657,7 @@ transform = Transform3D(0.714473, 0, -0.699663, 0, 1, 0, 0.699663, 0, 0.714473, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4843206, 0.480208, 4.0800037)
 
 [node name="key_main_door" parent="items" unique_id=2091486217 instance=ExtResource("23_k10x1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5480561, -2.0951283, 1.4400978)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6339383, -2.0951283, 14.518766)
 
 [node name="zones" type="Node3D" parent="." unique_id=1156769167]
 script = ExtResource("24")
