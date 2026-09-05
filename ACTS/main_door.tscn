@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://cabaqsihqtjlc"]
+
+[ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="1_dam0i"]
+[ext_resource type="Script" uid="uid://lfl352mu1h3v" path="res://ACTS/scripts/main_door.gd" id="1_s0ihj"]
+[ext_resource type="PackedScene" uid="uid://cr0mqyobw3x2m" path="res://ACTS/board.tscn" id="3_n3k7m"]
+
+[node name="main_door" type="Node3D" unique_id=2011067237]
+script = ExtResource("1_s0ihj")
+
+[node name="exit" parent="." unique_id=1107239999 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("1_dam0i")]
+transform = Transform3D(2.742, 0, 0, 0, 3.246, 0, 0, 0, 0.2, 0, 0, 0)
+visible = false
+FUNC_NAME = "escape"
+NODE_ACTION = NodePath("..")
+
+[node name="board" parent="." unique_id=434643289 instance=ExtResource("3_n3k7m")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, -0.25752825, -0.10333812)
+
+[node name="board2" parent="." unique_id=664504361 instance=ExtResource("3_n3k7m")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 0.73433447, -0.10333812)
