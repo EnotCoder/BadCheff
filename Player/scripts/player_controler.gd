@@ -5,122 +5,140 @@ class_name Player
 enum Platform { PC, ANDROID }
 
 @export var platform: Platform = Platform.ANDROID
+@export var search_timer_duration: float = 10.0
 
 const WALK_SPEED := 4.0
 const CROUCH_SPEED := 2.0
 const STAND_HEIGHT := 2.4
 const CROUCH_HEIGHT := 1.2
-const STAND_CAMERA_Y := 2.18
-const CROUCH_CAMERA_Y := 1.131
-const STAND_OBJ_Y := 1.782
-const CROUCH_OBJ_Y := 1.181
-const STAND_COLLISION_Y := 1.193
-const CROUCH_COLLISION_Y := 0.598
+const CAMERA_STAND_Y := 2.18
+const CAMERA_CROUCH_Y := 1.131
+const INTERACT_STAND_Y := 1.782
+const INTERACT_CROUCH_Y := 1.181
+const COLLISION_STAND_Y := 1.193
+const COLLISION_CROUCH_Y := 0.598
 const CAMERA_PITCH_LIMIT_DEG := 70.0
-const BOB_FREQUENCY := 2.6
-const BOB_AMOUNT_X := 0.03
-const BOB_AMOUNT_Y := 0.04
+const CAMERA_BOB_FREQUENCY := 2.6
+const CAMERA_BOB_AMPLITUDE_X := 0.03
+const CAMERA_BOB_AMPLITUDE_Y := 0.04
+const MOUSE_SENSITIVITY_PC := 0.003
+const MOUSE_SENSITIVITY_MOBILE := 0.005
+const CURSOR_INTERACT_SIZE := Vector2(6, 6)
+const CURSOR_DEFAULT_SIZE := Vector2(4, 4)
 
-@export var time: float = 10.0
+var current_speed: float = WALK_SPEED
+var is_crouching: bool = false
+var camera_base_y: float = CAMERA_STAND_Y
+var bob_time: float = 0.0
+var bob_offset := Vector3.ZERO
 
-var _speed: float = WALK_SPEED
-var _is_crouching: bool = false
-var _camera_base_y: float = STAND_CAMERA_Y
+@onready var camera: Camera3D = $Camera3D
+@onready var ray_cast: RayCast3D = $Camera3D/RayCast3D
+@onready var mesh: MeshInstance3D = $MeshInstance3D
+@onready var collision: CollisionShape3D = $CollisionShape3D
+@onready var interact_position: Node3D = $"obj pos"
+@onready var walking_sound: AudioStreamPlayer = $"ЗвукХодьбы"
+@onready var cursor: Control = $"Control/cursor"
+@onready var virtual_joystick: Control = $"Virtual Joystick"
+@onready var control_button: Control = $"Control/control"
+@onready var anim_screen: Control = $"Control/anim screen"
+@onready var enemy_timer: Control = $"timer enemy"
 
-var _bob_time: float = 0.0
-var _bob_offset := Vector3.ZERO
+func _ready() -> void:
+	if platform == Platform.PC:
+		virtual_joystick.hide()
+		control_button.hide()
+		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-@onready var ray_cast: RayCast3D = $Camera3D / RayCast3D
+	State.noise.connect(enemy_timer.p.bind())
+	enemy_timer.get_node("Timer").wait_time = search_timer_duration
+	anim_screen.color_down()
 
 func _physics_process(delta: float) -> void:
-	if velocity != Vector3.ZERO:
-		$"ЗвукХодьбы".stream_paused = false
-	else:
-		$"ЗвукХодьбы".stream_paused = true
-
-	camera_bob(delta)
+	update_walking_sound()
+	update_camera_bob(delta)
 	State.player = global_position
 
 	if Input.is_action_just_pressed("sit"):
-		_toggle_crouch()
+		toggle_crouch()
 
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 
 	var input_dir := Input.get_vector("a", "d", "w", "s")
 	var direction := (transform.basis * Vector3(input_dir.x, 0.0, input_dir.y)).normalized()
+
 	if direction:
-		velocity.x = direction.x * _speed
-		velocity.z = direction.z * _speed
+		velocity.x = direction.x * current_speed
+		velocity.z = direction.z * current_speed
 	else:
-		velocity.x = move_toward(velocity.x, 0.0, _speed)
-		velocity.z = move_toward(velocity.z, 0.0, _speed)
+		velocity.x = move_toward(velocity.x, 0.0, current_speed)
+		velocity.z = move_toward(velocity.z, 0.0, current_speed)
 
 	move_and_slide()
 
 	if Input.is_action_just_pressed("EXIT"):
 		get_tree().change_scene_to_file("res://ACTS/ACTS/menu.tscn")
 
+	update_cursor()
+
+func _input(event: InputEvent) -> void:
+	if platform == Platform.PC and event is InputEventMouseMotion:
+		rotate_y(-event.relative.x * MOUSE_SENSITIVITY_PC)
+		camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY_PC)
+		clamp_camera_rotation()
+	elif event is InputEventScreenDrag:
+		rotate_y(-event.relative.x * MOUSE_SENSITIVITY_MOBILE)
+		camera.rotate_x(-event.relative.y * MOUSE_SENSITIVITY_MOBILE)
+		clamp_camera_rotation()
+
+func clamp_camera_rotation() -> void:
+	var camera_rotation: Vector3 = camera.rotation_degrees
+	camera_rotation.x = clamp(camera_rotation.x, -CAMERA_PITCH_LIMIT_DEG, CAMERA_PITCH_LIMIT_DEG)
+	camera.rotation_degrees = camera_rotation
+
+func toggle_crouch() -> void:
+	is_crouching = not is_crouching
+	if is_crouching:
+		mesh.mesh.height = CROUCH_HEIGHT
+		mesh.position = Vector3(0, 0.6, 0)
+		camera_base_y = CAMERA_CROUCH_Y
+		collision.shape.height = CROUCH_HEIGHT
+		interact_position.position.y = INTERACT_CROUCH_Y
+		collision.position = Vector3(0, COLLISION_CROUCH_Y, 0)
+		current_speed = CROUCH_SPEED
+	else:
+		mesh.mesh.height = STAND_HEIGHT
+		mesh.position = Vector3(0, 1.197, 0)
+		camera_base_y = CAMERA_STAND_Y
+		collision.shape.height = STAND_HEIGHT
+		interact_position.position.y = INTERACT_STAND_Y
+		collision.position = Vector3(0, COLLISION_STAND_Y, 0)
+		current_speed = WALK_SPEED
+
+func update_walking_sound() -> void:
+	if velocity != Vector3.ZERO:
+		walking_sound.stream_paused = false
+	else:
+		walking_sound.stream_paused = true
+
+func update_camera_bob(delta: float) -> void:
+	bob_time += delta + velocity.length() * 0.01
+	bob_offset = Vector3.ZERO
+	bob_offset.x = sin(bob_time * CAMERA_BOB_FREQUENCY) * CAMERA_BOB_AMPLITUDE_X
+	bob_offset.y = cos(bob_time * CAMERA_BOB_FREQUENCY) * CAMERA_BOB_AMPLITUDE_Y + camera_base_y
+	camera.position = bob_offset
+
+func update_cursor() -> void:
 	if ray_cast.is_colliding():
 		var hit := ray_cast.get_collider()
 		if hit:
-			$"Control/cursor".scale = Vector2(6, 6)
+			cursor.scale = CURSOR_INTERACT_SIZE
 			if Input.is_action_just_pressed("left_click") and hit.has_method("main"):
 				hit.main()
 			if hit.has_method("main_delta"):
 				hit.main_delta()
 		else:
-			$"Control/cursor".scale = Vector2(6, 6)
+			cursor.scale = CURSOR_INTERACT_SIZE
 	else:
-		$"Control/cursor".scale = Vector2(4, 4)
-
-func _ready() -> void:
-	if platform == Platform.PC:
-		$"Virtual Joystick".hide()
-		$"Control/control".hide()
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
-	Dialog.show_say("Нужно выбратся от сюда и найти отца")
-	State.noise.connect($"timer enemy".p.bind())
-	$"timer enemy/Timer".wait_time = time
-	$"Control/anim screen".color_down()
-
-func _input(event: InputEvent) -> void:
-	if platform == Platform.PC and event is InputEventMouseMotion:
-		rotate_y(-event.relative.x * 0.003)
-		$Camera3D.rotate_x(-event.relative.y * 0.003)
-		clamp_camera_rotation()
-	elif event is InputEventScreenDrag:
-		rotate_y(-event.relative.x * 0.005)
-		$Camera3D.rotate_x(-event.relative.y * 0.005)
-		clamp_camera_rotation()
-
-func clamp_camera_rotation() -> void:
-	var rotation_camera: Vector3 = $Camera3D.rotation_degrees
-	rotation_camera.x = clamp(rotation_camera.x, -CAMERA_PITCH_LIMIT_DEG, CAMERA_PITCH_LIMIT_DEG)
-	$Camera3D.rotation_degrees = rotation_camera
-
-func _toggle_crouch() -> void:
-	_is_crouching = not _is_crouching
-	if _is_crouching:
-		$MeshInstance3D.mesh.height = CROUCH_HEIGHT
-		$MeshInstance3D.position = Vector3(0, 0.6, 0)
-		_camera_base_y = CROUCH_CAMERA_Y
-		$CollisionShape3D.shape.height = CROUCH_HEIGHT
-		$"obj pos".position.y = CROUCH_OBJ_Y
-		$CollisionShape3D.position = Vector3(0, CROUCH_COLLISION_Y, 0)
-		_speed = CROUCH_SPEED
-	else:
-		$MeshInstance3D.mesh.height = STAND_HEIGHT
-		$MeshInstance3D.position = Vector3(0, 1.197, 0)
-		_camera_base_y = STAND_CAMERA_Y
-		$CollisionShape3D.shape.height = STAND_HEIGHT
-		$"obj pos".position.y = STAND_OBJ_Y
-		$CollisionShape3D.position = Vector3(0, STAND_COLLISION_Y, 0)
-		_speed = WALK_SPEED
-
-func camera_bob(delta: float) -> void:
-	_bob_time += delta + velocity.length() * 0.01
-	_bob_offset = Vector3.ZERO
-	_bob_offset.x = sin(_bob_time * BOB_FREQUENCY) * BOB_AMOUNT_X
-	_bob_offset.y = cos(_bob_time * BOB_FREQUENCY) * BOB_AMOUNT_Y + _camera_base_y
-	$Camera3D.position = _bob_offset
+		cursor.scale = CURSOR_DEFAULT_SIZE
