@@ -22,8 +22,29 @@
 [ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/scripts/zones.gd" id="24"]
 [ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
 [ext_resource type="PackedScene" uid="uid://cld5hwq188761" path="res://mesh/hamer/hamer.tscn" id="25_k10x1"]
-[ext_resource type="Script" uid="uid://vkw4f3i5qs3f" path="res://ACTS/scripts/visibility_manager.gd" id="27"]
 [ext_resource type="PackedScene" uid="uid://cqqdge24m2pwi" path="res://ACTS/closet.tscn" id="28"]
+
+[sub_resource type="Shader" id="Shader_vignette"]
+code = "shader_type canvas_item;
+
+uniform float vignette_strength : hint_range(0.0, 2.0) = 0.65;
+uniform float vignette_radius : hint_range(0.0, 2.0) = 0.85;
+uniform float vignette_softness : hint_range(0.0, 1.0) = 0.45;
+
+void fragment() {
+	vec2 uv = SCREEN_UV;
+	float dist = distance(uv, vec2(0.5));
+	float vignette = smoothstep(vignette_radius, vignette_radius - vignette_softness, dist);
+	COLOR = vec4(0.0, 0.0, 0.0, (1.0 - vignette) * vignette_strength);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
+shader = SubResource("Shader_vignette")
+render_priority = 100
+shader_parameter/vignette_strength = 0.65
+shader_parameter/vignette_radius = 0.85
+shader_parameter/vignette_softness = 0.45
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_is1rh"]
 
@@ -675,8 +696,6 @@ stream = ExtResource("25")
 volume_db = -5.0
 autoplay = true
 
-[node name="VisibilityManager" type="Node3D" parent="." unique_id=1305382429]
-script = ExtResource("27")
 
 [node name="BasementWall" type="StaticBody3D" parent="." unique_id=1644105390]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.85, 1.5, 5.5)
@@ -690,6 +709,19 @@ collision_layer = 0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="BasementTrigger" unique_id=391195076]
 shape = SubResource("BoxShape3D_basement_trigger")
+
+[node name="Vignette" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="Vignette"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+material = SubResource("ShaderMaterial_vignette")
+color = Color(0, 0, 0, 0)
 
 [node name="FPSCounter" type="CanvasLayer" parent="." unique_id=1672235340]
 
