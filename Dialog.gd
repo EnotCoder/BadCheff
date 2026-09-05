@@ -8,8 +8,9 @@ var _hint_ready: bool = true
 @onready var _hint_timer: Timer = _make_timer(1.5)
 @onready var _hint_cooldown: Timer = _make_timer(1.0)
 
-func show_say(text: String) -> void:
+func show_say(text: String, duration: float = 2.0) -> void:
 	speech_text = text
+	_say_timer.wait_time = duration
 	_say_timer.start()
 
 func show_hint(text: String) -> void:

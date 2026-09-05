@@ -32,6 +32,7 @@ func set_noise():
 		return
 	audio_busy = true
 	await get_tree().create_timer(0.5).timeout
+	Dialog.show_say("Что это за шум?", noise_sound.stream.get_length())
 	noise_sound.play()
 	await noise_sound.finished
 	audio_busy = false

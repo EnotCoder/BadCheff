@@ -61,6 +61,7 @@ func _on_timer_timeout() -> void :
 		await cheff.arrived
 
 	State.audio_busy = true
+	Dialog.show_say("Так, погодика, что-то сдесь не так. Сдесь кто-то был?", sound_tak_pogodika.stream.get_length())
 	sound_tak_pogodika.play()
 	await sound_tak_pogodika.finished
 
@@ -69,6 +70,7 @@ func _on_timer_timeout() -> void :
 	test_room(State.object_list_from_kitchen)
 
 	if State.state != State.StateBook.ATTACK:
+		Dialog.show_say("Видимо показалось", sound_pokazalos.stream.get_length())
 		sound_pokazalos.play()
 		await sound_pokazalos.finished
 		State.state = State.StateBook.IDLE
