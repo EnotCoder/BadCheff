@@ -1,21 +1,35 @@
-extends Node2D
+extends Control
 
+@onready var menu: Control = $"../menu"
+@onready var chapter_chose: Control = $"../chapter_chose"
 
-func _ready() -> void :
+func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	YandexSDK.launch_adv_closed.connect(_on_launch_adv_closed)
-	$"../cheff/AnimationPlayer".play("idle")
+	$"../../cheff/AnimationPlayer".play("idle")
+
+	chapter_chose.get_node("chapter_one").pressed.connect(_on_chapter_one_pressed)
+	chapter_chose.get_node("chapter_one2").pressed.connect(_on_chapter_two_pressed)
 
 
 func _process(_delta: float) -> void:
-	$FPS.text = "FPS: " + str(Engine.get_frames_per_second())
+	menu.get_node("FPS").text = "FPS: " + str(Engine.get_frames_per_second())
 
 
-func _on_play_pressed() -> void :
+func _on_play_pressed() -> void:
+	menu.hide()
+	chapter_chose.show()
+
+
+func _on_chapter_one_pressed() -> void:
 	if YandexSDK.is_online:
 		YandexSDK.show_launch_adv()
 	else:
 		_show_loading_and_change("res://ACTS/ACTS/act_1_prolog.tscn")
+
+
+func _on_chapter_two_pressed() -> void:
+	pass
 
 
 func _on_launch_adv_closed() -> void:
@@ -25,7 +39,6 @@ func _on_launch_adv_closed() -> void:
 func _show_loading_and_change(path: String) -> void:
 	var loading := preload("res://widget/loading_screen.tscn").instantiate()
 	add_child(loading)
-	# Let the loading screen paint at least one frame before the heavy load.
 	await get_tree().process_frame
 
 	ResourceLoader.load_threaded_request(path)
@@ -46,5 +59,5 @@ func _show_loading_and_change(path: String) -> void:
 		get_tree().change_scene_to_packed(packed)
 
 
-func _on_exit_pressed() -> void :
+func _on_exit_pressed() -> void:
 	get_tree().quit()
