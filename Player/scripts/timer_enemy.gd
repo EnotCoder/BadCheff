@@ -61,7 +61,7 @@ func _on_timer_timeout() -> void :
 		await cheff.arrived
 
 	State.audio_busy = true
-	Dialog.show_say("Так, погодика, что-то сдесь не так. Сдесь кто-то был?", sound_tak_pogodika.stream.get_length())
+	Dialog.show_say("Так, погоди-ка… Что-то здесь не так. Здесь кто-то был?", sound_tak_pogodika.stream.get_length())
 	sound_tak_pogodika.play()
 	await sound_tak_pogodika.finished
 

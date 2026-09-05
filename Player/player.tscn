@@ -189,9 +189,9 @@ color = Color(1, 1, 1, 0)
 script = ExtResource("6")
 
 [node name="interact" type="TextureButton" parent="Control/control" unique_id=268772807]
-offset_left = 990.0
+offset_left = 1011.0
 offset_top = 103.0
-offset_right = 1090.0
+offset_right = 1111.0
 offset_bottom = 203.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
@@ -202,9 +202,9 @@ scale = Vector2(0.08, 0.08)
 texture = ExtResource("8")
 
 [node name="sit" type="TextureButton" parent="Control/control" unique_id=1021391900]
-offset_left = 990.0
+offset_left = 1011.0
 offset_top = 502.0
-offset_right = 1090.0
+offset_right = 1111.0
 offset_bottom = 602.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
@@ -278,10 +278,10 @@ one_shot = true
 
 [node name="cheffs say" type="Label" parent="timer enemy" unique_id=49295087]
 layout_mode = 0
-offset_left = 220.0
-offset_top = 55.0
-offset_right = 933.0
-offset_bottom = 79.0
+offset_left = 148.0
+offset_top = 69.0
+offset_right = 1000.0
+offset_bottom = 105.0
 theme_override_fonts/font = ExtResource("12")
 theme_override_font_sizes/font_size = 30
 text = "так чтото нетак"
