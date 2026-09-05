@@ -15,5 +15,24 @@ var Kitchen = Vector3(-6.048, -0.774, 0.56)
 var Room = Vector3(7.102, -0.774, 2.66)
 var Frezz_room = Vector3(-12.29, -0.774, 0.56)
 
+var noise_sound: AudioStreamPlayer
+var player_sound: AudioStreamPlayer
+
+func _ready():
+	noise_sound = AudioStreamPlayer.new()
+	noise_sound.stream = load("res://sounds/cheff/что_это_за_шум.mp3")
+	noise_sound.bus = "Master"
+	add_child(noise_sound)
+
+	player_sound = AudioStreamPlayer.new()
+	player_sound.stream = load("res://sounds/player/ЧЁРТ.mp3")
+	player_sound.bus = "Master"
+	add_child(player_sound)
+
 func set_noise():
+	await get_tree().create_timer(0.5).timeout
+	player_sound.play()
+	await player_sound.finished
+	noise_sound.play()
+	await noise_sound.finished
 	noise.emit()
