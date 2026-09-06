@@ -60,6 +60,10 @@ func _on_timer_timeout() -> void :
 	if cheff:
 		await cheff.arrived
 
+	var generator = get_tree().get_first_node_in_group("generator")
+	if generator:
+		generator.stop_noise()
+
 	State.audio_busy = true
 	Dialog.show_say("Так, погоди-ка… Что-то здесь не так. Здесь кто-то был?", sound_tak_pogodika.stream.get_length())
 	sound_tak_pogodika.play()

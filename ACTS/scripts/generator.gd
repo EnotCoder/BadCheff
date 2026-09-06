@@ -7,6 +7,7 @@ var is_on := false
 var generator_sound: AudioStreamPlayer
 
 func _ready() -> void:
+	add_to_group("generator")
 	generator_sound = AudioStreamPlayer.new()
 	generator_sound.stream = load("res://sounds/generator.mp3")
 	generator_sound.bus = "Master"
@@ -30,3 +31,7 @@ func _start_noise() -> void:
 func _stop_noise() -> void:
 	generator_sound.stop()
 	State.noise_target = State.Kitchen
+
+func stop_noise() -> void:
+	is_on = false
+	generator_sound.stop()
