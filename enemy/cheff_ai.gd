@@ -80,7 +80,7 @@ func manage_animations() -> void:
 func get_navigation_target() -> Vector3:
 	match State.state:
 		State.StateBook.IDLE: return State.Room
-		State.StateBook.CHEAK: return State.Kitchen
+		State.StateBook.CHEAK: return State.noise_target
 		State.StateBook.ATTACK: return State.player
 		_: return State.Room
 

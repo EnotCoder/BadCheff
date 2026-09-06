@@ -14,6 +14,7 @@ var player
 var Kitchen = Vector3(-6.048, -0.774, 0.56)
 var Room = Vector3(7.102, -0.774, 2.66)
 var Frezz_room = Vector3(-12.29, -0.774, 0.56)
+var noise_target: Vector3 = Kitchen
 
 var noise_sound: AudioStreamPlayer
 var player_sound: AudioStreamPlayer
