@@ -33,11 +33,10 @@ func set_noise():
 	if audio_busy or timer_active:
 		noise.emit()
 		return
+	audio_busy = true
 	if first_noise:
 		first_noise = false
 		Dialog.show_hint("Нужно вернутся обратно в комнату где он меня запер")
-		await get_tree().create_timer(3.0).timeout
-	audio_busy = true
 	await get_tree().create_timer(0.5).timeout
 	Dialog.show_say("Что это за шум?", noise_sound.stream.get_length())
 	noise_sound.play()
