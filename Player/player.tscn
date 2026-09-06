@@ -100,13 +100,15 @@ collide_with_bodies = false
 
 [node name="Control" type="Control" parent="." unique_id=149811016]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
 
 [node name="inventory" type="Node2D" parent="Control" unique_id=1774600199]
-position = Vector2(-64, -8)
+position = Vector2(640, 0)
 scale = Vector2(1.275, 1.275)
 script = ExtResource("2")
 
@@ -155,7 +157,7 @@ scale = Vector2(0.2, 0.2)
 metadata/_edit_use_anchors_ = true
 
 [node name="cursor" type="MeshInstance2D" parent="Control" unique_id=1218033845]
-position = Vector2(576, 324)
+position = Vector2(960, 540)
 scale = Vector2(4, 4)
 mesh = SubResource("SphereMesh_gwnis")
 
@@ -167,10 +169,10 @@ visible = false
 script = ExtResource("4")
 
 [node name="rect" type="ColorRect" parent="Control/anim screen" unique_id=264912674]
-offset_left = -38.0
-offset_top = -11.0
-offset_right = 1018.0
-offset_bottom = 528.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 1930.0
+offset_bottom = 1090.0
 color = Color(0, 0, 0, 1)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Control/anim screen" unique_id=1190063737]
@@ -178,10 +180,10 @@ libraries/ = SubResource("AnimationLibrary_od3ui")
 
 [node name="screen" type="ColorRect" parent="Control" unique_id=1592986548]
 layout_mode = 0
-offset_left = -21.0
-offset_top = -9.0
-offset_right = 1265.0
-offset_bottom = 673.0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 1930.0
+offset_bottom = 1090.0
 mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
@@ -189,10 +191,10 @@ color = Color(1, 1, 1, 0)
 script = ExtResource("6")
 
 [node name="interact" type="TextureButton" parent="Control/control" unique_id=268772807]
-offset_left = 1011.0
-offset_top = 103.0
-offset_right = 1111.0
-offset_bottom = 203.0
+offset_left = 1700.0
+offset_top = 100.0
+offset_right = 1850.0
+offset_bottom = 250.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
 
@@ -202,10 +204,10 @@ scale = Vector2(0.08, 0.08)
 texture = ExtResource("8")
 
 [node name="sit" type="TextureButton" parent="Control/control" unique_id=1021391900]
-offset_left = 1011.0
-offset_top = 502.0
-offset_right = 1111.0
-offset_bottom = 602.0
+offset_left = 1700.0
+offset_top = 800.0
+offset_right = 1850.0
+offset_bottom = 950.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
 
@@ -215,10 +217,10 @@ scale = Vector2(0.245, 0.245)
 texture = ExtResource("9")
 
 [node name="drop" type="TextureButton" parent="Control/control" unique_id=1768852973]
-offset_left = 48.0
-offset_top = 103.0
-offset_right = 148.0
-offset_bottom = 203.0
+offset_left = 70.0
+offset_top = 100.0
+offset_right = 220.0
+offset_bottom = 250.0
 texture_normal = ExtResource("7")
 metadata/_edit_group_ = true
 
@@ -228,24 +230,24 @@ scale = Vector2(0.205, 0.205)
 texture = ExtResource("10")
 
 [node name="slot" type="TextureButton" parent="Control/control" unique_id=1010208653]
-offset_left = 482.0
-offset_top = 587.0
-offset_right = 591.0
-offset_bottom = 694.0
+offset_left = 780.0
+offset_top = 900.0
+offset_right = 940.0
+offset_bottom = 1060.0
 scale = Vector2(0.505, 0.505)
 
 [node name="slot2" type="TextureButton" parent="Control/control" unique_id=336975508]
-offset_left = 546.0
-offset_top = 587.0
-offset_right = 655.0
-offset_bottom = 696.0
+offset_left = 880.0
+offset_top = 900.0
+offset_right = 1040.0
+offset_bottom = 1060.0
 scale = Vector2(0.505, 0.505)
 
 [node name="slot3" type="TextureButton" parent="Control/control" unique_id=1403612969]
-offset_left = 610.0
-offset_top = 586.0
-offset_right = 719.0
-offset_bottom = 697.0
+offset_left = 980.0
+offset_top = 900.0
+offset_right = 1140.0
+offset_bottom = 1060.0
 scale = Vector2(0.505, 0.505)
 
 [node name="obj pos" type="Marker3D" parent="." unique_id=407285797]
@@ -256,17 +258,23 @@ transform = Transform3D(0.891007, -0.357749, -0.279504, 0, 0.615662, -0.788011, 
 
 [node name="timer enemy" type="Control" parent="." unique_id=1882071947]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("11")
 
 [node name="Label" type="Label" parent="timer enemy" unique_id=89666092]
-layout_mode = 0
-offset_left = 562.0
-offset_top = 24.0
-offset_right = 590.0
-offset_bottom = 48.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 20.0
+offset_right = 20.0
+offset_bottom = 60.0
+grow_horizontal = 2
 theme_override_fonts/font = ExtResource("12")
 theme_override_font_sizes/font_size = 30
 text = "9"
@@ -277,11 +285,15 @@ vertical_alignment = 1
 one_shot = true
 
 [node name="cheffs say" type="Label" parent="timer enemy" unique_id=49295087]
-layout_mode = 0
-offset_left = 137.0
-offset_top = 69.0
-offset_right = 1016.0
-offset_bottom = 105.0
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -400.0
+offset_top = 60.0
+offset_right = 400.0
+offset_bottom = 100.0
+grow_horizontal = 2
 theme_override_fonts/font = ExtResource("12")
 theme_override_font_sizes/font_size = 30
 text = "так чтото нетак"
@@ -289,11 +301,18 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="hint" type="Label" parent="timer enemy" unique_id=651071158]
-layout_mode = 0
-offset_left = 270.0
-offset_top = 562.0
-offset_right = 873.0
-offset_bottom = 586.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -100.0
+offset_right = 300.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 0
 theme_override_fonts/font = ExtResource("12")
 theme_override_font_sizes/font_size = 20
 text = "hammer"
@@ -305,10 +324,10 @@ stream = ExtResource("13")
 autoplay = true
 
 [node name="Virtual Joystick" parent="." unique_id=745962944 instance=ExtResource("14")]
-offset_left = 0.999996
-offset_top = -250.0
-offset_right = 301.0
-offset_bottom = 50.0
+offset_left = 10.0
+offset_top = 700.0
+offset_right = 310.0
+offset_bottom = 1000.0
 scale = Vector2(0.83, 0.83)
 action_left = "a"
 action_right = "d"
