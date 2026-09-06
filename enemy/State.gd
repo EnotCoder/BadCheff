@@ -21,6 +21,7 @@ var player_sound: AudioStreamPlayer
 var audio_busy := false
 var timer_active := false
 var investigation_arrived := false
+var first_noise := true
 
 func _ready():
 	noise_sound = AudioStreamPlayer.new()
@@ -32,6 +33,10 @@ func set_noise():
 	if audio_busy or timer_active:
 		noise.emit()
 		return
+	if first_noise:
+		first_noise = false
+		Dialog.show_hint("Нужно вернутся обратно в комнату где он меня запер")
+		await get_tree().create_timer(3.0).timeout
 	audio_busy = true
 	await get_tree().create_timer(0.5).timeout
 	Dialog.show_say("Что это за шум?", noise_sound.stream.get_length())
