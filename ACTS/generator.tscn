@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dwaue1n1kfg7s" path="res://act 1 object/prolog/generator.glb" id="1_ghk26"]
 [ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="2_b6eef"]
-[ext_resource type="Script" path="res://ACTS/scripts/generator.gd" id="3_gen"]
+[ext_resource type="Script" uid="uid://f4mcdgpodtr4" path="res://ACTS/scripts/generator.gd" id="3_gen"]
 
 [node name="generator" type="Node3D" unique_id=1995040445]
 script = ExtResource("3_gen")

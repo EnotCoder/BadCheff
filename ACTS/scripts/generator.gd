@@ -8,7 +8,7 @@ var generator_sound: AudioStreamPlayer
 
 func _ready() -> void:
 	generator_sound = AudioStreamPlayer.new()
-	generator_sound.stream = load("res://sounds/фоновый звук.mp3")
+	generator_sound.stream = load("res://sounds/generator.mp3")
 	generator_sound.bus = "Master"
 	add_child(generator_sound)
 
