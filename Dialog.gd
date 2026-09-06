@@ -43,3 +43,11 @@ func _clear_hint() -> void:
 
 func _unlock_hint() -> void:
 	_hint_ready = true
+
+func reset() -> void:
+	speech_text = ""
+	hint_text = ""
+	_hint_ready = true
+	_say_timer.stop()
+	_hint_timer.stop()
+	_hint_cooldown.stop()

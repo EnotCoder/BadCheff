@@ -3,9 +3,9 @@ extends Node3D
 var _lightmap_with_basement: LightmapGIData = preload("res://ACTS/ACTS/act_1_prolog.lmbake")
 
 func _ready() -> void :
-	State.state = State.StateBook.IDLE
-	State.position_point = "room"
+	State.reset()
 	MainInventoryScript.reset()
+	Dialog.reset()
 	$Cheff.player_caught.connect(_on_player_caught)
 	$"active object/little object/lever".lever_activated.connect(_on_lever_activated)
 	_start_game()

@@ -29,6 +29,17 @@ func _ready():
 	noise_sound.bus = "Master"
 	add_child(noise_sound)
 
+func reset():
+	state = StateBook.IDLE
+	position_point = "room"
+	noise_target = Kitchen
+	audio_busy = false
+	timer_active = false
+	investigation_arrived = false
+	first_noise = true
+	object_list_from_kitchen = []
+	object_list_from_room = []
+
 func set_noise():
 	if audio_busy or timer_active:
 		noise.emit()

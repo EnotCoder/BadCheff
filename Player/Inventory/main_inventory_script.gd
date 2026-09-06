@@ -30,6 +30,8 @@ func remove_item_node(key: String) -> void:
 func reset() -> void:
 	slots = ["", "", ""]
 	num_chose = 1
+	position_point = "frezz_room"
+	_item_nodes.clear()
 	inventory_changed.emit()
 
 
