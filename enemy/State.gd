@@ -20,6 +20,7 @@ var noise_sound: AudioStreamPlayer
 var player_sound: AudioStreamPlayer
 var audio_busy := false
 var timer_active := false
+var investigation_arrived := false
 
 func _ready():
 	noise_sound = AudioStreamPlayer.new()

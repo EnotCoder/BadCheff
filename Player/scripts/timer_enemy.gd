@@ -54,11 +54,14 @@ func test_room(list):
 
 func _on_timer_timeout() -> void :
 	State.state = State.StateBook.CHEAK
+	State.investigation_arrived = false
 	test_room(State.object_list_from_room)
 
 	var cheff = get_tree().get_first_node_in_group("cheff")
 	if cheff:
 		await cheff.arrived
+
+	State.investigation_arrived = true
 
 	var generator = get_tree().get_first_node_in_group("generator")
 	if generator:
@@ -84,4 +87,5 @@ func _on_timer_timeout() -> void :
 
 	State.audio_busy = false
 	State.timer_active = false
+	State.investigation_arrived = false
 	time_wait = false

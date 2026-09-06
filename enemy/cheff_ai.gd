@@ -54,7 +54,7 @@ func process_movement() -> void:
 	if State.position_point == "kitchen" and (
 		door_kitchen.get("door_opened") as bool
 		or MainInventoryScript.position_point != "frezz_room"
-	) and State.state == State.StateBook.IDLE:
+	) and State.state != State.StateBook.ATTACK and not State.investigation_arrived:
 		_start_chase()
 
 	if !navigation_agent.is_navigation_finished():
