@@ -623,15 +623,15 @@ grow_vertical = 2
 
 [node name="chapter_one" type="TextureButton" parent="UI/chapter_chose" unique_id=50197214]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -500.0
-offset_top = 100.0
-offset_right = -50.0
-offset_bottom = 980.0
+offset_left = -687.0
+offset_top = 180.0
+offset_right = -67.0
+offset_bottom = 1080.0
 grow_horizontal = 2
-scale = Vector2(0.545, 0.545)
+scale = Vector2(0.895, 0.895)
 texture_normal = ExtResource("6_3xbuy")
 
 [node name="Label" type="Label" parent="UI/chapter_chose/chapter_one" unique_id=608536526]
@@ -647,15 +647,15 @@ horizontal_alignment = 1
 
 [node name="chapter_one2" type="TextureButton" parent="UI/chapter_chose" unique_id=1585420244]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = 50.0
-offset_top = 100.0
-offset_right = 500.0
-offset_bottom = 980.0
+offset_left = 107.00012
+offset_top = 180.0
+offset_right = 727.0001
+offset_bottom = 1079.9995
 grow_horizontal = 2
-scale = Vector2(0.545, 0.545)
+scale = Vector2(0.895, 0.895)
 texture_normal = ExtResource("8_sn6cm")
 
 [node name="Label" type="Label" parent="UI/chapter_chose/chapter_one2" unique_id=1023424505]
@@ -680,62 +680,64 @@ script = ExtResource("1")
 
 [node name="logo" type="TextureRect" parent="UI/menu" unique_id=1909119902]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
+offset_left = -777.0
 offset_top = 30.0
-offset_right = 200.0
-offset_bottom = 430.0
+offset_right = 1323.0
+offset_bottom = 1430.0
 grow_horizontal = 2
-scale = Vector2(0.195, 0.195)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("8_jkjk6")
 
 [node name="ColorRect" type="ColorRect" parent="UI/menu" unique_id=1031307380]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -200.0
-offset_top = 500.0
-offset_right = 200.0
-offset_bottom = 650.0
+offset_left = -790.0
+offset_top = 410.0
+offset_right = -418.66675
+offset_bottom = 720.0
 grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
 color = Color(0, 0, 0, 0.792157)
 
 [node name="Play" type="Button" parent="UI/menu" unique_id=1821042145]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -150.0
-offset_top = 520.0
-offset_right = 150.0
-offset_bottom = 570.0
+offset_left = -740.0
+offset_top = 489.0
+offset_right = -440.0
+offset_bottom = 556.0
 grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("3")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 51
 text = "Играть"
 flat = true
 
 [node name="Exit" type="Button" parent="UI/menu" unique_id=967595309]
 layout_mode = 1
-anchors_preset = 1
+anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -150.0
-offset_top = 600.0
-offset_right = 150.0
-offset_bottom = 650.0
+offset_left = -740.0
+offset_top = 645.0
+offset_right = -440.0
+offset_bottom = 712.0
 grow_horizontal = 2
+scale = Vector2(1.5, 1.5)
 theme_override_fonts/font = ExtResource("3")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 51
 text = "Выход"
 flat = true
 
 [node name="FPS" type="Label" parent="UI/menu" unique_id=780987820]
 layout_mode = 1
-anchors_preset = 0
 offset_left = 10.0
 offset_top = 10.0
 offset_right = 150.0
