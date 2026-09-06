@@ -2,6 +2,19 @@ class_name UIAnimations
 
 const DEFAULT_DURATION := 0.3
 
+static var _click_sound: AudioStreamPlayer
+
+static func _get_click_sound() -> AudioStreamPlayer:
+	if _click_sound == null:
+		_click_sound = AudioStreamPlayer.new()
+		_click_sound.stream = load("res://sounds/кнопка.mp3")
+		_click_sound.bus = "Master"
+		Engine.get_main_loop().root.add_child(_click_sound)
+	return _click_sound
+
+static func play_click() -> void:
+	_get_click_sound().play()
+
 static func fade_in(node: CanvasItem, duration: float = DEFAULT_DURATION) -> void:
 	node.modulate.a = 0.0
 	node.show()
@@ -47,11 +60,13 @@ static func setup_button_hover(button: Button, scale_amount := 1.05) -> void:
 	var original := button.scale
 	button.mouse_entered.connect(func(): _tween_scale(button, original * scale_amount))
 	button.mouse_exited.connect(func(): _tween_scale(button, original))
+	button.pressed.connect(play_click)
 
 static func setup_texture_button_hover(button: TextureButton, scale_amount := 1.05) -> void:
 	var original := button.scale
 	button.mouse_entered.connect(func(): _tween_scale(button, original * scale_amount))
 	button.mouse_exited.connect(func(): _tween_scale(button, original))
+	button.pressed.connect(play_click)
 
 static func _tween_scale(node: CanvasItem, target: Vector2) -> void:
 	var tw := node.create_tween()
