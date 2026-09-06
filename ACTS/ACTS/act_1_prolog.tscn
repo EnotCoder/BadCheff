@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://nhy7hyspqy81" path="res://ACTS/scripts/act_1_prolog.gd" id="1"]
 [ext_resource type="PackedScene" uid="uid://dip7a70gdxdee" path="res://Player/player.tscn" id="2"]
-[ext_resource type="LightmapGIData" uid="uid://d2vwfv55q75t" path="res://ACTS/ACTS/act_1_prolog.lmbake" id="2_chw1t"]
+[ext_resource type="LightmapGIData" uid="uid://y7yke16xouwk" path="res://ACTS/ACTS/act_1_prolog_without_basement.lmbake" id="2_k10x1"]
 [ext_resource type="PackedScene" uid="uid://dt27hoyuh8f0q" path="res://enemy/cheff.tscn" id="3"]
 [ext_resource type="PackedScene" uid="uid://bg2pkblkrhpm" path="res://ACTS/map.tscn" id="5_8nyl2"]
 [ext_resource type="PackedScene" uid="uid://bjotsfvxh0hqu" path="res://ACTS/door_kitchen.tscn" id="6"]
@@ -19,7 +19,6 @@
 [ext_resource type="PackedScene" uid="uid://ebiudfydg81h" path="res://golovolomki/hint_object.tscn" id="18"]
 [ext_resource type="PackedScene" uid="uid://bviogo5gglca3" path="res://mesh/key_panel/key_panel.tscn" id="20"]
 [ext_resource type="PackedScene" uid="uid://c44174odqpnqj" path="res://mesh/cook_handle/cook_handle.tscn" id="22"]
-[ext_resource type="PackedScene" uid="uid://2et6dy6al5i4" path="res://mesh/key_door/key_door.tscn" id="23"]
 [ext_resource type="PackedScene" uid="uid://bohgnvpke3gb4" path="res://mesh/key_main_door/key_main_door.tscn" id="23_k10x1"]
 [ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/scripts/zones.gd" id="24"]
 [ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
@@ -196,7 +195,7 @@ denoiser_strength = 0.05
 bias = 0.001
 texel_scale = 1.5
 max_texture_size = 8192
-light_data = ExtResource("2_chw1t")
+light_data = ExtResource("2_k10x1")
 
 [node name="player" parent="." unique_id=1696094556 instance=ExtResource("2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.539267, -0.812, 0.67925733)
@@ -653,9 +652,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.842857, -0.2753939, 3.7680
 
 [node name="cook_handle" parent="items" unique_id=573129757 instance=ExtResource("22")]
 transform = Transform3D(0.714473, 0, -0.699663, 0, 1, 0, 0.699663, 0, 0.714473, -5.5847144, 1.48111, 7.1260686)
-
-[node name="key_door" parent="items" unique_id=1015271151 instance=ExtResource("23")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4843206, 0.480208, 4.0800037)
 
 [node name="key_main_door" parent="items" unique_id=2091486217 instance=ExtResource("23_k10x1")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6339383, -2.0951283, 14.518766)
