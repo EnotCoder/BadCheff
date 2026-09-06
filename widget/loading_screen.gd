@@ -5,6 +5,9 @@ extends CanvasLayer
 
 func _ready() -> void:
 	layer = 128
+	$Control.modulate.a = 0.0
+	var tw := create_tween()
+	tw.tween_property($Control, "modulate:a", 1.0, 0.3)
 
 func set_progress(p: float) -> void:
 	_bar.value = clampf(p, 0.0, 1.0) * 100.0

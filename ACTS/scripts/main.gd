@@ -3,6 +3,8 @@ extends Control
 @onready var menu: Control = $"../menu"
 @onready var chapter_chose: Control = $"../chapter_chose"
 
+var _animating := false
+
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	YandexSDK.launch_adv_closed.connect(_on_launch_adv_closed)
@@ -11,17 +13,33 @@ func _ready() -> void:
 	chapter_chose.get_node("chapter_one").pressed.connect(_on_chapter_one_pressed)
 	chapter_chose.get_node("chapter_one2").pressed.connect(_on_chapter_two_pressed)
 
+	for btn in menu.get_children():
+		if btn is Button:
+			UIAnimations.setup_button_hover(btn)
+	for btn in chapter_chose.get_children():
+		if btn is TextureButton:
+			UIAnimations.setup_texture_button_hover(btn)
+
 
 func _process(_delta: float) -> void:
 	menu.get_node("FPS").text = "FPS: " + str(Engine.get_frames_per_second())
 
 
 func _on_play_pressed() -> void:
-	menu.hide()
-	chapter_chose.show()
+	if _animating:
+		return
+	_animating = true
+	await UIAnimations.slide_out(menu)
+	await UIAnimations.slide_in(chapter_chose)
+	_animating = false
 
 
 func _on_chapter_one_pressed() -> void:
+	if _animating:
+		return
+	_animating = true
+	await UIAnimations.fade_out(chapter_chose)
+	_animating = false
 	if YandexSDK.is_online:
 		YandexSDK.show_launch_adv()
 	else:
