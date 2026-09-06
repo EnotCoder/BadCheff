@@ -16,7 +16,7 @@ static func fade_out(node: CanvasItem, duration: float = DEFAULT_DURATION) -> vo
 	node.hide()
 
 static func slide_in(node: CanvasItem, duration: float = DEFAULT_DURATION, offset := Vector2(0, 50)) -> void:
-	var target_pos := node.position
+	var target_pos: Vector2 = node.position as Vector2
 	node.position = target_pos + offset
 	node.modulate.a = 0.0
 	node.show()
@@ -26,7 +26,7 @@ static func slide_in(node: CanvasItem, duration: float = DEFAULT_DURATION, offse
 	await tw.finished
 
 static func slide_out(node: CanvasItem, duration: float = DEFAULT_DURATION, offset := Vector2(0, 50)) -> void:
-	var start_pos := node.position
+	var start_pos: Vector2 = node.position as Vector2
 	var tw := node.create_tween().set_parallel(true)
 	tw.tween_property(node, "position", start_pos + offset, duration).set_ease(Tween.EASE_IN).set_trans(Tween.TRANS_CUBIC)
 	tw.tween_property(node, "modulate:a", 0.0, duration)
@@ -44,13 +44,15 @@ static func pop_in(node: CanvasItem, duration: float = 0.2) -> void:
 	await tw.finished
 
 static func setup_button_hover(button: Button, scale_amount := 1.05) -> void:
-	button.mouse_entered.connect(func(): _tween_scale(button, scale_amount))
-	button.mouse_exited.connect(func(): _tween_scale(button, 1.0))
+	var original := button.scale
+	button.mouse_entered.connect(func(): _tween_scale(button, original * scale_amount))
+	button.mouse_exited.connect(func(): _tween_scale(button, original))
 
 static func setup_texture_button_hover(button: TextureButton, scale_amount := 1.05) -> void:
-	button.mouse_entered.connect(func(): _tween_scale(button, scale_amount))
-	button.mouse_exited.connect(func(): _tween_scale(button, 1.0))
+	var original := button.scale
+	button.mouse_entered.connect(func(): _tween_scale(button, original * scale_amount))
+	button.mouse_exited.connect(func(): _tween_scale(button, original))
 
-static func _tween_scale(node: CanvasItem, target: float) -> void:
+static func _tween_scale(node: CanvasItem, target: Vector2) -> void:
 	var tw := node.create_tween()
-	tw.tween_property(node, "scale", Vector2.ONE * target, 0.15).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)
+	tw.tween_property(node, "scale", target, 0.15).set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_CUBIC)

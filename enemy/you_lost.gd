@@ -5,7 +5,7 @@ func _ready() -> void:
 		if btn is Button:
 			UIAnimations.setup_button_hover(btn)
 
-func show() -> void:
+func show_screen() -> void:
 	visible = true
 	await UIAnimations.pop_in($text)
 	await UIAnimations.pop_in($restart, 0.25)
