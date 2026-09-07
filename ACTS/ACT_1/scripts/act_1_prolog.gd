@@ -9,6 +9,7 @@ func _ready() -> void :
 	$Cheff.player_caught.connect(_on_player_caught)
 	$"active object/little object/lever".lever_activated.connect(_on_lever_activated)
 	_start_game()
+	_start_intro_blackout()
 
 func _process(_delta: float) -> void:
 	$FPSCounter/FPS.text = "FPS: " + str(Engine.get_frames_per_second())
@@ -17,6 +18,32 @@ func _start_game() -> void:
 	YandexSDK.loading_ready()
 	YandexSDK.gameplay_start()
 	RenderingServer.force_draw()
+
+func _start_intro_blackout() -> void:
+	get_tree().paused = true
+
+	var intro_player := AudioStreamPlayer.new()
+	intro_player.stream = load("res://sounds/cheff/а_кто_это_проснулся.mp3")
+	intro_player.bus = "Master"
+	intro_player.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
+	add_child(intro_player)
+
+	var layer := CanvasLayer.new()
+	layer.layer = 100
+	add_child(layer)
+	var blackout := ColorRect.new()
+	blackout.color = Color.BLACK
+	blackout.set_anchors_preset(Control.PRESET_FULL_RECT)
+	blackout.mouse_filter = Control.MOUSE_FILTER_STOP
+	layer.add_child(blackout)
+
+	intro_player.play()
+	await intro_player.finished
+
+	blackout.queue_free()
+	layer.queue_free()
+	intro_player.queue_free()
+	get_tree().paused = false
 
 func _on_lever_activated() -> void:
 	$LightmapGI.light_data = _lightmap_with_basement
