@@ -199,6 +199,7 @@ light_data = ExtResource("2_k10x1")
 
 [node name="player" parent="." unique_id=1696094556 instance=ExtResource("2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.539267, -0.812, 0.67925733)
+platform = 0
 
 [node name="Cheff" parent="." unique_id=620991757 node_paths=PackedStringArray("navigation_agent", "animation_tree", "hit", "door_kitchen", "list_kitchen_objects") instance=ExtResource("3")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.3895483, -0.408409, 3.3712485)
@@ -353,7 +354,7 @@ omni_range = 4.165
 omni_attenuation = 1.794
 
 [node name="kitchen11" type="OmniLight3D" parent="point light/kitchen" unique_id=1945512634]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.519969, 2.294, 2.7875788)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.954328, 2.5015361, 3.077565)
 light_bake_mode = 1
 shadow_enabled = true
 shadow_opacity = 0.15
@@ -626,20 +627,60 @@ omni_range = 0.8
 [node name="hint_player_object" type="Node3D" parent="." unique_id=1576116321]
 metadata/_edit_group_ = true
 
-[node name="knife" parent="hint_player_object" unique_id=69107026 instance=ExtResource("18")]
+[node name="knife_1" parent="hint_player_object" unique_id=69107026 instance=ExtResource("18")]
 transform = Transform3D(0.479965, 0, 0.0906969, 0, 0.28, 0, -0.164329, 0, 0.264904, -8.61565, 0.371006, 0.926228)
 visible = false
 Key_hint = "Тупой нож"
 
-[node name="knife2" parent="hint_player_object" unique_id=866758432 instance=ExtResource("18")]
+[node name="knife_2" parent="hint_player_object" unique_id=866758432 instance=ExtResource("18")]
 transform = Transform3D(-1.61231e-08, -0.127219, 0, 0.368854, -5.56093e-09, 0, 0, 0, 0.28, -8.17975, 0.624877, 3.45088)
 visible = false
 Key_hint = "Тупой нож"
 
-[node name="knife3" parent="hint_player_object" unique_id=1362503628 instance=ExtResource("18")]
+[node name="door_street" parent="hint_player_object" unique_id=1362503628 instance=ExtResource("18")]
 transform = Transform3D(1.237, 0, 0, 0, 2.918, 0, 0, 0, 0.688, -10.749222, 0.6407473, -3.1966155)
 visible = false
 Key_hint = "Закрыто"
+
+[node name="food_1" parent="hint_player_object" unique_id=1582512918 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -9.121085, 0.49126685, 0.52711743)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_2" parent="hint_player_object" unique_id=1972022760 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -6.8389325, 0.49126685, 0.52711743)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_3" parent="hint_player_object" unique_id=1828130752 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -7.9627495, 0.49126685, 0.52711743)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_4" parent="hint_player_object" unique_id=64136506 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -4.6988797, 0.49126685, 0.56080407)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_5" parent="hint_player_object" unique_id=1376118801 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -4.6988797, 0.49126685, -0.05818546)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_7" parent="hint_player_object" unique_id=109739875 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -4.4222984, 1.3157696, -0.8676726)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_6" parent="hint_player_object" unique_id=849266058 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -4.558903, 0.49126685, 1.2465564)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="box_food_1" parent="hint_player_object" unique_id=204410454 instance=ExtResource("18")]
+transform = Transform3D(2.87, 0, 0, 0, 0.82, 0, 0, 0, 0.805, -3.8683977, -0.4764632, 7.637423)
+visible = false
+Key_hint = "Много лимонов"
 
 [node name="items" type="Node3D" parent="." unique_id=1069946109]
 metadata/_edit_group_ = true
