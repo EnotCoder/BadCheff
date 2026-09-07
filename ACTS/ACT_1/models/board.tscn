@@ -12,8 +12,7 @@ script = ExtResource("1_pjq8h")
 transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
 
 [node name="break_mesh" parent="." unique_id=952780345 instance=ExtResource("2_pjq8h")]
-transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, 0)
-visible = false
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 0, 0, -0.8132186)
 
 [node name="action" parent="." unique_id=1135591141 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("3_6kkif")]
 transform = Transform3D(2.34, 0, 0, 0, 0.255, 0, 0, 0, 0.195, 0, 0, 0)
