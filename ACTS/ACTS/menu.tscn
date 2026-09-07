@@ -47,7 +47,7 @@ omni_attenuation = 1.395
 
 [node name="room2" type="OmniLight3D" parent="point light/room_light" unique_id=1854274781]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3598, 2.66145, 1.46317)
-light_energy = 1.366
+light_energy = 3.431
 light_bake_mode = 1
 shadow_opacity = 0.4
 omni_range = 5.359
@@ -138,7 +138,7 @@ omni_range = 5.359
 omni_attenuation = 1.086
 
 [node name="cheff" type="Node3D" parent="." unique_id=1376244842]
-transform = Transform3D(-0.2791253, 0, -0.10995035, 0, 0.3, 0, 0.10995035, 0, -0.2791253, 3.551, -0.763, 2.065)
+transform = Transform3D(-0.26963827, 0, -0.13151133, 0, 0.3, 0, 0.13151133, 0, -0.26963827, 3.636, -0.763, 2.412)
 
 [node name="Armature_002" type="Node3D" parent="cheff" unique_id=400319112]
 transform = Transform3D(0.01, 0, 0, 0, 0, -0.01, 0, 0.01, 0, 0, 0, 0)
