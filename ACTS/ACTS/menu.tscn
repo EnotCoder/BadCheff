@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://dcun6dsqciab3" path="res://ACTS/scripts/main.gd" id="1"]
 [ext_resource type="FontFile" uid="uid://bloqh7n8tgsiw" path="res://widget/font.ttf" id="3"]
-[ext_resource type="PackedScene" uid="uid://bg2pkblkrhpm" path="res://ACTS/map.tscn" id="3_v1bvb"]
+[ext_resource type="PackedScene" uid="uid://bg2pkblkrhpm" path="res://ACTS/ACT_1/map.tscn" id="3_v1bvb"]
 [ext_resource type="LightmapGIData" uid="uid://djggy0ftokdls" path="res://ACTS/ACTS/menu.lmbake" id="4_yoxsk"]
 [ext_resource type="ArrayMesh" path="res://enemy/cheff_mesh.res" id="5_s8wld"]
 [ext_resource type="Texture2D" uid="uid://c6oi83004csrf" path="res://widget/сhapters/chapter_one.png" id="6_3xbuy"]

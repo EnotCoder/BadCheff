@@ -12,7 +12,7 @@ func show_screen() -> void:
 	await UIAnimations.pop_in($"go to menu", 0.3)
 
 func _on_restart_pressed() -> void:
-	get_tree().change_scene_to_file("res://ACTS/ACTS/act_1_prolog.tscn")
+	get_tree().change_scene_to_file("res://ACTS/ACT_1/scenes/act_1_prolog.tscn")
 
 func _on_go_to_menu_pressed() -> void:
 	get_tree().change_scene_to_file("res://ACTS/ACTS/menu.tscn")

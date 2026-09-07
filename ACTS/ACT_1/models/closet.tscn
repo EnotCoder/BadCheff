@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cqqdge24m2pwi"]
+
+[ext_resource type="Script" uid="uid://ptkat2llu4ik" path="res://ACTS/ACT_1/scripts/doors/door.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://i2coyajrvt5s" path="res://ACTS_MODELS/act 1 object/prolog/closet.glb" id="2"]
+[ext_resource type="PackedScene" uid="uid://bjvikrvdscf05" path="res://ACTS_MODELS/act 1 object/prolog/door closet.glb" id="3"]
+[ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="4"]
+[ext_resource type="AudioStream" uid="uid://daxwy2b2trc45" path="res://sounds/squeak.mp3" id="5"]
+
+[sub_resource type="Animation" id="Animation_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.66985, 0.736177, 0.19233)]
+}
+
+[sub_resource type="Animation" id="Animation_close"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.015803, 0.736177, 0.19233), Vector3(-0.66985, 0.736177, 0.19233)]
+}
+
+[sub_resource type="Animation" id="Animation_open"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("door:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.66985, 0.736177, 0.19233), Vector3(-0.015803, 0.736177, 0.19233)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_closet"]
+_data = {
+&"RESET": SubResource("Animation_reset"),
+&"close": SubResource("Animation_close"),
+&"open": SubResource("Animation_open")
+}
+
+[node name="Closet" type="Node3D" unique_id=1711480461]
+script = ExtResource("1")
+say = "кто открыл шкаф"
+noise = true
+play_squeak = true
+
+[node name="body" parent="." unique_id=861495887 instance=ExtResource("2")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, 0, 0, 0)
+
+[node name="door" parent="." unique_id=321803170 instance=ExtResource("3")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -0.66985, 0.736177, 0.19233)
+
+[node name="ACTION" parent="door" unique_id=1536495382 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("4")]
+transform = Transform3D(0.520309, 0, 0, 0, 0.741025, 0, 0, 0, 0.0788279, 0, 0, 0)
+visible = false
+FUNC_NAME = "toggle_door"
+NODE_ACTION = NodePath("../..")
+
+[node name="light" type="OmniLight3D" parent="door" unique_id=953240996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21092887, 0.381728, -0.14783764)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.5
+
+[node name="light2" type="OmniLight3D" parent="door" unique_id=1676171247]
+transform = Transform3D(0.5102041, 0, 0, 0, 0.5102041, 0, 0, 0, 0.5102041, 0.21092884, -0.41137764, -0.14783764)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.5
+
+[node name="Squeak" type="AudioStreamPlayer3D" parent="." unique_id=962289253]
+stream = ExtResource("5")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=633542267]
+libraries/ = SubResource("AnimationLibrary_closet")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

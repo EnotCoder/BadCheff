@@ -1,0 +1,782 @@
+[gd_scene format=3 uid="uid://cnk4fmvfk2ppr"]
+
+[ext_resource type="Script" uid="uid://nhy7hyspqy81" path="res://ACTS/ACT_1/scripts/act_1_prolog.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dip7a70gdxdee" path="res://Player/player.tscn" id="2"]
+[ext_resource type="LightmapGIData" uid="uid://y7yke16xouwk" path="res://ACTS/ACT_1/lightmap/act_1_prolog_without_basement.lmbake" id="2_k10x1"]
+[ext_resource type="PackedScene" uid="uid://dt27hoyuh8f0q" path="res://enemy/cheff.tscn" id="3"]
+[ext_resource type="PackedScene" uid="uid://bg2pkblkrhpm" path="res://ACTS/ACT_1/map.tscn" id="5_8nyl2"]
+[ext_resource type="PackedScene" uid="uid://bjotsfvxh0hqu" path="res://ACTS/ACT_1/models/door_kitchen.tscn" id="6"]
+[ext_resource type="PackedScene" uid="uid://vy0v8kyled64" path="res://ACTS/ACT_1/models/door_double.tscn" id="7"]
+[ext_resource type="Script" uid="uid://ptkat2llu4ik" path="res://ACTS/ACT_1/scripts/doors/door.gd" id="9"]
+[ext_resource type="PackedScene" uid="uid://d1euety22e6tx" path="res://ACTS_MODELS/act 1 object/prolog/panel door.glb" id="10"]
+[ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="11"]
+[ext_resource type="Script" uid="uid://bx57vuhjty4ou" path="res://ACTS/ACT_1/scripts/lever.gd" id="13"]
+[ext_resource type="PackedScene" uid="uid://c8vrrw2o0gjw6" path="res://ACTS_MODELS/act 1 object/prolog/lever.glb" id="14"]
+[ext_resource type="PackedScene" uid="uid://bv34s03h4gq6g" path="res://ACTS_MODELS/act 1 object/prolog/soup model.glb" id="15"]
+[ext_resource type="Script" uid="uid://diugj0csq8ait" path="res://ACTS/ACT_1/scripts/tp_move_soup.gd" id="16"]
+[ext_resource type="PackedScene" uid="uid://cabaqsihqtjlc" path="res://ACTS/ACT_1/models/main_door.tscn" id="16_8nyl2"]
+[ext_resource type="PackedScene" uid="uid://cq7poyneqv6gn" path="res://ACTS/ACT_1/models/door_stove.tscn" id="17"]
+[ext_resource type="PackedScene" uid="uid://ebiudfydg81h" path="res://golovolomki/hint_object.tscn" id="18"]
+[ext_resource type="PackedScene" uid="uid://bviogo5gglca3" path="res://mesh/key_panel/key_panel.tscn" id="20"]
+[ext_resource type="PackedScene" uid="uid://c44174odqpnqj" path="res://mesh/cook_handle/cook_handle.tscn" id="22"]
+[ext_resource type="PackedScene" uid="uid://bohgnvpke3gb4" path="res://mesh/key_main_door/key_main_door.tscn" id="23_k10x1"]
+[ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/ACT_1/scripts/zones.gd" id="24"]
+[ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
+[ext_resource type="PackedScene" uid="uid://cld5hwq188761" path="res://mesh/hamer/hamer.tscn" id="25_k10x1"]
+[ext_resource type="PackedScene" uid="uid://bjwkwkvh10sbr" path="res://ACTS/ACT_1/models/generator.tscn" id="26_p2w7r"]
+[ext_resource type="PackedScene" uid="uid://cqqdge24m2pwi" path="res://ACTS/ACT_1/models/closet.tscn" id="28"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_is1rh"]
+
+[sub_resource type="Sky" id="Sky_qcmkn"]
+sky_material = SubResource("ProceduralSkyMaterial_is1rh")
+
+[sub_resource type="Environment" id="Environment_nyylq"]
+background_mode = 1
+sky = SubResource("Sky_qcmkn")
+fog_light_color = Color(0, 0, 0, 1)
+adjustment_brightness = 0.88
+
+[sub_resource type="Animation" id="Animation_e1ico"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("panel door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_tc3g8"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("panel door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_plkck"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("panel door:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bc1rt"]
+_data = {
+&"RESET": SubResource("Animation_e1ico"),
+&"close": SubResource("Animation_tc3g8"),
+&"open": SubResource("Animation_plkck")
+}
+
+[sub_resource type="Animation" id="Animation_jg2uw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lever mesh:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.23918, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_8djt0"]
+resource_name = "close"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lever mesh:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(1.09315, 0, 0), Vector3(-1.23918, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_bc1rt"]
+resource_name = "open"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("lever mesh:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-1.23918, 0, 0), Vector3(1.09315, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5jq2x"]
+_data = {
+&"RESET": SubResource("Animation_jg2uw"),
+&"close": SubResource("Animation_8djt0"),
+&"open": SubResource("Animation_bc1rt")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tc3g8"]
+size = Vector3(2.04356, 1.90381, 2.566)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bc1rt"]
+size = Vector3(9.19431, 2.14551, 11.2517)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8djt0"]
+size = Vector3(13.6339, 2.146, 14.314)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_basement_wall"]
+size = Vector3(1.5, 3, 0.3)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_basement_trigger"]
+size = Vector3(2, 3, 2)
+
+[sub_resource type="Shader" id="Shader_vignette"]
+code = "shader_type canvas_item;
+
+uniform float vignette_strength : hint_range(0.0, 2.0) = 0.65;
+uniform float vignette_radius : hint_range(0.0, 2.0) = 0.85;
+uniform float vignette_softness : hint_range(0.0, 1.0) = 0.45;
+
+void fragment() {
+	vec2 uv = SCREEN_UV;
+	float dist = distance(uv, vec2(0.5));
+	float vignette = smoothstep(vignette_radius, vignette_radius - vignette_softness, dist);
+	COLOR = vec4(0.0, 0.0, 0.0, (1.0 - vignette) * vignette_strength);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vignette"]
+shader = SubResource("Shader_vignette")
+shader_parameter/vignette_strength = 0.65
+shader_parameter/vignette_radius = 0.85
+shader_parameter/vignette_softness = 0.45
+
+[node name="ACT 1" type="Node3D" unique_id=535680354]
+script = ExtResource("1")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1729872880]
+environment = SubResource("Environment_nyylq")
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=991100221]
+supersampling = true
+bounces = 4
+interior = true
+denoiser_strength = 0.05
+bias = 0.001
+texel_scale = 1.5
+max_texture_size = 8192
+light_data = ExtResource("2_k10x1")
+
+[node name="player" parent="." unique_id=1696094556 instance=ExtResource("2")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.539267, -0.812, 0.67925733)
+
+[node name="Cheff" parent="." unique_id=620991757 node_paths=PackedStringArray("navigation_agent", "animation_tree", "hit", "door_kitchen", "list_kitchen_objects") instance=ExtResource("3")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.3895483, -0.408409, 3.3712485)
+navigation_agent = NodePath("NavigationAgent3D")
+animation_tree = NodePath("AnimationTree")
+hit = NodePath("hit")
+door_kitchen = NodePath("../active object/door/door kitchen")
+list_kitchen_objects = [NodePath("../active object/groups/stove_doors/stove_door"), NodePath("../active object/groups/stove_doors/stove_door_2"), NodePath("../active object/groups/stove_doors/stove_door_3"), NodePath("../active object/groups/stove_doors/stove_door_4"), NodePath("../active object/little object/soup model"), NodePath("../active object/little object/soup model2"), NodePath("../active object/door/closet"), NodePath("../active object/little object/door panel")]
+
+[node name="map" parent="." unique_id=1134671353 instance=ExtResource("5_8nyl2")]
+
+[node name="point light" type="Node3D" parent="." unique_id=478166692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.63623, 0)
+visible = false
+metadata/_edit_group_ = true
+
+[node name="player_room" type="OmniLight3D" parent="point light" unique_id=94928756]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9668, 1.84, 0.604882)
+light_color = Color(0.878431, 1, 1, 1)
+light_energy = 1.22
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 5.853
+omni_attenuation = 4.809
+
+[node name="room_light" type="Node3D" parent="point light" unique_id=1180062992]
+
+[node name="room_1" type="OmniLight3D" parent="point light/room_light" unique_id=631941455]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198532, 2.66145, 1.46317)
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 4.165
+omni_attenuation = 1.395
+
+[node name="room2" type="OmniLight3D" parent="point light/room_light" unique_id=482123413]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3598, 2.66145, 1.46317)
+light_energy = 1.366
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.395
+
+[node name="room7" type="OmniLight3D" parent="point light/room_light" unique_id=1647715090]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3598, 2.66145, 5.27779)
+light_energy = 0.4
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.995
+
+[node name="room8" type="OmniLight3D" parent="point light/room_light" unique_id=834502346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.239, 2.43526, 1.23617)
+light_color = Color(1, 0.92549, 1, 1)
+light_energy = 0.3
+light_size = 2.145
+light_bake_mode = 1
+shadow_opacity = 0.57
+omni_range = 5.359
+omni_attenuation = 0.566
+
+[node name="room9" type="OmniLight3D" parent="point light/room_light" unique_id=1350236103]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.239, 2.66145, 3.24309)
+light_color = Color(1, 0.92549, 1, 1)
+light_energy = 0.3
+light_size = 1.525
+light_bake_mode = 1
+shadow_opacity = 0.57
+omni_range = 5.359
+omni_attenuation = 0.566
+
+[node name="room3" type="OmniLight3D" parent="point light/room_light" unique_id=110578149]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.198532, 2.66145, -1.75286)
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 4.165
+omni_attenuation = 1.395
+
+[node name="room4" type="OmniLight3D" parent="point light/room_light" unique_id=146613422]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.3598, 2.66145, -1.75286)
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.395
+
+[node name="room5" type="OmniLight3D" parent="point light/room_light" unique_id=294792257]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.209662, 2.66651, -5.21334)
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 4.165
+omni_attenuation = 1.395
+
+[node name="room6" type="OmniLight3D" parent="point light/room_light" unique_id=73050754]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.34867, 2.66651, -5.21334)
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.395
+
+[node name="kitchen" type="Node3D" parent="point light" unique_id=909260169]
+
+[node name="kitchen2" type="OmniLight3D" parent="point light/kitchen" unique_id=1545929280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.085, 2.29438, -1.73429)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen3" type="OmniLight3D" parent="point light/kitchen" unique_id=983318882]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.62083, 2.29438, 2.86182)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen5" type="OmniLight3D" parent="point light/kitchen" unique_id=1789296105]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12549, 2.29438, -1.33648)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.395
+
+[node name="kitchen6" type="OmniLight3D" parent="point light/kitchen" unique_id=618646165]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.12549, 2.29438, 1.99918)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.395
+
+[node name="kitchen4" type="OmniLight3D" parent="point light/kitchen" unique_id=402683240]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.38438, 2.29438, -1.33648)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen7" type="OmniLight3D" parent="point light/kitchen" unique_id=1978262119]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.49976, 2.29438, 1.99918)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="kitchen8" type="OmniLight3D" parent="point light/kitchen" unique_id=1675866637]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.4025, 2.294, 0.593)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.794
+
+[node name="kitchen11" type="OmniLight3D" parent="point light/kitchen" unique_id=1945512634]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.954328, 2.5015361, 3.077565)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.794
+
+[node name="kitchen9" type="OmniLight3D" parent="point light/kitchen" unique_id=1892630121]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.33405, 2.294, 6.58969)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+omni_attenuation = 1.036
+
+[node name="kitchen10" type="OmniLight3D" parent="point light/kitchen" unique_id=870010516]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.16743, 1.96612, 8.14792)
+light_energy = 0.1
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 0.655
+omni_attenuation = 1.036
+
+[node name="bar" type="Node3D" parent="point light" unique_id=1689732836]
+
+[node name="bar light" type="OmniLight3D" parent="point light/bar" unique_id=1861576522]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.50921, 0.46292, 2.91336)
+light_color = Color(0.619217, 0.513405, 0.80692, 1)
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.086
+
+[node name="bar lamp2" type="OmniLight3D" parent="point light/bar" unique_id=744189109]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87789, 2.25583, 1.72578)
+light_energy = 0.111
+light_size = 0.33
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.086
+
+[node name="bar lamp3" type="OmniLight3D" parent="point light/bar" unique_id=1597538605]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.87789, 2.25583, 3.88547)
+light_energy = 0.111
+light_size = 0.33
+light_bake_mode = 1
+shadow_opacity = 0.4
+omni_range = 5.359
+omni_attenuation = 1.086
+
+[node name="basement" type="Node3D" parent="point light" unique_id=1323402988]
+
+[node name="stairs_1" type="OmniLight3D" parent="point light/basement" unique_id=2062211157]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.758164, 1.2229985, 6.5946527)
+light_energy = 0.2
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="stairs_2" type="OmniLight3D" parent="point light/basement" unique_id=462734178]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.758164, -1.9968576, 8.724116)
+light_energy = 0.2
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="basement_1" type="OmniLight3D" parent="point light/basement" unique_id=1419555359]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.097333, -1.1194872, 11.871823)
+light_energy = 0.5
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="basement_2" type="OmniLight3D" parent="point light/basement" unique_id=1694700647]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.433653, -1.1194872, 11.555179)
+light_energy = 0.5
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="basement_3" type="OmniLight3D" parent="point light/basement" unique_id=657208303]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.820168, -1.1194872, 11.6908865)
+light_energy = 0.5
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 4.165
+
+[node name="street" type="Node3D" parent="point light" unique_id=1157119859]
+
+[node name="street 1" type="OmniLight3D" parent="point light/street" unique_id=565691298]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.455061, 2.2902653, -6.9046197)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 2" type="OmniLight3D" parent="point light/street" unique_id=1593198336]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.157912, 2.2902653, -5.1288996)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 3" type="OmniLight3D" parent="point light/street" unique_id=24616280]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.44998646, 2.2902653, -10.246958)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 4" type="OmniLight3D" parent="point light/street" unique_id=831136498]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.049719, 2.2902653, -4.061343)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="active object" type="Node3D" parent="." unique_id=630362278]
+metadata/_edit_group_ = true
+
+[node name="door" type="Node3D" parent="active object" unique_id=1486234172]
+metadata/_edit_group_ = true
+
+[node name="door kitchen" parent="active object/door" unique_id=1219392373 instance=ExtResource("6")]
+transform = Transform3D(-8.56743e-08, 0, 2.255, 0, 1.96, 0, -1.96, 0, -9.85692e-08, -11.7587, 0.54513, 0.524405)
+locked_hint = "можно вибить"
+noise = false
+
+[node name="door_double" parent="active object/door" unique_id=1389420085 instance=ExtResource("7")]
+transform = Transform3D(-8.56743e-08, 0, 1.96, 0, 1.96, 0, -1.96, 0, -8.56743e-08, -2.2568, 0.545, 0.475585)
+locked = "key_door"
+locked_hint = "Закрыто"
+say = "кто открыл дверь"
+
+[node name="closet" parent="active object/door" unique_id=1147328754 instance=ExtResource("28")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18062, -0.0959911, -2.71109)
+
+[node name="closet2" parent="active object/door" unique_id=1396675150 instance=ExtResource("28")]
+transform = Transform3D(-1, 0, -1.7134865e-07, 0, 1, 0, 1.7134865e-07, 0, -1, -9.804866, -3.3065584, 14.491837)
+
+[node name="closet3" parent="active object/door" unique_id=1711480461 instance=ExtResource("28")]
+transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, -14.333183, -0.08192116, 3.238944)
+
+[node name="little object" type="Node3D" parent="active object" unique_id=813168241]
+metadata/_edit_group_ = true
+
+[node name="door panel" type="Node3D" parent="active object/little object" unique_id=1727007693]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21087, 0, 8.01726)
+script = ExtResource("9")
+locked = "key_panel"
+locked_hint = "нужен ключ"
+say = "кто открыл электро щеток"
+metadata/_edit_group_ = true
+
+[node name="panel door" parent="active object/little object/door panel" unique_id=1223471432 instance=ExtResource("10")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -0.191099, 1.35793, 0.0275011)
+
+[node name="ACTION" parent="active object/little object/door panel/panel door" unique_id=229469110 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
+transform = Transform3D(0.265464, 0, 0, 0, 0.378074, 0, 0, 0, 0.0402183, 0.126303, 0, 0)
+visible = false
+FUNC_NAME = "toggle_door"
+NODE_ACTION = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/door panel" unique_id=815974990]
+libraries/ = SubResource("AnimationLibrary_bc1rt")
+
+[node name="lever" type="Node3D" parent="active object/little object" unique_id=1688062373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21087, 0, 8.01726)
+script = ExtResource("13")
+metadata/_edit_group_ = true
+
+[node name="lever mesh" parent="active object/little object/lever" unique_id=1214377036 instance=ExtResource("14")]
+transform = Transform3D(1.96, 0, 0, 0, 0.63812274, 1.8532201, 0, -1.8532201, 0.63812274, 0.0609, 1.42771, 0.204931)
+
+[node name="ACTION" parent="active object/little object/lever/lever mesh" unique_id=999526764 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 3.72529e-09, 0, -3.72529e-09, 0.1, 0, -0.0153949, -0.0447106)
+visible = false
+FUNC_NAME = "toggle_door"
+NODE_ACTION = NodePath("../..")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="active object/little object/lever" unique_id=921652586]
+libraries/ = SubResource("AnimationLibrary_5jq2x")
+
+[node name="soup model" parent="active object/little object" unique_id=1983485075 instance=ExtResource("15")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -6.48771, 0.632, 4.016)
+script = ExtResource("16")
+pos = Array[Vector3]([Vector3(-6.488, 0.632, 4.016), Vector3(-7.168, 0.632, 4.016)])
+say = "Кто трогал суп"
+metadata/_edit_group_ = true
+
+[node name="ACTION" parent="active object/little object/soup model" unique_id=1245603356 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
+transform = Transform3D(0.215, 0, 0, 0, 0.215, 0, 0, 0, 0.215, 0, 0, 0)
+visible = false
+FUNC_NAME = "act"
+NODE_ACTION = NodePath("..")
+
+[node name="soup model2" parent="active object/little object" unique_id=1395946281 instance=ExtResource("15")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -9.341, 0.632, -2.78)
+script = ExtResource("16")
+pos = Array[Vector3]([Vector3(-9.341, 0.632, -2.78), Vector3(-8.746, 0.632, -2.78)])
+say = "Кто трогал суп"
+metadata/_edit_group_ = true
+
+[node name="ACTION" parent="active object/little object/soup model2" unique_id=525744062 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("11")]
+transform = Transform3D(0.215, 0, 0, 0, 0.215, 0, 0, 0, 0.215, 0, 0, 0)
+visible = false
+FUNC_NAME = "act"
+NODE_ACTION = NodePath("..")
+
+[node name="main_door" parent="active object/little object" unique_id=2011067237 instance=ExtResource("16_8nyl2")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.531, 0.739, 7.118)
+
+[node name="groups" type="Node3D" parent="active object" unique_id=1300293492]
+metadata/_edit_group_ = true
+
+[node name="stove_doors" type="Node3D" parent="active object/groups" unique_id=1471663208]
+
+[node name="stove_door" parent="active object/groups/stove_doors" unique_id=1823053172 instance=ExtResource("17")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -6.80519, -0.666083, 3.02491)
+say = "Кто открыл плиту"
+noise = true
+
+[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door" unique_id=638804928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.8
+
+[node name="stove_door_2" parent="active object/groups/stove_doors" unique_id=45881912 instance=ExtResource("17")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -8.89147, -0.666083, 3.02491)
+say = "Кто открыл плиту"
+noise = true
+
+[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_2" unique_id=1290695589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.8
+
+[node name="stove_door_3" parent="active object/groups/stove_doors" unique_id=1450894875 instance=ExtResource("17")]
+transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -6.95343, -0.666083, -1.80577)
+say = "Кто открыл плиту"
+noise = true
+
+[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_3" unique_id=1533623410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.8
+
+[node name="stove_door_4" parent="active object/groups/stove_doors" unique_id=682012548 instance=ExtResource("17")]
+transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -9.03971, -0.666083, -1.80577)
+say = "Кто открыл плиту"
+noise = true
+
+[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_4" unique_id=793346368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.8
+
+[node name="hint_player_object" type="Node3D" parent="." unique_id=1576116321]
+metadata/_edit_group_ = true
+
+[node name="knife_1" parent="hint_player_object" unique_id=69107026 instance=ExtResource("18")]
+transform = Transform3D(0.479965, 0, 0.0906969, 0, 0.28, 0, -0.164329, 0, 0.264904, -8.61565, 0.371006, 0.926228)
+visible = false
+Key_hint = "Тупой нож"
+
+[node name="knife_2" parent="hint_player_object" unique_id=866758432 instance=ExtResource("18")]
+transform = Transform3D(-1.61231e-08, -0.127219, 0, 0.368854, -5.56093e-09, 0, 0, 0, 0.28, -8.17975, 0.624877, 3.45088)
+visible = false
+Key_hint = "Тупой нож"
+
+[node name="door_street" parent="hint_player_object" unique_id=1362503628 instance=ExtResource("18")]
+transform = Transform3D(1.237, 0, 0, 0, 2.918, 0, 0, 0, 0.688, -10.749222, 0.6407473, -3.1966155)
+visible = false
+Key_hint = "Закрыто"
+
+[node name="food_1" parent="hint_player_object" unique_id=1582512918 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -9.121085, 0.49126685, 0.52711743)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_2" parent="hint_player_object" unique_id=1972022760 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -6.8389325, 0.49126685, 0.52711743)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_3" parent="hint_player_object" unique_id=1828130752 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -7.9627495, 0.49126685, 0.52711743)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_4" parent="hint_player_object" unique_id=64136506 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -4.6988797, 0.49126685, 0.56080407)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_5" parent="hint_player_object" unique_id=1376118801 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -4.6988797, 0.49126685, -0.05818546)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_7" parent="hint_player_object" unique_id=109739875 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -4.4222984, 1.3157696, -0.8676726)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="food_6" parent="hint_player_object" unique_id=849266058 instance=ExtResource("18")]
+transform = Transform3D(0.535, 0, 0, 0, 0.16, 0, 0, 0, 0.535, -4.558903, 0.49126685, 1.2465564)
+visible = false
+Key_hint = " Выглядит аппетитно"
+
+[node name="box_food_1" parent="hint_player_object" unique_id=204410454 instance=ExtResource("18")]
+transform = Transform3D(2.87, 0, 0, 0, 0.82, 0, 0, 0, 0.805, -3.8683977, -0.4764632, 7.637423)
+visible = false
+Key_hint = "Много лимонов"
+
+[node name="items" type="Node3D" parent="." unique_id=1069946109]
+metadata/_edit_group_ = true
+
+[node name="hamer" parent="items" unique_id=905970777 instance=ExtResource("25_k10x1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.450233, -0.5233036, 3.724915)
+
+[node name="key_panel" parent="items" unique_id=246291444 instance=ExtResource("20")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.842857, -0.2753939, 3.76808)
+
+[node name="cook_handle" parent="items" unique_id=573129757 instance=ExtResource("22")]
+transform = Transform3D(0.714473, 0, -0.699663, 0, 1, 0, 0.699663, 0, 0.714473, -5.5847144, 1.48111, 7.1260686)
+
+[node name="key_main_door" parent="items" unique_id=2091486217 instance=ExtResource("23_k10x1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6339383, -2.0951283, 14.518766)
+
+[node name="zones" type="Node3D" parent="." unique_id=1156769167]
+script = ExtResource("24")
+metadata/_edit_group_ = true
+
+[node name="player zone" type="Area3D" parent="zones" unique_id=433120795]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.9449, 1.01743, 0.731566)
+collision_layer = 12
+collision_mask = 12
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zones/player zone" unique_id=952275342]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0552168, -0.451904, -0.150635)
+shape = SubResource("BoxShape3D_tc3g8")
+
+[node name="kitchen" type="Area3D" parent="zones" unique_id=852964577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5259, 1.01743, 0.731566)
+collision_layer = 12
+collision_mask = 12
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zones/kitchen" unique_id=1440253333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.563859, -0.572754, 1.87058)
+visible = false
+shape = SubResource("BoxShape3D_bc1rt")
+
+[node name="room" type="Area3D" parent="zones" unique_id=159122862]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.70629, 0.998338, 0.286694)
+collision_layer = 12
+collision_mask = 12
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="zones/room" unique_id=2133248904]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.573, 0)
+visible = false
+shape = SubResource("BoxShape3D_8djt0")
+
+[node name="ambient_sound" type="AudioStreamPlayer3D" parent="." unique_id=1012415001]
+stream = ExtResource("25")
+volume_db = -5.0
+autoplay = true
+
+[node name="BasementWall" type="StaticBody3D" parent="." unique_id=1644105390]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.85, 1.5, 5.5)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementWall" unique_id=1007096308]
+shape = SubResource("BoxShape3D_basement_wall")
+
+[node name="BasementTrigger" type="Area3D" parent="." unique_id=506449026]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.85, 1.5, 5.003362)
+collision_layer = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementTrigger" unique_id=391195076]
+shape = SubResource("BoxShape3D_basement_trigger")
+
+[node name="Vignette" type="CanvasLayer" parent="." unique_id=185235590]
+layer = 10
+
+[node name="ColorRect" type="ColorRect" parent="Vignette" unique_id=314963385]
+material = SubResource("ShaderMaterial_vignette")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="FPSCounter" type="CanvasLayer" parent="." unique_id=1672235340]
+
+[node name="FPS" type="Label" parent="FPSCounter" unique_id=2099580516]
+offset_left = 10.0
+offset_top = 10.0
+offset_right = 150.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_font_sizes/font_size = 18
+text = "FPS: 0"
+
+[node name="generator" parent="." unique_id=1995040445 instance=ExtResource("26_p2w7r")]
+transform = Transform3D(-0.4430711, 0, 0.89648646, 0, 1, 0, -0.89648646, 0, -0.4430711, -13.441109, -3.7508378, 14.212812)
+
+[connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
+[connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]
+[connection signal="body_entered" from="zones/player zone" to="zones" method="_on_player_zone_body_entered"]
+[connection signal="body_entered" from="zones/kitchen" to="zones" method="_on_kitchen_body_entered"]
+[connection signal="body_entered" from="zones/room" to="zones" method="_on_room_body_entered"]
+[connection signal="body_entered" from="BasementTrigger" to="." method="_on_basement_trigger_body_entered"]

@@ -41,7 +41,7 @@ func _on_chapter_one_pressed() -> void:
 	_animating = true
 	await UIAnimations.fade_out(chapter_chose)
 	_animating = false
-	_pending_scene_path = "res://ACTS/ACTS/act_1_prolog.tscn"
+	_pending_scene_path = "res://ACTS/ACT_1/scenes/act_1_prolog.tscn"
 	if YandexSDK.is_online:
 		YandexSDK.show_launch_adv()
 	else:
@@ -54,7 +54,7 @@ func _on_chapter_two_pressed() -> void:
 	_animating = true
 	await UIAnimations.fade_out(chapter_chose)
 	_animating = false
-	_pending_scene_path = "res://ACTS/ACT_2/act_2.tscn"
+	_pending_scene_path = "res://ACTS/ACT_2/scenes/act_2.tscn"
 	if YandexSDK.is_online:
 		YandexSDK.show_launch_adv()
 	else:

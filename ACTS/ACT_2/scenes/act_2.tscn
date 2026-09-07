@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://dg4sfql1js8ie"]
+
+[ext_resource type="Script" uid="uid://ce848xinqqnd3" path="res://ACTS/ACT_2/scripts/act_2.gd" id="1"]
+[ext_resource type="PackedScene" uid="uid://dip7a70gdxdee" path="res://Player/player.tscn" id="2"]
+[ext_resource type="LightmapGIData" uid="uid://jptg66ajbyre" path="res://ACTS/ACT_2/lightmap/act_2.lmbake" id="2_8nvde"]
+[ext_resource type="PackedScene" uid="uid://0bpbc6s28o0i" path="res://ACTS_MODELS/act 2 object/street/mesh.glb" id="3"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_8nvde"]
+
+[sub_resource type="Sky" id="Sky_mki4p"]
+sky_material = SubResource("ProceduralSkyMaterial_8nvde")
+
+[sub_resource type="Environment" id="Environment_ly02t"]
+background_mode = 1
+sky = SubResource("Sky_mki4p")
+fog_light_color = Color(0, 0, 0, 1)
+adjustment_brightness = 0.88
+
+[node name="act_2" type="Node3D" unique_id=1934375664]
+script = ExtResource("1")
+
+[node name="LightmapGI" type="LightmapGI" parent="." unique_id=1925044700]
+supersampling = true
+bounces = 4
+interior = true
+denoiser_strength = 0.05
+bias = 0.001
+texel_scale = 1.5
+max_texture_size = 8192
+light_data = ExtResource("2_8nvde")
+
+[node name="player" parent="." unique_id=2057706632 instance=ExtResource("2")]
+transform = Transform3D(-1, 0, 8.742278e-08, 0, 1, 0, -8.742278e-08, 0, -1, 4.6269913, 0.11130309, 7.907775)
+
+[node name="street" parent="." unique_id=354465171 instance=ExtResource("3")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, 0, 0, 0)
+
+[node name="point light" type="Node3D" parent="." unique_id=664725204]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.63623, 0)
+visible = false
+metadata/_edit_group_ = true
+
+[node name="street" type="Node3D" parent="point light" unique_id=1010849037]
+
+[node name="street 1" type="OmniLight3D" parent="point light/street" unique_id=1035057299]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8213577, 2.2902653, 11.351291)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 2" type="OmniLight3D" parent="point light/street" unique_id=1153291642]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.4143515, 2.2902653, 11.351291)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 3" type="OmniLight3D" parent="point light/street" unique_id=700293930]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.184948, 2.2902653, 11.351291)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="street 4" type="OmniLight3D" parent="point light/street" unique_id=432875328]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.259933, 2.2902653, 7.3450623)
+light_bake_mode = 1
+shadow_enabled = true
+shadow_opacity = 0.15
+omni_range = 11.153
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=902102882]
+environment = SubResource("Environment_ly02t")
