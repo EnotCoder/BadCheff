@@ -14,11 +14,10 @@ func _ready() -> void:
 	add_child(generator_sound)
 
 func toggle_door() -> void:
-	is_on = not is_on
 	if is_on:
-		_start_noise()
-	else:
-		_stop_noise()
+		return
+	is_on = true
+	_start_noise()
 
 func _start_noise() -> void:
 	State.noise_target = global_position
@@ -27,10 +26,6 @@ func _start_noise() -> void:
 	if is_on:
 		State.set_noise()
 		_start_noise()
-
-func _stop_noise() -> void:
-	generator_sound.stop()
-	State.noise_target = State.Kitchen
 
 func stop_noise() -> void:
 	is_on = false
