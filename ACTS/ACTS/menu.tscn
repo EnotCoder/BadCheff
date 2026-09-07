@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://cbdo7l5ro8ukn"]
 
 [ext_resource type="Script" uid="uid://dcun6dsqciab3" path="res://ACTS/scripts/main.gd" id="1"]
+[ext_resource type="Script" uid="uid://c1fpq1lybfgnx" path="res://ACTS/scripts/chapter_chose.gd" id="1_c0"]
+[ext_resource type="Script" uid="uid://dob3u60805yho" path="res://ACTS/scripts/menu.gd" id="1_m0"]
 [ext_resource type="FontFile" uid="uid://bloqh7n8tgsiw" path="res://widget/font.ttf" id="3"]
 [ext_resource type="PackedScene" uid="uid://bg2pkblkrhpm" path="res://ACTS/ACT_1/map.tscn" id="3_v1bvb"]
 [ext_resource type="LightmapGIData" uid="uid://djggy0ftokdls" path="res://ACTS/ACTS/menu.lmbake" id="4_yoxsk"]
@@ -12,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://drec1h86r2apv" path="res://widget/сhapters/chapter_two.png" id="8_sn6cm"]
 
 [node name="Menu" type="Node3D" unique_id=2123374611]
+script = ExtResource("1")
 
 [node name="map" parent="." unique_id=1134671353 instance=ExtResource("3_v1bvb")]
 
@@ -620,6 +623,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_c0")
 
 [node name="chapter_one" type="TextureButton" parent="UI/chapter_chose" unique_id=50197214]
 layout_mode = 1
@@ -676,7 +680,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1")
+script = ExtResource("1_m0")
 
 [node name="logo" type="TextureRect" parent="UI/menu" unique_id=1909119902]
 layout_mode = 1

@@ -1,69 +1,40 @@
-extends Control
+extends Node3D
 
-@onready var menu: Control = $"../menu"
-@onready var chapter_chose: Control = $"../chapter_chose"
-
-var _animating := false
 var _pending_scene_path: String = ""
+var _animating := false
+
+@onready var _menu: Control = $UI/menu
+@onready var _chapter_chose: Control = $UI/chapter_chose
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
 	YandexSDK.launch_adv_closed.connect(_on_launch_adv_closed)
-	$"../../cheff/AnimationPlayer".play("idle")
-
-	chapter_chose.get_node("chapter_one").pressed.connect(_on_chapter_one_pressed)
-	chapter_chose.get_node("chapter_two").pressed.connect(_on_chapter_two_pressed)
-
-	for btn in menu.get_children():
-		if btn is Button:
-			UIAnimations.setup_button_hover(btn)
-	for btn in chapter_chose.get_children():
-		if btn is TextureButton:
-			UIAnimations.setup_texture_button_hover(btn)
-
-
-func _process(_delta: float) -> void:
-	menu.get_node("FPS").text = "FPS: " + str(Engine.get_frames_per_second())
-
+	$cheff/AnimationPlayer.play("idle")
+	_menu.play_pressed.connect(_on_play_pressed)
+	_chapter_chose.chapter_selected.connect(_on_chapter_selected)
 
 func _on_play_pressed() -> void:
 	if _animating:
 		return
 	_animating = true
-	await UIAnimations.slide_out(menu)
-	await UIAnimations.slide_in(chapter_chose)
+	await UIAnimations.slide_out(_menu)
+	await UIAnimations.slide_in(_chapter_chose)
 	_animating = false
 
-
-func _on_chapter_one_pressed() -> void:
+func _on_chapter_selected(path: String) -> void:
 	if _animating:
 		return
 	_animating = true
-	await UIAnimations.fade_out(chapter_chose)
+	await UIAnimations.fade_out(_chapter_chose)
 	_animating = false
-	_pending_scene_path = "res://ACTS/ACT_1/scenes/act_1_prolog.tscn"
+	_pending_scene_path = path
 	if YandexSDK.is_online:
 		YandexSDK.show_launch_adv()
 	else:
 		_show_loading_and_change(_pending_scene_path)
-
-
-func _on_chapter_two_pressed() -> void:
-	if _animating:
-		return
-	_animating = true
-	await UIAnimations.fade_out(chapter_chose)
-	_animating = false
-	_pending_scene_path = "res://ACTS/ACT_2/scenes/act_2.tscn"
-	if YandexSDK.is_online:
-		YandexSDK.show_launch_adv()
-	else:
-		_show_loading_and_change(_pending_scene_path)
-
 
 func _on_launch_adv_closed() -> void:
 	_show_loading_and_change(_pending_scene_path)
-
 
 func _show_loading_and_change(path: String) -> void:
 	var loading := preload("res://widget/loading_screen.tscn").instantiate()
@@ -86,7 +57,3 @@ func _show_loading_and_change(path: String) -> void:
 	var packed := ResourceLoader.load_threaded_get(path) as PackedScene
 	if packed:
 		get_tree().change_scene_to_packed(packed)
-
-
-func _on_exit_pressed() -> void:
-	get_tree().quit()
