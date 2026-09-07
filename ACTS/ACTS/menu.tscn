@@ -645,7 +645,7 @@ theme_override_font_sizes/font_size = 121
 text = "Пролог"
 horizontal_alignment = 1
 
-[node name="chapter_one2" type="TextureButton" parent="UI/chapter_chose" unique_id=1585420244]
+[node name="chapter_two" type="TextureButton" parent="UI/chapter_chose" unique_id=1585420244]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -658,7 +658,7 @@ grow_horizontal = 2
 scale = Vector2(0.895, 0.895)
 texture_normal = ExtResource("8_sn6cm")
 
-[node name="Label" type="Label" parent="UI/chapter_chose/chapter_one2" unique_id=1023424505]
+[node name="Label" type="Label" parent="UI/chapter_chose/chapter_two" unique_id=1023424505]
 layout_mode = 0
 offset_left = 93.578
 offset_top = 711.9266

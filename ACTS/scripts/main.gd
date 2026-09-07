@@ -4,6 +4,7 @@ extends Control
 @onready var chapter_chose: Control = $"../chapter_chose"
 
 var _animating := false
+var _pending_scene_path: String = ""
 
 func _ready() -> void:
 	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
@@ -11,7 +12,7 @@ func _ready() -> void:
 	$"../../cheff/AnimationPlayer".play("idle")
 
 	chapter_chose.get_node("chapter_one").pressed.connect(_on_chapter_one_pressed)
-	chapter_chose.get_node("chapter_one2").pressed.connect(_on_chapter_two_pressed)
+	chapter_chose.get_node("chapter_two").pressed.connect(_on_chapter_two_pressed)
 
 	for btn in menu.get_children():
 		if btn is Button:
@@ -40,18 +41,28 @@ func _on_chapter_one_pressed() -> void:
 	_animating = true
 	await UIAnimations.fade_out(chapter_chose)
 	_animating = false
+	_pending_scene_path = "res://ACTS/ACTS/act_1_prolog.tscn"
 	if YandexSDK.is_online:
 		YandexSDK.show_launch_adv()
 	else:
-		_show_loading_and_change("res://ACTS/ACTS/act_1_prolog.tscn")
+		_show_loading_and_change(_pending_scene_path)
 
 
 func _on_chapter_two_pressed() -> void:
-	pass
+	if _animating:
+		return
+	_animating = true
+	await UIAnimations.fade_out(chapter_chose)
+	_animating = false
+	_pending_scene_path = "res://ACTS/ACT_2/act_2.tscn"
+	if YandexSDK.is_online:
+		YandexSDK.show_launch_adv()
+	else:
+		_show_loading_and_change(_pending_scene_path)
 
 
 func _on_launch_adv_closed() -> void:
-	_show_loading_and_change("res://ACTS/ACTS/act_1_prolog.tscn")
+	_show_loading_and_change(_pending_scene_path)
 
 
 func _show_loading_and_change(path: String) -> void:
