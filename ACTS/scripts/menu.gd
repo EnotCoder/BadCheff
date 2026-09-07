@@ -17,3 +17,6 @@ func _on_play_pressed() -> void:
 
 func _on_exit_pressed() -> void:
 	get_tree().quit()
+
+func _on_youtube_pressed() -> void:
+	OS.shell_open("https://youtube.com/channel/UCp9uJuD0yVrkVltWQHFCLew?si=c61EJPe6tnuxoHWv")

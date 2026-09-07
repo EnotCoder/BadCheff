@@ -12,6 +12,7 @@
 [ext_resource type="AnimationLibrary" path="res://enemy/cheff_anims.res" id="7_81r6m"]
 [ext_resource type="Texture2D" uid="uid://bytwvn5duwan5" path="res://logo.png" id="8_jkjk6"]
 [ext_resource type="Texture2D" uid="uid://drec1h86r2apv" path="res://widget/сhapters/chapter_two.png" id="8_sn6cm"]
+[ext_resource type="Texture2D" uid="uid://o26x5iojwr5o" path="res://widget/youtube.png" id="9_yt"]
 
 [node name="Menu" type="Node3D" unique_id=2123374611]
 script = ExtResource("1")
@@ -750,5 +751,22 @@ theme_override_colors/font_color = Color(0, 1, 0, 1)
 theme_override_font_sizes/font_size = 18
 text = "FPS: 0"
 
+[node name="youtube" type="TextureButton" parent="UI/menu" unique_id=2022126789]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -203.0
+offset_top = -198.0
+offset_right = 309.0
+offset_bottom = 314.0
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.335, 0.335)
+texture_normal = ExtResource("9_yt")
+
 [connection signal="pressed" from="UI/menu/Play" to="UI/menu" method="_on_play_pressed"]
 [connection signal="pressed" from="UI/menu/Exit" to="UI/menu" method="_on_exit_pressed"]
+[connection signal="pressed" from="UI/menu/youtube" to="UI/menu" method="_on_youtube_pressed"]
