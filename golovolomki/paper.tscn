@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bas04u71u73o1"]
+
+[ext_resource type="Script" uid="uid://b2tsaniey2y6a" path="res://golovolomki/scripts/paper.gd" id="1_og0uh"]
+[ext_resource type="PackedScene" uid="uid://bfbdjopewbnng" path="res://golovolomki/action.tscn" id="1_okg33"]
+[ext_resource type="Texture2D" uid="uid://cl8kv5h664t80" path="res://widget/papers/paper_tex.png" id="2_c507l"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k5fre"]
+albedo_texture = ExtResource("2_c507l")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jmwk8"]
+size = Vector2(2, 1.46)
+
+[node name="paper" type="Node3D" unique_id=1009403205]
+script = ExtResource("1_og0uh")
+
+[node name="mesh" type="MeshInstance3D" parent="." unique_id=624229990]
+material_override = SubResource("StandardMaterial3D_k5fre")
+mesh = SubResource("PlaneMesh_jmwk8")
+
+[node name="ACTION" parent="." unique_id=695334252 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("1_okg33")]
+transform = Transform3D(2.04, 0, 0, 0, 0.145, 0, 0, 0, 1.47, 0, 0, 0)
+visible = false
+FUNC_NAME = "show_paper"
+NODE_ACTION = NodePath("..")
+
+[node name="UI" type="Control" parent="." unique_id=284578569]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="rect" type="TextureRect" parent="UI" unique_id=230684184]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 202.0
+offset_right = 1561.5641
+offset_bottom = 908.0

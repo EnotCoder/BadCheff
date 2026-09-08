@@ -23,7 +23,9 @@
 [ext_resource type="Script" uid="uid://c3ipqhqrqm0gm" path="res://ACTS/ACT_1/scripts/zones.gd" id="24"]
 [ext_resource type="AudioStream" uid="uid://c4ilx2pfm1n11" path="res://sounds/фоновый звук.mp3" id="25"]
 [ext_resource type="PackedScene" uid="uid://cld5hwq188761" path="res://mesh/hamer/hamer.tscn" id="25_k10x1"]
+[ext_resource type="PackedScene" uid="uid://bas04u71u73o1" path="res://golovolomki/paper.tscn" id="26_n0241"]
 [ext_resource type="PackedScene" uid="uid://bjwkwkvh10sbr" path="res://ACTS/ACT_1/models/generator.tscn" id="26_p2w7r"]
+[ext_resource type="Texture2D" uid="uid://dv2fcf46xbv1e" path="res://widget/papers/paper_1.png" id="27_27pnx"]
 [ext_resource type="PackedScene" uid="uid://cqqdge24m2pwi" path="res://ACTS/ACT_1/models/closet.tscn" id="28"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_is1rh"]
@@ -773,6 +775,10 @@ text = "FPS: 0"
 
 [node name="generator" parent="." unique_id=1995040445 instance=ExtResource("26_p2w7r")]
 transform = Transform3D(-0.4430711, 0, 0.89648646, 0, 1, 0, -0.89648646, 0, -0.4430711, -13.441109, -3.7508378, 14.212812)
+
+[node name="paper" parent="." unique_id=1009403205 instance=ExtResource("26_n0241")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -10.540011, -0.7450422, -1.1144121)
+texture_paper = ExtResource("27_27pnx")
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]

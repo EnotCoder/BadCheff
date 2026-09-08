@@ -96,6 +96,7 @@ far = 15.0
 [node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=437576829]
 target_position = Vector3(0, 0, -3)
 collide_with_areas = true
+collide_with_bodies = false
 
 [node name="Control" type="Control" parent="." unique_id=149811016]
 layout_mode = 3
