@@ -24,7 +24,7 @@ const CAMERA_BOB_AMPLITUDE_Y := 0.04
 const MOUSE_SENSITIVITY_PC := 0.003
 const MOUSE_SENSITIVITY_MOBILE := 0.005
 const CURSOR_INTERACT_SIZE := Vector2(6, 6)
-const CURSOR_DEFAULT_SIZE := Vector2(4, 4)
+const CURSOR_DEFAULT_SIZE := Vector2(7, 7)
 
 var current_speed: float = WALK_SPEED
 var is_crouching: bool = false
@@ -130,15 +130,11 @@ func update_camera_bob(delta: float) -> void:
 	camera.position = bob_offset
 
 func update_cursor() -> void:
+	cursor.scale = CURSOR_DEFAULT_SIZE
 	if ray_cast.is_colliding():
 		var hit := ray_cast.get_collider()
 		if hit:
-			cursor.scale = CURSOR_INTERACT_SIZE
 			if Input.is_action_just_pressed("left_click") and hit.has_method("main"):
 				hit.main()
 			if hit.has_method("main_delta"):
 				hit.main_delta()
-		else:
-			cursor.scale = CURSOR_INTERACT_SIZE
-	else:
-		cursor.scale = CURSOR_DEFAULT_SIZE
