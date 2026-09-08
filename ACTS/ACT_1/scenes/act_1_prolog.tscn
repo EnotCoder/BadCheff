@@ -27,6 +27,9 @@
 [ext_resource type="PackedScene" uid="uid://bjwkwkvh10sbr" path="res://ACTS/ACT_1/models/generator.tscn" id="26_p2w7r"]
 [ext_resource type="Texture2D" uid="uid://dv2fcf46xbv1e" path="res://widget/papers/paper_1.png" id="27_27pnx"]
 [ext_resource type="PackedScene" uid="uid://cqqdge24m2pwi" path="res://ACTS/ACT_1/models/closet.tscn" id="28"]
+[ext_resource type="Texture2D" uid="uid://cwvr2cxi63df0" path="res://widget/papers/paper_2.png" id="28_0mclj"]
+[ext_resource type="Texture2D" uid="uid://ckn10xkf2ikhn" path="res://widget/papers/paper_3.png" id="29_xkjt1"]
+[ext_resource type="Texture2D" uid="uid://cap2b4fybd8bv" path="res://widget/papers/paper_4.png" id="30_0mclj"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_is1rh"]
 
@@ -776,9 +779,23 @@ text = "FPS: 0"
 [node name="generator" parent="." unique_id=1995040445 instance=ExtResource("26_p2w7r")]
 transform = Transform3D(-0.4430711, 0, 0.89648646, 0, 1, 0, -0.89648646, 0, -0.4430711, -13.441109, -3.7508378, 14.212812)
 
-[node name="paper" parent="." unique_id=1009403205 instance=ExtResource("26_n0241")]
+[node name="papers" type="Node3D" parent="." unique_id=1404530436]
+
+[node name="paper" parent="papers" unique_id=1009403205 instance=ExtResource("26_n0241")]
 transform = Transform3D(0.08788171, 0, -0.04771588, 0, 0.1, 0, 0.04771588, 0, 0.08788171, -10.076768, -0.77376854, -1.827178)
 texture_paper = ExtResource("27_27pnx")
+
+[node name="paper2" parent="papers" unique_id=2070416383 instance=ExtResource("26_n0241")]
+transform = Transform3D(0.07716246, 0, -0.06360783, 0, 0.1, 0, 0.06360783, 0, 0.07716246, -4.403262, 0.45616627, 2.068127)
+texture_paper = ExtResource("28_0mclj")
+
+[node name="paper3" parent="papers" unique_id=136929257 instance=ExtResource("26_n0241")]
+transform = Transform3D(-0.09998478, -0.0017372111, -0.00016727443, 0, 0.009584576, -0.09953963, 0.001745246, -0.09952446, -0.009583117, -5.057135, 0.8289784, 8.275662)
+texture_paper = ExtResource("29_xkjt1")
+
+[node name="paper4" parent="papers" unique_id=1733208170 instance=ExtResource("26_n0241")]
+transform = Transform3D(-0.06494481, 0, -0.0760406, 0, 0.1, 0, 0.0760406, 0, -0.06494481, -4.6323204, -3.9538789, 11.94837)
+texture_paper = ExtResource("30_0mclj")
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]
