@@ -10,6 +10,8 @@ func _input(event):
 		hide_paper()
 	elif event is InputEventScreenTouch and event.pressed and is_show:
 		hide_paper()
+	elif Input.is_anything_pressed():
+		hide_paper()
 
 func show_paper() -> void:
 	rect.texture = texture_paper

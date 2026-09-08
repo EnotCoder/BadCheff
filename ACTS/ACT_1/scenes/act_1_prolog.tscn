@@ -203,7 +203,7 @@ light_data = ExtResource("2_k10x1")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.539267, -0.812, 0.67925733)
 
 [node name="Cheff" parent="." unique_id=620991757 node_paths=PackedStringArray("navigation_agent", "animation_tree", "hit", "door_kitchen", "list_kitchen_objects") instance=ExtResource("3")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 5.2286787, -0.408409, 2.300895)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.940895, -0.408409, 2.300895)
 navigation_agent = NodePath("NavigationAgent3D")
 animation_tree = NodePath("AnimationTree")
 hit = NodePath("hit")
@@ -777,7 +777,7 @@ text = "FPS: 0"
 transform = Transform3D(-0.4430711, 0, 0.89648646, 0, 1, 0, -0.89648646, 0, -0.4430711, -13.441109, -3.7508378, 14.212812)
 
 [node name="paper" parent="." unique_id=1009403205 instance=ExtResource("26_n0241")]
-transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -10.540011, -0.7450422, -1.1144121)
+transform = Transform3D(0.08788171, 0, -0.04771588, 0, 0.1, 0, 0.04771588, 0, 0.08788171, -10.076768, -0.77376854, -1.827178)
 texture_paper = ExtResource("27_27pnx")
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
