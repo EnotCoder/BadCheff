@@ -4,9 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://b3tj5vlc31n6j" path="res://golovolomki/action_object.tscn" id="2_ljf0h"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8migr"]
-size = Vector3(0.235, 0.255, 0.507)
+size = Vector3(0.235, 0.091367185, 0.507)
 
 [node name="key_main_door" type="RigidBody3D" unique_id=2091486217]
+collision_layer = 2
+collision_mask = 2
 
 [node name="key_main_door" parent="." unique_id=1642737301 instance=ExtResource("1_2ph7t")]
 transform = Transform3D(0.009541337, 0.03884537, 1.6979851e-09, 0, -1.7484555e-09, 0.04, 0.03884537, -0.009541337, -4.170651e-10, 0.016, 0, -0.073)
@@ -17,5 +19,5 @@ visible = false
 Key_object = "key_main_door"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=2015875576]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0151367, 0.0933669, -0.0338083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0151367, 0.011550494, -0.0338083)
 shape = SubResource("BoxShape3D_8migr")

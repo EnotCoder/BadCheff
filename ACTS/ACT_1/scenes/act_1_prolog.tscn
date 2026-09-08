@@ -204,6 +204,7 @@ light_data = ExtResource("2_k10x1")
 
 [node name="player" parent="." unique_id=1696094556 instance=ExtResource("2")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.539267, -0.812, 0.67925733)
+platform = 0
 
 [node name="Cheff" parent="." unique_id=620991757 node_paths=PackedStringArray("navigation_agent", "animation_tree", "hit", "door_kitchen", "list_kitchen_objects") instance=ExtResource("3")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.940895, -0.408409, 2.300895)
@@ -699,7 +700,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.842857, -0.2753939, 3.7680
 transform = Transform3D(0.714473, 0, -0.699663, 0, 1, 0, 0.699663, 0, 0.714473, -5.5847144, 1.48111, 7.1260686)
 
 [node name="key_main_door" parent="items" unique_id=2091486217 instance=ExtResource("23_k10x1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6339383, -2.0951283, 14.518766)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.6339383, -2.017478, 14.360669)
 
 [node name="zones" type="Node3D" parent="." unique_id=1156769167]
 script = ExtResource("24")
