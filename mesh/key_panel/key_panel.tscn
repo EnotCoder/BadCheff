@@ -4,20 +4,18 @@
 [ext_resource type="PackedScene" uid="uid://b3tj5vlc31n6j" path="res://golovolomki/action_object.tscn" id="2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v474b"]
-size = Vector3(0.235, 0.255, 0.507)
+size = Vector3(0.21658692, 0.11285156, 0.3476817)
 
 [node name="key panel" type="RigidBody3D" unique_id=1067345766]
-collision_layer = 2
-collision_mask = 2
 
 [node name="key panel" parent="." unique_id=905941230 instance=ExtResource("1")]
 transform = Transform3D(0.00954136, 0.0388454, 1.69798e-09, 0, -1.74846e-09, 0.04, 0.0388454, -0.00954136, -4.17066e-10, 0.0160681, 0, -0.0734537)
 
 [node name="ACTION_OBJECT" parent="key panel" unique_id=2127232776 instance=ExtResource("2")]
-transform = Transform3D(1.27806, 9.49614e-08, 9.82205, 5.20334, -1.21109e-07, -2.41253, 1.7834e-07, 2.853, -4.29336e-07, 0, 0, 0)
+transform = Transform3D(1.5082438, 1.1127102e-07, 9.054857, 6.140483, -1.4190913e-07, -2.2240813, 2.1045967e-07, 3.343, -3.958004e-07, 0, 0, 0.56583947)
 visible = false
 Key_object = "key_panel"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=506016154]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0151367, 0.0933669, -0.0338083)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015031714, 0.022292681, -0.07226799)
 shape = SubResource("BoxShape3D_v474b")

@@ -11,7 +11,7 @@ cell_height = 0.1
 agent_max_climb = 0.2
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_qrtu5"]
-size = Vector3(3.164013, 1.8125, 1.6176453)
+size = Vector3(0.117785454, 1.6505127, 1.3633347)
 
 [node name="map" type="Node3D" unique_id=1134671353]
 
@@ -34,6 +34,22 @@ shape = SubResource("BoxShape3D_qrtu5")
 
 [node name="CollisionShape3D2" type="CollisionShape3D" parent="NavigationRegion3D/collision_fix" unique_id=1391982417]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.04455304, -0.920259, 0.6418357)
+shape = SubResource("BoxShape3D_qrtu5")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="NavigationRegion3D/collision_fix" unique_id=589435679]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8657284, -0.31960368, -3.5194876)
+shape = SubResource("BoxShape3D_qrtu5")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="NavigationRegion3D/collision_fix" unique_id=299125960]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.5867841, -0.31960368, -3.5194876)
+shape = SubResource("BoxShape3D_qrtu5")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="NavigationRegion3D/collision_fix" unique_id=707381219]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9874725, -0.31960368, -9.634423)
+shape = SubResource("BoxShape3D_qrtu5")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="NavigationRegion3D/collision_fix" unique_id=1391462492]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.7085288, -0.31960368, -9.634423)
 shape = SubResource("BoxShape3D_qrtu5")
 
 [node name="mesh" parent="NavigationRegion3D" unique_id=1446744593 instance=ExtResource("2_knryj")]
