@@ -57,8 +57,8 @@ func _on_basement_trigger_body_entered(body: Node3D) -> void:
 func _on_player_caught() -> void:
 	$player.queue_free()
 	await get_tree().create_timer(1.2).timeout
-	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
-	$Cheff.get_node("you lost").show_screen()
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	$Cheff.get_node("CanvasLayer/you lost").show_screen()
 
 
 func f():
