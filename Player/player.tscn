@@ -115,18 +115,18 @@ script = ExtResource("2")
 [node name="slot_tex" type="Node2D" parent="Control/inventory" unique_id=1490508609]
 
 [node name="1" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=63532716]
-position = Vector2(450, 488)
-scale = Vector2(0.35, 0.35)
+position = Vector2(450, 479.67624)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("3")
 
 [node name="2" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=76871022]
-position = Vector2(500, 488)
-scale = Vector2(0.35, 0.35)
+position = Vector2(500, 479.67624)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("3")
 
 [node name="3" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=2077866241]
-position = Vector2(550, 488)
-scale = Vector2(0.35, 0.35)
+position = Vector2(550, 479.67624)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("3")
 
 [node name="item" type="Node2D" parent="Control/inventory" unique_id=1300875161]
@@ -219,9 +219,9 @@ scale = Vector2(0.245, 0.245)
 texture = ExtResource("9")
 
 [node name="drop" type="TextureButton" parent="Control/control" unique_id=1768852973]
-offset_left = 70.0
+offset_left = 177.0
 offset_top = 200.0
-offset_right = 170.0
+offset_right = 277.0
 offset_bottom = 300.0
 scale = Vector2(1.62, 1.62)
 texture_normal = ExtResource("7")
@@ -233,33 +233,33 @@ scale = Vector2(0.205, 0.205)
 texture = ExtResource("10")
 
 [node name="slot" type="TextureButton" parent="Control/control" unique_id=1010208653]
-offset_left = 806.0
-offset_top = 973.0
-offset_right = 1165.2305
-offset_bottom = 1133.0
+offset_left = 798.00006
+offset_top = 948.64496
+offset_right = 1208.5488
+offset_bottom = 1135.112
 scale = Vector2(0.25331926, 0.55237657)
 
 [node name="slot2" type="TextureButton" parent="Control/control" unique_id=336975508]
-offset_left = 910.0
-offset_top = 971.0
-offset_right = 1090.198
-offset_bottom = 1155.1583
+offset_left = 902.99994
+offset_top = 948.64496
+offset_right = 1103.0
+offset_bottom = 1152.6055
 scale = Vector2(0.505, 0.505)
 
 [node name="slot3" type="TextureButton" parent="Control/control" unique_id=1403612969]
-offset_left = 1014.0
-offset_top = 973.0
-offset_right = 1192.2179
-offset_bottom = 1151.2178
+offset_left = 1007.0
+offset_top = 948.64496
+offset_right = 1210.9603
+offset_bottom = 1152.6055
 scale = Vector2(0.505, 0.505)
 
 [node name="Virtual Joystick" parent="Control" unique_id=745962944 instance=ExtResource("14")]
 layout_mode = 1
 offset_left = 10.0
-offset_top = -393.00012
+offset_top = -483.0
 offset_right = 310.0
-offset_bottom = -93.00012
-scale = Vector2(1.325, 1.325)
+offset_bottom = -183.0
+scale = Vector2(1.62, 1.62)
 action_left = "a"
 action_right = "d"
 action_up = "w"
