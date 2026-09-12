@@ -38,6 +38,7 @@ sky_material = SubResource("ProceduralSkyMaterial_is1rh")
 
 [sub_resource type="Environment" id="Environment_nyylq"]
 background_mode = 1
+background_color = Color(0.09239707, 0.09239706, 0.09239706, 1)
 sky = SubResource("Sky_qcmkn")
 fog_light_color = Color(0, 0, 0, 1)
 adjustment_brightness = 0.88
