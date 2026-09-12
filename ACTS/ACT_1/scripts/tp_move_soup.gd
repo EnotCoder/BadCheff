@@ -4,7 +4,7 @@ extends Node3D
 
 @export var say: String
 
-var player_interaction_active = false
+var player_interaction_active: bool = false
 
 func act():
 	if MainInventoryScript.chose_obj == "cook_handle":

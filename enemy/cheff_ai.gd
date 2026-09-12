@@ -36,6 +36,25 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	process_movement()
 	manage_animations()
+	check_surroundings()
+
+func check_surroundings() -> void:
+	if State.state == State.StateBook.ATTACK:
+		return
+		
+	var current_list = []
+	if State.position_point == "kitchen":
+		current_list = list_kitchen_objects
+	elif State.position_point == "room":
+		current_list = list_room_objects
+		
+	for obj in current_list:
+		if is_instance_valid(obj) and obj.get("player_interaction_active") == true:
+			# Если повар видит открытый объект, он начинает погоню
+			_start_chase()
+			if obj.get("say"):
+				Dialog.show_say(obj.say)
+			break
 
 func process_movement() -> void:
 	var target_position := navigation_agent.get_next_path_position()
