@@ -206,12 +206,12 @@ light_data = ExtResource("2_k10x1")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.539267, -0.812, 0.67925733)
 
 [node name="Cheff" parent="." unique_id=620991757 node_paths=PackedStringArray("navigation_agent", "animation_tree", "hit", "door_kitchen", "list_kitchen_objects") instance=ExtResource("3")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.940895, -0.408409, 2.300895)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.2232633, -0.408409, 2.1958768)
 navigation_agent = NodePath("NavigationAgent3D")
 animation_tree = NodePath("AnimationTree")
 hit = NodePath("hit")
 door_kitchen = NodePath("../active object/door/door kitchen")
-list_kitchen_objects = [NodePath("../active object/groups/stove_doors/stove_door"), NodePath("../active object/groups/stove_doors/stove_door_2"), NodePath("../active object/groups/stove_doors/stove_door_3"), NodePath("../active object/groups/stove_doors/stove_door_4"), NodePath("../active object/little object/soup model"), NodePath("../active object/little object/soup model2"), NodePath("../active object/door/closet"), NodePath("../active object/little object/door panel")]
+list_kitchen_objects = [NodePath("../active object/little object/stove_doors/stove_door"), NodePath("../active object/little object/stove_doors/stove_door_2"), NodePath("../active object/little object/stove_doors/stove_door_3"), NodePath("../active object/little object/stove_doors/stove_door_4"), NodePath("../active object/little object/soup model"), NodePath("../active object/little object/soup model2"), NodePath("../active object/door/closet"), NodePath("../active object/little object/door panel")]
 
 [node name="map" parent="." unique_id=1134671353 instance=ExtResource("5_8nyl2")]
 
@@ -500,14 +500,62 @@ say = "кто открыл дверь"
 [node name="closet" parent="active object/door" unique_id=1147328754 instance=ExtResource("28")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.18062, -0.0959911, -2.71109)
 
-[node name="closet2" parent="active object/door" unique_id=1396675150 instance=ExtResource("28")]
-transform = Transform3D(-1, 0, -1.7134865e-07, 0, 1, 0, 1.7134865e-07, 0, -1, -9.804866, -3.3065584, 14.491837)
-
-[node name="closet3" parent="active object/door" unique_id=1711480461 instance=ExtResource("28")]
+[node name="closet2" parent="active object/door" unique_id=1711480461 instance=ExtResource("28")]
 transform = Transform3D(1.1924881e-08, 0, 1, 0, 1, 0, -1, 0, 1.1924881e-08, -14.333183, -0.08192116, 3.238944)
 
 [node name="little object" type="Node3D" parent="active object" unique_id=813168241]
 metadata/_edit_group_ = true
+
+[node name="stove_doors" type="Node3D" parent="active object/little object" unique_id=1471663208]
+metadata/_edit_group_ = true
+
+[node name="stove_door" parent="active object/little object/stove_doors" unique_id=1823053172 instance=ExtResource("17")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -6.80519, -0.666083, 3.02491)
+say = "Кто открыл плиту"
+noise = true
+
+[node name="light" type="OmniLight3D" parent="active object/little object/stove_doors/stove_door" unique_id=638804928]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.8
+
+[node name="stove_door_2" parent="active object/little object/stove_doors" unique_id=45881912 instance=ExtResource("17")]
+transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -8.89147, -0.666083, 3.02491)
+say = "Кто открыл плиту"
+noise = true
+
+[node name="light" type="OmniLight3D" parent="active object/little object/stove_doors/stove_door_2" unique_id=1290695589]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.8
+
+[node name="stove_door_3" parent="active object/little object/stove_doors" unique_id=1450894875 instance=ExtResource("17")]
+transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -6.95343, -0.666083, -1.80577)
+say = "Кто открыл плиту"
+noise = true
+
+[node name="light" type="OmniLight3D" parent="active object/little object/stove_doors/stove_door_3" unique_id=1533623410]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.8
+
+[node name="stove_door_4" parent="active object/little object/stove_doors" unique_id=682012548 instance=ExtResource("17")]
+transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -9.03971, -0.666083, -1.80577)
+say = "Кто открыл плиту"
+noise = true
+
+[node name="light" type="OmniLight3D" parent="active object/little object/stove_doors/stove_door_4" unique_id=793346368]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
+light_energy = 0.945
+light_bake_mode = 1
+shadow_opacity = 0.15
+omni_range = 0.8
 
 [node name="door panel" type="Node3D" parent="active object/little object" unique_id=1727007693]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.21087, 0, 8.01726)
@@ -574,59 +622,7 @@ NODE_ACTION = NodePath("..")
 
 [node name="main_door" parent="active object/little object" unique_id=2011067237 instance=ExtResource("16_8nyl2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.531, 0.739, 7.118)
-
-[node name="groups" type="Node3D" parent="active object" unique_id=1300293492]
 metadata/_edit_group_ = true
-
-[node name="stove_doors" type="Node3D" parent="active object/groups" unique_id=1471663208]
-
-[node name="stove_door" parent="active object/groups/stove_doors" unique_id=1823053172 instance=ExtResource("17")]
-transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -6.80519, -0.666083, 3.02491)
-say = "Кто открыл плиту"
-noise = true
-
-[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door" unique_id=638804928]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
-light_energy = 0.945
-light_bake_mode = 1
-shadow_opacity = 0.15
-omni_range = 0.8
-
-[node name="stove_door_2" parent="active object/groups/stove_doors" unique_id=45881912 instance=ExtResource("17")]
-transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -8.89147, -0.666083, 3.02491)
-say = "Кто открыл плиту"
-noise = true
-
-[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_2" unique_id=1290695589]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
-light_energy = 0.945
-light_bake_mode = 1
-shadow_opacity = 0.15
-omni_range = 0.8
-
-[node name="stove_door_3" parent="active object/groups/stove_doors" unique_id=1450894875 instance=ExtResource("17")]
-transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -6.95343, -0.666083, -1.80577)
-say = "Кто открыл плиту"
-noise = true
-
-[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_3" unique_id=1533623410]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
-light_energy = 0.945
-light_bake_mode = 1
-shadow_opacity = 0.15
-omni_range = 0.8
-
-[node name="stove_door_4" parent="active object/groups/stove_doors" unique_id=682012548 instance=ExtResource("17")]
-transform = Transform3D(-1.96, 0, -1.71349e-07, 0, 1.96, 0, 1.71349e-07, 0, -1.96, -9.03971, -0.666083, -1.80577)
-say = "Кто открыл плиту"
-noise = true
-
-[node name="light" type="OmniLight3D" parent="active object/groups/stove_doors/stove_door_4" unique_id=793346368]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15864249, 0.3396845)
-light_energy = 0.945
-light_bake_mode = 1
-shadow_opacity = 0.15
-omni_range = 0.8
 
 [node name="hint_player_object" type="Node3D" parent="." unique_id=1576116321]
 metadata/_edit_group_ = true

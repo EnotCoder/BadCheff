@@ -78,24 +78,15 @@ visible = false
 FUNC_NAME = "toggle_door"
 NODE_ACTION = NodePath("../..")
 
-[node name="light" type="OmniLight3D" parent="door" unique_id=953240996]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.21092887, 0.381728, -0.14783764)
-light_energy = 0.945
-light_bake_mode = 1
-shadow_opacity = 0.15
-omni_range = 0.5
-
-[node name="light2" type="OmniLight3D" parent="door" unique_id=1676171247]
-transform = Transform3D(0.5102041, 0, 0, 0, 0.5102041, 0, 0, 0, 0.5102041, 0.21092884, -0.41137764, -0.14783764)
-light_energy = 0.945
-light_bake_mode = 1
-shadow_opacity = 0.15
-omni_range = 0.5
-
 [node name="Squeak" type="AudioStreamPlayer3D" parent="." unique_id=962289253]
 stream = ExtResource("5")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=633542267]
 libraries/ = SubResource("AnimationLibrary_closet")
+
+[node name="AreaLight3D" type="AreaLight3D" parent="." unique_id=1494808310]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.89299464, 0.19657153)
+area_range = 2.0
+area_attenuation = 1.115
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
