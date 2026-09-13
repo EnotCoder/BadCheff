@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var not_anim_and = false
 

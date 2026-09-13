@@ -10,17 +10,13 @@
 [ext_resource type="Texture2D" uid="uid://7vowa1ecmx7b" path="res://widget/control/Crouch.png" id="9"]
 [ext_resource type="Texture2D" uid="uid://5h8pt611do21" path="res://widget/control/drop.png" id="10"]
 [ext_resource type="Script" uid="uid://5h3xer1o08y3" path="res://Player/scripts/timer_enemy.gd" id="11"]
+[ext_resource type="Texture2D" uid="uid://cudb1lahppsyp" path="res://widget/control/cursor.png" id="11_gu6f8"]
 [ext_resource type="FontFile" uid="uid://bloqh7n8tgsiw" path="res://widget/font.ttf" id="12"]
 [ext_resource type="AudioStream" uid="uid://bx5geg00005ba" path="res://sounds/звук ходьбы.MP3" id="13"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="14"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_hvfyp"]
 height = 2.4
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_l8h54"]
-height = 2.4
-
-[sub_resource type="SphereMesh" id="SphereMesh_gwnis"]
 
 [sub_resource type="Animation" id="Animation_fhl08"]
 length = 0.001
@@ -80,196 +76,18 @@ collision_mask = 5
 floor_max_angle = 1.0471976
 script = ExtResource("1")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1794087894]
+[node name="Collision" type="CollisionShape3D" parent="." unique_id=1794087894]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19306, 0)
 shape = SubResource("CapsuleShape3D_hvfyp")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=784892726]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.19715, 0)
-visible = false
-mesh = SubResource("CapsuleMesh_l8h54")
-
-[node name="Camera3D" type="Camera3D" parent="." unique_id=1915093553]
+[node name="Camera" type="Camera3D" parent="." unique_id=1915093553]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.17982, 0)
 far = 15.0
 
-[node name="RayCast3D" type="RayCast3D" parent="Camera3D" unique_id=437576829]
+[node name="RayCast" type="RayCast3D" parent="Camera" unique_id=437576829]
 target_position = Vector3(0, 0, -3)
 collision_mask = 3
 collide_with_areas = true
-
-[node name="Control" type="Control" parent="." unique_id=149811016]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="inventory" type="Node2D" parent="Control" unique_id=1774600199]
-position = Vector2(-88, 0)
-scale = Vector2(2.085, 2.085)
-script = ExtResource("2")
-
-[node name="slot_tex" type="Node2D" parent="Control/inventory" unique_id=1490508609]
-
-[node name="1" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=63532716]
-position = Vector2(450, 479.67624)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("3")
-
-[node name="2" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=76871022]
-position = Vector2(500, 479.67624)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("3")
-
-[node name="3" type="Sprite2D" parent="Control/inventory/slot_tex" unique_id=2077866241]
-position = Vector2(550, 479.67624)
-scale = Vector2(0.4, 0.4)
-texture = ExtResource("3")
-
-[node name="item" type="Node2D" parent="Control/inventory" unique_id=1300875161]
-position = Vector2(0, 21)
-
-[node name="3" type="TextureRect" parent="Control/inventory/item" unique_id=1028406037]
-offset_left = 530.0
-offset_top = 447.0
-offset_right = 730.0
-offset_bottom = 647.0
-scale = Vector2(0.2, 0.2)
-metadata/_edit_use_anchors_ = true
-
-[node name="2" type="TextureRect" parent="Control/inventory/item" unique_id=1357432789]
-offset_left = 480.0
-offset_top = 447.0
-offset_right = 680.0
-offset_bottom = 647.0
-scale = Vector2(0.2, 0.2)
-metadata/_edit_use_anchors_ = true
-
-[node name="1" type="TextureRect" parent="Control/inventory/item" unique_id=416916154]
-offset_left = 430.0
-offset_top = 447.0
-offset_right = 630.0
-offset_bottom = 647.0
-scale = Vector2(0.2, 0.2)
-metadata/_edit_use_anchors_ = true
-
-[node name="cursor" type="MeshInstance2D" parent="Control" unique_id=1218033845]
-position = Vector2(960, 540)
-scale = Vector2(7, 7)
-mesh = SubResource("SphereMesh_gwnis")
-
-[node name="hint_timer" type="Timer" parent="Control" unique_id=1531966501]
-wait_time = 2.0
-
-[node name="anim screen" type="Node2D" parent="Control" unique_id=1753516806]
-visible = false
-script = ExtResource("4")
-
-[node name="rect" type="ColorRect" parent="Control/anim screen" unique_id=264912674]
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 1930.0
-offset_bottom = 1090.0
-color = Color(0, 0, 0, 1)
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/anim screen" unique_id=1190063737]
-libraries/ = SubResource("AnimationLibrary_od3ui")
-
-[node name="screen" type="ColorRect" parent="Control" unique_id=1592986548]
-layout_mode = 0
-offset_left = -10.0
-offset_top = -10.0
-offset_right = 1930.0
-offset_bottom = 1090.0
-mouse_filter = 2
-color = Color(1, 1, 1, 0)
-
-[node name="control" type="Node2D" parent="Control" unique_id=1127348742]
-script = ExtResource("6")
-
-[node name="interact" type="TextureButton" parent="Control/control" unique_id=268772807]
-offset_left = 1670.9999
-offset_top = 200.0
-offset_right = 1770.9999
-offset_bottom = 300.0
-scale = Vector2(1.62, 1.62)
-texture_normal = ExtResource("7")
-metadata/_edit_group_ = true
-
-[node name="Ent" type="Sprite2D" parent="Control/control/interact" unique_id=590452804]
-position = Vector2(54, 48)
-scale = Vector2(0.08, 0.08)
-texture = ExtResource("8")
-
-[node name="sit" type="TextureButton" parent="Control/control" unique_id=1021391900]
-offset_left = 1673.9998
-offset_top = 853.00006
-offset_right = 1773.9998
-offset_bottom = 953.00006
-scale = Vector2(1.62, 1.62)
-texture_normal = ExtResource("7")
-metadata/_edit_group_ = true
-
-[node name="Crouch" type="Sprite2D" parent="Control/control/sit" unique_id=1305672656]
-position = Vector2(49, 49)
-scale = Vector2(0.245, 0.245)
-texture = ExtResource("9")
-
-[node name="drop" type="TextureButton" parent="Control/control" unique_id=1768852973]
-offset_left = 177.0
-offset_top = 200.0
-offset_right = 277.0
-offset_bottom = 300.0
-scale = Vector2(1.62, 1.62)
-texture_normal = ExtResource("7")
-metadata/_edit_group_ = true
-
-[node name="Drop" type="Sprite2D" parent="Control/control/drop" unique_id=438142252]
-position = Vector2(48, 48)
-scale = Vector2(0.205, 0.205)
-texture = ExtResource("10")
-
-[node name="slot" type="TextureButton" parent="Control/control" unique_id=1010208653]
-offset_left = 798.00006
-offset_top = 948.64496
-offset_right = 1208.5488
-offset_bottom = 1135.112
-scale = Vector2(0.25331926, 0.55237657)
-
-[node name="slot2" type="TextureButton" parent="Control/control" unique_id=336975508]
-offset_left = 902.99994
-offset_top = 948.64496
-offset_right = 1103.0
-offset_bottom = 1152.6055
-scale = Vector2(0.505, 0.505)
-
-[node name="slot3" type="TextureButton" parent="Control/control" unique_id=1403612969]
-offset_left = 1007.0
-offset_top = 948.64496
-offset_right = 1210.9603
-offset_bottom = 1152.6055
-scale = Vector2(0.505, 0.505)
-
-[node name="Virtual Joystick" parent="Control" unique_id=745962944 instance=ExtResource("14")]
-layout_mode = 1
-offset_left = 10.0
-offset_top = -483.0
-offset_right = 310.0
-offset_bottom = -183.0
-scale = Vector2(1.62, 1.62)
-action_left = "a"
-action_right = "d"
-action_up = "w"
-action_down = "s"
-
-[node name="obj pos" type="Marker3D" parent="." unique_id=407285797]
-transform = Transform3D(0.891007, -0.357749, -0.279504, 0, 0.615662, -0.788011, 0.453991, 0.702123, 0.548558, 0.380988, 1.81059, -0.420157)
-
-[node name="drop" type="Marker3D" parent="." unique_id=304854490]
-transform = Transform3D(0.891007, -0.357749, -0.279504, 0, 0.615662, -0.788011, 0.453991, 0.702123, 0.548558, 0, 1.782, 0)
 
 [node name="timer enemy" type="Control" parent="." unique_id=1882071947]
 layout_mode = 3
@@ -335,17 +153,189 @@ text = "hammer"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="hint_timer" type="Timer" parent="timer enemy" unique_id=1531966501]
+wait_time = 2.0
+
+[node name="Control" type="Control" parent="." unique_id=149811016]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="anim screen" type="Control" parent="Control" unique_id=1255448963]
+visible = false
+anchors_preset = 0
+script = ExtResource("4")
+
+[node name="rect" type="ColorRect" parent="Control/anim screen" unique_id=264912674]
+layout_mode = 0
+offset_left = -10.0
+offset_top = -10.0
+offset_right = 1930.0
+offset_bottom = 1090.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Control/anim screen" unique_id=1190063737]
+libraries/ = SubResource("AnimationLibrary_od3ui")
+
+[node name="inventory" type="Control" parent="Control" unique_id=1516372783]
+anchors_preset = 0
+offset_left = -88.0
+offset_right = -88.0
+scale = Vector2(2.085, 2.085)
+script = ExtResource("2")
+
+[node name="slot_tex" type="Control" parent="Control/inventory" unique_id=1780920144]
+anchors_preset = 0
+
+[node name="1" type="TextureButton" parent="Control/inventory/slot_tex" unique_id=2052241155]
+layout_mode = 0
+offset_left = 423.9808
+offset_top = 454.6762
+offset_right = 548.98083
+offset_bottom = 579.6762
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("3")
+
+[node name="2" type="TextureButton" parent="Control/inventory/slot_tex" unique_id=1629293504]
+layout_mode = 0
+offset_left = 474.8201
+offset_top = 454.6762
+offset_right = 599.82007
+offset_bottom = 579.6762
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("3")
+
+[node name="3" type="TextureButton" parent="Control/inventory/slot_tex" unique_id=2031641772]
+layout_mode = 0
+offset_left = 526.1391
+offset_top = 454.6762
+offset_right = 651.1391
+offset_bottom = 579.6762
+scale = Vector2(0.4, 0.4)
+texture_normal = ExtResource("3")
+
+[node name="item" type="Control" parent="Control/inventory" unique_id=1572824725]
+anchors_preset = 0
+offset_top = 21.0
+offset_bottom = 21.0
+
+[node name="1" type="TextureRect" parent="Control/inventory/item" unique_id=416916154]
+layout_mode = 0
+offset_left = 428.29736
+offset_top = 439.4316
+offset_right = 628.29736
+offset_bottom = 639.43164
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+
+[node name="2" type="TextureRect" parent="Control/inventory/item" unique_id=1357432789]
+layout_mode = 0
+offset_left = 479.61624
+offset_top = 438.952
+offset_right = 679.6162
+offset_bottom = 638.952
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+
+[node name="3" type="TextureRect" parent="Control/inventory/item" unique_id=1028406037]
+layout_mode = 0
+offset_left = 531.8945
+offset_top = 439.43164
+offset_right = 731.8945
+offset_bottom = 639.43164
+scale = Vector2(0.2, 0.2)
+mouse_filter = 2
+
+[node name="android_buttons" type="Control" parent="Control" unique_id=629040906]
+anchors_preset = 0
+script = ExtResource("6")
+
+[node name="Virtual Joystick" parent="Control/android_buttons" unique_id=745962944 instance=ExtResource("14")]
+layout_mode = 1
+offset_left = 10.0
+offset_top = 597.0
+offset_right = 310.0
+offset_bottom = 897.0
+scale = Vector2(1.62, 1.62)
+action_left = "a"
+action_right = "d"
+action_up = "w"
+action_down = "s"
+
+[node name="interact" type="TextureButton" parent="Control/android_buttons" unique_id=268772807]
+layout_mode = 0
+offset_left = 1670.9999
+offset_top = 200.0
+offset_right = 1770.9999
+offset_bottom = 300.0
+scale = Vector2(1.62, 1.62)
+texture_normal = ExtResource("7")
+metadata/_edit_group_ = true
+
+[node name="Ent" type="Sprite2D" parent="Control/android_buttons/interact" unique_id=590452804]
+position = Vector2(54, 48)
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("8")
+
+[node name="sit" type="TextureButton" parent="Control/android_buttons" unique_id=1021391900]
+layout_mode = 0
+offset_left = 1673.9998
+offset_top = 853.00006
+offset_right = 1773.9998
+offset_bottom = 953.00006
+scale = Vector2(1.62, 1.62)
+texture_normal = ExtResource("7")
+metadata/_edit_group_ = true
+
+[node name="Crouch" type="Sprite2D" parent="Control/android_buttons/sit" unique_id=1305672656]
+position = Vector2(49, 49)
+scale = Vector2(0.245, 0.245)
+texture = ExtResource("9")
+
+[node name="drop" type="TextureButton" parent="Control/android_buttons" unique_id=1768852973]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 200.0
+offset_right = 277.0
+offset_bottom = 300.0
+scale = Vector2(1.62, 1.62)
+texture_normal = ExtResource("7")
+metadata/_edit_group_ = true
+
+[node name="Drop" type="Sprite2D" parent="Control/android_buttons/drop" unique_id=438142252]
+position = Vector2(48, 48)
+scale = Vector2(0.205, 0.205)
+texture = ExtResource("10")
+
+[node name="Cursor" type="TextureRect" parent="Control" unique_id=942174477]
+layout_mode = 0
+offset_left = 947.5
+offset_top = 527.5
+offset_right = 972.5
+offset_bottom = 552.5
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("11_gu6f8")
+
+[node name="obj pos" type="Marker3D" parent="." unique_id=407285797]
+transform = Transform3D(0.891007, -0.357749, -0.279504, 0, 0.615662, -0.788011, 0.453991, 0.702123, 0.548558, 0.380988, 1.81059, -0.420157)
+
+[node name="drop" type="Marker3D" parent="." unique_id=304854490]
+transform = Transform3D(0.891007, -0.357749, -0.279504, 0, 0.615662, -0.788011, 0.453991, 0.702123, 0.548558, 0, 1.782, 0)
+
 [node name="ЗвукХодьбы" type="AudioStreamPlayer3D" parent="." unique_id=837473034]
 stream = ExtResource("13")
 autoplay = true
 
-[connection signal="timeout" from="Control/hint_timer" to="timer enemy/hint" method="_on_timer_timeout"]
-[connection signal="animation_finished" from="Control/anim screen/AnimationPlayer" to="Control/anim screen" method="_on_animation_player_animation_finished"]
-[connection signal="current_animation_changed" from="Control/anim screen/AnimationPlayer" to="Control/anim screen" method="_on_animation_player_current_animation_changed"]
-[connection signal="pressed" from="Control/control/interact" to="Control/control" method="_on_interact_pressed"]
-[connection signal="pressed" from="Control/control/sit" to="Control/control" method="_on_sit_pressed"]
-[connection signal="pressed" from="Control/control/drop" to="Control/control" method="_on_drop_pressed"]
-[connection signal="pressed" from="Control/control/slot" to="Control/control" method="_on_slot_pressed"]
-[connection signal="pressed" from="Control/control/slot2" to="Control/control" method="_on_slot_2_pressed"]
-[connection signal="pressed" from="Control/control/slot3" to="Control/control" method="_on_slot_3_pressed"]
 [connection signal="timeout" from="timer enemy/Timer" to="timer enemy" method="_on_timer_timeout"]
+[connection signal="timeout" from="timer enemy/hint_timer" to="timer enemy/hint" method="_on_timer_timeout"]
+[connection signal="animation_finished" from="Control/anim screen/AnimationPlayer" to="Control/anim screen" method="_on_animation_player_animation_finished"]
+[connection signal="pressed" from="Control/inventory/slot_tex/1" to="Control/inventory" method="_on_slot_pressed"]
+[connection signal="pressed" from="Control/inventory/slot_tex/2" to="Control/inventory" method="_on_slot_2_pressed"]
+[connection signal="pressed" from="Control/inventory/slot_tex/3" to="Control/inventory" method="_on_slot_3_pressed"]
+[connection signal="pressed" from="Control/android_buttons/interact" to="Control/android_buttons" method="_on_interact_pressed"]
+[connection signal="pressed" from="Control/android_buttons/sit" to="Control/android_buttons" method="_on_sit_pressed"]
+[connection signal="pressed" from="Control/android_buttons/drop" to="Control/android_buttons" method="_on_drop_pressed"]

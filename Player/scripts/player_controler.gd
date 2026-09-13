@@ -9,14 +9,19 @@ enum Platform { PC, ANDROID }
 
 const WALK_SPEED := 4.0
 const CROUCH_SPEED := 2.0
+
 const STAND_HEIGHT := 2.4
 const CROUCH_HEIGHT := 1.2
+
 const CAMERA_STAND_Y := 2.18
 const CAMERA_CROUCH_Y := 1.131
+
 const INTERACT_STAND_Y := 1.782
 const INTERACT_CROUCH_Y := 1.181
+
 const COLLISION_STAND_Y := 1.193
 const COLLISION_CROUCH_Y := 0.598
+
 const CAMERA_PITCH_LIMIT_DEG := 70.0
 const CAMERA_BOB_FREQUENCY := 2.6
 const CAMERA_BOB_AMPLITUDE_X := 0.03
@@ -32,16 +37,14 @@ var camera_base_y: float = CAMERA_STAND_Y
 var bob_time: float = 0.0
 var bob_offset := Vector3.ZERO
 
-@onready var camera: Camera3D = $Camera3D
-@onready var ray_cast: RayCast3D = $Camera3D/RayCast3D
-@onready var mesh: MeshInstance3D = $MeshInstance3D
-@onready var collision: CollisionShape3D = $CollisionShape3D
+@onready var camera: Camera3D = $Camera
+@onready var ray_cast: RayCast3D = $Camera/RayCast
+@onready var collision: CollisionShape3D = $Collision
 @onready var interact_position: Node3D = $"obj pos"
 @onready var walking_sound: AudioStreamPlayer3D = $"ЗвукХодьбы"
-@onready var cursor: MeshInstance2D = $Control/cursor
-@onready var virtual_joystick: Control = $"Control/Virtual Joystick"
-@onready var control_button: Node2D = $"Control/control"
-@onready var anim_screen: Node2D = $"Control/anim screen"
+@onready var virtual_joystick: Control = $"Control/android_buttons/Virtual Joystick"
+@onready var control_button: Control = $Control/android_buttons
+@onready var anim_screen: Control = $"Control/anim screen"
 @onready var enemy_timer: Control = $"timer enemy"
 
 func _ready() -> void:
@@ -50,7 +53,7 @@ func _ready() -> void:
 		control_button.hide()
 		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 
-	State.noise.connect(enemy_timer.p.bind())
+	State.noise.connect(enemy_timer.set_noise.bind())
 	enemy_timer.get_node("Timer").wait_time = search_timer_duration
 	anim_screen.color_down()
 
@@ -80,7 +83,7 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("EXIT"):
 		get_tree().change_scene_to_file("res://ACTS/ACTS/menu.tscn")
 
-	update_cursor()
+	raycast()
 
 func _input(event: InputEvent) -> void:
 	if platform == Platform.PC and event is InputEventMouseMotion:
@@ -100,16 +103,12 @@ func clamp_camera_rotation() -> void:
 func toggle_crouch() -> void:
 	is_crouching = not is_crouching
 	if is_crouching:
-		mesh.mesh.height = CROUCH_HEIGHT
-		mesh.position = Vector3(0, 0.6, 0)
 		camera_base_y = CAMERA_CROUCH_Y
 		collision.shape.height = CROUCH_HEIGHT
 		interact_position.position.y = INTERACT_CROUCH_Y
 		collision.position = Vector3(0, COLLISION_CROUCH_Y, 0)
 		current_speed = CROUCH_SPEED
 	else:
-		mesh.mesh.height = STAND_HEIGHT
-		mesh.position = Vector3(0, 1.197, 0)
 		camera_base_y = CAMERA_STAND_Y
 		collision.shape.height = STAND_HEIGHT
 		interact_position.position.y = INTERACT_STAND_Y
@@ -129,8 +128,7 @@ func update_camera_bob(delta: float) -> void:
 	bob_offset.y = cos(bob_time * CAMERA_BOB_FREQUENCY) * CAMERA_BOB_AMPLITUDE_Y + camera_base_y
 	camera.position = bob_offset
 
-func update_cursor() -> void:
-	cursor.scale = CURSOR_DEFAULT_SIZE
+func raycast() -> void:
 	if ray_cast.is_colliding():
 		var hit := ray_cast.get_collider()
 		if hit:

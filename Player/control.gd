@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 func _press_and_release(action: StringName) -> void:
 	var a = InputEventAction.new()

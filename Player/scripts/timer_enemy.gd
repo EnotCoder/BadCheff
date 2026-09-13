@@ -32,10 +32,10 @@ func _process(_delta: float) -> void :
 	$hint.text = Dialog.hint_text
 	$Label.text = str(int($Timer.time_left))
 
-	if str(int($Timer.time_left)) != "0" and 	State.state != State.StateBook.ATTACK: $Label.show()
+	if str(int($Timer.time_left)) != "0" and State.state != State.StateBook.ATTACK: $Label.show()
 	else: $Label.hide()
 
-func p():
+func set_noise():
 	var timer = $Timer
 	var timer_int = int($Timer.time_left)
 

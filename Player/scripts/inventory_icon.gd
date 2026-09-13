@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 var inv_show = false
 
@@ -23,9 +23,9 @@ func _process(_delta: float) -> void :
 
 	for slot in $slot_tex.get_children():
 		if slot.name == str(MainInventoryScript.num_chose):
-			slot.texture = load("res://widget/inventory item/active slot.jpg")
+			slot.texture_normal = load("res://widget/inventory item/active slot.jpg")
 		else:
-			slot.texture = load("res://widget/inventory item/slot.jpg")
+			slot.texture_normal = load("res://widget/inventory item/slot.jpg")
 
 	var current_key: String = MainInventoryScript.slots[MainInventoryScript.num_chose - 1]
 	if current_key:
@@ -42,10 +42,29 @@ func _process(_delta: float) -> void :
 			MainInventoryScript.slots[MainInventoryScript.num_chose - 1] = ""
 			MainInventoryScript.remove_item_node(current_key)
 
-func arm_widget(num):
-	var a
-	if MainInventoryScript.slots[num - 1]:
-		a = load("res://widget/arm/" + MainInventoryScript.slots[num - 1] + ".png")
-	else:
-		a = load("res://widget/arm/null.png")
-	return a
+
+
+func _on_slot_pressed() -> void:
+	_press_and_release("slot_1")
+
+
+func _on_slot_2_pressed() -> void:
+	_press_and_release("slot_2")
+
+
+func _on_slot_3_pressed() -> void:
+	_press_and_release("slot_3")
+	
+func _press_and_release(action: StringName) -> void:
+	var a = InputEventAction.new()
+	a.action = action
+	a.pressed = true
+	Input.parse_input_event(a)
+	
+	# Give it a frame to be processed by consumers like is_action_just_pressed
+	await get_tree().process_frame
+	
+	var b = InputEventAction.new()
+	b.action = action
+	b.pressed = false
+	Input.parse_input_event(b)
