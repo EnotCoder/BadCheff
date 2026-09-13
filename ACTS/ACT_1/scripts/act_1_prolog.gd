@@ -30,15 +30,48 @@ func _start_intro_blackout() -> void:
 
 	var layer := CanvasLayer.new()
 	layer.layer = 100
+	layer.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	add_child(layer)
+
 	var blackout := ColorRect.new()
 	blackout.color = Color.BLACK
 	blackout.set_anchors_preset(Control.PRESET_FULL_RECT)
 	blackout.mouse_filter = Control.MOUSE_FILTER_STOP
+	blackout.process_mode = Node.PROCESS_MODE_WHEN_PAUSED
 	layer.add_child(blackout)
 
+	var skip_hint := Label.new()
+	skip_hint.text = "Нажми, чтобы пропустить"
+	skip_hint.set_anchors_preset(Control.PRESET_BOTTOM_WIDE)
+	skip_hint.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	skip_hint.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	skip_hint.offset_top = -110
+	skip_hint.offset_bottom = -60
+	skip_hint.mouse_filter = Control.MOUSE_FILTER_IGNORE
+	var font := load("res://widget/font.ttf")
+	if font:
+		skip_hint.add_theme_font_override("font", font)
+	skip_hint.add_theme_font_size_override("font_size", 40)
+	skip_hint.add_theme_color_override("font_color", Color(1, 1, 1, 0.7))
+	blackout.add_child(skip_hint)
+
 	intro_player.play()
-	await intro_player.finished
+
+	var skipped := [false]
+	blackout.gui_input.connect(func(event: InputEvent) -> void:
+		if event is InputEventMouseButton and event.pressed:
+			skipped[0] = true
+		elif event is InputEventScreenTouch and event.pressed:
+			skipped[0] = true
+	)
+
+	var tree := get_tree()
+	while intro_player.playing and not skipped[0]:
+		if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed("left_click"):
+			skipped[0] = true
+			break
+		await tree.process_frame
+	intro_player.stop()
 
 	blackout.queue_free()
 	layer.queue_free()
