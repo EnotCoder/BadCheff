@@ -39,7 +39,7 @@ func _physics_process(delta: float) -> void:
 	check_surroundings()
 
 func check_surroundings() -> void:
-	if State.state == State.StateBook.ATTACK:
+	if State.state != State.StateBook.IDLE:
 		return
 		
 	var current_list = []
@@ -70,10 +70,10 @@ func process_movement() -> void:
 		global_transform.basis = global_transform.basis.slerp(target_transform.basis, 10.0 * get_physics_process_delta_time())
 	navigate_to(get_navigation_target())
 
-	if State.position_point == "kitchen" and (
+	if State.state == State.StateBook.IDLE and State.position_point == "kitchen" and (
 		door_kitchen.get("door_opened") as bool
 		or MainInventoryScript.position_point != "frezz_room"
-	) and State.state != State.StateBook.ATTACK and not State.investigation_arrived:
+	):
 		_start_chase()
 
 	if !navigation_agent.is_navigation_finished():

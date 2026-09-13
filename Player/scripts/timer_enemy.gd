@@ -32,10 +32,12 @@ func _process(_delta: float) -> void :
 	$hint.text = Dialog.hint_text
 	$Label.text = str(int($Timer.time_left))
 
-	if str(int($Timer.time_left)) != "0" and State.state != State.StateBook.ATTACK: $Label.show()
+	if $Timer.time_left > 0 and State.state != State.StateBook.ATTACK: $Label.show()
 	else: $Label.hide()
 
 func set_noise():
+	if State.timer_active:
+		return
 	var timer = $Timer
 	var timer_int = int($Timer.time_left)
 
@@ -70,7 +72,7 @@ func _on_timer_timeout() -> void :
 	State.audio_busy = true
 	Dialog.show_say("Так, погоди-ка… Что-то здесь не так. Здесь кто-то был?", sound_tak_pogodika.stream.get_length())
 	sound_tak_pogodika.play()
-	await sound_tak_pogodika.finished
+	await get_tree().create_timer(sound_tak_pogodika.stream.get_length()).timeout
 
 	await get_tree().create_timer(2.0).timeout
 
@@ -79,11 +81,11 @@ func _on_timer_timeout() -> void :
 	if State.state != State.StateBook.ATTACK:
 		Dialog.show_say("Видимо показалось", sound_pokazalos.stream.get_length())
 		sound_pokazalos.play()
-		await sound_pokazalos.finished
+		await get_tree().create_timer(sound_pokazalos.stream.get_length()).timeout
 		State.state = State.StateBook.IDLE
 	else:
 		sound_aga.play()
-		await sound_aga.finished
+		await get_tree().create_timer(sound_aga.stream.get_length()).timeout
 
 	State.audio_busy = false
 	State.timer_active = false
