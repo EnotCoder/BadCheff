@@ -16,10 +16,10 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 config/name="badcheff"
 config/description="This project demonstrates what you can be done with the Volumetrics Plugin."
-run/main_scene="uid://cbdo7l5ro8ukn"
+run/main_scene="res://splash/splash_screen.tscn"
 config/features=PackedStringArray("4.7")
 boot_splash/use_filter=false
-boot_splash/image="res://prev.png"
+boot_splash/image="res://my_icon.png"
 config/icon="uid://ckayg2tlpi0an"
 
 [autoload]
