@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://cwvr2cxi63df0" path="res://widget/papers/paper_2.png" id="28_0mclj"]
 [ext_resource type="Texture2D" uid="uid://ckn10xkf2ikhn" path="res://widget/papers/paper_3.png" id="29_xkjt1"]
 [ext_resource type="Texture2D" uid="uid://cap2b4fybd8bv" path="res://widget/papers/paper_4.png" id="30_0mclj"]
+[ext_resource type="Texture2D" uid="uid://buoq34735muu0" path="res://ACTS/ACT_1/textures/rain_drop.png" id="rain_drop"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_is1rh"]
 
@@ -186,6 +187,19 @@ shader = SubResource("Shader_vignette")
 shader_parameter/vignette_strength = 0.65
 shader_parameter/vignette_radius = 0.85
 shader_parameter/vignette_softness = 0.45
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rain"]
+transparency = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("rain_drop")
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_rain"]
+size = Vector2(0.035, 0.5)
 
 [node name="ACT 1" type="Node3D" unique_id=535680354]
 script = ExtResource("1")
@@ -793,6 +807,25 @@ texture_paper = ExtResource("29_xkjt1")
 [node name="paper4" parent="papers" unique_id=1733208170 instance=ExtResource("26_n0241")]
 transform = Transform3D(-0.06494481, 0, -0.0760406, 0, 0.1, 0, 0.0760406, 0, -0.06494481, -4.6323204, -3.9538789, 11.94837)
 texture_paper = ExtResource("30_0mclj")
+
+[node name="RainNorth" type="CPUParticles3D" parent="." unique_id=1776665399]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.179872, 3.094634, -6.3717117)
+material_override = SubResource("StandardMaterial3D_rain")
+amount = 100
+lifetime = 0.4
+preprocess = 0.5
+lifetime_randomness = 0.2
+draw_order = 2
+mesh = SubResource("QuadMesh_rain")
+emission_shape = 3
+emission_box_extents = Vector3(5.12, 0.2, 2.96)
+particle_flag_align_y = true
+direction = Vector3(0, -1, 0)
+spread = 6.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 9.0
+initial_velocity_max = 12.0
+color = Color(0.78, 0.85, 1, 0.75)
 
 [connection signal="animation_finished" from="active object/little object/door panel/AnimationPlayer" to="active object/little object/door panel" method="_on_animation_player_animation_finished"]
 [connection signal="animation_finished" from="active object/little object/lever/AnimationPlayer" to="active object/little object/lever" method="_on_animation_player_animation_finished"]
