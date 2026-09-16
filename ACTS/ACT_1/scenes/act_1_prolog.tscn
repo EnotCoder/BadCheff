@@ -207,7 +207,7 @@ light_data = ExtResource("2_k10x1")
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -13.539267, -0.812, 0.67925733)
 
 [node name="Cheff" parent="." unique_id=620991757 node_paths=PackedStringArray("navigation_agent", "animation_tree", "hit", "door_kitchen", "list_kitchen_objects") instance=ExtResource("3")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 6.2232633, -0.408409, 2.1958768)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 4.5231814, -0.408409, 2.1958768)
 navigation_agent = NodePath("NavigationAgent3D")
 animation_tree = NodePath("AnimationTree")
 hit = NodePath("hit")
@@ -687,7 +687,7 @@ Key_hint = "Много лимонов"
 metadata/_edit_group_ = true
 
 [node name="hamer" parent="items" unique_id=905970777 instance=ExtResource("25_k10x1")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.450233, -0.5233036, 3.724915)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.450233, 0.14809436, 3.724915)
 
 [node name="key_panel" parent="items" unique_id=246291444 instance=ExtResource("20")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.842857, -0.2753939, 3.76808)
