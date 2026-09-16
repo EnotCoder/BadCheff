@@ -809,7 +809,7 @@ transform = Transform3D(-0.06494481, 0, -0.0760406, 0, 0.1, 0, 0.0760406, 0, -0.
 texture_paper = ExtResource("30_0mclj")
 
 [node name="RainNorth" type="CPUParticles3D" parent="." unique_id=1776665399]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.179872, 3.094634, -6.3717117)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.179872, 3.094634, -6.4332314)
 material_override = SubResource("StandardMaterial3D_rain")
 amount = 100
 lifetime = 0.4
