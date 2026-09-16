@@ -73,7 +73,7 @@ transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, 0, 0, 0)
 transform = Transform3D(1.96, 0, 0, 0, 1.96, 0, 0, 0, 1.96, -0.66985, 0.736177, 0.19233)
 
 [node name="ACTION" parent="door" unique_id=1536495382 node_paths=PackedStringArray("NODE_ACTION") instance=ExtResource("4")]
-transform = Transform3D(0.520309, 0, 0, 0, 0.741025, 0, 0, 0, 0.0788279, 0, 0, 0)
+transform = Transform3D(0.426, 0, 0, 0, 1.246, 0, 0, 0, 0.034, 0.09373453, 0.018409431, 0)
 visible = false
 FUNC_NAME = "toggle_door"
 NODE_ACTION = NodePath("../..")
