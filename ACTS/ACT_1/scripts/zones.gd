@@ -16,3 +16,11 @@ func _on_kitchen_body_entered(body: Node3D) -> void :
 func _on_room_body_entered(body: Node3D) -> void :
 	if body is Player: MainInventoryScript.position_point = "room"
 	if body is Enemy: State.position_point = "room"
+
+func _on_basement_body_entered(body: Node3D) -> void :
+	if body is Player: MainInventoryScript.position_point = "basement"
+	if body is Enemy: State.position_point = "basement"
+
+func _on_basement_body_exited(body: Node3D) -> void :
+	if body is Player: MainInventoryScript.position_point = "kitchen"
+	if body is Enemy: State.position_point = "kitchen"

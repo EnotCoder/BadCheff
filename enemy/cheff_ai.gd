@@ -39,6 +39,19 @@ func _physics_process(delta: float) -> void:
 	check_surroundings()
 
 func check_surroundings() -> void:
+	if State.state == State.StateBook.ATTACK:
+		return
+
+	if State.position_point == "basement":
+		return
+
+	if State.position_point == "kitchen" and (
+		door_kitchen.get("door_opened") as bool
+		or MainInventoryScript.position_point != "frezz_room"
+	):
+		_start_chase()
+		return
+
 	if State.state != State.StateBook.IDLE:
 		return
 		
@@ -69,12 +82,6 @@ func process_movement() -> void:
 		var target_transform = global_transform.looking_at(look_target, Vector3.UP)
 		global_transform.basis = global_transform.basis.slerp(target_transform.basis, 10.0 * get_physics_process_delta_time())
 	navigate_to(get_navigation_target())
-
-	if State.state == State.StateBook.IDLE and State.position_point == "kitchen" and (
-		door_kitchen.get("door_opened") as bool
-		or MainInventoryScript.position_point != "frezz_room"
-	):
-		_start_chase()
 
 	if !navigation_agent.is_navigation_finished():
 		move_and_slide()
